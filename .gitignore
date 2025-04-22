@@ -8,7 +8,7 @@
 .DS_Store
 
 # Windows系 统缩 略图 缓 存
-Thumbs .db
+Thumbs.db
 
 #Linux文件管理器生成的缓存
 .directory
