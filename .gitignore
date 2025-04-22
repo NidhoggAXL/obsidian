@@ -5,7 +5,7 @@
 .trash/
 
 #macos 系统文件
-.DS Store
+.DS_Store
 
 # Windows系 统缩 略图 缓 存
 Thumbs .db
