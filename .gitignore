@@ -1,0 +1,24 @@
+#忽略.obsidian 文件夹下的所有内容
+.obsidian/
+
+#忽略垃圾箱 中的内容
+.trash/
+
+#macos 系统文件
+.DS Store
+
+# Windows系 统缩 略图 缓 存
+Thumbs .db
+
+#Linux文件管理器生成的缓存
+.directory
+
+#忽略 node.js插件的依赖(如果你在库中开发插件)
+node_modules/
+
+#如果你使用 obsidian Git 插件，它可能会有临时文件
+obsidian-git-log.txt
+
+#忽略临时或备份文件
+.sWp
+.gitignore"25,446B
