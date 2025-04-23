@@ -46,14 +46,14 @@ http://jdev.tw/blog/7066
 
 ## 5. 标题 (Heading)
 
-|Heading|HTML|
-|:--|:--|
-|# Heading Level 1|`<h1>Heading Level 1</h1>`|
-|## Heading Level 2|`<h2>Heading Level 2</h2>`|
-|#### Heading Level 3|`<h3>Heading Level 3</h3>`|
-|##### Heading Level 4|`<h4>Heading Level 4</h4>`|
-|###### Heading Level 5|`<h5>Heading Level 5</h5>`|
-|####### Heading Level 6|`<h6>Heading Level 6</h6>`|
+| Heading                 | HTML                       |
+| :---------------------- | :------------------------- |
+| # Heading Level 1       | `<h1>Heading Level 1</h1>` |
+| ## Heading Level 2      | `<h2>Heading Level 2</h2>` |
+| #### Heading Level 3    | `<h3>Heading Level 3</h3>` |
+| ##### Heading Level 4   | `<h4>Heading Level 4</h4>` |
+| ###### Heading Level 5  | `<h5>Heading Level 5</h5>` |
+| ####### Heading Level 6 | `<h6>Heading Level 6</h6>` |
 
 > [!TIP] 技巧💡  
 > 1. 井号后至少加一个空白  
