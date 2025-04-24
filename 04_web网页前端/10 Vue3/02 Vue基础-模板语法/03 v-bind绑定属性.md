@@ -49,3 +49,90 @@ v-once用于指定元素或者组件只渲染一次：
 
 
 
+# 二、v-text指令(了解)
+
+用于更新元素的 textContent：
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17454954930006ciazu.png)
+
+
+
+# 三、v-html(了解)
+
+默认情况下，如果我们展示的内容本身是 html 的，那么vue并不会对其进行特殊的解析。 
+
+如果我们希望这个内容被Vue可以解析出来，那么可以使用 v-html 来展示；
+
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745498216000yd2w62.png)
+
+# 四、v-pre(了解)
+
+v-pre用于**跳过元素和它的子元素的编译过程**，显示原始的Mustache标签： 
+
+* 跳过不需要编译的节点，加快编译的速度；
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745499192000rwp3iz.png)
+
+# 五、v-cloak(了解)
+
+cloak - 斗篷，这个指令保持在元素上直到关联组件实例结束编译。 
+
+* 和 CSS 规则如 `[v-cloak] { display: none }` 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到组件实例准备完毕。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745499578000boep3h.png)
+
+> `<div>`不会显示，直到编译结束。
+
+
+# 六、v-memo
+
+可以在父元素里面进行设置，规定子元素里面哪一个元素改变了，才会进行重新的渲染，不然的话可以不进行渲染。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745500289000ldxall.png)
+
+如果 methods 里面代码为如下，则 v-memo 里面的元素不会进行渲染（更改）：
+
+```js
+methods: {
+	newAge: function() {
+		this.age = 20
+	}
+}
+```
+
+
+# 七、v-bind绑定属性
+
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745500595000i8s1vg.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745501325000quyqrl.png)
+
+> v-bind有一个对应的语法糖，也就是简写方式。 
+> 在开发中，我们通常会使用语法糖的形式，因为这 样更加简洁。
+# 八、绑定基本属性
+
+v-bind用于**绑定一个或多个属性值**，或者向另一个组件**传递props值**（到组件时再介绍）；
+
+在开发中，有哪些属性需要动态进行绑定呢？ 
+
+* 还是有很多的，比如图片的链接src、网站的链接href、动态绑定一些类、样式等等
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17455016690009nrxqn.png)
+
+当使用了 v-bind 绑定属性后，引号里面的也可以编写为一个表达式
+
+```html
+<div :class=" 2 > 3 ? true : flase"></div>
+```
+
+
+
+
+
+
+
+
+
+
