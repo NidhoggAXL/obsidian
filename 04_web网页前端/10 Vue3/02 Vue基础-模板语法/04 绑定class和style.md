@@ -34,5 +34,47 @@
 # 四、绑定style介绍
 
 
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745582265000z7lha6.png)
+
+
+# 五、绑定style-对象、数组语法
+
+对象语法：
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745582800000vnxfxt.png)
+
+数组语法：
+
+* `:style` 的数组语法可以将多个样式对象应用到同一个元素上；
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745582831000qicypx.png)
+
+
+# 六、动态绑定属性(了解)
+
+
+在某些情况下，我们属性的名称可能也不是固定的
+
+* 前端我们无论绑定`｀src、href、class、style｀`，属性名称都是固定的
+* 如果属性名称不是固定的，我们可以使用 `:[属性名]="值"` 的格式来定义； 
+* 这种绑定的方式，我们称之为动态绑定属性
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745583678000yxhuwy.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745583692000p9032v.png)
+
+# 七、绑定一个对象(重要)
+
+如果我们希望将一个**对象的所有属性**，绑定**到元素上的所有属性**，应该怎么做呢？ 
+
+*　非常简单，我们可以直接使用 **v-bind 绑定一个 对象；**
+
+案例：info对象会被拆解成div的各个属性
+
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17455839190000msb2l.png)
+
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745583931000h9tl4e.png)
 
 
