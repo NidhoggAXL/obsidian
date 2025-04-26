@@ -14,16 +14,6 @@
 * 有key的时候，如何基于key重新排列的？
 
 
-# 二、认识VNode
-
-我们先来解释一下VNode的概念： 
-
-* 因为目前我们还没有比较完整的学习组件的概念，所以目前我们先理解HTML元素创建出来的VNode； 
-* VNode的全称是Virtual Node，也就是**虚拟节点**； 
-* 事实上，无论是 **组件还是元素**，它们最终 **在Vue中表示出来的都是一个个VNode**；
-* <mark class="hltr-orange">VNode的本质是一个JavaScript的对象；</mark>
-
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745656355000yam4d8.png)
 
 
 
