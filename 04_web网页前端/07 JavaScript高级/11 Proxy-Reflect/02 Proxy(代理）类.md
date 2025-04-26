@@ -5,7 +5,7 @@
 * 之后对该对象的所有操作，都通过代理对象来完成，代理对象可以监听我们想要对原对象进行哪些操作
 
 
-我们可以将上面的案例用Proxy来实现一次：
+我们可以将案例用Proxy来实现一次：
 
 * 首先，我们需要**new Proxy对象**，并且传入需要**侦听的对象**以及**一个处理对象**，处理对象可以称之为handler； 
 	* `const p = new Proxy(target, handler) `
@@ -23,7 +23,7 @@ const objProxy = new Proxy(obj,{})
 # 二、Proxy的set和get捕获器
 如果我们想要侦听某些具体的操作，那么就可以在handler中添加对应的**捕捉器（Trap）**：
 
-set和get分别对应的是函数类型； 
+**set和get分别对应的是函数类型；** 
 
 * set函数有四个参数： 
 	* target：目标对象（侦听的对象）； 
@@ -70,7 +70,7 @@ set和get分别对应的是函数类型；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17321938790003wbxkv.png)
 
-# 五、Receiver的作用
+# 五、Receiver
 ![[04 Reflect(反射)#四、Receiver的作用|Receiver的作用]]
 
 

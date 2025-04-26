@@ -6,12 +6,26 @@
 * 当数据变化时，template会自动进行更新来显示最新的数据； 
 * 但是在某些情况下，我们希望在**代码逻辑**中监听某个数据的变化，这个时候就需要用侦听器watch来完成了；
 
-侦听器的用法如下： 
+**侦听器的用法如下：** 
 
 * 选项：watch 
 * 类型：`{ [key: string]: string | Function | Object | Array}`
 * 监听 data 里面的属性时，在 watch 里面的对应函数必须是和监听 data 的属性相同
 * 监听会默认传入两个参数：参数一（新的属性值）、参数二（旧的参数值）
+
+**当然监听也有语法糖**：
+
+```
+watch: {
+	//原编写
+	info: {
+	 handler(newValue, oldValue) {}
+	}
+	
+	//语法糖
+	info() { }
+}
+```
 
 
 **案例一**：通过按钮来改变data里面的**字符串数据**，但是希望在代码逻辑里面可以监听数据的改变
@@ -33,4 +47,33 @@ console.log(Vue.toRaw(newValue) === newValue) // true
 console.log(Vue.toRaw(oldValue) === oldValue) // true
 ```
 
-# 二、
+# 二、侦听器watch的配置选项
+**我们先来看一个例子：** 
+
+* 当我们点击按钮的时候会修改info.name的值； 
+* 这个时候我们使用watch来侦听info，可以侦听到吗？答案是**不可以。**
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677354000l6xpwz.png)
+
+这是因为默认情况下，<mark class="hltr-orange">watch只是在侦听info的引用变化</mark>，对于<mark class="hltr-orange">内部属性的变化是不会做出响应</mark>的： 
+
+* 这个时候我们可以使用一个 **选项deep进** 行更深层的侦听； 
+	* 默认为 false，深度监听为 true
+* 注意前面我们说过**watch里面侦听的属性对应的也可以是一个Object**；
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456775480007t6azf.png)
+
+> [!tip] 为什么 newValue 和 oldValue 是同一个对象？
+> <mark class="hltr-orange">改变的是 info 中的属性 name，并没有改变 info 的地址</mark>，所以说并发生改变我们监听的 info 的地址的，所以 newValue 和 oldValue 还是同一个对象并且 oldValue 不为 undifined。
+
+
+**还有另外一个属性，是希望一开始的就会立即执行一次：**
+
+* 这个时候我们使用 **immediate选项**； 
+* 这个时候无论后面数据是否有变化，侦听的函数都会<mark class="hltr-orange">有限执行一次</mark>；
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677910000jycj04.png)
+
+
+
+
