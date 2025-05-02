@@ -43,6 +43,7 @@ export { name, age, sayHello}
 
 ```js
 // import 关键字进行导入
+// 使用解构来进行解构
 import { name, age, sayHello} from "./bar.js"
 
 console.log(name, age, sayHello)
@@ -128,9 +129,9 @@ import * as foo from "./bar.js"
 export { sum as barSum } from './bar.js';
 ```
 
-为什么要这样做呢?
+**为什么要这样做呢?**
 
-* 在开发和封装一个功能库时，通常我们希望将暴露的所有接口放到一个文件中;
+* 在开发和封装一个功能库时，通常我们希望将暴露的<mark class="hltr-orange">所有接口放到一个文件中</mark>;
 * 这样方便指定统一的接口规范，也方便阅读，
 * 这个时候，我们就可以使用export和import结合使用;
 
@@ -154,7 +155,7 @@ export * from './01工具1.js'
 export * from './01工具2.js'
 ```
 
-> 冲 form 导入，并且从 export 导出全部数据，也可以理解为是一种简化的编写。
+> 从 form 导入，并且从 export 导出全部数据，也可以理解为是一种简化的编写。
 > 当然也是可以特定导出的。
 
 ```js
@@ -216,9 +217,11 @@ if (true) {
  import sayHello from "./utles.js"
 }
 //Uncaught SyntaxError: Unexpected identifier 'sayHello' (at main.js:8:9)
+// unexpected 意外的
+// identifier 标识符
 ```
 
-为什么会出现这个情况呢？ 
+**为什么会出现这个情况呢？** 
 
 * 这是因为ES Module在被JS引擎解析时，就**必须知道它的依赖关系**； 
 * 由于这个时候js代码没有任何的运行，所以无法在进行**类似于if判断中根据代码的执行情况**； 

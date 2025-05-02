@@ -34,7 +34,7 @@ exports.name = name
 // 判断导出的 exports.name 地址是否等于 let 定义的 name
 console.log(name === exports.name)//true
   
-// 重新定义了 export.name 地址就会发生改变
+// 重新定义了name, export.name 地址就会发生改变
 exports.name = "axl"
   
 //export.name地址发生改变对 let name 没有影响
@@ -44,7 +44,7 @@ console.log(name)//coderwhy
 console.log(name === exports.name)//false
 ```
 
-> 只是 exports.name 地址发生了改变，可以理解为指向的**地址发生改变**，**但是 exports 地址没有发生改变，里面没有进行重新定义的数据也不会发生改变。**
+> 只是 exports.name 地址发生了改变，可以理解为指向name的**地址发生改变**，**但是 exports 地址没有发生改变，里面没有进行重新定义的数据也不会发生改变。**
 
 ```js
 let name = 'axl'
@@ -66,7 +66,7 @@ console.log(age === exports.age)//true
 
 module.exports和exports有什么关系或者区别呢？
 
-我们追根溯源，通过维基百科中对CommonJS规范的解析： 
+<mark class="hltr-orange">我们追根溯源，通过维基百科中对CommonJS规范的解析： </mark>
 
 * CommonJS中是没有**module.exports**的概念的； 
 * 但是为了实现模块的导出，Node中使用的是**Module的类，每一个模块都是Module的一个实例，也就是module；** 
@@ -81,7 +81,7 @@ module.exports和exports有什么关系或者区别呢？
 ![[module.exports的实质|600]]
 
 
-> [!tip] 那么肯定会产生怀疑，Node也支持CommonJS，那么已经有一个expots为还要设置一个module.exports呢？
+> [!node] 那么肯定会产生怀疑，Node也支持CommonJS，那么已经有一个expots为还要设置一个module.exports呢？
 > 这是因为在导出的时候Node会查询 module.exports ，通过 exports 也可以导出，是因为 module.exports 和 exports 是同一个引用，
 **如果改变 exports 的引用地址的话就不可以进行导出了。**![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743837746000h69zrx.png)
 **但是改变 modele.exports 的地址引用，还是可以进行导入的（Node是查看 module.exports)**![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743837928000mv8b3o.png)
@@ -89,4 +89,4 @@ module.exports和exports有什么关系或者区别呢？
 # 五、CommonJS缺点
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17438436360000oz6yc.png)
 
-[[04 AMD和CMD(了解)]]]
+[[04 AMD和CMD(了解)]]
