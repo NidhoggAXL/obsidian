@@ -53,9 +53,12 @@ export default {
 
 要解决这个问题,那么就需要在这是style的属性 
 
+* 本质是为元素自动添加不同的 <mark class="hltr-orange">data- 属性</mark>
+
 ```html
 <style scoped> </style>
 ```
 
 >[!tip] 在开发中
 >基本上所有的style都希望设计自己的组件,不要和其他的有影响所以基本<mark class="hltr-orange">都需要为style添加 scoped(作用域) 属性</mark>
+

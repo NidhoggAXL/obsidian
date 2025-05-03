@@ -4,6 +4,7 @@
 * 我们前面学习了如何通过webpack配置Vue的开发环境，但是在真实开发中我们不可能每一个项目从头来完成所有的 webpack配置，这样显示开发的效率会大大的降低； 
 * 所以在真实开发中，我们通常会使用<mark class="hltr-orange">脚手架</mark>来创建一个项目，Vue的项目我们使用的就是<mark class="hltr-orange">Vue的脚手架</mark>； 
 * 脚手架其实是建筑工程中的一个概念，在我们软件工程中也会将一些<mark class="hltr-orange">帮助我们搭建项目的工具称之为脚手架</mark>；
+* <mark class="hltr-orange">Vue的脚手架里面已经默认集成了 webpack 了.</mark>
 
 **Vue的脚手架就是Vue CLI：** 
 
