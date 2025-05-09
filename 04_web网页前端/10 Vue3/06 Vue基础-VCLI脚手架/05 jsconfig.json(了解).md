@@ -11,7 +11,6 @@
 
 当然为了我们在编写时<mark class="hltr-orange">获得更好的提示</mark>，在回到 jsconfig.json 里面进行路径的配置：
 
-
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746256103000d9puem.png)
 
 
