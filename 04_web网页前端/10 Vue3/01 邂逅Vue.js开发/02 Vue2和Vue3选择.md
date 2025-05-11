@@ -1,2 +1,3 @@
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745224970000v5smt3.png)
+《程序员》:Vue 3版本兼容 2.x，对于想要学习 Vue 的开发者而言，时常在纠结是从Vue2开始学基础还是直接学 Vue 3，对此，你有着什么样的建议?
 
+<mark class="hltr-orange">尤雨溪(Vue的创始人)</mark>:直接学 Vue 3就行了，基础概念是一模一样的。

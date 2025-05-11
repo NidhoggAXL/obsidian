@@ -1,14 +1,19 @@
-
 # 一、绑定 class 介绍
+在开发中，有时候我们的元素class也是动态的，比如
 
+* 当数据为<mark class="hltr-orange">某个状态</mark>时，字体显示红色。
+* 当数据<mark class="hltr-orange">另一个状态</mark>时，字体显示黑色,
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745502607000u9tzy3.png)
+绑定class有两种方式:
+
+* 对象语法
+* 数组语法
 
 # 二、绑定class – 对象语法
 
 **对象语法**：我们可以传给` :class (v-bind:class 的简写) `一个对象，以动态地切换 class。
 
-```
+```html
 <button :class="{key: value}>内容</button>
 ```
 
@@ -32,24 +37,28 @@
 
 
 # 四、绑定style介绍
+我们可以利用**v-bind:style**来绑定一些**CSS内联样式**
 
+* 这次因为某些样式我们需要根据<mark class="hltr-orange">数据</mark>动态来决定;
+* 比如某段文字的颜色，大小等等;
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745582265000z7lha6.png)
+CSS property 名可以用<mark class="hltr-orange">驼峰式(camelCase)</mark>或<mark class="hltr-orange">短横线分隔(kebab-case，:记得用引号括起来</mark>)来命名;
 
+绑定class有两种方式:
 
+* 对象语法
+* 数组语法
 # 五、绑定style-对象、数组语法
 
 对象语法：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745582800000vnxfxt.png)
 
-数组语法：
+**数组语法：**
 
-* `:style` 的数组语法可以将多个样式对象应用到同一个元素上；
+* `:style` 的数组语法可以将<mark class="hltr-orange">多个样式对象</mark>应用到同一个元素上；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745582831000qicypx.png)
-
-
 # 六、动态绑定属性(了解)
 
 
@@ -67,7 +76,7 @@
 
 如果我们希望将一个**对象的所有属性**，绑定**到元素上的所有属性**，应该怎么做呢？ 
 
-*　非常简单，我们可以直接使用 **v-bind 绑定一个 对象；**
+* 非常简单，我们可以直接使用 **v-bind 绑定一个 对象；**
 
 案例：info对象会被拆解成div的各个属性
 

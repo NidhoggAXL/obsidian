@@ -25,7 +25,7 @@ Hello Vue案例的实现：
 
 通过script标签，引入刚才的文件：
 
-```
+```js
 <script src="../lib/vue.js"></script>
 ```
 
