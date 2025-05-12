@@ -10,12 +10,12 @@
 
 * 选项：watch 
 * 类型：`{ [key: string]: string | Function | Object | Array}`
-* 监听 data 里面的属性时，在 watch 里面的对应函数必须是和监听 data 的属性相同
+* 监听 data 里面的属性时，在 watch 里面的<mark class="hltr-orange">对应函数名必须是和监听 data 的属性相同</mark>
 * 监听会默认传入两个参数：参数一（新的属性值）、参数二（旧的参数值）
 
-**当然监听也有语法糖**：
+**当然监听也有语法糖**：[[01 认识事件处理#一、认识事件（Event）|handler]]
 
-```
+```js
 watch: {
 	//原编写
 	info: {
@@ -33,7 +33,7 @@ watch: {
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674183000tk8cr5.png)
 
 
-**案例二**：通过按钮来改变data里面的对象数据
+**案例二**：通过按钮来改变data里面的**对象数据**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674607000a84erw.png)
 

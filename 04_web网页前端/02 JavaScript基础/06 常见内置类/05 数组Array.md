@@ -76,7 +76,7 @@ console.log(bar)//['haha', 'hehe', 'b', 'c']
 
 **arr.splice 方法可以说是处理数组的利器，它可以做所有事情:添加，删除和替换元素。** ^c6d11c
 
-arr.splice的语法结构如下:(**重点使用**)
+arr.splice的语法结构如下:(**重点使用**) ^ffadfe
 
 `array.splice(start[,deleteCount[,iteml[,item2[,·..]]]])`
 
@@ -159,7 +159,7 @@ for (var item of message) {
 > 前面两种方法可以拿到索引值
 
 # 五、数组的方法-slice、concat、join
-arr.slice 方法:用于对数组进行截取(类似于字符串的slice方法)^aaa
+arr.slice 方法(片):用于对数组进行截取(类似于字符串的slice方法)^aaa
 
 * arr.slice`([begin[,end]])`
 * 包含begin元素，但是不包含end元素
@@ -392,7 +392,7 @@ console.log(newNum)
 
 arr.map
 
-* map()方法创建一个新数组;
+* map()方法创建**一个新数组;**
 * 这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成;
 
 ```js

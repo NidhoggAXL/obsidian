@@ -1,10 +1,12 @@
-# 一、计算属性 vs mesthods
+# 一、计算属性 VS mesthods
 
 会发现计算属性和methods的实现看起来是差别是不大的，而且我们多次提到计算属性<mark class="hltr-orange">有缓存</mark>的。
 
 * 接下来我们来看一下同一个计算多次使用，计算属性和methods的差异：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456613600007yzdl8.png)
+
+methods 中的 getName 调用了3次，而 pullName 却只是调用了一次。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745661368000e9kl3j.png)
 
