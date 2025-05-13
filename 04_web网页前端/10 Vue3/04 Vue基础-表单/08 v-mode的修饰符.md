@@ -36,7 +36,7 @@ lazy修饰符是什么作用呢？
 
 # 三、trim(修剪)
 
-如果要自动过滤用户输入的守卫空白字符，可以给v-model添加 **trim 修饰符：**
+如果要自动过滤用户输入的空白字符，可以给v-model添加 **trim 修饰符：**
 
 ```html
 <input type="text" v-model.trim="message" />
