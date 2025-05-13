@@ -51,7 +51,7 @@ Vue create 项目的名称
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746171100000a5jmag.png)
 
-2. 如果选择特性就会有如下的选项，按住空格选择一个，a选择全部
+2. 如果选择<mark class="hltr-orange">获取到特性</mark>就会有如下的选项，按住空格选择一个，a选择全部
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746171222000kcpsfh.png)
 

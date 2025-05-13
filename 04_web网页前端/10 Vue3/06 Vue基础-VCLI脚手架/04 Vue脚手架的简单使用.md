@@ -1,7 +1,7 @@
 # 一、使用全局脚手架
 
 ## 1.1 根组件挂在
-首相定义一个 product.vue 组件：会使用到 ES Module 里面的[[05 ES Module用法详解#六、default用法|ES module中export的defalut]]来进行<mark class="hltr-orange">导出</mark>
+首先定义一个 product.vue 组件：会使用到 ES Module 里面的[[05 ES Module用法详解#六、default用法|ES module中export的defalut]]来进行<mark class="hltr-orange">导出</mark>
 
 ```html
 <template>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+//默认导出
 export default {
  data() {
   return {
@@ -49,8 +50,8 @@ index.html 里面的文件格式：
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746178725000eqisbg.png)
 
 ## 1.2 其他组件挂在到根组件
+首先也是创建 demo.vue 组建：
 
-首相也是创建 demo.vue 组建：
 ```html
 <template>
  <h2>{{ title }}</h2>

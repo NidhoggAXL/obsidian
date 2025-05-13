@@ -52,17 +52,17 @@
 //components定义局部组件
 components: {
 // 自定义局部组件1
-'h1-compoent': {
-    template: '#h1-compoent-template',
+    'h1-compoent': {
+        template: '#h1-compoent-template',
 
-    // 再进行componets定义局部组件
-    components: {
-    // 在局部组件里面使用局部组件
-    'p-compoent': {
-    template: '#p-compoent-template'
+        // 再进行componets定义局部组件
+        components: {
+            // 在局部组件里面使用局部组件
+            'p-compoent': {
+            template: '#p-compoent-template'
+            }
+        }
     }
-    }
-}
 }
 ```
 

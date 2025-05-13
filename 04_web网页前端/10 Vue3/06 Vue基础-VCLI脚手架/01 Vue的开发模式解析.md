@@ -9,14 +9,14 @@
 * 在我们编写代码完成之后，依然需要<mark class="hltr-orange">通过工具对代码进行构建、代码</mark>； 
 
 
-所以在真实开发中，我们可以通过一个后<mark class="hltr-orange">缀名为 .vue </mark>的<mark class="hltr-orange">single-file components (单文件组件) </mark>来解决，并且可以使用 webpack或者vite或者rollup等构建工具来对其进行处理。
+所以在真实开发中，我们可以通过一个<mark class="hltr-orange">后缀名为 .vue </mark>的<mark class="hltr-orange">single-file components (单文件组件) </mark>来解决，并且可以使用 webpack或者vite或者rollup等构建工具来对其进行处理。
 
 
 # 二、单文件的特点
 这个组件中我们可以获得非常多的特性： 
 
 * 代码的高亮； 
-* ES6、CommonJS的模块化能力； 
+* ES6、[[02 CommonJS和Node|CommonJS]] 的模块化能力； 
 * 组件作用域的CSS； 
 * 可以使用预处理器来构建更加丰富的组件，比如 TypeScript、Babel、Less、Sass等；
 
