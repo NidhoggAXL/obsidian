@@ -89,7 +89,7 @@ xhr.onload = function() {
 xhr.responseType = "json"
 ```
 
-和responseText、responseXML的区别： 
+responseText、responseXML的区别： 
 
 * **早期通常服务器**返回的数据是**普通的文本和XML**，所以我们通常会通过responseText、 responseXML来获取响应结果； 
 * 之后将它们转化成JavaScript对象形式； 
