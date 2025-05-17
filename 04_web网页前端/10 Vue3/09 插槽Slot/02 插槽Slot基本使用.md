@@ -1,5 +1,32 @@
 # 一、插槽的基本使用
-要求是: App.vue 文件里面确定插槽的内容(例如按钮、图片)：
+**要求是: App.vue 文件里面确定插槽的内容(例如按钮、图片)：**
+
+组件的代码如下：
+
+```html
+<template>
+ <div class="show-message">
+   <h1>{{ message }}</h1>
+   <slot></slot>
+   <p>这是一个插槽的例子</p>
+ </div>
+</template>
+
+<script>
+export default {
+ props: {
+  message: {
+   type: String,
+   default: 'message的默认值'
+  }
+ }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
 
 ```html
 <template>
@@ -30,32 +57,7 @@ export default {
 </style>
 ```
 
-组件的代码如下：
 
-```html
-<template>
- <div class="show-message">
-   <h1>{{ message }}</h1>
-   <slot></slot>
-   <p>这是一个插槽的例子</p>
- </div>
-</template>
-
-<script>
-export default {
- props: {
-  message: {
-   type: String,
-   default: 'message的默认值'
-  }
- }
-}
-</script>
-
-<style scoped>
-
-</style>
-```
 
 页面效果：
 
