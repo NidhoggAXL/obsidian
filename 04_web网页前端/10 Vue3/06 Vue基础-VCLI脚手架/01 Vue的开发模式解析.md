@@ -22,6 +22,14 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17461676440008e975j.png)
 
+例如如果使用less的话可以添加 attribute 属性：
+
+```html
+<sytle lang="less" scoped>
+</style>
+```
+
+> vue默认是集成了less，但是在使用的时候还是需要下载less的[[10 Webpack打包Vue#App.vue的打包过程|loader]]
 # 三、如何支持SFC
 
 如果我们想要使用这一的SFC的.vue文件，比较常见的是两种方式：
