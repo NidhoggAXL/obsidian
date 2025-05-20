@@ -45,4 +45,22 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747665575000wu2j36.png)
 
+# 五、router-link
+
+router-link事实上有很多属性可以配置： 
+
+* to属性： 
+	* 是一个字符串，或者是一个对象 
+	* 目的确定占位路由是哪一个
+
+ * replace属性： 
+	 * 设置 replace 属性的话，当点击时，会调用 router.replace()，而不是 router.push()； 
+	 * 目的是不记录历史记录，当点击返回的时候会直接回到浏览器搜索页面
+	 
+ * active-class属性： 
+	 * 设置激活a元素后应用的class，默认是router-link-active 
+	 * 如果添加的 active-class 就会替换掉 router-link-active 的 class![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17477238300005sucie.png)
+	 
+ * exact-active-class属性：[[04 动态路由和路由嵌套#6.1 精准路由|路由嵌套的精准路由]] 
+	 * 链接精准激活时，应用于渲染的`<a>`的 class，默认是router-link-exact-active；
 
