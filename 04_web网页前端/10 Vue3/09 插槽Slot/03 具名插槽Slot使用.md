@@ -12,7 +12,7 @@
 * 具名插槽顾名思义就是给插槽起一个名字， <mark class="hltr-orange">元素有一个特殊的 attribute：name</mark>； 
 * 一个<mark class="hltr-orange">不带 name 的slot，会带有隐含的名字 default</mark>；
 	* `<solt></solt> 等价于 <solt name="default"></solt>`
-	* 在使用的时候如果不指定插槽名字就会默认使用不带name的插槽
+	* 在使用的时候如果不指定插槽名字就会默认使用name为default的插槽
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746780930000grg512.png)
 
