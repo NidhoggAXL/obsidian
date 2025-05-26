@@ -72,9 +72,7 @@ demo.vue 子组件：
 
 ```html
 <template>
- <div class="demo">
   <h2 class="title">demo里面的title</h2>
- </div>
 </template>
 
 <script>
