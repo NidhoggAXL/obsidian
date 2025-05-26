@@ -43,7 +43,7 @@ export default {
 
 可以通过$parent来访问父元素。 
 
-可以通过$root来访问父元素。 
+可以通过$root来访问根元素。 
 
 ```js
 console.log(this.$parent)
