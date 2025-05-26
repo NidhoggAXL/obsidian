@@ -52,7 +52,7 @@ export default {
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746259679000tek3zk.png)
 
-要解决这个问题,那么就需要在这是style的属性 
+要解决这个问题,那么就需要为style设置scoped（作用域）的属性
 
 * 本质是为元素自动添加不同的 <mark class="hltr-orange">data- 属性</mark>
 
