@@ -36,7 +36,7 @@ keep-alive有一些属性：
 
 * 但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件； 
 * 这个时候我们可以使用activated（活跃的） 和 deactivated（不活跃的） 这两个生命周期钩子函数来监听；
-	* acrivated - 进入组件
+	* activated - 进入组件
 	* deactivated - 离开组件
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746867298000y538hr.png)
