@@ -40,7 +40,7 @@ window对象在浏览器中可以从两个视角来看待:
 # 五、window常见的事件
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1729171808000e85cy4.png)
 
-哈希值是上面呢？
+哈希值是什么呢？
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1729171858000uh24r9.png)
 
