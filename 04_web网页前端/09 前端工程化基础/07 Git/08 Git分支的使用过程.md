@@ -59,7 +59,7 @@ blob 说明是一个二进制文件，如果要查看内容的话就是是用`gi
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745132030000nvp3yv.png)
 
-可以看出这连个文件，一个文件是存放着文件的索引，另一个是存放着提交的信息。
+可以看出这两个文件，一个文件是存放着文件的索引，另一个是存放着提交的信息。
 
 提交信息中有一个 tree 这个又是什么呢？这个就是提交的另外一个存放打印内容的文件（362f）。
 
@@ -148,7 +148,7 @@ git checkout master
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745137904000za56n8.png)
 
-3. 回退到 tag： v1.0.0 版本，创建并切换 hotfix 分支
+3. 回退到 tag： v1.0.0 版本，创建并切换到 hotfix 分支
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745138262000vixb5l.png)
 
