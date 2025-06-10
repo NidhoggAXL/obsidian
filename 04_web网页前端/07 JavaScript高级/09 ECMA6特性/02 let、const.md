@@ -49,7 +49,7 @@ let、const和var的另一个重要区别是作用域提升:
 </script>
 ```
 
-那么是不是意味着foo变量只有在代码执行阶段才会创建的呢?
+那么是不是意味着info变量只有在代码执行阶段才会创建的呢?
 
 * 事实上并不是这样的，我们可以看一下ECMA262对let和const的描述;
 * 这些变量会被创建在包含他们的词法环境被实例化时，但是是不可以访问它们的，直到词法绑定被求值:
@@ -114,7 +114,7 @@ let、const和var的另一个重要区别是作用域提升:
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1731851817000qxg4bk.png)
 
 > [!tip] 总结就是：
-> let、const、var声明的变量都保存在 Global Wnvironment Records（全局环境记录）中。
+> let、const、var声明的变量都保存在 Global Environment Records（全局环境记录）中。
 > * var 保存在全局环境记录的`[[ObjectRecord]]`就是 global object（全局对象-Window）
 > * let、const在全局环境记录的`[[DeclarativeRecord]]`(声明环境记录)
 
