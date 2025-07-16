@@ -12,7 +12,7 @@ Getters相当于Store的计算属性（compute）：
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748160187000qs25gb.png)
 
 
-Getters中访问自己的其他Getters：  我们可以<mark class="hltr-orange">通过this来访问到当前store实例的所有其他属性;</mark>
+Getters中访问自己的其他Getters：  我们可以<mark class="hltr-orange">通过this来访问到当前store实例的所有<mark class="hltr-red">其他属性</mark>;</mark>
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748160203000tzgu1m.png)
 

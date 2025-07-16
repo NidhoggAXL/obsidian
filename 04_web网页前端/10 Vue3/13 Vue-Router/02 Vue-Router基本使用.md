@@ -30,7 +30,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747664440000k1gyjt.png)
 
-我们在routes中又配置了一个映射： 
+我们在routes中又配置了一个映射： 
 
 * path配置的是根路径: `/` 
 * <mark class="hltr-orange">redirect是重定向</mark>, 也就是我们将根路径<mark class="hltr-orange">重定向到/home的路径下</mark>, 这样就可以得到我们想要的结果了.
