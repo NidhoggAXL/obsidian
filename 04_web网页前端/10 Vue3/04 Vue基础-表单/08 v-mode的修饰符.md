@@ -6,12 +6,12 @@ lazy修饰符是什么作用呢？
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746088724000v5r0du.png)
 
-# 二、numble(数字
+# 二、numble(数字)
 
 我们先来看一下v-model绑定后的值是什么类型的： 
 
 * message<mark class="hltr-orange">总是</mark> **string类型**，即使在**我们设置type为number也是string类型**；
-* 不管我们设置的类型是什么，v-model 也会默认为 **string类型
+* 不管我们设置的类型是什么，v-model 也会默认为 **string类型**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746089571000mog57w.png)
 

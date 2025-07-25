@@ -32,7 +32,7 @@ keep-alive有一些属性：
 
 # 三、缓存组件的生命周期
 
-对于缓存的组件来说，再次进入时，我们是<mark class="hltr-orange">不会执行created（组件创建完成）或者mounted（卸载组件）等生命周期函数</mark>的： 
+对于缓存的组件来说，再次进入时，我们是<mark class="hltr-orange">不会执行created（组件创建完成）或者mounted（挂载组件）等生命周期函数</mark>的： 
 
 * 但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件； 
 * 这个时候我们可以使用activated（活跃的） 和 deactivated（不活跃的） 这两个生命周期钩子函数来监听；

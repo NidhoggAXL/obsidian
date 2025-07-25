@@ -32,20 +32,20 @@
 # 二、flex布局的理解
 **两个重要的概念:**
 
-* 开启了 flex 布局的元素叫 flex container
+* 开启了 flex 布局的元素叫 flex container(容器)
 * flex container 里面的直接子元素叫做 flex item
 
 **当flex container中的子元素变成了flex item时,具备一下特点:**
 
 * flex item的布局将受flex container属性的设置来进行控制和布局
-* flex item**不再严格区分块级元素和行内级元素**;
-	* 可以理解为**行内块级元素**
+* flex item<mark class="hltr-orange">不再严格区分块级元素和行内级元素</mark>;
+	* 可以理解为<mark class="hltr-orange">行内块级元素</mark>
 * flex item默认情况下是包裹内容的,但是可以设置宽度和高度
 
 **设置 display 属性为 flex 或者inline-flex 可以成为 flex container**
 
 * flex: flex container 以 block-level 形式存在
-* inline-flex:flex container 以inline-level 形式存在
+* inline-flex:flex container 以 inline-level 形式存在
 
 > felx container 既可以是块级元素也可以是行内级元素。
 
@@ -63,7 +63,7 @@ item 默认按照主轴排列
 
 **应用在 flex container 上的 CSS 属性**
 
-* flex-flow（ditection 和wrap 的简写属性）
+* flex-flow（ditection 和 wrap 的简写属性）
 * flex-direction（主轴方向）
 * flex-wrap（单行还是多行显示）
 * justify-content（决定 main axis 上 item 的分布方式）
@@ -108,13 +108,13 @@ justigy-两端对齐
 * flex-start(**默认值**):与main start 对齐
 * flex-end:与main end 对齐
 * center:居中对齐
-* space-between:
+* space-between（空间在两者之间）:
 	* flex items 之间的距离相等
 	* 与 main start、main end两端对齐
-* space-around:
+* space-around（空间环绕）:
 	* flex items 之间的距离相等
 	* flex items 与 main start、main end 之间的距离是 flex items 之间距离的一半
-* space-evenly:
+* space-evenly（空间均匀分布）:
 	* flex items 之间的距离相等
 	* flex items与 main start、main end 之间的距离 等于 fex items 之间的距离
 
@@ -167,7 +167,7 @@ justigy-两端对齐
 * flex
 
 ## 5.1 order
-**order 决定了 fexitems 的排布顺序**
+**order 决定了 flex items 的排布顺序**
 
 * 在不改变 html 结构的同时进行排布
 * 可以设置**任意整数**(正整数、负整数、0)，值越小就越排在前面
@@ -177,7 +177,8 @@ justigy-两端对齐
 **flex items 可以通过 align-self 覆盖 flex  container 设置的 align-items**
 
 * auto(默认值):遵从fex container 的 align-items 设置
-* stretch、flex-start、flex-end、center、 baseline,:，效果跟 [[09 Flex布局#四、flex-container属性#4.6 align-iems|align-items]] 一致
+* stretch、flex-start、flex-end、center、 baseline,
+* 效果跟 [[09 Flex布局#四、flex-container属性#4.6 align-iems|align-items]] 一致
 
 ## 5.3 flex-grow
 **flex-grow 决定了 flex items 如何扩展(拉伸/成长)**
@@ -192,7 +193,7 @@ justigy-两端对齐
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1723877167000lgtge4.png)
 
-**flex items 扩展后的最终size 不能超过 `max-width\max-height`**
+**flex items 扩展后的最终size 不能超过 `max-width、max-height`**
 
 
 ## 5.4 flex-shrink
@@ -205,7 +206,7 @@ justigy-两端对齐
 
 * flex items 超出 fex container 的` size*收缩比例/所有 flex items 的收缩比例之和`
 
-**flexitems 收缩后的最终size 不能小于` min-width\min-height`**
+**flexitems 收缩后的最终size 不能小于` min-width、min-height`**
 
 ## 5.5 flex-basis
 **flex-basis用来设置flex items 在 main axis 方向上的 base size**
@@ -259,7 +260,9 @@ justigy-两端对齐
 > [!tip] 重点
 > flex 缩写属性具有一定的[[元素语义化及SEO#二、SEO|SEO]]，在使用过程中尽量使用缩写属性。
 
-# 六、flex 常见问题[](元素语义化及SEO.md#二、SEO) 如下布局如何解决对齐问题**
+# 六、flex 常见问题
+
+## 6.1 如下布局如何解决对齐问题
 
 让最后一排也依次排列
 
