@@ -351,4 +351,11 @@ watchFn(function () {
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753453646000alz9dw.png)
 
+# 十二、Vue3响应式原理
+
+Vue3主要是通过Proxy来监听数据的变化以及收集相关 的依赖的； 
+
+Vue2中通过我们前面学习过的Object.defineProerty 的方式来实现对象属性的监听；
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753453757000bhfgwh.png)
 

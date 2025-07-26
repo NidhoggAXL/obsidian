@@ -1,3 +1,4 @@
+
 # 一、认识自定义指令
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/175317359900028pw4l.png)
@@ -112,13 +113,14 @@ app.mount('#app')
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17534026310000oz20g.png)
 
+> [!info] modifiers - 修饰符
 ## 3.1 自定义指令练习
 
 自定义指令案例：时间戳的显示需求： 
 
 * 在开发中，大多数情况下从服务器获取到的都是时间戳； 
 * 我们需要将时间戳转换成具体格式化的时间来展示； 
-* 在Vue2中我们可以通过过滤器来完成； 
+* 在Vue2中我们可以通过[[03 JQuery的整体架构#四、jQuery过滤器（filtering）的API|过滤器]]来完成； 
 * 在Vue3中我们可以通过 计算属性（computed） 或者 自定义一个方法（methods） 来完成； 
 * 其实我们还可以通过一个自定义的指令来完成；
 
