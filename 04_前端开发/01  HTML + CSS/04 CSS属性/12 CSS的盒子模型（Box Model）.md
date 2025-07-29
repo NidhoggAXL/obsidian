@@ -489,7 +489,21 @@ border-box
 
 对比 content-box 和 boder-box
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1715671878000z0h0b7.png)
+<div style="
+  height: 500px; 
+  overflow-y: auto;
+  background: #fafafa;
+">
+  <img 
+    src="https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1715671878000z0h0b7.png" 
+    style="
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    "
+  />
+</div>
+
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1715671886000kxud6b.png)
 

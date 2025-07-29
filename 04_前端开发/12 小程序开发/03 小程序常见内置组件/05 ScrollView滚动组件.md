@@ -66,7 +66,6 @@ Page({
 }
 ```
 
-
 > [!tldr] 内容补充：
 > - scroll-view 有默认高度 120px
 > - scroll-view 要使用 flex 布局，要添加 enable-flex 属性
