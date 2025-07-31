@@ -13,7 +13,22 @@ Button组件用于创建按钮，默认**块级元素**
 
 # 三、open-type属性
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753599122000us5twv.png)
+
+
+<div style="
+  height: 500px; 
+  overflow-y: auto;
+  background: #fafafa;
+">
+  <img 
+    src="https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753599122000us5twv.png" 
+    style="
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    "
+  />
+</div>
 
 ## 3.1 获取用户的头像和名称
 

@@ -4,6 +4,8 @@
 
 # 二、WXSS支持的选择器
 
+[[09 伪类选择器|伪类选择器]]、[[10 伪元素（pseudo-elements）|伪元素]]
+
 <div style="
   height: 500px; 
   overflow-y: auto;

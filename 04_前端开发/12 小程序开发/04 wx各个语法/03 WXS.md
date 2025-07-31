@@ -15,6 +15,7 @@ WXS使用的限制和特点：
 	- <mark class="hltr-orange">但是可以调用 JavaScript 中 ES5 的 API</mark>
 - 由于运行环境的差异，在 iOS 设备上小程序内的 WXS 会比 JavaScript 代码快 2 ~ 20 倍。在 android 设备 上二者运行效率 无差异；
 
+
 >[!note] 为什么 WXS 是和 JavaScript 代码是隔离的。
 >小程序是双线程的架构，一个线程是进行页面渲染的，一个页面是运行 js 代码的，而 **WXS 的运行环境是在页面渲染的线程中，就不会接触 js 代码。**
 >- 在 WXS 的运行环境中不要编写大量逻辑代码，会影响页面的渲染
@@ -33,7 +34,7 @@ WXS有两种写法：
 每一个 .wxs 文件和`<wxs>`标签都是一个单独的模块。 
 
 - 每个模块都有自己独立的作用域。即在一个模块里面定义的变量与函数，**默认为私有**的，对其他模块不可见；
-- 一个模块要想对外暴露其内部的私有变量与函数，只能通过 [[02 CommonJS和Node#四、module.exports导出|module.wxports]] 实现；
+- 一个模块要想对外暴露其内部的私有变量与函数，只能通过 [[02 CommonJS和Node#四、module.exports导出|module.exports]] 实现；
 
 
 # 三、WXS语法案例练习

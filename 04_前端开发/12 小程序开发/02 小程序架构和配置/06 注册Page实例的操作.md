@@ -15,11 +15,25 @@
 
 # 二、注册Page时做什么？
 
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753579808000tla2nn.png)
 
 # 三、Page页面的生命周期
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17535800140002xaxws.png)
+<div style="
+  height: 700px; 
+  overflow-y: auto;
+  background: #fafafa;
+">
+  <img 
+    src="https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17535800140002xaxws.png" 
+    style="
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    "
+  />
+</div>
 
 
 

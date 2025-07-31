@@ -75,7 +75,7 @@ favor 页面的结构文件中（favor.wxml）中编写结构：
 
 ## 2.3 下拉修改data数据
 
-favor 页面配置文件中（favor.json）添加：`"enablePullDownRefresh": true`
+favor 页面配置文件中（favor.json）添加：`"enablePullDownRefresh": true`-应许下来刷新
 
 favor 页面的逻辑文件中（favor.js）中编写逻辑：
 
