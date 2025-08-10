@@ -37,7 +37,7 @@
 * 这个**对象内部的`[[prototype]]`（显式属性）属性会被赋值为该类的`prototype`（隐式原型）属性；** 
 * 构造函数内部的this，会指向创建出来的新对象； 
 * 执行构造函数的内部代码（函数体代码）； 
-* 如果构造函数没有返回非空对象，则返回创建出来的新对象；
+* 如果构造函数**没有返回非空对象**，则返回创建出来的新对象；
 
 ```js
 <script>
@@ -85,7 +85,7 @@
   }
   
   var stu = new Persong("axl", 18)
-  console.log(stu)
+  console.log(stu)//Persong {name: 'axl', age: 18
   stu.running()//running
 </script>
 ```
@@ -143,7 +143,7 @@
 </script>
 ```
 
-> 每个传入的 name 都可以进行监听，这就是比起 对象访问器 的好处，每一个对象都是可以进行监听的。
+> [!tip] 每个传入的 name 都可以进行监听，这就是比起 [[01 Object.defineProperty|对象访问器]] 的好处，每一个对象都是可以进行监听的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1731571328000xa5b0j.png)
 
