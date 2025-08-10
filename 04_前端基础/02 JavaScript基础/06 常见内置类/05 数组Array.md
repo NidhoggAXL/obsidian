@@ -144,7 +144,7 @@ var message = ["abc", "nba", "cba"]
 for (var i = 0; i < message.length; i++) {
   console.log(message[i])
 }
-
+	
 //2.for in
 for (var index in message) {
   console.log(index, message[index])

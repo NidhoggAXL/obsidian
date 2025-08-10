@@ -30,8 +30,8 @@ promis.then().then().then().catch()
 
 Promise有三种状态，那么这个Promise处于什么状态呢？ 
 
-* 当then方法中的回调**函数本身在执行的时候**，那么它处于[[03 Promise状态变化|pending]]状态； 
-* 当then方法中的回调函数返回一个结果时，那么它处于[[03 Promise状态变化|fulfilled]]状态，并且会将**结果作为resolve的参数**；
+* 当then方法中的回调**函数本身在执行的时候**，那么它处于[[03 Promise状态变化#一、Promise的代码结构|pending]]状态； 
+* 当then方法中的回调函数返回一个结果时，那么它处于[[03 Promise状态变化#一、Promise的代码结构|fulfilled]]状态，并且会将**结果作为resolve的参数**；
 	* 情况一：返回一个普通的值； 
 	* 情况二：返回一个Promise； 
 	* 情况三：返回一个thenable值；
@@ -121,6 +121,8 @@ catch方法也是Promise对象上的一个方法（实例方法）：
   }).catch((err) => {
     console.log("第二次回调" ,err)
   })
+ 
+//第二次cath不会执行
 </script>
 ```
 

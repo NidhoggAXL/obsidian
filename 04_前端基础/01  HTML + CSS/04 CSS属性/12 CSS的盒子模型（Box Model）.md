@@ -477,7 +477,7 @@ content-box
 * padding、border都布置在width、height外边
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1715670232000je7hoo.png)
-
+	
 
 border-box
 * padding、border都布置在width、height里边

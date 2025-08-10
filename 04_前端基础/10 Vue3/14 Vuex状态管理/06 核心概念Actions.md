@@ -16,8 +16,10 @@ Action类似于mutation，不同在于：
 # 二、actions的分发操作
 如何使用action呢？进行action的分发： 
 
-* 分发使用的是 store 上的dispatch函数；![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747988849000wpi09m.png)
-* 同样的，它也可以携带我们的参数：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747989007000myy5po.png)
+* 分发使用的是 store 上的dispatch函数；
+	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747988849000wpi09m.png)
+* 同样的，它也可以携带我们的参数：
+	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747989007000myy5po.png)
 * 也可以以对象的形式进行分发：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17479890220004r2bxy.png)
 
 # 三、actions的辅助函数

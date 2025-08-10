@@ -72,25 +72,43 @@ Page({
   // 提交信息（通过表单提交）
   submitUserInfo(e) {
     // 从表单事件中获取昵称值
-    const nickname = e.detail.value.nickname
+    const nickname = e.detail.value.nickname;
     
     // 更新数据并验证
     this.setData({ nickname }, () => {
-      if (!this.data.avatarUrl || !nickname) {
+      if (!this.data.avatarUrl || !this.data.nickname) {  // 使用 this.data.nickname
         wx.showToast({ title: '请完善信息', icon: 'none' })
-        return
+        return;
       }
       
-      // 实际提交逻辑
-      console.log('用户信息:', {
-        avatar: this.data.avatarUrl,
-        nickname: nickname
-      })
-      
-      wx.showToast({ title: '提交成功' })
-    })
+      // 实际提交逻辑 - 修复存储API使用方式
+      wx.setStorage({
+        key: 'userInfo',
+        data: {
+          avatar: this.data.avatarUrl,
+          nickname: this.data.nickname
+        },
+        success: () => {
+          // 提交成功后提示并跳转
+          wx.showToast({ 
+            title: '提交成功',
+            icon: 'success',
+            duration: 1500
+          });
+          
+          // 延迟跳转让用户看到提示
+          setTimeout(() => {
+            wx.navigateBack()
+          }, 1000);
+        },
+        fail: (err) => {
+          console.error('存储失败:', err);
+          wx.showToast({ title: '提交失败', icon: 'error' });
+        }
+      });
+    });
   }
-})
+});
 ```
 
 ```css

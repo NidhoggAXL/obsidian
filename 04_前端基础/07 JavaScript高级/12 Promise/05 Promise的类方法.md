@@ -33,7 +33,7 @@ Promise.reject("axl")
 new Promise((resolve, resolve) => reject("axl"))
 ```
 
-Promise.reject传入的参数无论是什么形态，都会直接作为reject状态的参数传递到catch的。
+Promise.reject传入的参数**无论是什么形态**，都会直接作为reject状态的参数传递到catch的。
 
 
 # 三、all方法-重点
@@ -43,7 +43,7 @@ Promise.reject传入的参数无论是什么形态，都会直接作为reject状
 * 它的作用是**将多个Promise包裹在一起形成一个新的Promise**； 
 * 新的Promise状态由包裹的**所有Promise共同决定**： 
 
-当**所有的**Promise状态变成fulfilled状态时，新的Promise状态为fulfilled，并且会**将所有Promise的返回值组成一个数组**； 
+当**所有的**Promise状态变成[[03 Promise状态变化|fulfilled状态]]时，新的Promise状态为fulfilled，并且会**将所有Promise的返回值组成一个数组**； 
 
 ```js
 <script>
