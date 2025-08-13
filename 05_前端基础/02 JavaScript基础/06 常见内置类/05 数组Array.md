@@ -23,6 +23,8 @@ console.log(arr[-1])//undefined
 
 # 二、数组的操作
 
+## 2.1 at查找
+
 数组的基本操作：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17276157470003ic7qi.png)
@@ -36,9 +38,9 @@ console.log(message.at(-1))//"123"
 console.log(message[-1])//undefined
 ```
 
-**开发中基本都是使用方法来操作：**
+## 2.2 push、pop
 
-在数组的尾端添加或删除元素
+**开发中基本都是使用方法来操作：** 在数组的尾端添加或删除元素
 
 * push() 在末端添加元素
 * pop() 从末端取出一个元素（**每次只能是一个**）
@@ -56,6 +58,7 @@ bar.pop()
 console.log(bar)//['a', 'b', 'c']
 ```
 
+## 2.3 shift、unsshift
 
 在数组的首端添加或删除元素
 
@@ -74,6 +77,8 @@ console.log(bar)//['haha', 'hehe', 'b', 'c']
 
 >push/pop 方法运行的比较快，而shift/unshift 比较慢。(这和数组在内存中地址依次排列有关）
 
+## 2.4 splice利器
+
 **arr.splice 方法可以说是处理数组的利器，它可以做所有事情:添加，删除和替换元素。** ^c6d11c
 
 arr.splice的语法结构如下:(**重点使用**) ^ffadfe
@@ -81,7 +86,7 @@ arr.splice的语法结构如下:(**重点使用**) ^ffadfe
 `array.splice(start[,deleteCount[,iteml[,item2[,·..]]]])`
 
 * 从**start**索引位置开始，处理数组中的元素;
-* **deleteCount**:要删除元素的个数，如果为0或者负数表示不删除;
+	* **deleteCount**:要删除元素的个数，如果为0或者负数表示不删除;
 * **item1,item2,…** 在添加元素时，需要添加的元素;
 
 ```js

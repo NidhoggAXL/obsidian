@@ -53,7 +53,7 @@ Storage有如下的属性和方法：
 
 
 方法： 
-～
+
 * Storage.key(index)：该方法接受一个数值n作为参数，返回存储中的第n个key名称； 
 * Storage.getItem()：该方法接受一个key作为参数，并且返回key对应的value； 
 * Storage.setItem()：该方法接受一个key和value，并且将会把key和value添加到存储中。 
