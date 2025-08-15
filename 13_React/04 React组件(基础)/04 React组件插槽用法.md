@@ -5,7 +5,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175513368300063aq0q.png)
 
-这种需求在Vue当中有一个固定的做法是通过slot来完成的，React呢？
+这种需求在Vue当中有一个固定的做法是通过[[02 插槽Slot基本使用|slot]]来完成的，React呢？
 
 React对于这种需要插槽的情况非常灵活，有两种方案可以实现： 
 

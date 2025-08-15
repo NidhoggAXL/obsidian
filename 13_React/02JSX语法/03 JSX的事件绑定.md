@@ -43,7 +43,7 @@
 
 ![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754985873000e3f9zq.png)
 
-> React 做的本质就是把 this.btnClick() 的执行结果给返回了，并没有执行 btnClik 本身。
+> React 在这里做的本质就是把 this.btnClick() 的执行结果给返回了，并没有执行 btnClik 本身。
 # 三、事件参数传递
 在执行事件函数时，有可能我们需要获取一些参数信息：比如event对象、其他参数 
 

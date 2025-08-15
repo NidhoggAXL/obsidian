@@ -40,7 +40,7 @@ React的组件相对于Vue更加的灵活和多样，按照不同的方式可以
 
 **使用class定义一个组件**： 
 
-- constructor是可选的，我们通常在constructor中初始化一些数据；
+- **constructor是可选的**，我们通常在constructor中初始化一些数据；
 - this.state中维护的就是我们组件内部的数据； 
 - **render()** 方法是 class 组件中**唯一必须实现的方法**；
 

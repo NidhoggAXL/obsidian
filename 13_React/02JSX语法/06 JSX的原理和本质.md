@@ -71,11 +71,11 @@
 如何查看ReactElement的树结构呢？ 
 
 - 我们可以将之前的jsx返回结果进行打印； 
-- 注意下面代码中我打jsx的打印；
+- 注意下面代码中jsx的打印；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755002867000il1wlp.png)
 
-**而ReactElement最终形成的树结构就是Virtual DOM；**
+> **而ReactElement最终形成的树结构就是Virtual DOM；**
 
 # 五、jsx–虚拟DOM–真实DOM
 
@@ -89,7 +89,7 @@
 React官方的说法：Virtual DOM 是一种编程理念。 
 
 - 在这个理念中，UI以一种理想化或者说虚拟化的方式保存在内存中，并且它是一个相对简单的JavaScript对象 
-- 我们可以通过ReactDOM.render让 虚拟DOM 和 真实DOM同步起来，这个过程中叫做协调（Reconciliation）； 
+- 我们可以通过ReactDOM.render让 **虚拟DOM** 和 **真实DOM同步起来**，这个过程中叫做**协调（Reconciliation）**； 
 
 这种编程的方式赋予了React声明式的API： 
 

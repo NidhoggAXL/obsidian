@@ -11,7 +11,7 @@
 
 JSX是什么？ 
 
-- JSX是一种JavaScript的语法扩展（eXtension），也在很多地方称之为JavaScript XML，因为看起就是一段XML语法； 
+- JSX是一种JavaScript的语法扩展（extension），也在很多地方称之为JavaScript XML，因为看起就是一段XML语法； 
 - 它用于描述我们的UI界面，并且其完成可以和JavaScript融合在一起使用； 
 - 它不同于Vue中的模块语法，你不需要专门学习模块语法中的一些指令（比如v-for、v-if、v-else、v-bind）；
 

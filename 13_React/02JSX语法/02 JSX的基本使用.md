@@ -56,7 +56,7 @@ jsx绑定属性
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175497924100096ilrm.png)
 
-> [!info] 不可以使用 font-size ，只可以使用小驼峰编写
+> [!info] 不可以使用 font-size ，只可以使用小驼峰编写fontSize
 
 > [!warning] Object不可以作为子元素，但是属性编写可以使用 Object
 

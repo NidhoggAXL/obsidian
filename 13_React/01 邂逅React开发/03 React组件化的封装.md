@@ -21,7 +21,7 @@
 
 参与界面更新的数据我们也可以称之为是**参与数据流**，这个数据是定义在当前对象的state中 
 
-- 我们可以通过在构造函数中 this.state = {定义的数据} 
+- 我们可以通过在构造函数中 **this.state = {定义的数据}** 
 - 当我们的数据发生变化时，我们可以**调用 this.setState 来更新数据**，并且通知React进行update操作； 
 	- 在进行update操作时，就会**重新调用render函数**，并且使用最新的数据，来**渲染界面**
 
@@ -54,7 +54,7 @@
 
 如果有多个元素，都是使用到这个 btnClik 的实例方法，那么编写起来就会太麻烦啦，每次都要使用 bind 进行绑定，所有就有了下面这种编写方式：
 
-- 提前对 btnClik 进行正确的绑定，后面在进行使用的时候就不需要进行 bind 绑定
+- 提前对 btnClik 进行正确的绑定，并添加到 App 实例属性中，直接调用属性方法。
 - 在构造的 constructor 的时候就进行一个绑定。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754832507000qfianj.png)
