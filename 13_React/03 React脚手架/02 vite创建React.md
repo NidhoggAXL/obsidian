@@ -1,4 +1,4 @@
-# 一、创建方式Vite
+# 一、创建方式
 
 创建React项目的命令如下： 
 
@@ -168,4 +168,26 @@ function ConstantsDemo() {
 }
 ```
 
+
+
+## 2.2 主要文件结构
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17550690070001fdnb9.png)
+
+上面的导出也可以是
+
+```jsx
+import ReactDOM form 'react-dom/client'
+import App from './App.jsx'
+
+ReactDOM.createRoot(document.getElementByid('root')).render(<App />)
+```
+
+为什么可以这样呢?**其实是进行了多次导出的**
+
+```js
+export function createRoot(){}
+
+export default ReactDOM;
+```
 
