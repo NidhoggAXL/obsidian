@@ -69,7 +69,7 @@ React在props或state发生改变时，会调用React的render方法，会创建
 
 React给我们提供了一个生命周期方法 <mark class="hltr-orange">shouldComponentUpdate（很多时候，我们简称为SCU）</mark>，这个方法接受参数，并且需要有 返回值： 
 
-![[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]]
+![[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]
 
 **比如我们在App中增加一个message属性：** 
 
@@ -146,7 +146,7 @@ export default Home
 ```jsx
 import React, { memo } from 'react'
 
-memo(
+const Banner = memo(
   function Banner() {
     return (
       <div>Banner</div>
@@ -161,6 +161,8 @@ export default Banner
 
 要修改 this.state 里面的数据，都需要进行一个拷贝在操作，操作附件，完成后再把附件赋值给 this.state 。
 
-就算是深层的内容改变，也要先进行拷贝，操作附件
+就算是深层的内容改变，也要先进行拷贝，操作附件，这种不可以对原数据的直接改变的方式就成为不可变数据的力量。
+
+
 
 

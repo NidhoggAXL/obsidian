@@ -20,7 +20,7 @@
 * **type**:事件的类型;
 * **target**:当前事件发生的元素;
 * **currentTarget**:当前处理事件的元素
-* **eventPhase**:事件所处的阶段[[02 事件冒泡捕获#^d8d748]]
+* **eventPhase**:事件所处的阶段[[02 事件冒泡捕获#^d8d748|冒泡、捕获]]
 * offsetX、offsetY:事件发生在元素内的位置;
 * clientX、clientY:事件发生在客户端内的位置;
 * pageX、pageY:事件发生在客户端相对于document的位置:
@@ -30,7 +30,7 @@
 >* target 是事件发生的源头
 >* currentTarget 是当前通过事件冒泡处理的元素
 
-```js
+```html
 <div class="box">
   <button data-action="add">增加</button>
   <button data-action="remove">删除</button>
@@ -49,10 +49,9 @@
 点击删除按钮：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1734166703000dgo5i5.png)
+	
 
-
-常见的方法:
-
-* preventDefault:取消事件的默认行为;
-	* 例如 a 元素的跳转 URL
-* stopPropagation:阻止事件的进一步传递(冒泡或者捕获都可以阻止)
+> [!tip] **常见的方法**:
+> * preventDefault:取消事件的默认行为;
+> 	* 例如 a 元素的跳转 URL
+> * stopPropagation:阻止事件的进一步传递(冒泡或者捕获都可以阻止)

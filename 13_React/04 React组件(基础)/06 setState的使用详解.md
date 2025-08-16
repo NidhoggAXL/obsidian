@@ -13,7 +13,7 @@
 	- 就算调用 setState 里面**并没有数据进行更改**，**默认情况下也是会进行重新渲染的**
 	- 到底要不要渲染，可以进行设置[[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]来判断
 
-疑惑:在组件中并没有实现setState的方法，为什么可以调用呢?
+**疑惑**:在组件中并没有实现setState的方法，为什么可以调用呢?
 
 - 原因很简单，setState方法是从Component中继承过来的。
 
@@ -30,7 +30,7 @@ this.setState({ key: value })
 **用法二**：回调函数修改 state 里面的值
 
 - 可以对 state、props 进行一些处理在进行修改，减少要对其改变而再次创建函数
-- setState 第一个参数中，不过是什么拿到的都是修改前的 state 
+- setState 第一个参数中，拿到的都是修改前的 state 
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755169552000ue5xaj.png)
 
@@ -38,6 +38,7 @@ this.setState({ key: value })
 **用法三**：传入第二个参数，要求是一个回调函数
 
 - 可以进行逻辑的编写，以及修改完成的确定
+- 这个回调函数只会等前面修改完之后才会回调后面的函数
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551698130001z1khf.png)
 
