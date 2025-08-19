@@ -76,3 +76,32 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 这个时候，我们就可以使用高阶组件来完成鉴权操作：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755303942000x1tboj.png)
+
+# 四、高阶组件的意义
+
+我们会发现利用高阶组件可以针对某些React代码进行更加优雅的处理。 
+
+其实早期的React有提供组件之间的一种复用方式是mixin，**目前已经不再建议使用**： 
+
+- Mixin 可能会相互依赖，相互耦合，不利于代码维护； 
+- 不同的Mixin中的方法可能会相互冲突； 
+- Mixin非常多时，组件处理起来会比较麻烦，甚至还要为其做相关处理，这样会给代码造成滚雪球式的复杂性； 
+
+当然，HOC也有自己的一些缺陷： 
+
+- HOC需要在原组件上进行包裹或者嵌套，如果大量使用HOC，将会产生非常多的嵌套，这让调试变得非常困难； 
+- HOC可以劫持props，在不遵守约定的情况下也可能造成冲突；
+
+# 五、ref转发
+
+在前面我们学习ref时讲过，ref不能应用于函数式组件： 
+
+- 因为函数式组件没有实例，所以不能获取到对应的组件对象 
+
+但是，在开发中我们可能想要获取函数式组件中某个元素的DOM，这个时候我们应该如何操作呢？ 
+
+- 方式一：直接传入ref属性（错误的做法） 
+- 方式二：通过forwardRef高阶函数；
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755305639000iwwqtl.png)
+
