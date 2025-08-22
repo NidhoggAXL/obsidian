@@ -33,6 +33,7 @@ ref 的值根据节点的类型而有所不同：
 函数式组件是没有实例的，所以无法通过ref获取他们的实例： 
 
 - 但是某些时候，我们可能想要获取函数式组件中的某个DOM元素； 
-- 这个时候我们可以通过 [[04 React的高阶组件#五、ref转发|React.forwardRef]] ，后面我们也会学习 hooks 中如何使用ref；
+- 这个时候我们可以通过 [[04 React的高阶组件#五、ref转发|React.forwardRef]] ，后面我们也会学习 hooks 中如何使用[[05 Ref和LayoutEffect|ref]]；
+
 
 

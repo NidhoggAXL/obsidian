@@ -98,10 +98,15 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 
 - 因为函数式组件没有实例，所以不能获取到对应的组件对象 
 
-但是，在开发中我们可能想要获取函数式组件中某个元素的DOM，这个时候我们应该如何操作呢？ 
+但是，在开发中我们可能想要获取**函数式组件中某个元素的DOM**，这个时候我们应该如何操作呢？ 
 
 - 方式一：直接传入ref属性（错误的做法） 
-- 方式二：通过forwardRef高阶函数；
+- 方式二：通过forwardRef高阶函数,让父组件传入[[05 Ref和LayoutEffect|ref]]；
+
+```jsx
+//父组件传入ref到forwordRef的第二个参数
+<Home ref={ref} />
+```
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755305639000iwwqtl.png)
 

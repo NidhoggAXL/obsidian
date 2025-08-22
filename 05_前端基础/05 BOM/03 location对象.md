@@ -20,10 +20,10 @@ location对象用于表示window上当前链接到的URL信息。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1729172429000o0j6bc.png)
 
-location有如下常用的方法:
+**location有如下常用的方法:**
 
-* assign:赋值一个新的URL，并且跳转到该URL中;
-* replace:打开一个新的URL，并且跳转到该URL中(不同的是不会在浏览记录中留下之前的记录)
+* **assign**:赋值一个新的URL，并且跳转到该URL中;
+* **replace**:打开一个新的URL，并且跳转到该URL中(不同的是不会在浏览记录中留下之前的记录)
 * reload:重新加载页面，可以传入一个Boolean类型:
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1734177400000kh3gwt.png)

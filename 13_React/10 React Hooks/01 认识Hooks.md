@@ -1,0 +1,68 @@
+
+# 一、为什么需要Hook
+
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17557368160004v5unj.png)
+
+# 二、Class组件存在的问题
+
+**复杂组件变得难以理解：** 
+
+- 我们在最初编写一个class组件时，往往逻辑比较简单，并不会非常复杂。但是**随着业务的增多**，我们的**class组件会变得越来越复杂**； 
+- 比如[[02 React组件生命周期#2.3 常用生命周期|componentDidMount]]中，可能就会包含大量的逻辑代码：包括**网络请求、一些事件的监听**（还需要在 componentWillUnmount中移除）； 
+- 而对于这样的class实际上非常难以拆分：因为它们的**逻辑往往混在一起**，强行拆分反**而会造成过度设计，增加代码的复杂度**；
+
+**难以理解的class：** 
+
+- 很多人发现学习ES6的class是学习React的一个障碍。 
+- 比如在class中，我们必须搞清楚[[01 this的绑定规则|this的指向]]到底是谁，所以需要花很多的精力去学习this； 
+- 虽然我认为前端开发人员必须掌握this，但是依然处理起来非常麻烦；
+
+**组件复用状态很难：** 
+
+- 在前面为了一些状态的复用我们需要通过[[04 React的高阶组件|高阶组件]]；
+- 像我们之前学习的**redux中connect或者react-router中的withRouter**，这些高阶组件设计的目的就是为了**状态的复用**； 
+- 或者类似于Provider、Consumer来共享一些状态，但是多次使用[[05 React非父子的通信|Consumer]]时，我们的代码就会存在很多嵌套； 
+- 这些代码让我们不管是编写和设计上来说，都变得非常困难；
+
+# 三、Hook的出现
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738427000agz03o.png)
+
+# 四、计数器案例对比
+
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738463000fmngra.png)
+
+
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738467000e8w5y7.png)
+
+你会发现上面的代码差异非常大： 
+
+- 函数式组件结合hooks让整个代码变得非常简洁 
+- 并且再也不用考虑this相关的问题；
+
+# 五、useState解析
+
+那么我们来研究一下核心的一段代码代表什么意思： 
+
+- useState来自react，需要从react中导入，它是一个hook； 
+	- 参数：初始化值，如果不设置为undefined； 
+	- 返回值：数组，包含两个元素； 
+		- **元素一**：当前状态的值（第一调用为初始化值）； 
+		- **元素二**：设置状态值的函数； 
+- 点击button按钮后，会完成两件事情： 
+	- 调用setCount，设置一个新的值； 
+	- 组件重新渲染，并且根据新的值返回DOM结构；
+
+**Hook 就是 JavaScript 函数，这个函数可以帮助你 钩入（hook into） React State以及生命周期等特性；**
+
+但是使用它们会有两个额外的规则： 
+
+- 只能在函数最外层调用 Hook。**不要在循环、条件判断或者子函数中调用**。 
+- 只能在 React 的函数组件中调用 Hook。**不要在其他 JavaScript 函数中调用**。
+
+
+> [!tip] 术语
+> - Hook指的类似于useState、 useEffect这样的函数 
+> - Hooks是对这类函数的统称
+

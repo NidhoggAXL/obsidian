@@ -4,9 +4,9 @@
 * img元素，设置src属性； 
 * 其他元素（比如div），设置background-image的css属性；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174463329600033sox8.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174463329600033sox8.png)
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744633303000427tvn.png)
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744633303000427tvn.png)
 
 **这个时候打包会出现错误**
 
@@ -44,7 +44,7 @@ test:/\.(png|svg|jpe?g|gif)$/i
 
 打包后文件：（会把图片转换为代码的格式嵌入到打包的 js 文件中)
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744634051000plf97o.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744634051000plf97o.png)
 
 网页中的显示样子：(可以看出是**一种使用 base64 的算法进行格式为浏览器认识的代码**，这样就可以显示到页面)
 
@@ -57,9 +57,9 @@ asset/source 导出资源的源代码
 
 现代的浏览器已经**不在识别这种的打包格式**：（虽然可以打包）
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744634380000709hyr.png)
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744634380000709hyr.png)
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744634389000zidn0n.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744634389000zidn0n.png)
 
 ## asset(开发使用)
 asset 在导出一个 data URI 和发送一个单独的文件之间**自动选择**。
