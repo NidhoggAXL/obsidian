@@ -1,4 +1,5 @@
 # 一、CommonJS规范和Node关系
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174377017300082pbm6.png)
 
 # 二、模块化案例
@@ -44,7 +45,7 @@ console.log(name)//coderwhy
 console.log(name === exports.name)//false
 ```
 
-> 只是 exports.name 地址发生了改变，可以理解为指向name的**地址发生改变**，**但是 exports 地址没有发生改变，里面没有进行重新定义的数据也不会发生改变。**
+> 只是 exports.name 地址发生了改变，可以理解为指向name的**地址发生改变**，**但是 exports 对象地址没有发生改变，里面没有进行重新定义的数据也不会发生改变。**
 
 ```js
 let name = 'axl'
@@ -82,11 +83,19 @@ module.exports和exports有什么关系或者区别呢？
 
 
 > [!node] 那么肯定会产生怀疑，Node也支持CommonJS，那么已经有一个expots为还要设置一个module.exports呢？
+> 
 > 这是因为在导出的时候Node会查询 module.exports ，通过 exports 也可以导出，是因为 module.exports 和 exports 是同一个引用，
-**如果改变 exports 的引用地址的话就不可以进行导出了。**![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743837746000h69zrx.png)
-**但是改变 modele.exports 的地址引用，还是可以进行导入的（Node是查看 module.exports)**![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743837928000mv8b3o.png)
+> 
+> **如果改变 exports 的引用地址的话就不可以进行导出了。**
+> 
+> ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743837746000h69zrx.png)
+> 
+> **但是改变 modele.exports 的地址引用，还是可以进行导入的（Node是查看 module.exports)**
+> 
+> ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743837928000mv8b3o.png)
 
 # 五、CommonJS缺点
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17438436360000oz6yc.png)
 
 [[04 AMD和CMD(了解)]]

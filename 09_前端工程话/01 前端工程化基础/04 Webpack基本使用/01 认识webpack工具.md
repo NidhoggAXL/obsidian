@@ -1,14 +1,14 @@
+# 一、认识webpack
 
-# 认识webpack
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17442030780006r5wvj.png)
 
-# 脚手架依赖webpack
+# 二、脚手架依赖webpack
 
 事实上我们上面提到的所有脚手架都是依赖于webpack的：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744203107000aecpx2.png)
 
-# Webpack到底是什么呢？
+# 三、Webpack到底是什么呢？
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744204059000wvz3fj.png)
 

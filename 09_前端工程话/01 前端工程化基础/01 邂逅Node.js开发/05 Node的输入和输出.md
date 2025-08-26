@@ -1,4 +1,5 @@
 # 一、Node程序传递参数
+
 正常情况下执行一个node程序，直接跟上我们对应的文件即可
 
 ```
@@ -35,6 +36,7 @@ node index.js (env=development coderwhy)-传递的参数
 
 
 # 二、Node的输出
+
 console.log（掌握这个，其他了解）
 
 * 最常用的输入内容的方式:console.log
@@ -50,10 +52,11 @@ console.trace
 还有一些其他的方法，其他的一些console方法，可以自己在下面学习研究一下： https://nodejsorg/dist/latest-v16.x/docs/api/console.html
 
 # 三、Node的REPL(了解)
+
 什么是REPL呢?感觉挺高大上
 
 * REPL是Read-Eval-Print Loop的简称，翻译为“读取-求值-输出”循环
-* REPL是一个简单的、交互式的编程环境事实上，我们浏览器的console就可以看成一个REPL。
+* REPL是一个简单的、交互式的编程环境事实上，我们**浏览器的console就可以看成一个REPL**。
 
 事实上，我们浏览器的console就可以看成一个REPL。
 

@@ -17,7 +17,7 @@
 
 
 # 三、Node.js架构
-我们编写的JavaScript代码会经过V8引擎，再通过Node.js的Bindings，将任务放到Libuv的事件循环中
+我们编写的JavaScript代码会经过V8引擎，再通过Node.js的Bindings，将任务放到 **Libuv(链路)** 的事件循环中
 
 libuv(Unicorn Velociraptor-独角伶盗龙)是使用C语言编写的库
 

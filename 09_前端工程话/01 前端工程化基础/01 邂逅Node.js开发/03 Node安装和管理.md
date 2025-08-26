@@ -1,5 +1,5 @@
 # 一、Node.js的安装
-Node.js是在2009年诞生的，目前最新的版本是分别是LTS16.15.1以及Current18.4.0:
+Node.js是在2009年诞生的，2022年5月目前最新的版本是分别是LTS16.15.1以及Current18.4.0:
 
 * **LTS版本**:(Long-term support,长期支持)相对稳定一些，推荐线上环境使用该版本;
 * **Current版本**:最新的Node版本，包含很多新特性;
@@ -18,7 +18,7 @@ Node的安装方式有很多:
 
 * window选择,msi安装包，Mac选择.pkg安装包，Linux会在后续部署中讲解
 * 安装过程中会配置环境变量(让我们可以在命令行使用)
-* 并且会安装npm(Node Package Manager)工具;
+* 并且会安装**npm(Node Package Manager)-节点包管理**工具;
 
 # 二、Node的版本工具(了解)
 在实际开发学习中，我们只需要使用一个Node版本来开发或者学习即可。
@@ -35,7 +35,7 @@ Node的安装方式有很多:
 
 Window的同学怎么办?
 
-* 针对nvm，在GitHub上有提供对应的window版本:https://githuk?.com/coreybutler/nvm-windows
+* 针对nvm，在GitHub上有提供对应的window版本:https://github.com/coreybutler/nvm-windows
 * 通过 nvm install latest 安装最新的node版本
 * 通过 nvm list 展示目前安装的所有版本
 * 通过 nvm use 切换版本
