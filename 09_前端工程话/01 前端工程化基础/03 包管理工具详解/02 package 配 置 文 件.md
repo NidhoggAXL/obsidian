@@ -61,15 +61,15 @@ main属性：
 	* 它们是等价的； 
 	* 对于常用的 start、 test、stop、restart可以**省略掉run**直接通过 npm start等方式运行；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744114255000o3dp53.png)
+![gh|700](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744114255000o3dp53.png)
 
-**dependencies属性：** 
+**dependencies(依赖项)属性：** 
 
 * dependencies属性是指定**无论开发环境还是生成环境都需要依赖的包**； 
 * 通常是我们**项目实际开发用到的一些库模块vue、vuex、vue-router、react、react-dom、axios**等等； 
 * 与之对应的是devDependencies；
 
-**devDependencies属性：**
+**devDependencies(开发依赖)属性：**
 
 * 一些包在生成环境是不需要的，比如webpack、babel等； 
 * 这个时候我们会通过 `npm install webpack --save-dev`，将它安装到devDependencies属性中；
@@ -79,7 +79,7 @@ main属性：
 > [!tip] 开发环境和生成环境
 > ![[开发环境和生成环境|500]]
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744115050000jf19jk.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744115050000jf19jk.png)
 
 
 peerDependencies属性：
@@ -92,7 +92,24 @@ peerDependencies属性：
 
 # 四、依赖版本管理
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744116203000n4bevv.png)
+我们会发现安装的依赖版本出现:^2.0.3或~2.0.3，这是什么意思呢?
+
+npm的包通常需要遵从semver版本规范:
+
+- semver: https://semver.org/lang/zh-CN/anpm 
+- semver:https://docs.npmjs.com/misc/semver
+
+**semver版本规范是X.Y.Z:**
+
+- X主版本号(major)当你做了不兼容的 API修改(可能不兼容之前的版本)当你做了向下兼容的功能性新增(新功能增加，但是兼容之前的版本)
+- Y次版本号(minor)当你做了向下兼容的问题修正(没有新功能，修复了之前版本的bug);
+- Z修订号(patch)
+
+**我们这里解释一下 `^` 和 `~` 的区别:**
+
+ - **`x.y.z`**:表示一个明确的版本号
+- **`^x.y.z`**:表示x是保持不变的，y和z永远安装最新的版本
+- **`~x.y.z`**:表示x和y保持不变的，z永远安装最新的版本
 
 ## 4.1 常见属性(了解)
 

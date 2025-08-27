@@ -1,4 +1,5 @@
 # 一、npm install 命令
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744117135000x5a7ci.png)
 
 
@@ -10,7 +11,7 @@
 
 # 二、项目安装
 
-项目安装会在当前目录下生成一个 node_modules 文件夹，require查找顺序时有讲解过这个包在什么情况下被 查找； 
+项目安装会在当前目录下生成一个 node_modules 文件夹，[[03 require函数解析|require]] 查找顺序时有讲解过这个包在什么情况下被 查找； 
 
 局部安装分为开发时依赖和生产时依赖：
 
@@ -18,12 +19,13 @@
 
 
 # 二、npm install 原理 
+
 执行 npm install它背后帮助我们完成了什么操作？ 
 
 * 我们会发现还有一个称之为**package-lock.json的文件**，它的作用是什么？ 
 * 从npm5开始，**npm支持缓存策略（来自yarn的压力），缓存有什么作用**呢？ 
 
-一幅画出的根据 npm install 的原理图：
+	一幅画出的根据 npm install 的原理图：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174411881300083kntu.png)
 

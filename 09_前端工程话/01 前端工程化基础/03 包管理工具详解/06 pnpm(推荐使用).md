@@ -10,6 +10,7 @@
 ![[pnpm出现前的疼点|600]]
 
 # 二、什么是pnpm呢？
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744184802000ngrbnd.png)
 
 
@@ -26,11 +27,11 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744186125000rpouyb.png)
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744186133000fnu5da.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744186133000fnu5da.png)
 
 在 VS Coder 中有小箭头的就表示软连接：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744189184000nx1w5n.png)
+![gh|300](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744189184000nx1w5n.png)
 
 
 # 四、硬链接和软连接的演练
@@ -87,7 +88,7 @@ macos: ln -s 原文件 拷贝文件
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744198611000t5sqgn.png)
 
 
-同时在 Window 在 C 盘和 文件所在的盘都有一份硬链接数据。
+同时 Window 在 C 盘和 文件所在的盘都有一份硬链接数据。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744198507000g93cid.png)
 

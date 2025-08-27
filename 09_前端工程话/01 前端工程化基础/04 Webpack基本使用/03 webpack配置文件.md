@@ -1,4 +1,4 @@
-# Webpack配置文件
+# 一、Webpack配置文件
 
 在通常情况下，webpack需要打包的项目是非常复杂的，并且我们需要一系列的配置来满足要求，默认配置必然是不可以的。
 
@@ -18,7 +18,8 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17443534160002vrq3a.png)
 
-# 指定配置文件
+# 二、指定配置文件
+
 但是如果我们的配置文件并不是 webpack.config.js 的名字，而是其他的名字呢？ 
 
 * 比如我们将webpack.config.js修改成了 aoao.config.js； 
@@ -35,7 +36,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17443538170002opuzs.png)
 
 
-# webpack的依赖图
+# 三、webpack的依赖图
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17443547190005z6qym.png)
 

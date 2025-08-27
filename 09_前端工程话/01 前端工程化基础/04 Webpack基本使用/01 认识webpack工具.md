@@ -12,27 +12,28 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744204059000wvz3fj.png)
 
-# Webpack官方的图片
+# 四、Webpack官方的图片
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744204070000cgetov.png)
 
 
-# Vue项目加载的文件有哪些呢？
+# 五、Vue项目加载的文件有哪些呢？
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17442041030001p4l3m.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17442041030001p4l3m.png)
 
-# Webpack的使用前提
-webpack的官方文档是https://webpack.js.org/ 
+# 六、Webpack的使用前提
 
-* webpack的中文官方文档是https://webpack.docschina.org/ 
+webpack的官方文档是: https://webpack.js.org/ 
+
+* webpack的中文官方文档是: https://webpack.docschina.org/ 
 * DOCUMENTATION：文档详情，也是我们最关注的
 
 Webpack的运行是依赖**Node环境**的，所以我们电脑上必须有Node环境 
 
-* 所以我们需要先安装Node.js，并且同时会安装npm；
-* Node官方网站：https://nodejs.org/
+* 所以我们需要先[[03 Node安装和管理|安装Node.js]]，并且同时会安装npm；
+* Node官方网站: https://nodejs.org/
 
-# webpack的安装
+# 七、webpack的安装
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744204241000qx0rh3.png)
 

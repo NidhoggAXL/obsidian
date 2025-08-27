@@ -1,4 +1,5 @@
-# 认识PostCSS工具
+# 一、认识PostCSS工具
+
 可以借助于构建工具： 
 
 * 在webpack中使用postcss就是使用postcss-loader来处理的；
@@ -12,7 +13,7 @@ npm install postcss-loader -D
 我修改加载css的loader：（配置文件已经过多，给出一部分了） 
 * 注意：因为postcss需要**有对应的插件**才会起效果，所以我们需要配置它的plugin；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744552929000jcsax2.png)
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744552929000jcsax2.png)
 
 比如在使用 webpack 打包工具后的 `user-select: none;` 属性，在有些浏览器中不适配的需要添加前缀，这里我们就可以使用 postcss 的 autoprefixer 来添加前缀
 
@@ -26,7 +27,8 @@ npm install postcss-loader -D
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744553565000mkcf4r.png)
 
 
-# 单独的postcss配置文件
+# 二、单独的postcss配置文件
+
 因为我们需要添加前缀，所以要安装autoprefixer：
 
 ```
@@ -37,15 +39,16 @@ npm install autoprefixer -D
 
 * 在**根目录下**创建postcss.config.js
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744553228000bhft2n.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744553228000bhft2n.png)
 
 这个时候在 webpack.config.js 中就不用把 postcss 的配置信息放到那里了：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744553323000jv6o17.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744553323000jv6o17.png)
 
 
-# postcss-preset-env
-事实上，在配置postcss-loader时，我们配置插件并不需要使用autoprefixer。
+# 三、postcss-preset-env
+
+事实上，在配置postcss-loader时，我们配置插件并不需要使用 **autoprefixer**。
 
 我们可以使用另外一个插件：postcss-preset-env 
 

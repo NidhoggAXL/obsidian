@@ -1,4 +1,5 @@
-# Mode配置
+# 一、Mode配置
+
 前面我们一直没有讲mode。 
 
 Mode配置选项，可以告知webpack使用相应模式的内置优化： 
@@ -12,7 +13,7 @@ Mode配置选项，可以告知webpack使用相应模式的内置优化：
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744721804000p9opak.png)
 
 
-# Mode配置代表很多
+# 二、Mode配置代表很多
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17447218230006804gj.png)
 
