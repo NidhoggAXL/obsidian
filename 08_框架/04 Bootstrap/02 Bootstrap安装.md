@@ -42,20 +42,23 @@ Bootstrap框架的CDN地址
 当引入了 Bootstrap 框架以后，CSS文件的 box-size的属性值都设置为border-box。[[12 CSS的盒子模型（Box Model）#十一、CSS属性 box-sizing|box-sizing属性]]
 
 # 三、方式二：下载源码
+
 Bootstrap框架的下载
 
 * Bootstrap下载地址:https://v4.bootcss.com/docs/getting-started/download
 * jQuery下载地址:https://jquery.com/download/
 
-忝加重要的全局配置
+添加重要的全局配置
 
 * HTML5 文档类型(doctype 或 DOCTYPE)Bootstrap 要求文档类型(doctype)是HTML5。
 * 添加视口**viewport**(shrink-to-fit 是为了兼容 Safari9 以后版本，禁止页面的伸缩)
-* **integrity**:防止资源被篡改，篡改了将不加载;crossorigin:加载不同源的资源时，是否需要需带用户凭证(cookie，证书)
+* **integrity**:防止资源被篡改，篡改了将不加载;
+* **crossorigin**:加载不同源的资源时，是否需要需带用户凭证(cookie，证书)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1741953549000pgtwy4.png)
 
 # 四、Bootstrap软件包内容
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1741953740000xvuuxk.png)
 
 

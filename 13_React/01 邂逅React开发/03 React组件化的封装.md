@@ -22,6 +22,7 @@
 参与界面更新的数据我们也可以称之为是**参与数据流**，这个数据是定义在当前对象的state中 
 
 - 我们可以通过在构造函数中 **this.state = {定义的数据}** 
+- 在 constructor 里面必须调用 [[02 extends实现继承#二、super关键字|super()]] 函数。
 - 当我们的数据发生变化时，我们可以**调用 this.setState 来更新数据**，并且通知React进行update操作； 
 	- 在进行update操作时，就会**重新调用render函数**，并且使用最新的数据，来**渲染界面**
 
@@ -29,9 +30,7 @@
 
 # 三、事件绑定
 
-**事件绑定中的this** ：
-
-- 在类中直接定义一个函数，并且将这个函数绑定到**元素的onClick事件**上，当前这个函数的this指向的是谁呢？ 
+**事件绑定中的this** ： 在类中直接定义一个函数，并且将这个函数绑定到**元素的onClick事件**上，当前这个函数的this指向的是谁呢？ 
 
 默认情况下是**undefined** 
 
@@ -57,7 +56,7 @@
 - 提前对 btnClik 进行正确的绑定，并添加到 App 实例属性中，直接调用属性方法。
 - 在构造的 constructor 的时候就进行一个绑定。
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754832507000qfianj.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754832507000qfianj.png)
 
 
 

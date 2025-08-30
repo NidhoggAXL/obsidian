@@ -1,4 +1,5 @@
 # 一、React开发依赖
+
 开发React必须依赖三个库： 
 
 - **react**：包含react所必须的核心代码 
@@ -14,10 +15,10 @@
 
 为什么要进行拆分呢？**原因就是react-native**。 
 
-- react包中包含了react web和react-native所共同拥有的核心代码。 
+- react包中包含了react-web和react-native所共同拥有的核心代码。 
 - **react-dom**针对web和native所**完成的事情不同**： 
 	- web端：react-dom会将jsx最终渲染成真实的DOM，显示在浏览器中 
-	- native端：react-dom会将jsx最终渲染成原生的控件（比如Android中的Button，iOS中的UIButton）。
+	- native端：react-dom会将jsx最终渲染成**原生的控件**（比如Android中的Button，iOS中的UIButton）。
 
 # 二、Babel和React的关系
 
@@ -46,7 +47,7 @@ React和Babel的关系：
 
 - 这里有一个**crossorigin的属性**，这个属性的**目的是为了拿到跨域脚本的错误信息**
 
-```js
+```html
   <!-- React 核心库 -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   
@@ -74,7 +75,7 @@ root.render函数:
 
 - 参数：要渲染的根组件 
 
-我们可以通过 **{}语法**来引入外部的变量或者表达式
+我们可以通过 **{}语法** 来引入外部的变量或者表达式
 
 **现在添加一个按钮，通过按钮来改变内容：**
 
