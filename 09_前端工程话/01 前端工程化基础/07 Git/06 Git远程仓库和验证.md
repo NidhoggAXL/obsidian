@@ -1,14 +1,16 @@
 # 一、什么是远程仓库？
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448924110001jyrw9.png)
+
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448924110001jyrw9.png)
 
 **服务器和Git服务器的关系：**
 
 * Git 服务器是搭建在 一台服务器 上面的，**并不是说有专门的一种服务器是Git服务器**
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744892487000wkqk2w.png)
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744892487000wkqk2w.png)
 
 
 # 二、远程仓库的验证(gitee)
+
 常见的远程仓库有哪些呢？目前比较流行使用的是三种： 
 
 * GitHub：https://github.com/ 
@@ -25,6 +27,7 @@
 * 方式二：基于**SSH的密钥**；
 
 ## 2.1 凭证
+
 因为本身HTTP协议是**无状态的连接**，所以每一个连接都需要用户名和密码： 
 
 * 如果每次都这样操作，那么会非常麻烦； 
@@ -38,7 +41,7 @@
 >
 **是 cookie 做了记录，并不是HTTP**
 
-有一些 Git Crediential 的选项可以解决上面的问题： 
+有一些 **Git Crediential(凭证)** 的选项可以解决上面的问题： 
 
 * 选项一：默认所有都不缓存。 每一次连接都会询问你的用户名和密码； 
 * 选项二：“cache” 模式会将凭证存放在内存中一段时间。 密码永远不会被存储在磁盘中，并且在15分钟后从内存中清除； 
@@ -52,13 +55,13 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174489745600000shjq.png)
 
-这样就可以不用每次都要输入凭证啦
+> [!note] 这样就可以不用每次都要输入凭证啦
 
 ### 2.1.1 从远程仓库clone操作
 
 复制登录的 HTTP 凭证
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448982520002na8x1.png)
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448982520002na8x1.png)
 
 在 git bash 中输入命令进行 clone:
 
@@ -71,6 +74,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448983650005bd56p.png)
 
 ### 2.1.2 push到远程仓库
+
 对 clone 的文件进行修改，并 `git commit -a -m "测试"`操作
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448985400007n8xld.png)
@@ -98,15 +102,17 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744899302000ccv0i3.png)
 
-> 这样就可以明显的看出来，子文件的改变了。
+> [!warning] 这样就可以明显的看出来，子文件的改变了。
 
 
 ## 2.2 删除凭证
+
 在 window 控制面板中就可以删除凭证：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744899570000wihdzi.png)
 
 ## 2.3 SSH密钥
+
 Secure Shell（安全外壳协议，简称SSH）是一种加密的网络传输协议，可在不安全的网络中为网络服务提供安全的传输环境。 
 
 SSH以**非对称加密实现身份验证**。 
@@ -132,6 +138,7 @@ ssh-keygen -t rsa -b 2048 -C "your email"
 * -C： 后面是 自己的邮箱（**C要大写**）
 
 ### 2.3.1 生成SHH密钥
+
 生成SHH的公钥和私钥
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744901103000i8lqhg.png)
@@ -148,32 +155,36 @@ ssh-keygen -t rsa -b 2048 -C "your email"
 点击确定，输入密码后就添加成功公钥了
 
 ### 2.3.3 本地私钥进行clone
+
 复制 SHH 的密钥进行 clone
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744901541000zn8qjp.png)
 
 ### 2.3.4 私钥进行push
+
 后续的修改和 HTTP 相同的 push 操作相同
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17449017000001yedki.png)
 
 
 # 三、管理远程服务器
+
 查看远程地址：比如我们之前从Gitee上clone下来的代码，它就是有自己的远程仓库的：
 
 ```
 git remote 
 git remote –v 
 -v是—verbose的缩写(冗长的)
+remote - 远程的
 ```
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174495510500028x8ij.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744955119000hip052.png)
 
-添加远程地址：我们也可以继续添加远程服务器（让本地的仓库和远程服务器仓库建立连接）：
+**添加远程地址**：我们也可以继续添加远程服务器（让本地的仓库和远程服务器仓库建立连接）：
 
-```
+```bash
 git remote add
 git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 ```
@@ -194,13 +205,15 @@ git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 
 > There is no tracking information for the current branch.
 > 当前分支机构没有跟踪信息。
+> 
 > Please specify which branch you want to merge with.
 > 请指明需要合并的分支
 
 ## 3.1 本地分支的上游分支(跟踪分支)
-问题一:当前分支没有track的分支
 
-原因:当前分支没有和远程的 origin/master 分支进行跟踪
+**问题一**:当前分支没有track的分支
+
+**原因**:当前分支没有和远程的 origin/master 分支进行跟踪
 
 * 在没有跟踪的情况下，我们直接执行pul操作的时候必须指定从哪一个远程仓库中的哪一个分支中获取内容;
 * 前面已经更改了远程仓库在本地的名字，所以要使用 demo 而不是 origin。
@@ -212,6 +225,7 @@ git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744967055000ymhff6.png)
 
 ## 3.2 拒绝合并不相干的历史
+
 3.1 设置了分支，是否可以进行pull了呢？还是会有错误
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744967147000xd8ham.png)
@@ -224,7 +238,7 @@ git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744967950000w1nhpi.png)
 
-```
+```bash
 git merge --allow-unrelated-histories
 ```
 
@@ -236,6 +250,7 @@ git merge --allow-unrelated-histories
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744982451000mx3r8r.png)
 
 # 四、远程仓库的交互
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17449826920003oqp2r.png)
 
 # 五、远程仓库总结
@@ -251,12 +266,13 @@ git push //提交本地仓库信息到远程
 ## 5.2 开发一个全新项目
 
 ### 5.2.1 本地无项目
-先创建一个远程的仓库，在从远程clone下来[[06 Git远程仓库和验证#五、远程仓库总结#5.1 从远程仓库直接clone项目|项目]]，在进行项目的搭建
+
+先创建一个[[06 Git远程仓库和验证#五、远程仓库总结#5.1 从远程仓库直接clone项目|远程的仓库]]，在从远程clone下来项目，在进行项目的搭建
 
 ### 5.2.2 本地有项目
 #### 第一种方式
 
-```
+```bash
 git remote add origin 远程仓库地址
 git fetch
 git branch --set-upstream-to=origin/master(github上面是main)
@@ -265,29 +281,25 @@ git config push.default upstream
 git push
 ```
 
-git remoter add origin xxx：和远程仓库建立连接，这个时候只是建立了连接，当是**本地并不知道建立连接的远程仓库的分支是什么。**
+- git remoter add origin xxx：和远程仓库建立连接，这个时候只是建立了连接，但是**本地并不知道建立连接的远程仓库的分支是什么。**
 
-git fetch：将远程仓库的内容下载到本地的 .git 文件（**并没有和本地文件进行合并**）
+- git fetch：将远程仓库的内容下载到本地的 .git 文件（**并没有和本地文件进行合并**）
 
+- git branch --set-upstream-to=origin/master(**github上面是main**)：这是设置本地分支的上游分支是远程仓库的 origin/master(github上面是main) 分支（**让本地知道远程仓库的分支**）
+	-  **这个操作之前，一定要进行`get fetch`操作，不然就会报如下的错误。**
+		- 如果不进行`get fetch`操作就会报下面的错误：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745148716000iqmzyi.png)
+		* 意思是：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745148756000bqjdy3.png)
 
-
-git branch --set-upstream-to=origin/master(**github上面是main**)：这是设置本地分支的上游分支是远程仓库的 origin/master(github上面是main) 分支（**让本质知道远程仓库的分支**）
-
-* **这个操作之前，一定要进行`get fetch`操作，不然就会报如下的错误。**
-* 如果不是就会报下面的错误：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745148716000iqmzyi.png)
-* 意思是：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745148756000bqjdy3.png)
-
-git merge --allow-unrelated-histories：就是对于不相关的历史进行合并
+- **`git merge --allow-unrelated-histories`**：就是对于不相关的历史进行合并
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451503570006zc2td.png)
 
-git config push.default upstream：更改本地的配置文件，**使得 push 的默认为上游分支**
-
-* 这个操作也可以不做，只是后面进行 push 操作的时候要选定push的位置例如`git push origin/master`
+- **git config push.default upstream**：更改本地的配置文件，**使得 push 的默认为上游分支**
+	* 这个操作也可以不做，只是后面进行 push 操作的时候要选定push的位置例如`git push origin/master`
 
 #### 第二种方式
 
-```
+```bash
 git remote add origin 远程仓库地址
 git fetch
 git branch --set-upstream-to=origin/master(github上面是main)
@@ -298,11 +310,12 @@ git push
 
 **当然还有一种更加方便的解决办法**：在本地创建一个跟踪远程分支的分支
 
-```
+```bash
 git checkout --track origin/main
 ```
 
-> 这样本地就会有一个 main 的分支是跟踪远程 main 分支了,这个时候就可以对 master 分支进行删除（也可以不删除）。![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451509870002zslh8.png)
+> 这样本地就会有一个 main 的分支是跟踪远程 main 分支了,这个时候就可以对 master 分支进行删除（也可以不删除）。
+> ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451509870002zslh8.png)
 
 如果要**删除本地的** master 分支，必须使用分支的[[08 Git分支的使用过程#八、查看和删除分支|强制删除]]
 
@@ -311,25 +324,40 @@ git checkout --track origin/main
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451512620001m1xrn.png)
 
 # 六、开源协议
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174498344400022rn7v.png)
 
-MIT 是使用最多的（**最宽松**）
-
+> [!tip] MIT 是使用最多的（**最宽松**）
 
 # 七、github的ssh和http错误
+
 从github中进行clone操作，本地开启了代理报如下两个错误怎么解决：
 
-2.  进行ssh的clone操作，错误是
+**进行ssh的clone操作，错误:**
 
->ssh: connect to host github.com port 22: Connection refused
->fatal: Could not read from remote repository.
+```text
+ssh: connect to host github.com port 22: Connection refused
+连接到主机github.com端口22：连接被拒绝
+
+fatal: Could not read from remote repository.
+无法从远程存储库读取。
+```
 
 >[!tip] 原因以及解决
-> 原因就是![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17450582030008tmot7.png)
-> 解决办法就是在![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745058361000zamfsl.png)
+> **原因就是**：国内并非普遍屏蔽SSH的22端口，只是在某些特定场景和网络环境下会进行限制，主要有以下原因:
+> 
+> - **安全风险**:SSH的默认端口22经常成为黑客攻击的目标。黑客可利用针对特定版本SSH的CVE漏洞、进行密码字典攻击、会话劫持等方式来获取服务器访问权限。
+> - **网络策略**:一些单位和机构为了加强网络安全管理，会制定严格的网络访问策略，限制对某些端口的访问。例如，医院、高校、科研单位等通常会部署防火墙，对网络流量进行管控，SSH协议因其专业性和潜在风险，往往被防火墙限制访问。
+> - **误判风险**:SSH协议的加密特性虽然提高了安全性，但也增加了其在网络中的识别难度，容易被防火墙误判为潜在的安全威胁而进行拦截。
+> - 不过，在很多情况下，如果有合法的需求，经过申请和审批流程，或者在一些私有网络、受信任的环境中，22端口也可以是开放的，以满足远程管理等正常业务需求。
+> 
+> **解决办法就是在**
+> 
+> ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745058361000zamfsl.png)
 
 
-3.  进行https的clone操作，错误是
+ **进行https的clone操作，错误是:**
+ 
 >fatal: unable to access 'https://github.com/NidhoggAXL/obsidian.git/': Failed to connect to github.com port 443 after 2087 ms: Could not connect to server
 
 这个错误就是国内的一些运营商对访问做了一定的截取，也有解决的办法但是太过麻烦。

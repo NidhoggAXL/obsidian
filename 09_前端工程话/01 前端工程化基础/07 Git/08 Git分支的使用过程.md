@@ -1,12 +1,13 @@
 # 一、git和commit的本质
+
 几乎所有的版本控制系统都以某种形式支持分支。 
 
 * 使用分支意味着你可以把你的工作从开发主线上分离开来，以免影响开发主线。
 
-在进行提交操作时，Git 会保存一个**提交对象**（commit object）： 
+在进行**提交操作时**，Git 会保存一个**提交对象**（commit object）： 
 
 * 该提交对象会包含一个指向**暂存内容**快照的指针； 
-* 该提交对象还包含了作者的姓名和邮箱、提交时输入的信息以及指向它的父对象的指针； 
+* 该提交对象还包含了作者的姓名和邮箱、提交时输入的信息以及**指向它的父对象的指针**； 
 	* 首次提交产生的提交对象**没有父对象**，普通提交操作产生的提交对象有一个父对象； 
 	* 而由多个分支合并产生的提交对象有多个父对象；
 
@@ -33,9 +34,9 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745131712000lcx3pi.png)
 
 
-会多出两个文件夹，并且文件夹里面存放的东西是二进制的格式，要查看里面的内容需要使用 `git cat-file -t` 查看文件格式（这个命令默认 查看的就是 objects 里面的文件）。
+会多出两个文件夹，并且文件夹里面存放的东西是二进制的格式，要查看里面的内容需要使用 `git cat-file -t` 查看文件格式（这个命令默认查看的就是 objects 里面的文件）。
 
-```
+```bash
 git cat-file -t objects中文件的文件夹名+文件名（可以省略后面多位）
 ```
 
@@ -70,20 +71,22 @@ blob 说明是一个二进制文件，如果要查看内容的话就是是用`gi
 **会发现提交时的校验和（commit id）就是 2348 ，存放着两个打印文件索引的文件。**
 
 # 二、git master分支
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745133774000scxiu9.png)
 
 可以通过下面命令来查看处于那个分支(branch)：
 
-```
+```bash
 git branch
 ```
 
 # 三、Git创建分支
+
 Git 是怎么创建新分支的呢？  很简单，它只是为你创建了一个可以移动的新的指针；
 
 比如，创建一个 testing 分支， 你需要使用 git branch 命令：
 
-```
+```bash
 git branch testing
 ```
 
@@ -98,26 +101,28 @@ git branch testing
 
 切换指针使用命令(**本质是切换HEAD指针的指向**):
 
-```
+```bash
 git checkout testing
 ```
 
 > [!tip] 补充
-git checkout 也可以通过标签（tag）进行切换`git checkout v1.0.0`,但是不能更改代码。（tag只是一个标记，更改要到一个工作流里面（分支））
-如果需要更改的话，那必须在切换后，创建一个分支，这样才可以进行修改代码。
+> 
+> git checkout 也可以通过标签（tag）进行切换`git checkout v1.0.0`,但是不能更改代码。（tag只是一个标记，更改要到一个工作流里面（分支））
+> 
+> 如果需要更改的话，那必须在切换后，创建一个分支，这样才可以进行修改代码。
 
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451339330000or5hw.png)
 
-
 # 四、Git分支提交
+
 如果我们指向某一个分支，并且在这个分支上提交：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451340700007w0f7q.png)
 
 你也可以切换回到master分支，继续开发：
 
-```
+```bash
 git checkout master
 ```
 
@@ -126,16 +131,20 @@ git checkout master
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745134445000f51uda.png)
 
 # 五、创建分支同时切换
+
 创建新分支的同时切换过去 
 
 * 通常我们会在创建一个新分支后立即切换过去； 
 * 这可以用 `git checkout -b 新的分支名` 一条命令搞定；
 
+
 # 六、为什么需要使用分支呢？
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745137351000piuqc6.png)
 
 
-# 七、分支开发和合并
+	# 七、分支开发和合并
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745137396000wdksrv.png)
 
 来看一下流程：
@@ -169,7 +178,7 @@ git checkout master
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745139076000upttjk.png)
 
-> 在进行合并的时候，这个时候代码内容回增加一些标识：
+> [!tip] 在进行合并的时候，这个时候代码内容回增加一些标识：
 >* 第一种手动：通过手动更改来进行对代码的更改
 >* 第二种自动：在 vs coder 中会智能的更改，可以在 vs coder 里面进行选择。
 
@@ -182,6 +191,7 @@ git checkout master
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745139644000yagdkx.png)
 
 # 八、查看和删除分支
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745140536000qj3xtv.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745140668000luhuzh.png)
