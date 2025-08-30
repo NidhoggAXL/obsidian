@@ -55,7 +55,7 @@
 
 **从 React v15.5 开始，React.PropTypes 已移入另一个包中：prop-types 库**
 
-```
+```bash
 npm install prop-sypes
 ```
 

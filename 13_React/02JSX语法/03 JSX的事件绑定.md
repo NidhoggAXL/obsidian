@@ -1,8 +1,8 @@
 # 一、React事件绑定
 
-如果原生DOM原生有一个监听事件，我们可以如何操作呢？ 
+如果原生DOM有一个监听事件，我们可以如何操作呢？ 
 
-- 方式一：获取DOM原生，添加监听事件； 
+- 方式一：获取DOM原生，添加[[01 认识事件处理|监听事件]]； 
 - 方式二：在HTML原生中，直接绑定onclick；
 
 在React中是如何操作呢？我们来实现一下React中的事件监听，这里主要有两点不同 
@@ -43,7 +43,7 @@
 
 ![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754985873000e3f9zq.png)
 
-> React 在这里做的本质就是把 this.btnClick() 的执行结果给返回了，并没有执行 btnClik 本身。
+>[!tip] React 在这里做的本质就是把 this.btnClick() 的执行结果给返回了，并没有执行 btnClik 本身。
 # 三、事件参数传递
 在执行事件函数时，有可能我们需要获取一些参数信息：比如event对象、其他参数 
 
@@ -60,7 +60,7 @@
 点击不同的 movies 列表，更具点击改变点击的颜色：
 
 <div style="
-  height: 500px; 
+  height: 700px; 
   overflow-y: auto;
   background: #fafafa;
 ">

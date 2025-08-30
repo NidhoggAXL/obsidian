@@ -151,7 +151,7 @@
 
 静态方法通常用于定义直接使用类来执行的方法，不需要有类的实例，使用static关键字来定义：
 
-```js
+```html
 <script>
   class Person {
     constructor(age) {

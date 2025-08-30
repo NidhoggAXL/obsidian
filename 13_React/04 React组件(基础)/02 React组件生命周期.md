@@ -160,6 +160,6 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755160716000qz8tka.png)
 
 
-另外，React中还提供了一些过期的生命周期函数，这 些函数已经不推荐使用。 更详细的生命周期相关的内容，可以参考官网： https://zh-hans.reactjs.org/docs/reactcomponent.html
+另外，React中还提供了一些过期的生命周期函数，这些函数已经不推荐使用。 更详细的生命周期相关的内容，可以参考官网： https://zh-hans.reactjs.org/docs/reactcomponent.html
 
 

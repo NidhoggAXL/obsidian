@@ -5,13 +5,13 @@
 - 注意：项目名称不能包含大写字母 
 - 另外还有更多创建项目的方式，可以参考GitHub的readme
 
-```
+```bash
 npm create vite@latest my-app -- --template react
 ```
 
 创建完成后，进入对应的目录，就可以将项目跑起来：
 
-```
+```bash
 cd my-app
 npm install
 npm run dev

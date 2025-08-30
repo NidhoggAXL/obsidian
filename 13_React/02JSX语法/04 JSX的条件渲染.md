@@ -17,7 +17,8 @@
 
 ```jsx
 <div>
-{ friends && <div>{friends.name + " " + friends.desc}</div> }</div>
+  { friends && <div>{friends.name + " " + friends.desc}</div> }
+</div>
 ```
 
 - **v-show的效果** ：主要是控制display属性是否为none

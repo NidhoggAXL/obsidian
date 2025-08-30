@@ -67,8 +67,8 @@ ReactElement对象 ^BlZTG6RJ
 		},
 		{
 			"type": "embeddable",
-			"version": 808,
-			"versionNonce": 850251527,
+			"version": 811,
+			"versionNonce": 996923759,
 			"isDeleted": false,
 			"id": "Au_Yv6drtOwnf_0S_7PGu",
 			"fillStyle": "solid",
@@ -90,8 +90,8 @@ ReactElement对象 ^BlZTG6RJ
 				"type": 3
 			},
 			"boundElements": [],
-			"updated": 1755226495658,
-			"link": "https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17550014000008awnbr.png",
+			"updated": 1756536510411,
+			"link": "[!ph](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17550014000008awnbr.png)",
 			"locked": false,
 			"validated": true,
 			"scale": [
@@ -263,10 +263,10 @@ ReactElement对象 ^BlZTG6RJ
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
-		"scrollX": 261.40514775883753,
-		"scrollY": 1386.1566962091945,
+		"scrollX": 584.7273795634912,
+		"scrollY": 1127.4337986196797,
 		"zoom": {
-			"value": 0.55
+			"value": 0.7000000000000001
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
