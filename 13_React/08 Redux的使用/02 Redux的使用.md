@@ -38,8 +38,8 @@ yarn add redux
 	- 通过dispatch来派发action； 
 	- 通常action中都会有type属性，也可以携带其他的数据； 
 4. 修改reducer中的处理代码 
-	- 这里一定要记住，reducer是一个纯函数，不需要直接修改state； 
-	- 后面我会讲到直接修改state带来的问题
+	- 这里一定要记住，**reducer是一个纯函数，不需要直接修改state；** 
+	- 后面我会讲到直接修改state带来的问题a
 5. 可以在派发action之前，监听store的变化：
 
 ```js

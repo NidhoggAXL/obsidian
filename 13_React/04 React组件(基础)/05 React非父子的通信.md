@@ -1,4 +1,5 @@
 # 一、Spread Attributes
+
 我们实现一个一层层传递的案例:[Spread Attributes](https://zh-hans.react.dev/learn/passing-props-to-a-component#forwarding-props-with-the-jsx-spread-syntax)
 
 有时候，传递 props 会变得非常重复：
@@ -44,7 +45,7 @@ function Avatar(props) {
 }
 ```
 
-> 通过这样 `...this.props` 一直传递下去
+>[!note] 通过这样 `...this.props` 一直传递下去
 
 # 二、Context应用场景
 
@@ -64,7 +65,7 @@ function Avatar(props) {
 **React.createContext** 
 
 - 创建一个需要**共享的Context对象**： 
-- 如果一个组件订阅了Context，那么这个组件会从离自身最近的那个匹配的 Provider 中读取到当前的context值； 
+- 如果一个组件**订阅了Context**，那么这个组件会从离自身最近的那个匹配的 **Provider** 中读取到当前的context值； 
 - defaultValue是组件在顶层查找过程中没有找到对应的Provider，那么就使用默认值
 
 ```jsx
@@ -79,7 +80,7 @@ const MyContext = React.createContext(defaultValue);
 - 多个 Provider 也可以嵌套使用，**里层的会覆盖外层的数据**；
 - **当 Provider 的 value 值发生变化时，它内部的所有消费组件都会重新渲染**；
 
-```jsx
+```html
 <MyContext.Provider value={/*某个值*/}>
 ```
 

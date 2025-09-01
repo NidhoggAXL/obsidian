@@ -1,6 +1,6 @@
 CSSTransition是基于Transition组件构建的：
 
-CSSTransition执行过程中，有三个状态：appear、enter、exit； 
+CSSTransition执行过程中，有三个状态：appear(出现)、enter(进入)、exit(退出)； 
 
 **它们有三种状态，需要定义对应的CSS样式：** 
 

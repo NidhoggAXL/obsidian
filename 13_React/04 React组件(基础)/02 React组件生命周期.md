@@ -120,7 +120,7 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 
 **componentDidUpdate** ：
 
-- componentDidUpdate() 会在更新后会被立即调用，首次渲染不会执行此方法。 
+- componentDidUpdate() 会在**更新后会被立即调用**，首次渲染不会执行此方法。 
 - 当组件更新后，可以在此处对 DOM 进行操作； 
 - 如果你对更新前后的 props 进行了比较，也可以选择在此处进行网络请求；（例如，当 props 未发生变化时，则不会执行网 络请求）。
 
@@ -138,7 +138,8 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 除了上面介绍的生命周期函数之外，还有一些不常用 的生命周期函数：
 
 - **getDerivedStateFromProps**：state 的值在任何 时候都依赖于 props时使用；该方法返回一个对象 来更新state； 
-- **getSnapshotBeforeUpdate**：在React更新DOM 之前回调的一个函数，可以获取DOM更新前的一 些信息（比如说滚动位置）； 
+- **getSnapshotBeforeUpdate**：在React更新DOM 之前回调的一个函数，可以获取DOM更新前的一 些信息（比如说滚动位置）；
+	- snapshot - 快照
 	- 第一个参数：prevProps（获取更新前props数据）
 	- 第二个参数：prevState（获取更新前的this.state数据）
 	- 第三个参数：shnapshot（获取更新前的一些信息）

@@ -4,11 +4,11 @@
 
 当然，我们可以通过原生的CSS来实现这些过渡动画，但是React社区为我们提供了react-transition-group用来完成过渡动画。 
 
-React曾为开发者提供过动画插件 react-addons-css-transition-group，后由社区维护，形成了现在的 react-transitiongroup。
+React曾为开发者提供过动画插件 react-addons-css-transition-group，后由社区维护，形成了现在的 react-transition-group。
 
 - 这个库可以帮助我们方便的实现组件的 **入场** 和 离场 **动画**，使用时需要进行额外的安装：
 
-```
+```bash
 #npm
 npm install react-transition-group --save
 

@@ -23,6 +23,9 @@ JavaScript中比较常见的filter、map、reduce都是高阶函数。
 高阶组件的调用过程类似于这样：
 
 ```jsx
+enhance - 增强的
+warppeed - 被包裹的
+
 const EnhanceComponent = higherOrderComponent(WarppedComponent)
 ```
 
@@ -46,7 +49,8 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 
 ## 3.1 props的增强
 
-![[React高阶组件增强Propos|100%]]
+![[React高阶组件增强Propos]]
+
 
 > [!info] 封装的方式有两种：
 > - 使用类组件来重新渲染传入的组件
@@ -60,6 +64,8 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 > [!tip] 总结 
 > - 需要增强数据固定，多个组件都需要的话，使用第一种封装，比如用户的信息
 > - 需要增强的数据少，比较少的组件需要增强的话，使用第二种封装，
+
+
 
 ## 3.2 共享context
 

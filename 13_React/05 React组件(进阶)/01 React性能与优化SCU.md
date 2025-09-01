@@ -6,7 +6,7 @@ React的渲染流程：
 
 那么React的更新流程呢？
 
-> props/state改变 -> render函数重新执行 -> 产生新的DOM树 -> 新旧DOM树更新 -> 计算出差异进行更新 -> 更新到真实DOM
+> props/state改变 -> render函数重新执行 -> 产生新的虚拟DOM树 -> 新旧虚拟DOM树更新 -> 计算出差异进行更新 -> 更新到真实DOM
 
 
 # 二、React的更新流程
@@ -67,8 +67,7 @@ React在props或state发生改变时，会调用React的render方法，会创建
 
 # 五、shouldComponentUpdate
 
-React给我们提供了一个生命周期方法 <mark class="hltr-orange">shouldComponentUpdate（很多时候，我们简称为SCU）</mark>，这个方法接受参数，并且需要有 返回值： 
-
+React给我们提供了一个生命周期方法 <mark class="hltr-orange">shouldComponentUpdate（很多时候，我们简称为SCU）</mark>，这个方法接受参数，并且需要有 返回
 ![[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]
 
 **比如我们在App中增加一个message属性：** 
@@ -76,7 +75,7 @@ React给我们提供了一个生命周期方法 <mark class="hltr-orange">should
 - jsx中并没有依赖这个message，那么它的改变不应该引起重新渲染；
 - 但是因为render监听到state的改变，就会重新render，所以最后render方法还是被重新调用了；
 
-> [!info] 数据少的时候还可以使用一下 shouldComponentUpdate ，但是一但数据多，这是一个极其疯狂的事情，需要对每一个组件都进行设置，这是不可能的。
+> [!tip] 数据少的时候还可以使用一下 shouldComponentUpdate ，但是一但数据多，这是一个极其疯狂的事情，需要对每一个组件都进行设置，这是不可能的。
 
 # 六、PureComponent
 
@@ -88,7 +87,7 @@ React给我们提供了一个生命周期方法 <mark class="hltr-orange">should
 事实上React已经考虑到了这一点，所以React已经默认帮我们实现好了，如何实现呢？ 
 
 * 将class继承自PureComponent。
-* 是一个浅层比较
+* 是一个<mark class="hltr-orange">浅层比较</mark>
 
 
 ```jsx
@@ -117,7 +116,7 @@ export default Home
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755215007000w6436t.png)
 
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755215326000nalffh.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755215326000nalffh.png)
 
 ## 6.1 shallowEqual方法
 
@@ -128,7 +127,6 @@ export default Home
 - 比如两个对象和数组，都**不对深层里面的数据比较**，而是比较在内存中新旧地址是否相同，
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551787750000sjuxz.png)
-
 
 # 七、高阶组件memo
 
@@ -161,7 +159,7 @@ export default Banner
 
 要修改 this.state 里面的数据，都需要进行一个拷贝在操作，操作附件，完成后再把附件赋值给 this.state 。
 
-就算是深层的内容改变，也要先进行拷贝，操作附件，这种不可以对原数据的直接改变的方式就成为不可变数据的力量。
+就算是深层的内容改变，也要先进行拷贝，操作附件，<mark class="hltr-orange">这种不可以对原数据的直接改变的方式就成为不可变数据的力量。</mark>
 
 
 

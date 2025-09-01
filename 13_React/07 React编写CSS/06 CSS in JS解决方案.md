@@ -1,6 +1,6 @@
 # 一、认识CSS in JS
 
-官方文档也有提到过CSSin Js这种方案:
+官方文档也有提到过CSS in Js这种方案:
 
 - “CSS-in-JS”是指一种模式，其中 **CSS 由JavaScript 生成而不是在外部文件中定义**;
 - 注意此功能并不是 React 的一部分，而是由第三方库提供;
@@ -148,11 +148,11 @@ props可以传递：
 <HYInput type="password" $left="20px" />
 ```
 
-> [!tip] 非标准的属性（`left` 和 `paddingLeft`）传递给了底层的 DOM `<input>` 元素。React 会警告你这些属性不是有效的 DOM 属性。解决方案是使用 **临时属性**（transient props），即在属性名前加 `$` 符号，这样 styled-components 就知道这些属性只用于样式计算，不会传递给 DOM。
+> [!warning] 非标准的属性（`left` 和 `paddingLeft`）传递给了底层的 DOM `<input>` 元素。React 会警告你这些属性不是有效的 DOM 属性。解决方案是使用 **临时属性**（transient props），即在属性名前加 `$` 符号，这样 styled-components 就知道这些属性只用于样式计算，不会传递给 DOM。
 
 props可以被传递给styled组件 
 
-- 获取props需要通过${}传入一个插值函数，props会作为该函数的参数； 
+- 获取props需要通过 **`${}`** 传入一个**插值函数**，props会作为该函数的参数； 
 - 这种方式可以有效的解决动态样式的问题；
 
 attrs属性可以设置**默认参数**：

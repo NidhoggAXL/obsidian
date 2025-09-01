@@ -10,14 +10,14 @@ Redux Toolkit 是官方推荐的编写 Redux 逻辑的方法。
 安装Redux Toolkit：
 
 ```bash
-	npm install @reduxjs/toolkit react-redux
+npm install @reduxjs/toolkit react-redux
 ```
 
 **Redux Toolkit的核心API主要是如下几个：** 
 
 - **configureStore**：包装createStore以提供简化的配置选项和良好的默认值。它可以自动组合你的 slice reducer，添加你提供 的任何 Redux 中间件，**redux-thunk默认包含，并启用 Redux DevTools Extension**。 
 - **createSlice**：接受reducer函数的对象、切片名称和初始状态值，并自动生成切片reducer，并带有相应的actions。 
-- **createAsyncThunk**: 接受一个动作类型字符串和一个返回承诺的函数，并生成一个pending/fulfilled/rejected基于该承诺分 派动作类型的 thunk
+- **createAsyncThunk**: 接受一个动作类型字符串和一个返回承诺的函数，并生成一个`pending/fulfilled/rejected`基于该承诺分 派动作类型的 thunk
 
 # 二、创建counter的reducer
 
@@ -62,7 +62,7 @@ configureStore用于创建store对象，常见参数如下：
 Redux Toolkit默认已经给我们继承了Thunk相关的功能：createAsyncThunk
 
 - payload接收其他参数
-- extraInfo接收一个store，里面包含了dispatch、getState，可以通过结构获取
+- extraInfo(额外信息)接收一个store，里面包含了dispatch、getState，可以通过结构获取
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755656559000lh157h.png)
 
@@ -73,7 +73,7 @@ Redux Toolkit默认已经给我们继承了Thunk相关的功能：createAsyncThu
 - **fulfilled(已完成)**：获取到最终的结果（有返回值的结果）； 
 - **rejected(被拒绝**)：执行过程中有错误或者抛出了异常；
 
-可以在createSlice的extraReducer中监听这些结果：
+可以在createSlice的extraReducer(额外reducer)中监听这些结果：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17556567410004vvyl7.png)
 

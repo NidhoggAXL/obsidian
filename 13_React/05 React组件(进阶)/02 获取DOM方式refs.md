@@ -15,7 +15,7 @@
 	- 对象是通过 React.createRef() 方式创建出来的； 
 	- 使用时获取到创建的对象其中有一个current属性就是对应的元素； 
 - **方式三**：传入一个函数 
-	- 该函数会在DOM被挂载时进行回调，这个函数会传入一个 **元素对象**，我们可以自己保存； 
+	- 该函数会在DOM被挂载时进行回调，这个函数会传入一个 **元素对象(el)**，我们可以自己保存； 
 	- 使用时，直接拿到之前保存的元素对象即可；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755217242000quvqnp.png)

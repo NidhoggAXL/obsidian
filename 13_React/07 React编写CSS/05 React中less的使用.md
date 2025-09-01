@@ -22,6 +22,7 @@ export default defineConfig({
   plugins: [react()],
   css: {
     preprocessorOptions: {
+	  //preprocessor-预处理器
       less: {
         // 可选：全局变量/混入（mixin）配置
         additionalData: `@import "@/styles/vars.less";`,

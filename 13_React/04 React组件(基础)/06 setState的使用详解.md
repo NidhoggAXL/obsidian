@@ -37,8 +37,8 @@ this.setState({ key: value })
 
 **用法三**：传入第二个参数，要求是一个回调函数
 
-- 可以进行逻辑的编写，以及修改完成的确定
-- 这个回调函数只会等前面修改完之后才会回调后面的函数
+- 可以进行逻辑的编写，以及**修改完成的确定**
+- 这个回调函数**只会等前面修改完之后**才会回调后面的函数
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551698130001z1khf.png)
 
@@ -75,17 +75,17 @@ setState设计为异步，可以**显著的提升性能**；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551700300005z3amo.png)
 
-当然，我们也可以在[[02 React组件生命周期|生命周期]]函数：
+当然，我们也可以在[[02 React组件生命周期#2.3 常用生命周期|生命周期]]函数：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551700400009mzlli.png)
 
 # 五、setState一定异步吗?(React18之前)
 
-验证一：在setTimeout中的更新：
+**验证一**：在setTimeout中的更新：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755173046000zubiqn.png)
 
-验证二：原生DOM事件：
+**验证二**：原生DOM事件：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755173053000yr1fxp.png)
 
@@ -113,7 +113,7 @@ console.log(this.state.counter)//1000
 ```
 
 > [!tip] 批处理自我理解：
-> 和节流一样，在规定时间内执行一次，不过事件的多少都是在一定时间内统一执行
+> 和[[01 认识防抖和节流|节流]]一样，在规定时间内执行一次，不过事件的多少都是在一定时间内统一执行
 
 
 

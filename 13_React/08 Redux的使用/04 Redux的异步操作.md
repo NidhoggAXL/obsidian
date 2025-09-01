@@ -12,8 +12,6 @@
 我现在完成如下案例操作：  在Home组件中请求categories的数据，并把数据保存到store中，并从store中获取数据；
 
 
-
-
 # 二、redux中异步操作
 
 上面的代码有一个缺陷： 
@@ -31,7 +29,7 @@
 
 # 三、理解中间件
 
-edux也引入了中间件（Middleware）的概念： 
+redux也引入了中间件（Middleware）的概念： 
 
 - 这个中间件的目的是在dispatch的action和最终达到的reducer之间，扩展一些自己的代码； 
 - 比如日志记录、调用异步接口、添加代码调试功能等等；
@@ -58,7 +56,7 @@ npm install redux-thunk
 ```
 
 2. 在创建store时传入应用了middleware的enhance函数 
-	- 通过applyMiddleware来结合多个Middleware, 返回一个enhancer； 
+	- 通过applyMiddleware来结合多个Middleware(中间件), 返回一个enhancer； 
 	- 将enhancer作为第二个参数传入到createStore中；
 
 ```js
