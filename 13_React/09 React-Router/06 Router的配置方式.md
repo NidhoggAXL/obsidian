@@ -10,15 +10,15 @@
 先来看一个表格，快速了解 React Router 中路由配置的几种主要方式及其特点：
 
 
-|特性|Routes/Route 组件|useRoutes Hook (推荐)|备注 (主要针对 v6 及以上)|
-|---|---|---|---|
-|配置形式|JSX 标签形式|对象数组形式|useRoutes 的配置更集中，类似 Vue Router|
-|嵌套路由|<Route> 嵌套或 Outlet|通过 children 属性|父路由元素中需放置 <Outlet /> 组件来渲染子路由|
-|路径匹配规则|默认精确匹配，如需匹配子路由，则在父路由 path 后加 /*|同组件形式|V6 版本移除了 exact 属性|
-|路由重定向|使用 <Navigate> 组件|在配置数组中可使用 {redirect: true, to: "/path"} 等自定义字段|通常结合路由拦截或统一配置使用|
-|路由懒加载|需配合 React.lazy 和 Suspense 使用|同上，可在配置数组中实现|提升应用初始加载性能|
-|路由拦截|需自定义包装组件或高阶组件|易于在统一路由管理中实现全局前置守卫 (onRouteBefore)|常用于权限控制、登录状态检查等|
-|类型支持|良好|良好|对 TypeScript 支持友好|
+| **特性** |       **Routes/Route 组件**       |            **useRoutes Hook (推荐)**             |      **备注 (主要针对 v6 及以上)**      |
+| :----: | :-----------------------------: | :--------------------------------------------: | :----------------------------: |
+|  **配置形式**  |            JSX 标签形式             |                     对象数组形式                     | useRoutes 的配置更集中，类似 Vue Router |
+|  **嵌套路由**  |       <Route> 嵌套或 Outlet        |                 通过 children 属性                 | 父路由元素中需放置 <Outlet /> 组件来渲染子路由  |
+| **路径匹配规则** | 默认精确匹配，如需匹配子路由，则在父路由 path 后加 /* |                     同组件形式                      |       V6 版本移除了 exact 属性        |
+| **路由重定向**  |        使用 <Navigate> 组件         | 在配置数组中可使用 {redirect: true, to: "/path"} 等自定义字段 |        通常结合路由拦截或统一配置使用         |
+| **路由懒加载**  |  需配合 React.lazy 和 Suspense 使用   |                  同上，可在配置数组中实现                  |           提升应用初始加载性能           |
+|  **路由拦截**  |          需自定义包装组件或高阶组件          |       易于在统一路由管理中实现全局前置守卫 (onRouteBefore)       |        常用于权限控制、登录状态检查等         |
+|  **类型支持**  |               良好                |                       良好                       |       对 TypeScript 支持友好        |
 
 # 🌐 首先配置路由环境
 
@@ -51,8 +51,8 @@ createRoot(document.getElementById('root')).render(
 
 React Router v6 及以后版本主要推荐以下两种配置路由的方式：
 
-- 使用 `<Routes>` 和 `<Route>` 组件 (JSX 形式)：这种方式直接在组件的 JSX 中定义路由结构，直观明了。
-- 使用 useRoutes Hook (对象数组形式)：这种方式通过一个 JavaScript 对象数组来定义路由，更加灵活和推荐，尤其对于复杂的路由结构或需要统一管理路由的场景。
+- **使用 `<Routes>` 和 `<Route>` 组件 (JSX 形式)**：这种方式直接在组件的 JSX 中定义路由结构，直观明了。
+- **使用 useRoutes Hook (对象数组形式)**：这种方式通过一个 JavaScript 对象数组来定义路由，更加灵活和推荐，尤其对于复杂的路由结构或需要统一管理路由的场景。
 
 ## 1. 使用 `<Routes>` 和 `<Route>` 组件
 
@@ -136,7 +136,6 @@ export default App;
     - 在 useRoutes 形式中，使用 children 属性。
 
 例如，假设有 `/products` 和它的子路由 `/products/list`, `/products/:id`：
-
 
 ```jsx
 // 使用 useRoutes 配置嵌套路由
@@ -226,7 +225,7 @@ function HomePage() {
 }
 ```
 
-对于类组件，React Router v6 及以上版本不再提供 withRouter 高阶组件。你需要自己创建一个 [[04 Router的代码跳转|HOC ]]来注入 navigate 函数，或者更**推荐的方式是将类组件转换为函数组件**。
+**对于类组件**，React Router v6 及以上版本不再提供 withRouter 高阶组件。你需要自己创建一个 [[04 Router的代码跳转|HOC ]]来注入 navigate 函数，或者更**推荐的方式是将类组件转换为函数组件**。
 
 ## 2. 路由重定向
 
@@ -242,7 +241,7 @@ import { Navigate } from 'react-router-dom';
 }
 ```
 
-**你也可以在组件渲染过程中根据条件返回 `<Navigate>` 组件来实现动态重定向。**
+**你也可以在组件渲染过程中根据条件返回  `<Navigate>` 组件来实现动态重定向。**
 
 # ⚡ 路由懒加载
 

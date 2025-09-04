@@ -19,7 +19,7 @@
 useReducer仅仅是[[02 State和Effect(核心)|useState]]的一种替代方案： 
 
 - 在某些场景下，如果state的处理逻辑比较复杂，我们可以通过useReducer来对其进行拆分； 
-- 或者这次修改的state需要依赖之前的state时，也可以使用；
+- 或者这次**修改的state需要依赖之前的state时**，也可以使用；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175576601500085vxbk.png)
 

@@ -1,5 +1,6 @@
 # 一、vite构建工具
 
+> [!warning] vite内置了less，可以无需配置和安装，直接使用
 ## 1. 安装必要依赖
 
 ```bash
@@ -55,7 +56,7 @@ export default defineConfig({
   background: lighten(@primary-color, 40%);
   padding: 20px;
 
-  h1 {
+	  h1 {
     color: @primary-color;
     &:hover {
       color: darken(@primary-color, 10%);

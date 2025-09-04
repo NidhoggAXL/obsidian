@@ -5,7 +5,7 @@
 - 推荐列表和排行榜列表；
 - 点击不同的链接可以跳转到不同的地方，显示不同的内容； 
 
-**`<Outlet />`组件用于在父路由元素中作为子路由的占位元素。**
+**`<Outlet />`组件(outlet - 出口)用于在父路由元素中作为子路由的占位元素。**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755689537000vpc5lb.png)
 

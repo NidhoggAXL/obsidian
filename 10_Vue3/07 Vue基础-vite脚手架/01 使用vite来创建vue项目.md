@@ -2,7 +2,7 @@
 
 * @latest 表示初始化最新的版本
 
-```
+```bash
 npm init vue@latest
 ```
 

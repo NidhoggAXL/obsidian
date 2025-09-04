@@ -21,7 +21,7 @@
 **组件复用状态很难：** 
 
 - 在前面为了一些状态的复用我们需要通过[[04 React的高阶组件|高阶组件]]；
-- 像我们之前学习的**redux中connect或者react-router中的withRouter**，这些高阶组件设计的目的就是为了**状态的复用**； 
+- 像我们之前学习的**redux中[[09 connect原理|connect]]或者react-router中的[[04 Router的代码跳转#函数组件|withRouter]]**，这些高阶组件设计的目的就是为了**状态的复用**； 
 - 或者类似于Provider、Consumer来共享一些状态，但是多次使用[[05 React非父子的通信|Consumer]]时，我们的代码就会存在很多嵌套； 
 - 这些代码让我们不管是编写和设计上来说，都变得非常困难；
 

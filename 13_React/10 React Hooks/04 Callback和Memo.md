@@ -4,7 +4,7 @@ useCallback实际的目的是为了进行性能的优化。
 
 如何进行性能的优化呢？ 
 
-- useCallback会返回一个函数的 **memoized（记忆的）** 值； 
+- useCallback会返回一个**函数的 memoized（记忆的）** 值； 
 - 在`[]`依赖不变的情况下，多次定义的时候，返回的值是相同的；
 
 ## 1.1 闭包陷阱
@@ -25,7 +25,7 @@ useCallback实际的目的是为了进行性能的优化。
 
 > [!tip] 函数组件是否渲染，跟父组件是否渲染以及props是否改变有关
 
-如果还希望，当子组件点击的时候也还是不进行渲染，那么可以使用 [[05 Ref和LayoutEffect|useRef]]：这样useCallback放回的还是用一个函数，但是函数内部改变了count。
+如果还希望，**当子组件点击的时候也还是不进行渲染**，那么可以使用 [[05 Ref和LayoutEffect|useRef]]：这样useCallback放回的还是用一个函数，但是函数内部改变了count。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755777948000l5e4vf.png)
 
@@ -35,7 +35,7 @@ useMemo实际的目的也是为了进行性能的优化。
 
 如何进行性能的优化呢？ 
 
-- useMemo返回的也是一个 memoized（记忆的）值； 
+- useMemo返回的也是一个 **memoized（记忆的）值**； 
 - 在依赖不变的情况下，多次定义的时候，<mark class="hltr-orange">返回的值是相同的</mark>；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755780514000zq74z9.png)

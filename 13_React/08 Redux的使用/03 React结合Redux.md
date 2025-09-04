@@ -2,7 +2,6 @@
 
 目前redux在react中使用是最多的，所以我们需要将之前编写的redux代码，融入到react当中去。
 
-
 核心代码主要是两个： 
 
 - 在 [[02 React组件生命周期#2.3 常用生命周期|componentDidMount]] 中定义数据的变化，当数据发生变化时重新设置 counter; 

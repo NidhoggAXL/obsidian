@@ -32,7 +32,7 @@ Route：Route用于路径的匹配；
 Link和NavLink： 
 
 - 通常路径的跳转是使用Link组件，最终会被渲染成a元素； 
-- NavLink是在Link基础之上增加了一些样式属性（后续学习）； 
+- [[06 Router的配置方式#1. 路由跳转|NavLink]]是在Link基础之上增加了一些样式属性（后续学习）； 
 - to属性：Link中最重要的属性，用于设置跳转到的路径；
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755680785000v48czy.png)

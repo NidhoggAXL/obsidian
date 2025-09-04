@@ -85,6 +85,7 @@ macos: ln -s 原文件 拷贝文件
 
 
 # 八、pnpm的存储store
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744198611000t5sqgn.png)
 
 

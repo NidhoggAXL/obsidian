@@ -56,7 +56,7 @@ useEffect的解析：
 
 在class组件的编写过程中，某些副作用的代码，我们需要在[[02 React组件生命周期#2.3 常用生命周期|componentWillUnmount]]中进行清除： 
 
-- 比如我们之前的[[06 自定义事件总线|事件总线]]或Redux中手动调用subscribe； 
+- 比如我们之前的[[06 自定义事件总线|事件总线]]或Redux中手动调用[[02 Redux的使用#三、Redux结构划分|subscribe]]； 
 - 都需要在componentWillUnmount有对应的取消订阅； 
 - Effect Hook通过什么方式来模拟componentWillUnmount呢？
 
