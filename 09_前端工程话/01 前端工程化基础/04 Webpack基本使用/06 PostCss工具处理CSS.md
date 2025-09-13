@@ -6,7 +6,7 @@
 
 安装postcss-loader： 
 
-```
+```bash
 npm install postcss-loader -D
 ```
 

@@ -222,7 +222,7 @@ export default {
 }
 ```
 
-```css
+```js
 /* Vite */
 .banner {
   /* 方式1: 相对路径 */

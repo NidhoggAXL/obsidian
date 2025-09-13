@@ -48,9 +48,9 @@ const { count } = useSelector(
 );
 ```
 
-useDispatch非常简单，就是直接获取dispatch函数，之后在组件中直接使用即可； 
+**useDispatch非常简单，就是直接获取dispatch函数，之后在组件中直接使用即可；** 
 
-还可以通过useStore来获取当前的store对象；
+**还可以通过useStore来获取当前的store对象；**
 
 
 ![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17558330960008s6zc5.png)

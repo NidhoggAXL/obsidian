@@ -190,47 +190,27 @@ line-height 具有继承属性，line-height是字体内容进行设置的，但
 ## 7.1 缩写属性中也可以对 line-height 直接编写数值
 ```html
   <style>
-
     /* 关于字体属性 */
-
     .box{
-
       font-size: 30px;
-
       font-weight: 500;
-
       font-variant: small-caps;
-
       font-style: normal;
-
       font-family: serif;
-
       line-height: 30px;
-
   
-
       /* 属性缩写 */
-
       font: normal small-caps 500 30px/30px serif;
-
       /* 1.5行高是相对于 font-size 的 */
-
       font: normal small-caps 500 30px/1.5 serif;
-
     }
-
   
-
   </style>
-
 </head>
 
 <body>
-
   <div class="box">我是div跨级元素/div>
-
 </body>
-
 </html>
 ```
 

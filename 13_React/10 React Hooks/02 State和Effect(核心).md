@@ -4,7 +4,7 @@ State Hook的API就是 useState，我们在前面已经进行了学习：
 
 - useState会帮助我们定义一个 state变量，useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。 
 - 一般来说，在函数退出后变量就会”消失”，而 state 中的变量会被 React 保留。
-- useState接受唯一一个参数，在第一次组件被调用时使用来作为初始化值。（如果没有传递参数，那么初始化值为undefined）。 
+- useState接受唯一一个参数，在<mark class="hltr-orange">第一次组件被调用时使用来作为初始化值</mark>。（如果没有传递参数，那么初始化值为undefined）。 
 - useState的返回值是一个数组，我们可以通过[[05 解构Destructuring#1.1 数组解构|数组的解构]]，来完成赋值会非常方便。
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring
 
@@ -14,6 +14,36 @@ FAQ：为什么叫 useState 而不叫 createState?
 - **在下一次重新渲染时，useState 返回给我们当前的 state**。 
 - 如果每次都创建新的变量，它就不是 “state”了。
 - 这也是 Hook 的名字总是以 use 开头的一个原因。
+
+## 1.1 useState常见错误
+
+<mark class="hltr-orange">useState 在第一次渲染的时候，初始化值就是已经确定的：</mark>
+
+比如第一次渲染的时候如下面伪代码：
+
+```jsx
+const initCounter = ""
+const [counter, setCounter] = useState(initCounter)
+```
+
+因为一些原因，不是通过 setCount 改变的 counter 的值，比如网络请求改变了 initCounter 的值，这个时候进行第二次渲染:
+
+```jsx
+const initCounter = 'axl'
+const [counter, setCounter] = useState(initCounter)
+```
+
+> [!warning] 这个时候的 counter 还是 空字符串， 不会因为 initCounter 的改变而改变。
+
+如果遇到这种情况，那么就在 initCounter 改变为不是 空字符 的时候，不要进行渲染(本质是执行 useState)
+
+比如：第一次渲染 Home 组件的时候 initCounter 由外部传入，但是外部组件的内容需要网络请求才可以得到，在第一次渲染的时候 initCounter 就是为空字符串
+
+```jsx
+{
+  Object.keys(outData).length && <Home initCounter={outData.initCounter} />
+}
+```
 
 # 二、认识Effect Hook
 

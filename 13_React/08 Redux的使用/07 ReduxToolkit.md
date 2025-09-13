@@ -67,7 +67,7 @@ Redux Toolkit默认已经给我们继承了Thunk相关的功能：createAsyncThu
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755656559000lh157h.png)
 
 
-当createAsyncThunk创建出来的action被dispatch时，会存在三种状态：
+当createAsyncThunk创建出来的action被**dispatch时**，会存在三种状态：
 
 - **pending(待处理)**：action被发出，但是还没有最终的结果； 
 - **fulfilled(已完成)**：获取到最终的结果（有返回值的结果）； 
