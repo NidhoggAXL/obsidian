@@ -33,7 +33,7 @@ react-transition-group主要包含四个组件：
 
 **SwitchTransition** 
 
-- 两个组件显示和隐藏切换时，使用该组件 
+- 两个组件**显示和隐藏**切换时，使用该组件 
 
 **TransitionGroup** 
 
