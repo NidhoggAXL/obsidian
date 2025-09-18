@@ -167,10 +167,9 @@ transform: rotate(数值deg) ;
 * length:从左上角开始计算（依据X和Y轴具体的值）
 * 百分比:**参考元素本身大小**
 
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1725267722000ftviaq.png)
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1725267722000ftviaq.png)
-
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1725267739000qxsxdj.png)
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1725267739000qxsxdj.png)
 
 # 七、函数skew-倾斜
 **倾斜:skew(x，y)**
