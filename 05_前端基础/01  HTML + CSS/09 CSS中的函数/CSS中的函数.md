@@ -99,8 +99,7 @@ radius - 半斤    blur - 模糊
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1726319577000debcar.png)
 
-> backdrop-filter 是最底层的，**对这个属性进行设置的时候必须有添加背景或者元素。**
-2
+> [!tip] backdrop-filter 是最底层的，**对这个属性进行设置的时候必须有添加背景或者元素。**
 # 五、gradient（了解）
 gradient - 渐变
 
