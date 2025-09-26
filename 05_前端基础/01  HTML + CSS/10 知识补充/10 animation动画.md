@@ -22,62 +22,146 @@
 
 # 三、animation属性
 
-**CSS animation 属性是 animation-name，animation-duration，animation-timing-function,，animation-delay，animation-iteration-count，animation-direction，animation-fill-mode 和 animation-play-state 属性的一个简写属性形式。**
+animation的组成属性
 
-**animation-name**:指定执行哪一个关键帧动画
+| 属性                          | 作用           | 默认值       |
+| --------------------------- | ------------ | --------- |
+| `animation-name`            | 指定关键帧动画的名称   | `none`    |
+| `animation-duration`        | 动画完成一个周期所需时间 | `0s`      |
+| `animation-timing-function` | 动画的速度曲线      | `ease`    |
+| `animation-delay`           | 动画开始前的延迟时间   | `0s`      |
+| `animation-iteration-count` | 动画播放次数       | `1`       |
+| `animation-direction`       | 动画是否反向播放     | `normal`  |
+| `animation-fill-mode`       | 动画执行前后如何应用样式 | `none`    |
+| `animation-play-state`      | 动画运行或暂停      | `running` |
+|                             |              |           |
 
+##  3.1 animation-name
 
-**animation-duration**:指定动画的持续时间
+定义要应用的`@keyframes`动画名称。
 
-* duration - 持续时间
+```css
+animation-name: slide-in;
+```
 
+## 3.2 animation-duration
 
-**animation-timing-function**:指定动画的变化曲线
-
-* timing - 时机
-* function - 函数
-
-
-**animation-delay**:指定延迟执行的时间
-
-* delay - 延迟
-
-
-**animation-iteration-count**:指定动画执行的次数，执行infinite表示无限动画
-
-* iteration - 迭代/重复
-
-**animation-direction**:指定方向，常用值normal和reverse
-
-* direction - 方向
-
-**animation-fill-mode**:执行动画最后保留哪一个值
-
-* none:回到没有执行动画的位置
-* forwards:动画最后一帧的位置
-* backwards:动画第一帧的位置
-
-|           |     |
-| --------- | --- |
-| fill      | 填满  |
-| mode      | 模式  |
-| forwards  | 向前  |
-| backwards | 向后  |
+定义动画完成一个周期所需时间，单位可以是秒(s)或毫秒(ms)。
 
 
-**animation-play-state**:指定动画运行或者暂停(在JavaScript中使用，用于暂停动画)
+```css
+animation-duration: 2s;
+```
 
-* state - 状态
+## 3.3 animation-timing-function
+
+定义动画的速度曲线：
+
+- `ease` - 慢快慢（默认）
+    
+- `linear` - 匀速
+    
+- `ease-in` - 慢开始
+    
+- `ease-out` - 慢结束
+    
+- `ease-in-out` - 慢开始和结束
+    
+- `cubic-bezier(n,n,n,n)` - 自定义贝塞尔曲线
+    
+- `steps(n)` - 分步动画
 
 
-> [!tip] 简写属性
-> ```css
-> animation: name duration timing-function delay iteration-count direction fill-mode;
-> ```
-> 这些之间没有顺序，其中可以写多个值是定义中的`@keyframes`可以是多个，
-> 比如：
-> `animation:name……,name……;`
+```css
+animation-timing-function: ease-in-out;
+```
 
+
+## 3.4 animation-delay
+
+定义动画开始前的等待时间。
+
+```css
+animation-delay: 1s;
+```
+
+## 3.5 animation-iteration-count
+
+定义动画播放次数：
+
+- `n` - 具体次数
+    
+- `infinite` - 无限循环
+
+```css
+animation-iteration-count: 3;
+```
+
+## 3.6 animation-direction
+
+定义动画播放方向：
+
+- `normal` - 正常播放
+    
+- `reverse` - 反向播放
+    
+- `alternate` - 正反交替
+    
+- `alternate-reverse` - 反正交替
+
+```css
+animation-direction: alternate;
+```
+
+## 3.7 animation-fill-mode
+
+定义动画执行前后如何应用样式：
+
+- `none` - 不应用任何样式
+    
+- `forwards` - 保持最后一帧样式
+    
+- `backwards` - 应用第一帧样式（含延迟）
+    
+- `both` - 同时应用forwards和backwards
+
+```css
+animation-fill-mode: forwards;
+```
+
+## 3.8 animation-play-state
+
+控制动画运行状态：
+
+- `running` - 运行中
+    
+- `paused` - 暂停
+
+```css
+animation-play-state: paused;
+```
+
+## animation简写语法
+
+```css
+animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+```
+
+> [!warning] **注意**
+> 简写属性中，只有`animation-duration`和`animation-delay`的值是时间类型，且顺序固定（duration在前，delay在后）。
+
+简写实例：
+
+```css
+/* 只指定必要属性 */
+animation: slide-in 2s;
+
+/* 包含更多属性 */
+animation: slide-in 2s ease-in-out 1s infinite alternate;
+
+/* 完整属性 */
+animation: slide-in 2s linear 0.5s 3 normal forwards running;
+```
 
 **代码示例：**
 
@@ -111,6 +195,17 @@
 
 <div class="box"></div>
 ```
+
+
+## 多动画声明
+
+```css
+animation: 
+    slide-in 2s ease-in-out,
+    fade-out 1.5s linear 0.5s;
+```
+
+
 
 
 
