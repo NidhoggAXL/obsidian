@@ -25,7 +25,7 @@ Canvas 画出一帧动画的基本步骤（如要画出流畅动画，1s 需绘6
 - 第五步：恢复 canvas 状态 ，准备重绘下一帧。
 
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17583560880007xbppr.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17583560880007xbppr.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758356099000fvptvd.png)
 
@@ -123,13 +123,13 @@ setInterval(() => {
 求圆上x, y的坐标： 
 
 - 圆上x, y轴坐标实际上就是右图的 ( AB, BC )，AC为时钟半径 
-- x= AB = cosa * AC => x = Math.cos(弧度) * R 
-- y= BC = sina * AC => y = Math.sin(弧度) * R 
-- 角度与弧度的 JS 表达式：弧度=( Math.PI / 180 ) * 角度 => 弧度= 1角度对应的弧度 * 角度 。 
+- `x= AB = cosa * AC => x = Math.cos(弧度) * R` 
+- `y= BC = sina * AC => y = Math.sin(弧度) * R` 
+- 角度与弧度的 JS 表达式：`弧度=( Math.PI / 180 ) * 角度 => 弧度= 1角度对应的弧度 * 角度` 。 
 - 比如：旋转90°：弧度为Math.PI / 2； 旋转180°：为Math.PI ； 旋转360°：为Math.PI * 2； 旋转-90°：为-Math.PI / 2； 
 - 第 i 小时的坐标： 
-	- x = Math.cos( Math.PI * 2 / 12 * i ) * R
-	- y = Math.sin( Math.PI * 2 / 12 * i ) * R
+	- `x = Math.cos( Math.PI * 2 / 12 * i ) * R`
+	- `y = Math.sin( Math.PI * 2 / 12 * i ) * R`
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758392164000x9cd7q.png)
 

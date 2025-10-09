@@ -57,7 +57,7 @@
 	- 如果图形是已经闭合了的，即当前点为开始点，该函数什么也不做。 
 - 第四步：调用stroke()函数来给线描边，或者调用fill()函数来填充（**使用填充 fill 时，路径会自动闭合，而 stroke 不会**）。
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758265709000bmg1z6.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758265709000bmg1z6.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758265718000pq3mt1.png)
 

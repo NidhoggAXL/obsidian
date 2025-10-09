@@ -3,7 +3,7 @@
 什么是Canvas 
 
 - Canvas 最初由Apple于2004 年引入，用于Mac OS X WebKit组件，为仪表板小部件和Safari浏览器等应用程序提供支持。 后来，它被Gecko内核的浏览器（尤其是Mozilla Firefox），Opera和Chrome实现，并被网页超文本应用技术工作小组提议为下一代的网络技术的**标准元素（HTML5新增元素）**。 
-- C**anvas提供了非常多的JavaScript绘图API（比如：绘制路径、矩形、圆、文本和图像等方法），与 `<canvas`元素可以绘制 各种2D图形。** 
+- **Canvas提供了非常多的JavaScript绘图API（比如：绘制路径、矩形、圆、文本和图像等方法），与 `<canvas>`元素可以绘制 各种2D图形。** 
 - Canvas API 主要聚焦于 2D 图形。当然也可以使用 `<canvas>` 元素对象的 WebGL API 来绘制 2D 和 3D 图形。
 
 Canvas的应用场景 

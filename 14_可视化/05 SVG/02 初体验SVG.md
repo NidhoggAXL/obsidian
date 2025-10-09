@@ -14,7 +14,7 @@ SVG 初体验：
 	- ~~version~~： 指定使用svg的版本，值为 1.0 和 1.1，并没有 2.0。 
 	- ~~baseProfile~~：SVG 2 之前，version 和 baseProfile 属性用来验证和**识别 SVG 版本**。而SVG2后不推荐使用这两个属性了。
 	- width / height ：指定svg画布（视口）的宽和高，**默认值分别为300和150**，默认使用px单位。 
-	- xmlns：给svg元素帮定一个命名空间（http://www.w3.org/2000/svg）意味着这个 `<svg> ` 标签和它的子元素都属于该命名空间下。
+	- xmlns：给svg元素帮定一个命名空间 (http://www.w3.org/2000/svg) 意味着这个 `<svg> ` 标签和它的子元素都属于该命名空间下。
 		- **svg 2.0 后浏览器会自动添加**
 - 第三步：在 `<svg>` 元素中添加 图形（比如：`<rect>` ） 元素 
 - 第四步：在浏览器直接预览 或 嵌入到 HTML中预览（嵌入HTML有6种方案）
@@ -35,7 +35,7 @@ SVG的XML声明格式：`<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
 	- 默认为no：代表**依赖外部标记声明** 
 	- yes：代表依赖内部默认的标记声明
 
-**VG的文档类型声明（DTD）**，让解析器验证XML文件是否符合该规范，与HTML5文件的DTD声明类似。 
+**SVG的文档类型声明（DTD）**，让解析器验证XML文件是否符合该规范，与HTML5文件的DTD声明类似。 
 
 - XML中内部 DTD 声明（可选） ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758509422000lcm485.png)
 
