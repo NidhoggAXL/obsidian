@@ -100,7 +100,7 @@ const obj = {
 obj.getName()//axl
 ```
 
-上面的代码默认情况下是可以正常运行的，也就是TypeScript在编译时，认为我们的this是可以正确去使用的： 这是因为**在没有指定this的情况，this会更具上下文[[01 TS变量声明#三、变量的类型推导(推断)|推导]]出来this的类型**；
+上面的代码默认情况下是可以正常运行的，也就是TypeScript在编译时，认为我们的this是可以正确去使用的： 这是因为**在没有指定this的情况，this会更具上下文[[01 TS变量#三、变量的类型推导(推断)|推导]]出来this的类型**；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1760277517000kvj01d.png)
 
