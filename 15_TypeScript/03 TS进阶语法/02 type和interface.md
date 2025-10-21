@@ -47,7 +47,7 @@ interface Point {
 
 那么它们有什么区别呢？ 
 
-- 类型别名和接口非常相似，在定义对象类型时，大部分时候，你可以任意选择使用。 
+- 类型别名和接口非常相似，在**定义对象类型时**，**大部分时候**，你可以任意选择使用。 
 - 接口的几乎所有特性都可以在 type 中使用
 
 # 三、type和interface的区别
@@ -62,10 +62,6 @@ interface User {
   name: string;
   email: string;
 }
-
-interface Admin extends User {
-  permissions: string[];
-}
 ```
 
 type：
@@ -77,9 +73,6 @@ type User = {
   email: string;
 };
 
-type Admin = User & {
-  permissions: string[];
-};
 ```
 
 ## 3.2 扩展方式
@@ -102,7 +95,7 @@ interface ServiceDog extends Dog {
 ```
 
 
-type 使用交叉类型(&)：
+type 使用[[03 交叉类型|交叉类型(&)]]：
 
 ```ts
 type Animal = {
@@ -166,7 +159,7 @@ type User = {
 
 ## 3.4 实现(implements)
 
-两者都可以被类实现：
+两者都可以被[[04 TS接口补充#二、接口的实现|类实现]]：
 
 ```ts
 // 使用 interface

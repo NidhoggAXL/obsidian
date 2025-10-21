@@ -15,7 +15,7 @@
 
 ## 1.2 sum函数的重载
 
-如我们对sum函数进行重构： 在调用sum的时候，它会根据我们传入的参数类型来决定执行函数体时，到底执行哪一个函数的重载签名；
+如我们对sum函数进行重构： 在调用sum的时候，它会**根据传入的参数类型来决定执行函数体**，来决定到底执行哪一个函数的重载签名；
 
 ```ts
 //编写重载签名
@@ -36,8 +36,8 @@ console.log(sum('axl', 123))//错误的
 
 ```ts
 //下面是错误的调用
-sum()
-sum({name: "axl"}, {age: 123})
+//sum()
+//sum({name: "axl"}, {age: 123})
 ```
 
 ## 1.3 联合类型vs重载
@@ -115,7 +115,7 @@ VSCode在检测我们的TypeScript代码时，默认情况下运行不确定的t
 > 
 > 如果要报错的话，必须是严格模式，在 `tsconfig.json` 中设置 `"strict": true` 或 `"noImplicitThis": true`
 
-到了现在，即使没有 `tsconfig.json`，较新版本的 TypeScript 默认会启用一些严格检查。从 TypeScript 2.3 开始，某些检查在**默认情况下就是启用**的。
+到了现在，即使没有 `tsconfig.json` ，较新版本的 TypeScript 默认会启用一些严格检查。从 TypeScript 2.3 开始，某些检查在**默认情况下就是启用**的。
 
 我们可以创建一个tsconfig.json文件，并且在其中显示的告知VSCodethis必须明确执行严格模式（**不能是隐式的**）；
 
@@ -135,7 +135,7 @@ tsc --init
 
 如何指定呢？函数的第一个参数类型： 
 
-- 函数的第一个参数我们可以根据该函数之后被调用的情况，用于声明this的类型（名词必须叫this）； 
+- 函数的**第一个参数**我们可以根据该函数之后被调用的情况，**用于声明this的类型（名词必须叫this）**； 
 - 在后续调用函数传入参数时，从第二个参数开始传递的，this参数会在编译后被抹除；
 
 ```ts
@@ -144,6 +144,8 @@ function foo(this: any, name: string) {
 }
 foo('axl')
 ```
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1760966276000j1fq0u.png)
 
 
 
