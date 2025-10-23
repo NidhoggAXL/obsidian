@@ -2,10 +2,10 @@
 
 案例是当我点击按钮时会在中间插入一个f；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456578600001ja10d.png)
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456578600001ja10d.png)
 
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745657868000c9z9ys.png)
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745657868000c9z9ys.png)
 
 
 # 二、Vue源码对于key的判断

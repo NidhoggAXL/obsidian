@@ -51,14 +51,12 @@ var bar = ["a", "b", "c"]
 bar.push("d", "e")
 console.log(bar)//['a', 'b', 'c', 'd', 'e']
 
-
-
 bar.pop()
 bar.pop()
 console.log(bar)//['a', 'b', 'c']
 ```
 
-## 2.3 shift、unsshift
+## 2.3 shift、unshift
 
 在数组的首端添加或删除元素
 
@@ -75,6 +73,7 @@ bar.unshift("haha", "hehe")
 console.log(bar)//['haha', 'hehe', 'b', 'c']
 ```
 
+>[!tip]
 >push/pop 方法运行的比较快，而shift/unshift 比较慢。(这和数组在内存中地址依次排列有关）
 
 ## 2.4 splice利器
@@ -86,13 +85,13 @@ arr.splice的语法结构如下:(**重点使用**) ^ffadfe
 `array.splice(start[,deleteCount[,iteml[,item2[,·..]]]])`
 
 * 从**start**索引位置开始，处理数组中的元素;
-	* **deleteCount**:要删除元素的个数，如果为0或者负数表示不删除;
+* **deleteCount**:要删除元素的个数，如果为0或者负数表示不删除;
 * **item1,item2,…** 在添加元素时，需要添加的元素;
 
 ```js
 var bar = ["1", "2", "3"]
 
-// 在索引1后面增加2个数组元素
+// 在索引1的地方增加2个数组元素
 bar.splice(1, 0, "abc", "nba")
 console.log(bar)//'1', 'abc', 'nba', '2', '3']
 
@@ -100,12 +99,12 @@ console.log(bar)//'1', 'abc', 'nba', '2', '3']
 bar.splice(1,2)
 console.log(bar)//(3) ['1', '2', '3']
 
-// 删除第二个数组元组，并增加2个数组元素怒
+// 删除第二个数组元组，并增加2个数组元素
 bar.splice(1, 1, "abc", "cba")
 console.log(bar)//(4) ['1', 'abc', 'cba', '3']
 ```
 
-> [!tip] 注意:
+> [!warning] 注意:
 > 这个方法会修改原数组
 
 ```js
@@ -115,6 +114,7 @@ console.log(bar)//['1', '3']
 ```
 
 # 三、Length属性
+
 length属性用于获取数组的长度:
 
 * 当我们修改数组的时候，length 属性会自动更新。
@@ -136,10 +136,12 @@ console.log(message)//['abc', 'nba', empty]
 //empty - 空
 ```
 
+> [!tip]
 > 所以，清空数组最简单的方法就是:`arr.length=0;`。
 
 
 # 四、数组的遍历
+
 数组的遍历有三种方式
 
 ```js
@@ -161,14 +163,16 @@ for (var item of message) {
 }
 ```
 
-> 前面两种方法可以拿到索引值
+>[!note] 
+>前面两种方法可以拿到索引值
 
 # 五、数组的方法-slice、concat、join
+
 arr.slice 方法(片):用于对数组进行截取(类似于字符串的slice方法)^aaa
 
 * arr.slice`([begin[,end]])`
 * 包含begin元素，但是不包含end元素
-* **不改变原数组**，而是创建一个新的数组
+* **不改变原数组**，而是**创建一个新的数组**
 
 ```js
 var message = ["abc", "nba", "cba", "123",]
@@ -208,14 +212,15 @@ console.log(message.join("--"))
 `arr.index0f(searchElement[,fromIndex])`
 
 * 从fromIndex开始查找，如果找到返回对应的索引，没有找到返回-1:
-* 也有对应的从最后位置开始查找的lastIndexOf 方法
+	* 默认值为0
+* 也有对应的从最后位置开始查找的 lastIndexOf 方法
 
 ```js
 var message = ["abc", "nba", "cba", "123"]
 console.log(message.indexOf("nba"))//1
 ```
 
-通过 key 直接来进行查找，并且返回的是 元素所在位置的索引
+通过 key 直接来进行查找，并且返回的是 **元素所在位置的索引**
 
 **arr.includes方法:判断数组是否包含某个元素**
 
@@ -299,7 +304,7 @@ console.log(student)
 ```
 
 
-## 6.3 补充ForEach
+## 6.3 补充forEach
 **arr.forEach**：遍历数组，并且让数组中每一个元素都执行一次对应的方法;
 
 ```js
@@ -313,7 +318,9 @@ bar.forEach(function(item, index, name) {
 })
 ```
 
+> [!note]
 > forEach回调函数里面的参数
+> 
 > * 第一个参数：每一次遍历的数组值
 > * 第二个参数：每一个遍历的索引
 > * 第三个参数：遍历的对象数组
@@ -342,6 +349,7 @@ bar.xlForEACH(function(item, index, names) {
 ```
 
 # 七、数组的排序
+
 sort方法也是一个高阶函数，用于对数组进行排序，并且生成一个排序后的**数组（改变原数组）**:
 
 `arr.sort([compareFunction ])`
@@ -371,7 +379,6 @@ console.log(num.reverse())
 ```
 
 # 八、数组的高阶方法
-
 
 ## 8.1 filter-过滤
 
@@ -421,8 +428,8 @@ arr.reduce
 * 用于计算数组中所有元素的总和;
 
 * 对数组中的每个元素按序执行一个由您提供的reducer 函数;
-	* 如果没有提供，那么这个会使用数组第一个数为返回值
-	* 简单数组是原始值，复杂数组就是第一个对象
+	* 如果没有提供，那么这个会使用数组**第一个数为返回值**
+	* 简单数组是原始值，**复杂数组就是第一个对象**
 	* **所以在对复杂数组进行计算的时候一定要对返回值进行初始话**
 * 每一次运行 reducer 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值;
 

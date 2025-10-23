@@ -5,12 +5,10 @@ v-for也支持遍历对象，并且支持有一二三个参数：
 * 二个参数： "(value, key) in object"; 
 * 三个参数： "(value, key, index) in object"; 
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745653174000zg7xqg.png)
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745653174000zg7xqg.png)
 
 
-v-for同时也支持数字的遍历： 
-
-* 每一个item都是一个数字；
+v-for同时也支持数字的遍历： 每一个item都是一个数字；
 
 ```html
 <li v-for="item in 10">{{item}}</li>
