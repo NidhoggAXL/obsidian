@@ -1,7 +1,7 @@
 # 一、简单使用
 在 vue 开发中是一个组件的开发，并不希望组件之间相互影响，但是 style 本身是一个选择器，并没有作用域的。
 
-例如：在 App.vue 根组件下面这是的style会影响到引入的其他局部组件。
+例如：在 App.vue 根组件下面的style会影响到引入的其他局部组件。
 
 **创建的 demo 组价：**
 
@@ -52,9 +52,10 @@ export default {
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746259679000tek3zk.png)
 
-要解决这个问题,那么就需要为style设置scoped（作用域）的属性
+要解决这个问题,那么就需要为style设置 **scoped（作用域）** 的属性
 
-* 本质是为元素自动添加不同的 <mark class="hltr-orange">data- 属性</mark>
+>[!abstract] 
+>本质是为元素自动添加不同的 <mark class="hltr-orange">data- 属性</mark>
 
 ```html
 <style scoped> </style>
@@ -66,6 +67,7 @@ export default {
 >基本上所有的style都希望设计自己的组件,不要和其他的有影响所以基本<mark class="hltr-orange">都需要为style添加 scoped(作用域) 属性</mark>
 
 # 二、BUG
+
 如果子组件并没有<mark class="hltr-orange">进行一个包裹</mark>的时候，这个 style 的 scoped 就不生效：
 
 demo.vue 子组件：
@@ -91,13 +93,14 @@ App.vue 根组件：
 ```html
 <template>
  <div class="app">
-  <h2 class="title">我是App里面的</h2>
+  <h2 class="title">我是App里面的title</h2>
   <Demo></Demo>
  </div>
 </template>
 
 <script>
 import Demo from './demo.vue'
+
 export default {
  components: {
   Demo

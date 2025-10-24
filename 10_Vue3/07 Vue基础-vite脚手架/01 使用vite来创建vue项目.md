@@ -10,9 +10,7 @@ npm init vue@latest
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17462612310002q145f.png)
 
-**后面就是创建项目过程:**
-
-* 会进行一定的提示
+**后面就是创建项目过程:** 会进行一定的提示
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17462614370001tqzw5.png)
 
