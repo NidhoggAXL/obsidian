@@ -30,12 +30,12 @@ watch: {
 
 **案例一**：通过按钮来改变data里面的**字符串数据**，但是希望在代码逻辑里面可以监听数据的改变
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674183000tk8cr5.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674183000tk8cr5.png)
 
 
 **案例二**：通过按钮来改变data里面的**对象数据**
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674607000a84erw.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674607000a84erw.png)
 
 会发现如果改变的是对象就会拿到 [[02 Proxy(代理）类|代理对象]]，如果真的想<mark class="hltr-orange">拿到原对象</mark>，就要使用 **Vue.toRaw()** 方法如下的代码：
 
@@ -53,23 +53,23 @@ console.log(Vue.toRaw(oldValue) === oldValue) // true
 * 当我们点击按钮的时候会修改info.name的值； 
 * 这个时候我们使用watch来侦听info，可以侦听到吗？答案是**不可以。**
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677354000l6xpwz.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677354000l6xpwz.png)
 
 这是因为默认情况下，<mark class="hltr-orange">watch只是在侦听info的引用变化</mark>，对于<mark class="hltr-orange">内部属性的变化是不会做出响应</mark>的： 
 
-* 这个时候我们可以使用一个 **选项deep进** 行更深层的侦听； 
+* 这个时候我们可以使用一个选项 **deep** 进行更深层的侦听； 
 	* 默认为 false，深度监听为 true
-* 注意前面我们说过**watch里面侦听的属性对应的也可以是一个Object**；
+* 注意前面说过**watch里面侦听的属性对应的也可以是一个Object**；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456775480007t6azf.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456775480007t6azf.png)
 
 > [!tip] 为什么 newValue 和 oldValue 是同一个对象？
-> <mark class="hltr-orange">改变的是 info 中的属性 name，并没有改变 info 的地址</mark>，所以说并发生改变我们监听的 info 的地址的，所以 newValue 和 oldValue 还是同一个对象并且 oldValue 不为 undifined。
+> <mark class="hltr-orange">改变的是 info 中的属性 name，并没有改变 info 的地址</mark>，所以说并发生改变我们监听的 info 的地址的，还是对 info 的同一个引用，所以 newValue 和 oldValue 还是同一个对象并且 oldValue 不为 undifined。
 
 
 **还有另外一个属性，是希望一开始的就会立即执行一次：**
 
-* 这个时候我们使用 **immediate选项**； 
+* 这个时候我们使用 **immediate** 选项； 
 * 这个时候无论后面数据是否有变化，侦听的函数都会<mark class="hltr-orange">有限执行一次</mark>；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677910000jycj04.png)

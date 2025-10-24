@@ -1,4 +1,4 @@
-看一下v-model绑定 **checkbox**：单个勾选框和多个勾选框 
+看一下v-model绑定 [[01 高级元素的使用#5.6 input 作为复选框 checkbox|checkbox]]：单个勾选框和多个勾选框 
 
 <mark class="hltr-orange">单个勾选框： </mark>
 
@@ -14,6 +14,8 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745933590000rbxeef.png)
 
-
+```js
+var hobbies = ['篮球','足球','网球']
+```
 
 

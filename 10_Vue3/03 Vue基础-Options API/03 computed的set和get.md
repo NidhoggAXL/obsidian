@@ -12,7 +12,7 @@ pullName: {
 pullName() { console.log("hahahah") }
 ```
 
-但是，如果我们确实想设**置计算属性的值**呢？ (<mark class="hltr-orange">了解</mark>)
+但是，如果我们确实想**设置计算属性的值**呢？ (<mark class="hltr-orange">了解</mark>)
 
 * 这个时候我们也可以给计算属性设置一个setter的方法；
 

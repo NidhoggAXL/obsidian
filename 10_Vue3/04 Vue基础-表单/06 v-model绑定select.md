@@ -25,7 +25,7 @@
   </select>
   <p>当前选中select是:{{ selection }}</p>
 
-  <!-- multiple属性表示多选,可以选中多个选项
+  <!-- multiple(多重的)属性表示多选,可以选中多个选项
   size属性表示显示的选项数量 -->
   <select multiple size="3" v-model="current">
    <option value="1">选项1</option>

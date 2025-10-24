@@ -15,7 +15,7 @@
 <input :value="searchText" @input="searchText = $sevent.target.value" />
 ```
 
-# 二、事实上v-**model更加复杂**
+# 二、事实上v-model更加复杂
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745932303000x9nmz7.png)
 

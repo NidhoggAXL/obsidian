@@ -3,7 +3,7 @@
 * 比如gender的两个输入框值male、female;
 * 比如hobbies的三个输入框值basketball、football、tennis;
 
-在真实开发中，我们的**数据可能是来自服务器**的，那么我们就可以先将值**请求下来，** 绑定到data返回的对象中，再通过v-bind来进行值的绑定，这个过程就是值绑定。
+在真实开发中，我们的**数据可能是来自服务器**的，那么我们就可以先将值**请求下来，** 绑定到data返回的对象中，再通过v-bind来进行值的绑定，这个过程就是**值绑定**。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746087878000nalq4c.png)
 

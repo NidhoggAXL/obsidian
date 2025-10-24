@@ -37,6 +37,7 @@
 	* 数组进行反转（[[05 数组Array#七、数组的排序|reverse]]）
 	* 数组->字符串（[[05 数组Array#五、数组的方法-slice、concat、join|join]]）
 
+
 **可以有三种实现思路：** 
 
 * 思路一：在模板语法中直接使用表达式； 
@@ -51,7 +52,7 @@
 * **缺点二**：当有多次一样的逻辑时，存在重复的代码； 
 * **缺点三**：多次使用的时候，很多运算也需要多次执行，没有缓存；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745660133000h8z4qv.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745660133000h8z4qv.png)
 
 # 五、实现思路二：method实现
 
@@ -61,17 +62,17 @@
 * **缺点二**：多次使用方法的时候，<mark class="hltr-orange">没有缓存</mark>，也需要多次计算；
 
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745660375000x0ktm3.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745660375000x0ktm3.png)
 
 # 六、思路三的实现：computed实现
 
 思路三的实现：computed实现 
 
-* 注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，**这个后面讲setter和getter时会讲到；** 
+* 注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，后面的[[03 computed的set和get|setter和getter]]有说明
 * 我们会发现无论是直观上，还是效果上计算属性都是更好的选择； 
 * 并且计算属性是<mark class="hltr-orange">有缓存</mark>的；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456605330004e9hpg.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456605330004e9hpg.png)
 
 
 
