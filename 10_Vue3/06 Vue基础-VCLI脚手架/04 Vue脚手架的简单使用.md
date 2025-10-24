@@ -1,7 +1,8 @@
 # 一、使用全局脚手架
 
-## 1.1 根组件挂在
-首先定义一个 product.vue 组件：会使用到 ES Module 里面的[[05 ES Module用法详解#六、default用法|ES module中export的defalut]]来进行<mark class="hltr-orange">导出</mark>
+## 1.1 根组件挂载
+
+首先定义一个 product.vue 组件：会使用到 ES Module 里面的ES module中export的[[05 ES Module用法详解#六、default用法|defalut]]来进行**导出**
 
 ```html
 <template>
@@ -49,7 +50,8 @@ index.html 里面的文件格式：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746178725000eqisbg.png)
 
-## 1.2 其他组件挂在到根组件
+## 1.2 其他组件挂载到根组件
+
 首先也是创建 demo.vue 组建：
 
 ```html
@@ -112,7 +114,7 @@ app.mount('#app')
 
 # 二、使用局部组件
 
-以上面的 [[#1.2 其他组件挂在到根组件]] 为例，让 demo 为局部组件的话，需要到 product.vue 里面设置 [[06 Vue的options|options]]的 components。
+以上面的 [[#1.2 其他组件挂在到根组件|其他组件挂载到根组件]] 为例，让 demo 为局部组件的话，需要到 product.vue 里面设置 [[06 Vue的options|options]] 的 components。
 
 首先需要把 main.js 里面的全局注册删除：
 
@@ -135,11 +137,11 @@ app.mount('#app')
 
 ```
 
-当然要注册，那肯定就需要 在product.vue 里面导入 demo.vue 的组件：[[02 注册Vue的全局组件#五、组件的名称]]
+使用局部组件就需要在 product.vue 里面导入 demo.vue 的组件：[[03 注册Vue的布局组件|布局组件]]
 
 ```html
 <template>
- <h2>我是一个vue模块化的{{ message }}</h2>
+ <h2>{{ message }}</h2>
  <demo-component></demo-component>
 </template>
 

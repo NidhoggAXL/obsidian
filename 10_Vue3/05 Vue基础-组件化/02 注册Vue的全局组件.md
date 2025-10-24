@@ -48,7 +48,7 @@ app.component(组件名词, 组件对象)
 </body>
 ```
 
-但是和我们根组件会发生有不同，根组件就不需要使用到 createApp 里面使用 template 就可以创建 <mark class="hltr-orange">标签的元素</mark>，这里也可以把 html 内容抽取出来。
+但是我们根组件会有不同，根组件就不需要使用到 createApp 里面，使用 template 就可以创建 <mark class="hltr-orange">标签的元素</mark>，这里也可以把 html 内容抽取出来。
 
 ```html
 <body>
@@ -80,16 +80,17 @@ app.component(组件名词, 组件对象)
 </body>
 ```
 
-> 注意my-compoent的模板实在 id=”app“ 之外定义的模板
+> [!tip]
+> 注意my-compoent的模板实在 `id="app"` 之外定义的模板
 
 # 三、全局组件的逻辑
-当然，我们组件本身也可以有自己的代码逻辑： 
 
-* 比如自己的data、computed、methods等等
+组件本身也可以有自己的代码逻辑： 比如自己的data、computed、methods等等
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746105274000mccj99.png)
 
 # 四、全局组件的特点
+
 <mark class="hltr-orange">只要注册的是全局组件，就可以在任意的 template 中使用：</mark>
 
 * 其中根组件 id="app" 默认就是一个 template 模板
@@ -139,11 +140,11 @@ app.component(组件名词, 组件对象)
 
 # 五、组件的名称
 
-在通过app.component注册一个组件的时候，第一个参数是组件的名称，定义组件名的方式有两种：
+在通过 app.component 注册一个组件的时候，第一个参数是组件的名称，定义组件名的方式有两种：
 
 **方式一：使用kebab-case（短横线分割符）** 
 
-* 当使用 kebab-case (短横线分隔命名) 定义一个组件时，你也必须在引用这个自定义元素时使用 kebab-case，例如 `<my-cpnponent-name>；
+* 当使用 kebab-case (短横线分隔命名) 定义一个组件时，你也必须在引用这个自定义元素时使用 kebab-case，例如 `<my-cpnponent-name>`；
 
 ```js
 app.component('my-component-name', {})

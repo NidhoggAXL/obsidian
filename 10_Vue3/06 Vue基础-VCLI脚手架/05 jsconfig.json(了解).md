@@ -1,4 +1,4 @@
-<mark class="hltr-orange">一般都不会进行一个配置的，使用默认配置就好</mark>：
+一般都不会进行一个配置的，使用默认配置就好：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746195647000l7ioi6.png)
 

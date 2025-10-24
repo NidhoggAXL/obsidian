@@ -1,3 +1,5 @@
+# 一、认识SFC单文件组件
+
 目前我们使用vue的过程都是在html文件中，通过<mark class="hltr-orange">template编写自己的模板、脚本逻辑、样式</mark>等。 
 
 **但是随着项目越来越复杂，我们会采用组件化的方式来进行开发：** 
@@ -13,6 +15,7 @@
 
 
 # 二、单文件的特点
+
 这个组件中我们可以获得非常多的特性： 
 
 * 代码的高亮； 
@@ -20,7 +23,7 @@
 * 组件作用域的CSS； 
 * 可以使用预处理器来构建更加丰富的组件，比如 TypeScript、Babel、Less、Sass等；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17461676440008e975j.png)
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17461676440008e975j.png)
 
 例如如果使用less的话可以添加 attribute 属性：
 
@@ -29,7 +32,8 @@
 </style>
 ```
 
-> vue默认是集成了less，但是在使用的时候还是需要下载less的[[10 Webpack打包Vue#App.vue的打包过程|loader]]
+> [!tip]
+> 虽然vue默认是集成了less，但是在使用的时候还是需要下载less的[[10 Webpack打包Vue#App.vue的打包过程|loader]]
 # 三、如何支持SFC
 
 如果我们想要使用这一的SFC的.vue文件，比较常见的是两种方式：
