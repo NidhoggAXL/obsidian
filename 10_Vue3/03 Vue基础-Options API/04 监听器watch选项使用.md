@@ -48,6 +48,7 @@ console.log(Vue.toRaw(oldValue) === oldValue) // true
 ```
 
 # 二、侦听器watch的配置选项
+
 **我们先来看一个例子：** 
 
 * 当我们点击按钮的时候会修改info.name的值； 

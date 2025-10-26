@@ -1,5 +1,6 @@
 # 一、认识keep-alive
-我们先对之前的案例中About组件进行改造： 
+
+先对之前的案例中About组件进行改造： 
 
 在其中增加了一个按钮，点击可以递增的功能；
 
@@ -17,6 +18,7 @@
 
 
 # 二、keep-alive属性
+
 keep-alive有一些属性： 
 
 * include - `string | RegExp | Array`。只有名称匹配的组件会被缓存； 
@@ -35,7 +37,7 @@ keep-alive有一些属性：
 对于缓存的组件来说，再次进入时，我们是<mark class="hltr-orange">不会执行created（组件创建完成）或者mounted（挂载组件）等生命周期函数</mark>的： 
 
 * 但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件； 
-* 这个时候我们可以使用activated（活跃的） 和 deactivated（不活跃的） 这两个生命周期钩子函数来监听；
+* 这个时候我们可以使用 **activated（活跃的）** 和 **deactivated（不活跃的）** 这两个生命周期钩子函数来监听；
 	* activated - 进入组件
 	* deactivated - 离开组件
 

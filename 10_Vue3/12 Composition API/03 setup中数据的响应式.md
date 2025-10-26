@@ -1,4 +1,5 @@
 # 一、Reactive API
+
 如果想为在setup中定义的数据提供响应式的特性，那么我们可以<mark class="hltr-orange">使用reactive的函数</mark>：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747550407000z719sd.png)

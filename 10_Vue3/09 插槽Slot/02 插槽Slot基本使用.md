@@ -1,7 +1,8 @@
 # 一、插槽的基本使用
+
 **要求是: App.vue 文件里面确定插槽的内容(例如按钮、图片)：**
 
-组件的代码如下：
+子组件的代码如下：
 
 ```html
 <template>
@@ -27,6 +28,9 @@ export default {
 
 </style>
 ```
+
+父组件代码如下：
+
 
 ```html
 <template>
@@ -57,11 +61,9 @@ export default {
 </style>
 ```
 
-
-
 页面效果：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746780203000gjgn03.png)
+![gh|300](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746780203000gjgn03.png)
 
 
 # 二、插槽的默认内容

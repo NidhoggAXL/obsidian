@@ -1,4 +1,5 @@
 # 一、渲染作用域
+
 在Vue中有渲染作用域的概念： 
 
 * 父级模板里的所有内容都是在<mark class="hltr-orange">父级作用域中编译</mark>的； 
@@ -12,10 +13,11 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17467899540002acatm.png)
 
 # 二、作用域插槽
+
 **但是有时候我们希望插槽可以访问到子组件中的内容是非常重要的：** 
 
 * 当一个组件被用来渲染一个<mark class="hltr-orange">数组元素时</mark>，我们使用插槽，并且希望插槽中显示每项的内容； 
-* 这个Vue给我们提供了作用域插槽；
+* 这个时候Vue给我们提供了作用域插槽；
 
 我们来看下面的一个案例： 
 
