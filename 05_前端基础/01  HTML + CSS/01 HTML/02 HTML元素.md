@@ -215,6 +215,7 @@ HTML `<img>`元素将一份图像嵌入文档.
  ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710575612000mme6v6.png)
 
 ## 7.2 a元素跳转到网页中的具体位置
+
 **锚点链接可以实现:跳转到网页中的具体位置**
 
 **锚点链接有两个重要步骤:**

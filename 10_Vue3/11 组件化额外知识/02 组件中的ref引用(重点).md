@@ -5,7 +5,7 @@
 * 在Vue开发中我们是<mark class="hltr-orange">不推荐进行原生DOM操作</mark>的； 
 * 这个时候，我们可以<mark class="hltr-orange">给元素或者组件绑定一个ref的attribute属性</mark>；
 
-组件实例有一个$refs属性：它一个对象Object，持有注册过 ref attribute 的所有 DOM 元素和组件实例。
+组件实例有一个$refs属性：它一个对象Object，持有注册过 ref attribute 的**所有 DOM 元素和组件实例**。
 
 在 App.vue 和 banner.vue 子组件里面都存在 ref 属性的元素
 
