@@ -1,9 +1,8 @@
 # 一、Provide函数
+
 事实上我们之前还学习过[[01 依赖注入Provide和lnject(理解)|provide和inject]]，Composition APl也可以替代之前的 Provide 和 Inject 的选项。
 
-我们可以通过 provide来提供数据:
-
-* 可以通过 provide 方法来定义每个 Property;
+通过 provide来提供数据: provide 方法来定义每个 Property;
 
 provide可以传入两个参数:
 
@@ -13,9 +12,8 @@ provide可以传入两个参数:
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747574057000rmsm5v.png)
 
 # 二、inject函数
-在 <mark class="hltr-orange">后代组件</mark> 中可以通过 inject 来注入需要的属性和对应的值： 
 
-* 可以通过 inject 来注入需要的内容； 
+在 **后代组件** 中可以通过 inject 来注入需要的属性和对应的值
 
 inject可以传入两个参数： 
 
@@ -23,7 +21,6 @@ inject可以传入两个参数：
 * 默认值；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747574101000gna3u7.png)
-
 
 # 三、数据响应式
 

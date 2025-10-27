@@ -5,7 +5,7 @@
 
 如何使用computed呢？ 
 
-* 方式一：接收一个getter函数，并为 getter 函数返回的值，返回一个不变的 ref 对象； 
+* 方式一：**接收一个getter函数**，并为 getter 函数返回的值，返回一个**不变的 ref 对象**； 
 * 方式二：接收一个具有 get 和 set 的对象，返回一个可变的（可读写）ref 对象；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747558879000zzcgpb.png)

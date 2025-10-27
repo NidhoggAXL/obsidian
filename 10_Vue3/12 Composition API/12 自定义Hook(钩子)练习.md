@@ -15,7 +15,8 @@ return {
 ```
 
 # 二、useTitle
-我们编写一个修改title的Hook：
+
+编写一个修改title的Hook：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747636199000bpld6d.png)
 

@@ -1,5 +1,6 @@
 # 一、script setup语法
-`<script setup>` 是在单文件组件 (SFC) 中使用组合式 API 的编译时语法糖，当同时使用 SFC 与组合式 API 时则推荐该语法。
+
+`<script setup>` 是在[[01 Vue的开发模式解析|单文件组件 (SFC)]] 中使用组合式 API 的编译时语法糖，当同时使用 SFC 与组合式 API 时则推荐该语法。
 
 * 更少的样板内容，更简洁的代码；
 * 能够使用纯 Typescript 声明 prop 和抛出事件；

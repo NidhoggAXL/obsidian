@@ -4,13 +4,14 @@
 
 在Composition API中，我们可以使用watchEffect和watch来完成响应式数据的侦听； 
 
-* watchEffect：用于自动收集响应式数据的依赖； 
-* watch：需要手动指定侦听的数据源；
+* watchEffect：用于**自动收集响应式数据**的依赖； 
+* watch：需要**手动指定侦听**的数据源；
+
 # 二、watch的使用
 
 watch的API完全等同于组件watch选项的Property： 
 
-* watch需要<mark class="hltr-orange">侦听特定的数据源</mark>，并且执行其回调函数； 
+* watch需要**侦听特定的数据源**，并且**执行其回调函数**； 
 * 默认情况下它是惰性的，只有当被侦听的源发生变化时才会执行回调；
 
 ```js
@@ -34,7 +35,7 @@ import { ref, watch } from 'vue'
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747575464000rrvyai.png)
 
 
-也可以编写为一个函数，这样默认就是**深层监听**：
+也可以编写为一个函数，这样默认就是**深层监听**（算深层监听的一种语法糖）：
 
 ```js
 const info = reactive({
@@ -51,19 +52,22 @@ watch(() => info, (newValue, oldValue) => {
 ```
 # 五、watchEffect
 
-当侦听到某些响应式数据变化时，我们希望执行某些操作，这个时候可以使用 <mark class="hltr-orange">watchEffect</mark>。
+当侦听到某些响应式数据变化时，我们希望执行某些操作，这个时候可以使用watchEffect。
 
 **我们来看一个案例：** 
 
-* 首先，watchEffect传入的函数<mark class="hltr-orange">会被立即执行一次</mark>，并且在执行的过程中<mark class="hltr-orange">会收集依赖</mark>； 
-* 其次，<mark class="hltr-orange">只有</mark>收集的依赖发生变化时，watchEffect传入的函数才会再次执行；
+* 首先，watchEffect传入的函数会被**立即执行一次**，并且在执行的过程中会收集依赖； 
+* 其次<mark class="hltr-cyan">，只有收集的依赖发生变化时，watchEffect传入的函数才会再次执行</mark>；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747575541000a2tdui.png)
 
+> [!info]
+> 
 > 例如上面的例子：这里的依赖就是 name 和 age
 
 # 六、watchEffect的停止侦听
-如果在发生某些情况下，我们希望停止侦听，这个时候我们可以获取watchEffect的<mark class="hltr-orange">返回值函数，调用该函数</mark>即可。 
+
+如果在发生某些情况下，我们希望停止侦听，这个时候可以<mark class="hltr-cyan">获取watchEffect的返回值函数，调用该函数即可</mark>。 
 
 比如在上面的案例中，我们age达到20的时候就停止侦听：
 
