@@ -1,9 +1,8 @@
-> [!tip] 重要思路：
-> 为什么还要再封装？
-> * 当有一天类似域axios的库不在维护了，这个时候项目和axios已经高度耦合了
-> * 如果要进行更改，那么整个项目的更改就会变得非常困难与麻烦
+> [!tip] 重要思路：为什么还要再封装？
+> - 当有一天类似域axios的库不在维护了，这个时候项目和axios已经高度耦合了
+> - 如果要进行更改，那么整个项目的更改就会变得非常困难与麻烦
 
-分装的方式没有固定的要求，下面就是一种<mark class="hltr-orange">类的封装思路</mark>。
+封装的方式没有固定的要求，下面就是一种<mark class="hltr-cyan">类的封装思路</mark>。
 
 ```js
 import axios from 'axios'
@@ -14,6 +13,7 @@ class AXLRequest {
     //为什么不是 this = axios.create 是错误的？
     //如果直接更改this了，那就是this的指向已经改变啦
     //所以就要使用一个this.instance的属性来使用
+    //instace - 实例的意思
     this.instance = axios.create({
       baseURL,
       timeout
