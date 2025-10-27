@@ -37,14 +37,16 @@ Vuex 使用单一状态树:
 * 通过useStore拿到store后去获取某个状态即可； 
 * 但是如果需要使用 mapState 的功能呢？
 
-## 3.1 自己封装hook
+## 3.1 自己封装Hook
 
-默认情况下，Vuex并没有提供非常方便的使用mapState的方式，这里进行了一个函数的封装：
+默认情况下，Vuex并没有提供非常方便的使用mapState的方式，下面进行了一个函数的封装：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747837054000ld2ah6.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747837299000zr2qan.png)
 
+> [!abstract]
+> 
 > 主要 bind 绑定，为什么要使用 bind 来绑定 this 到 store 呢？这是因为在 setup 中是不可以使用 this 的，这个时候就需要我们改变 this ，这样就可以使用this。
 
 

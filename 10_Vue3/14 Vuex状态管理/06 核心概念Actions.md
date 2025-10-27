@@ -1,5 +1,6 @@
 # 一、acrions的基本使用
-Action类似于mutation，不同在于： 
+
+Action类似于mutations，不同在于： 
 
 * Action提交的是mutation，而不是直接变更状态； 
 * Action可以包含任意异步操作；
@@ -8,25 +9,29 @@ Action类似于mutation，不同在于：
 
 这里有一个非常重要的参数context： 
 
-* context是一个和store实例均有相同方法和属性的context对象； 
-* 所以我们可以从其中获取到commit方法来提交一个mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters；
+* **context是一个和store实例均有相同方法和属性的context对象**；
+* 所以可以从其中获取到commit方法来提交一个mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters；
 
 但是为什么<mark class="hltr-orange">它不是store对象</mark>呢？这个等到我们讲[[07 核心概念Modules|Modules]]时再具体来说；
 
 # 二、actions的分发操作
+
 如何使用action呢？进行action的分发： 
 
 * 分发使用的是 store 上的dispatch函数；
 	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747988849000wpi09m.png)
 * 同样的，它也可以携带我们的参数：
 	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747989007000myy5po.png)
-* 也可以以对象的形式进行分发：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17479890220004r2bxy.png)
+* 也可以以对象的形式进行分发：
+	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17479890220004r2bxy.png)
 
 # 三、actions的辅助函数
+
 action也有对应的辅助函数： 
 
-* 对象类型的写法； ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747989352000yyarnf.png)
-
+* 对象类型的写法； 
+	
+	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747989352000yyarnf.png)
 * 数组类型的写法；![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17479893580002w37zw.png)
 
 
