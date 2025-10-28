@@ -1,35 +1,63 @@
 # 一、什么是响应式？
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/175343504200063ds0i.png)
+先来看一下响应式意味着什么?来看一段代码
+
+- m有一个初始化的值，有一段代码使用了这个值;
+- 那么在m有一个新的值时，这段代码可以自动重新执行，
+
+```js
+let m = 20
+console.log(m)
+conle.log(m * 2)
+
+m = 40
+```
+
+上面的这样一种<mark class="hltr-cyan">可以自动响应数据变量的代码机制，就称之为是响应式的。</mark>
+
+那么我们再来看一下对象的响应式:
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/176163443200031irrc.png)
+
 
 # 二、响应式函数设计
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753435089000f4kd0w.png)
+首先，执行的代码中可能不止一行代码，所以可以将这些代码放到一个函数中：那么问题就变成了，当数据发生变化时，自动去执行某一个函数;
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1761634467000qf9suk.png)
+
+但是有一个问题:在开发中是有很多的函数的，如何区分一个函数需要响应式，还是不需要响应式呢?
+
+- 很明显，下面的函数中 foo 需要在obj的name发生变化时，重新执行，做出反应
+- bar函数是一个完全独立干obj的函数，它不需要执行任何响应式的操作
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1761634559000ka7j5o.png)
+
 
 # 三、响应式函数的实现watchFn
 
-但是我们怎么区分呢？ 
+但是怎么区分呢？ 
 
-* 这个时候我们封装一个新的函数watchFn； 
+* 这个时候封装一个新的函数watchFn； 
 * 凡是传入到watchFn的函数，就是需要响应式的； 
 * 其他默认定义的函数都是不需要响应式的；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753435315000lz0y65.png)
+![gh|350](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753435315000lz0y65.png)
 
 
 # 四、响应式依赖的收集
 
-目前我们收集的依赖是放到一个数组中来保存的，但是这里会存在数据管理的问题： 
+目前**收集的依赖是放到一个数组中来保存**的，但是这里会存在数据管理的问题： 
 
-* 我们在实际开发中需要监听很多对象的响应式； 
+* 实际开发中需要监听很多对象的响应式； 
 * 这些对象需要监听的不只是一个属性，它们很多属性的变化，都会有对应的响应式函数； 
-* 我们不可能在全局维护一大堆的数组来保存这些响应函数； 
+* 不可能在全局维护一大堆的数组来保存这些响应函数； 
 
-所以我们要设计一个类，这个类用于管理某一个对象的某一个属性的所有响应式函数： 
+所以要**设计一个类**，这个类用于管理<mark class="hltr-cyan">某一个对象的某一个属性</mark>的**所有响应式函数**： 
 
 * 相当于替代了原来的简单 reactiveFns 的数组；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753435727000koyljq.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753435727000koyljq.png)
 
 ```js
 const obj = {
@@ -80,7 +108,7 @@ dep.notify()
 ```
 # 五、监听对象的变化
 
-那么我们接下来就可以通过之前学习的方式来监听对象的变量： 
+那么接下来就可以通过之前学习的方式来监听对象的变量： 
 
 * 方式一：通过 Object.defineProperty的方式（vue2采用的方式）； 
 * 方式二：通过new Proxy的方式（vue3采用的方式）；
