@@ -77,6 +77,7 @@ Map也可以通过for of进行遍历,不过遍历打印的解构不同。
 ```
 
 # 三、WeakMap的使用
+
 和Map类型的另外一个数据结构称之为**WeakMap**，也是**以键值对的形式存在的**。 
 
 那么和Map有什么区别呢？ 
@@ -94,6 +95,7 @@ Map也可以通过for of进行遍历,不过遍历打印的解构不同。
 * delete(key)：根据key删除一个键值对，返回Boolean类型；
 
 # 四、WeakMap应用
+
 注意：WeakMap也是不能遍历的 
 
 * 没有forEach方法，也不支持通过for of的方式进行遍历；
