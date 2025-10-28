@@ -48,7 +48,8 @@ Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是
 ```
 
 # 四、Receiver的作用
-我们发现在使用getter、setter的时候有一个**receiver的参数**，它的作用是什么呢？ 
+
+发现在使用getter、setter的时候有一个**receiver的参数**，它的作用是什么呢？ 
 
 * 如果我们的源对象（obj）有**setter、getter的访问器属性，那么可以通过receiver来改变里面的this**；
 
@@ -72,11 +73,11 @@ Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是
   
   objProxy.name = "mba"
   //监听：name进行set改变
-  //obj里面的 {_name: 'axl'}
+  //obj里面的 {_name: 'mba'}
 </script>
 ```
 
-上面代码的运行顺序来看一下图片：
+上面代码的运行顺序来看一下图片：**（`obj._name` 是为 mba，下面图片错误）**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/173219929300001fh4d.png)
 
@@ -84,7 +85,7 @@ Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是
 
 **但是我们上面的代码中，`name`发生了改变，同时`_name`也是发生了改变。**
 
-Proxy是一个代理的，实质还是对obj创建了一个监听的对象 objProxy 代理，而当 obj 里面的name发生改变的时候，是 obj 本身发生了改变并不是 代理发生了改变，所以代理就会监听不到。**（代理对象 objProxy 引起的 obj 本身发生改变）**
+Proxy是一个代理的，实质还是对obj创建了一个监听的对象 objProxy 代理，而当 obj 里面的 `_name` 发生改变的时候，是 obj 本身发生了改变并不是 代理发生了改变，所以代理就会监听不到。**（代理对象 objProxy 引起的 obj 本身发生改变）**
 
 **上面从情况就要使用到 Receive 来改变 obj 里面的 thsi**
 

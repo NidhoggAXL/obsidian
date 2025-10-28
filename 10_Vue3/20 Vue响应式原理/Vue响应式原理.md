@@ -113,13 +113,13 @@ dep.notify()
 * 方式一：通过 Object.defineProperty的方式（vue2采用的方式）； 
 * 方式二：通过new Proxy的方式（vue3采用的方式）；
 
-我们这里先以Proxy的方式来监听：
+这里以 [[02 Proxy(代理）类#二、Proxy的set和get捕获器|Proxy(代理)]] 的方式来监听：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753442481000wttrm1.png)
 
 # 六、对象的依赖管理
 
-我们目前是创建了一个Depend对象，用来管理对于name变化需要监听的响应函数： 
+目前是创建了一个Depend对象，用来管理对于name变化需要监听的响应函数： 
 
 * 但是实际开发中我们会有不同的对象，另外会有不同的属性需要管理； 
 * 我们如何可以使用一种数据结构来管理不同对象的不同依赖关系呢？ 
