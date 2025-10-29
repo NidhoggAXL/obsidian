@@ -59,12 +59,14 @@ $('字符串')
 ```
 
 # 三、VSCode代码片段
+
 生线生成代码片段地址:https://snippet-generator.app/
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1737702433000t98brn.png)
 
 
 # 四、jQuery过滤器（filtering）的API
+
 jQuery过滤器API(即jQuery原型上的方法)
 
 1. **eq(index)**:从匹配元素的集合中，取索引处的元素，eq全称(equal 等于)，返回jQuery对象.
