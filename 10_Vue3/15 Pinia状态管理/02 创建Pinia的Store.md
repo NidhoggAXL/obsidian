@@ -30,21 +30,35 @@ store有三个核心概念:
 
 定义一个Store： 
 
-* 需要知道 Store 是使用 defineStore() 定义的，
+* 需要知道 **Store 是使用 defineStore() 定义的**，
 * 并且它需要一个唯一名称，作为第一个参数传递（类似ID）；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748007139000hte7hk.png)
 
+## defineStore的返回值
 
- defineStore 返回的是一个函数，这也是 composition API 方便使用的原因。上面的 counter，也称为 id，是必要的，Pinia 使用它来将 store 连接到 devtools。
+ **defineStore 返回的是一个函数**，这也是 composition API 方便使用的原因。上面的 counter，也称为 id，是必要的，Pinia 使用它来将 store 连接到 devtools。
 
 > [!abstract] 
 > 
 > 返回的函数统一使用useX作为命名方案，这是约定的规范；use + name 使用小驼峰命名
 
+当 Store 要使用其他 Store 的 [[04 Pinia核心概念Getters#^0c656b|state、getters、actiongs]] 的时候，就更加的具有通用性
+
+**这种设计的好处：**
+
+- **延迟初始化**: Store 只在第一次调用时创建
+    
+- **单例模式**: 多次调用返回同一个实例
+    
+- **Composition API 友好**: 符合 Vue 3 的函数式风格
+    
+- **类型安全**: 完整的 TypeScript 支持
+
+
 # 四、使用定义的Store
 
-Store在它被使用之前是不会创建的，我们可以通过**调用use函数来使用Store**：
+Store在它被使用之前是不会创建的，可以通过**调用use函数来使用Store**：
 
 * 使用的时候不需要再确定使用 counter 里面的什么属性（`counter.state.count`)，直接使用就可以啦（`counter.count`)
 

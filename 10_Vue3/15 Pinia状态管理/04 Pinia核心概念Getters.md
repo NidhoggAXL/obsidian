@@ -18,7 +18,7 @@ Getters相当于Store的计算属性（compute）：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748160203000tzgu1m.png)
 
-**访问其他store的Getters**：
+**访问其他store的Getters**： ^0c656b
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748160236000lo2tsf.png)
 
