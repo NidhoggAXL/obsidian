@@ -471,6 +471,7 @@ padding、boder、margin-left/right 对于行内非替换元素都起作用。
 margin-top、margin-bottom 对于行内非替换元素不起作用。
 
 # 十一、CSS属性 box-sizing
+
 box-sizing用来设置盒子模型中宽高的行为
 
 content-box

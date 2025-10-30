@@ -16,11 +16,11 @@
 
 # 二、注册全局组件
 
-我们先来学习一下全局组件的注册： 
+先来学习一下全局组件的注册： 
 
-* 全局组件需要使用我们全局创建的<mark class="hltr-orange">app来注册组件</mark>； 
+* 全局组件需要使用全局创建的<mark class="hltr-orange">app来注册组件</mark>； 
 * 通过<mark class="hltr-orange">component方法</mark>传入<mark class="hltr-orange">组件名称、组件对象</mark>即可注册一个全局组件了； 
-* 之后，我们可以在<mark class="hltr-orange">App组件的template中</mark>直接使用这个<mark class="hltr-orange">全局组件</mark>：
+* 之后，可以在<mark class="hltr-orange">App组件的template中</mark>直接使用这个<mark class="hltr-orange">全局组件</mark>：
 
 ```js
 app.component(组件名词, 组件对象)
@@ -48,7 +48,7 @@ app.component(组件名词, 组件对象)
 </body>
 ```
 
-但是我们根组件会有不同，根组件就不需要使用到 createApp 里面，使用 template 就可以创建 <mark class="hltr-orange">标签的元素</mark>，这里也可以把 html 内容抽取出来。
+但是根组件会有不同，根组件就不需要使用到 createApp 里面，使用 template 就可以创建 <mark class="hltr-orange">标签的元素</mark>，这里也可以把 html 内容抽取出来。
 
 ```html
 <body>
