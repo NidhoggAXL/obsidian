@@ -36,7 +36,7 @@ const message = ref("Hello World")
 >
  > - 在模板中引入ref的值时，Vue会自动帮助进行解包操作，所以并不需要在模板中通过 ref.value 的方式来使用
  >
- > - 但是在 setup 函数内部，它依然是一个ref引用，所以对其进行操作时，我们依然需要使用 ref.value 的方式
+ > - <mark class="hltr-cyan">但是在 setup 函数内部，它依然是一个ref引用，所以对其进行操作时，我们依然需要使用 ref.value 的方式</mark>
 
 # 三、Ref自动解包
 
