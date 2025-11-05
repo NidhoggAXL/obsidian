@@ -421,9 +421,12 @@ export default {
 
 比如在 Vue 的项目中，在父子组件，或者在 app 结构之外的组件，要选择一个唯一 class 或者 id ，就可以使用这个语法：
 
-```css
-:global(.el-dropdown-menu_item) {
-  padding: 20px;
+```CSS
+//因为el-dropdown-menu_item在app结构之外
+//要到全局寻找，所以需要用:global来修改
+:global(.el-dropdown-menu__item) {
+  line-height: 36px !important;
+  padding: 6px 22px;
 }
 ```
 
