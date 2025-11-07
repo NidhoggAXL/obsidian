@@ -89,22 +89,6 @@ createApp(App).use(router).use(pinia).use(RegisterIcons).mount("#app")
 
 ```
 
-
-## 3.2 动态Icons
-
-在使用动态的 Icons 的时候，都是根据服务器返回的数据来确定要使用那一个 icon 的，这样就可以根据服务器返回的数据确定不同的 icon。
-
-要使用到 [[03 动态组件的使用|Vue的动态组件]] ，根据服务器返回不同的字符串进行选择不同的 icon。
-
-```html
-<!-- 服务器类似放回 el-icon-location 的字符串 -->
-<el-icon>
-  <component :is="item.icon.split('-icon-')[1]" />
-</el-icon>
-```
-
-
-
 # 四、FormInstance获取表单实例
 
 **FormInstance 详细说明**：`FormInstance` 是 Element Plus 为表单组件提供的**类型接口**，它专门定义了表单实例的**公共 API 方法**，而不包含内部实现细节
@@ -407,27 +391,4 @@ export default {
 ```
 
 其他选项：https://github.com/element-plus/unplugin-element-plus/blob/main/README.zh-CN.md
-
-
-# 六、特殊样式
-
-在 Element-Plus 中，有一些样式是设置到 `id='app'` 之外，就是不在组件渲染的结构中，这种渲染在 [[02 Vue内置组件Teleport|Vue内置组件Teleport]] 中有这种的渲染方法。
-
-这个时候如果使用常用的 css 选择器，是不能选择到需要的 class ，这个时候就需要使用到 `:global` 来全局选择
-
-|               |                                                          |
-| ------------- | -------------------------------------------------------- |
-| **`:global`** | **CSS Modules 的语法**，用于在模块化 CSS 中声明一个选择器是**全局的**，不会被哈希转换。 |
-
-比如在 Vue 的项目中，在父子组件，或者在 app 结构之外的组件，要选择一个唯一 class 或者 id ，就可以使用这个语法：
-
-```CSS
-//因为el-dropdown-menu_item在app结构之外
-//要到全局寻找，所以需要用:global来修改
-:global(.el-dropdown-menu__item) {
-  line-height: 36px !important;
-  padding: 6px 22px;
-}
-```
-
 

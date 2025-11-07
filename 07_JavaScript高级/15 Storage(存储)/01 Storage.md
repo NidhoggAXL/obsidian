@@ -1,5 +1,4 @@
 # 一、认识Storage
-
  WebStorage主要提供了**一种机制**，可以让浏览器提供一种**比cookie更直观的key、value存储方式**
 
   * **localStorage**：本地存储，提供的是一种**永久性的存储方法**，在关闭掉网页重新打开时，存储的内容依然保留； 
@@ -10,7 +9,6 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17329733750008o6ewi.png)
 
 # 二、localStorage和sessionStorage的区别
-
 我们会发现localStorage和sessionStorage看起来非常的相似。 
 
 那么它们有什么区别呢？ 
@@ -64,7 +62,6 @@ Storage有如下的属性和方法：
 * Storage.clear()：该方法的作用是清空存储中的所有key；
 
 # 四、localStorage工具封装
-
 ```js
 <script>
   class Cache {

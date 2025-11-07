@@ -209,7 +209,6 @@ a()//sayHello
 ```
 
 # 七、import 函数
-
 通过import关键字加载一个模块，是不可以在其放到逻辑代码中的，比如： 
 
 ```js
@@ -236,7 +235,6 @@ if (true) {
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744026562000clzi7c.png)
 
 # 八、emport meta(了解)
-
 import.meta是一个给JavaScript模块暴露特定上下文的元数据属性的对象。
 
 * 它包含了这个模块的信息，比如说这个模块的URL； 

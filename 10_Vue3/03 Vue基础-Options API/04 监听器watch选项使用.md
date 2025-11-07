@@ -37,7 +37,7 @@ watch: {
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674607000a84erw.png)
 
-会发现如果改变的是对象就会拿到 [[02 Proxy(代理）类|代理对象]]，如果真的想<mark class="hltr-orange">拿到原对象</mark>，就要使用 [[03 Pinia核心概念State#3.3 toRaw|toRaw()]]  方法如下的代码：
+会发现如果改变的是对象就会拿到 [[02 Proxy(代理）类|代理对象]]，如果真的想<mark class="hltr-orange">拿到原对象</mark>，就要使用 **Vue.toRaw()** 方法如下的代码：
 
 ```js
 console.log(Vue.toRaw(newValue))//{name: 'axl'}
