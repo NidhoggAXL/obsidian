@@ -409,7 +409,7 @@ export default {
 其他选项：https://github.com/element-plus/unplugin-element-plus/blob/main/README.zh-CN.md
 
 
-# 六、特殊样式
+# 六、app外样式
 
 在 Element-Plus 中，有一些样式是设置到 `id='app'` 之外，就是不在组件渲染的结构中，这种渲染在 [[02 Vue内置组件Teleport|Vue内置组件Teleport]] 中有这种的渲染方法。
 
@@ -421,7 +421,7 @@ export default {
 
 比如在 Vue 的项目中，在父子组件，或者在 app 结构之外的组件，要选择一个唯一 class 或者 id ，就可以使用这个语法：
 
-```CSS
+```css title=".css"
 //因为el-dropdown-menu_item在app结构之外
 //要到全局寻找，所以需要用:global来修改
 :global(.el-dropdown-menu__item) {
@@ -430,4 +430,40 @@ export default {
 }
 ```
 
+
+# 七、国际化
+
+Element Plus 组件**默认**使用英文。 如果你想使用其他语言，请继续阅读以了解具体方法。
+
+## 全局配置
+
+Element Plus 提供了全局配置选项。
+
+```ts 
+//main.ts
+import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+
+app.use(ElementPlus, {
+  locale: zhCn,
+})
+```
+
+
+## ConfigProvider
+
+Element Plus 还提供了一个 Vue 组件 [ConfigProvider](https://element-plus.org/en-US/component/config-provider) 用于全局配置国际化的设置。
+
+```vue title=".vue"
+<template>
+  <el-config-provider :locale="zhCn">
+    <app />
+  </el-config-provider>
+</template>
+
+<script setup lang="ts">
+import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
+</script>
+```
 
