@@ -146,6 +146,7 @@ JavaScript的注释主要分为三种:
 > JavaScript也不支持注释的嵌套
 
 # 八、VSCode插件和配置
+
 ES7+ React/Redux/React-Native snippets
 
 * 这个插件是在react开发中会使用到的，但是我经常用到它里面的打印语句;（clg -> enter)

@@ -9,6 +9,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753404699000zvk7rk.png)
 
 # 三、和组件结合使用
+
 当然，teleport也可以和组件结合一起来使用： 可以在 teleport 中使用组件，并且也可以给他传入一些数据；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753404828000m8vm0l.png)
