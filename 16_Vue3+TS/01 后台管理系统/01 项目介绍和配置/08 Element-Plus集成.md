@@ -104,8 +104,6 @@ createApp(App).use(router).use(pinia).use(RegisterIcons).mount("#app")
 </el-icon>
 ```
 
-
-
 # 四、FormInstance获取表单实例
 
 **FormInstance 详细说明**：`FormInstance` 是 Element Plus 为表单组件提供的**类型接口**，它专门定义了表单实例的**公共 API 方法**，而不包含内部实现细节
