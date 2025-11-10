@@ -104,7 +104,103 @@ Day.js的插件应用
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1741943819000afx6w3.png)
 
+# 八、对UTC时间的处理
 
+## 8.1 认识UTC
+
+**UTC（协调世界时）是一个全球通用的、高精度的标准时间基准，可以将其理解为现代的“世界标准时间”。**
+
+1. **时区关系**：
+    
+    - 北京时间 = UTC + 8小时
+    - 东京时间 = UTC + 9小时
+    - 伦敦时间 = UTC + 0小时（冬季）/ UTC + 1小时（夏季）
+    - 纽约时间 = UTC - 5小时（东部标准时间）
+2. **常见格式**：
+    
+    - ISO 8601格式：2023-12-25T10:30:00Z
+    - RFC 2822格式：Sun, 25 Dec 2023 10:30:00 GMT
+    - 数字格式：20231225103000Z
+3. **在编程中的应用**：
+    
+    - 数据库存储通常使用UTC时间
+    - API接口传递时间建议使用UTC
+    - 前端展示时再转换为本地时间
+
+## 8.2 装换UTC
+
+UTC 增加了 `.utc` `.local` `.isUTC` APIs 使用 UTC 模式来解析和展示时间。
+
+```javascript
+var utc = require("dayjs/plugin/utc");
+// import utc from 'dayjs/plugin/utc' // ES 2015
+
+dayjs.extend(utc);
+
+// default local time
+dayjs().format(); //2019-03-06T17:11:55+08:00
+
+// UTC mode
+dayjs.utc().format(); // 2019-03-06T09:11:55Z
+
+// convert local time to UTC time
+dayjs().utc().format(); // 2019-03-06T09:11:55Z
+
+// While in UTC mode, all display methods will display in UTC time instead of local time.
+// 所有的 get 和 set 方法也都会使用 Date#getUTC* 和 Date#setUTC* 而不是 Date#get* and Date#set*
+dayjs.utc().isUTC(); // true
+dayjs.utc().local().format(); //2019-03-06T17:11:55+08:00
+dayjs.utc("2018-01-01", "YYYY-MM-DD"); // with CustomParseFormat plugin
+```
+
+默认情况下，Day.js 会把时间解析成本地时间。
+
+Day.js 默认使用用户本地时区来解析和展示时间。 如果想要使用 UTC 模式来解析和展示时间，可以使用 `dayjs.utc()` 而不是 `dayjs()`
+
+### [dayjs.utc](https://day.js.org/docs/zh-CN/plugin/utc#dayjsutc-dayjsutcdatetype-string-number-date-dayjs-format-string)
+
+`dayjs.utc(dateType?: string | number | Date | Dayjs, format? string)`
+
+返回一个使用 UTC 模式的 `Dayjs` 对象。
+
+### [Use UTC time ](https://day.js.org/docs/zh-CN/plugin/utc#use-utc-time-utc)
+
+`.utc()`
+
+返回一个复制的包含使用 UTC 模式标记的 `Dayjs` 对象。
+
+### [Use local time](https://day.js.org/docs/zh-CN/plugin/utc#use-local-time-local) 
+
+`.local()`
+
+返回一个复制的包含使用本地时区标记的 `Dayjs` 对象。
+
+### [Set UTC offset ](https://day.js.org/docs/zh-CN/plugin/utc#set-utc-offset-utcoffset)
+
+`.utcOffset()`
+
+返回一个复制的使用 UTC 模式的 Day.js 对象。
+
+### [isUTC mode](https://day.js.org/docs/zh-CN/plugin/utc#isutc-mode-isutc) 
+
+`.isUTC()`
+
+返回一个 `boolean` 来展示当前 Day.js 对象是不是在 UTC 模式下。
+
+
+## 8.3 装换封装
+
+```ts
+import dayjs from 'dayjs'
+import utc from "dayjs/plugin/utc"
+dayjs.extend(utc)
+
+export function formatDayjs(utcString: string, format = "YYYY-MM-DD HH:mm:ss") {
+  return dayjs.utc(utcString).utcOffset(8).format(format)
+  //  使用 dayjs 库处理 UTC 时间格式转换 将 UTC 时间字符串转换为东八区（北京时间）的格式化时间字符串 参数 utcString: UTC 格式的时间字符串 参数 format: 目标格式，如 'YYYY-MM-DD HH:mm:ss' 返回: 转换后的格式化时间字符串
+}
+
+```
 
 
 
