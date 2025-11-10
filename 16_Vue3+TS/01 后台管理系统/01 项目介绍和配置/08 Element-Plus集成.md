@@ -19,7 +19,8 @@ npm install -D unplugin-vue-components unplugin-auto-import
 
 配置 Vite (vite.config.ts)
 
-```ts
+```ts 
+// vite.config.ts
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -72,7 +73,7 @@ export default RefisterIcons
 
 再在 main.ts 文件里面使用插件：
 
-```ts
+```ts title="main.ts"
 import { createApp } from "vue"
 //引入自定义插件
 import RegisterIcons from '@/global/register-icons'
@@ -358,7 +359,8 @@ app.mount('#app')
 
 方案二：在 CSS 文件中全局引入
 
-```css
+```css title="main.css"
+
 /* style.css 或 main.css */
 @import 'element-plus/dist/index.css';
 ```
