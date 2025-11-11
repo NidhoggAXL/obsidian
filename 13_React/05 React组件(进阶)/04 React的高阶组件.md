@@ -5,12 +5,12 @@
 - 接受一个或多个函数作为输入； 
 - 输出一个函数；
 
-JavaScript中比较常见的filter、map、reduce都是高阶函数。
+JavaScript中比较常见的[[05 数组Array#八、数组的高阶方法|filter、map、reduce]]都是高阶函数。
 
 那么说明是高阶组件是什么呢？ 
 
 - 高阶组件的英文是 Higher-Order Components，简称为 HOC； 
-- 官方的定义：高阶组件是参数为组件，返回值为新组件的<mark class="hltr-orange">函数</mark>；
+- 官方的定义：高阶组件是参数为组件，<mark class="hltr-cyan">返回值为新组件</mark>的函数；
 
 **可以进行如下的解析**： 
 
@@ -36,9 +36,20 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 **组件的名称问题**： 
 
 - 在ES6中，类表达式中类名是可以省略的； 
+
+```js
+// 类表达式
+const Person = class {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
 - 组件的名称都可以通过displayName来修改；
 
-> [!tip] 高阶组件并不是React API的一部分，它是基于React的 组合特性而形成的设计模式； 
+> [!tip] 高阶组件并不是React API的一部分，它是基于React的**组合特性而形成的设计模式** 
 > 
 > 高阶组件在一些React第三方库中非常常见： 
 > 
@@ -49,23 +60,11 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 
 ## 3.1 props的增强
 
-![[React高阶组件增强Propos]]
+![[React高阶组件增强Propos|100%]]
 
-
-> [!info] 封装的方式有两种：
-> - 使用类组件来重新渲染传入的组件
-> 	- 需要增强的 数据 在创建高阶组件的时候就是确定好了，
-> - 使用函数组件来重新渲染传入的组件
-> 	- 需要增强的 数据 每一次都需要进行确定，
-> - 使用总结：
-> 	- 需要增强的组件 类组件和函数组件 对比，类组件多了可以在自身添加 this.state 数据，再次添加本地数据
-> 	- 两种封装的方法，各有好处，类封装可以不用每次确定需要增强的数据，函数封装可以改变增强的数据
-
-> [!tip] 总结 
-> - 需要增强数据固定，多个组件都需要的话，使用第一种封装，比如用户的信息
-> - 需要增强的数据少，比较少的组件需要增强的话，使用第二种封装，
-
-
+> [!abstract]
+> 
+> 最终组件的渲染都是在高组件里面进行渲染的，在 App 中组件的实例化本质是实例了高阶组件里面的返回值，所有才说渲染的本质是在高阶组件里面渲染的。
 
 ## 3.2 共享context
 
@@ -98,16 +97,16 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 - HOC需要在原组件上进行包裹或者嵌套，如果大量使用HOC，将会产生非常多的嵌套，这让调试变得非常困难； 
 - HOC可以劫持props，在不遵守约定的情况下也可能造成冲突；
 
-# 五、ref转发
+# 五、ref函数组件转发
 
-在前面我们学习ref时讲过，ref不能应用于函数式组件： 
+前面知识点ref时讲过，ref不能应用于函数式组件： 
 
 - 因为函数式组件没有实例，所以不能获取到对应的组件对象 
 
 但是，在开发中我们可能想要获取**函数式组件中某个元素的DOM**，这个时候我们应该如何操作呢？ 
 
 - 方式一：直接传入ref属性（错误的做法） 
-- 方式二：通过forwardRef高阶函数,让父组件传入[[05 Ref和LayoutEffect|ref]]；
+- 方式二：通过forwardRef高阶函数,让父组件传入 ref
 
 ```jsx
 //父组件传入ref到forwordRef的第二个参数
@@ -115,4 +114,6 @@ const EnhanceComponent = higherOrderComponent(WarppedComponent)
 ```
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755305639000iwwqtl.png)
+
+那么，如果想要获取到函数组件中的某些方法呢？这个时候就需要使用到 hooks 中的 [[05 useRef和LayoutEffect|useRef]]
 

@@ -6,7 +6,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175513368300063aq0q.png)
 
-这种需求在Vue当中有一个固定的做法是通过[[02 插槽Slot基本使用|slot]]来完成的，React呢？
+这种需求在Vue当中有一个固定的做法是通过 [[02 插槽Slot基本使用|slot]] 插槽来完成的，React呢？
 
 React对于这种需要插槽的情况非常灵活，有两种方案可以实现： 
 
@@ -21,10 +21,17 @@ React对于这种需要插槽的情况非常灵活，有两种方案可以实现
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755133611000ca6zua.png)
 
-如果只有一个 ReactElement，那么 children 就是一个 对象：
+如果只有一个Element，那么 children 就是一个 ReactElement对象：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755133930000y3lg75.png)
 
+> [!ps] 为什么 {} 这里可以编写对象呢？
+> `{children}` 能正常工作的原因是：
+> - `children` 本身已经是React可渲染的内容（字符串、元素等）
+>     
+> - 它不是普通JavaScript对象
+>     
+> - React对 `children` prop有特殊处理机制
 
 # 三、props实现插槽
 

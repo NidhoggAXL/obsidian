@@ -25,7 +25,7 @@ useCallback实际的目的是为了进行性能的优化。
 
 > [!tip] 函数组件是否渲染，跟父组件是否渲染以及props是否改变有关
 
-如果还希望，**当子组件点击的时候也还是不进行渲染**，那么可以使用 [[05 Ref和LayoutEffect|useRef]]：这样useCallback放回的还是用一个函数，但是函数内部改变了count。
+如果还希望，**当子组件点击的时候也还是不进行渲染**，那么可以使用 [[05 useRef和LayoutEffect|useRef]]：这样useCallback放回的还是用一个函数，但是函数内部改变了count。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755777948000l5e4vf.png)
 

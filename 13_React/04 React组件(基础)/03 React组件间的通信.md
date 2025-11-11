@@ -33,7 +33,9 @@
 
 ## 3.1 类组件和函数组件
 
-> [!tip] Recat 内部给把 props 通过 super(props) 在类组件里面进行了一个保存，类似在constructor里面 `this.props = props` 的操作。
+> [!tip] 
+> 
+> Recat 内部给把 props 通过 super(props) 在类组件里面进行了一个保存，类似在constructor里面 `this.props = props` 的操作。
 
 
 <div style="
@@ -82,7 +84,7 @@ npm install prop-sypes
 
 某些情况，我们也需要子组件向父组件传递消息： 
 
-- 在vue中是通过自定义事件来完成的； 
+- 在vue中是通过[[05 子组件传递父组件#二、自定义事件的流程|自定义事件]]来完成的； 
 - 在React中同样是通过props传递消息，只是让父组件给子组件传递一个回调函数，在子组件中调用这个函数即可；
 
 我们这里来完成一个案例： 

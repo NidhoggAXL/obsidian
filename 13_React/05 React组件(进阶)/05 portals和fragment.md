@@ -1,4 +1,4 @@
-# 一、Portals的使用
+# 一、Portals(门户)的使用
 
 #渲染根节点之外/react
 
@@ -15,8 +15,9 @@ ReactDom.createPortal(child, container)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755307658000a4t6qo.png)
 
-
-通常来讲，当你从组件的 render 方法返回一个元素时，该元素将被挂载到 DOM 节点中离其最近的父节点： 
+> [!tip] 
+> 
+> 通常来讲，当你从组件的 render 方法返回一个元素时，该元素将被挂载到 DOM 节点中离其最近的父节点： 
 
 ## 1.1 Modal组件案例
 

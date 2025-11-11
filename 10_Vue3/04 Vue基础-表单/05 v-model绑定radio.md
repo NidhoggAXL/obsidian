@@ -1,4 +1,4 @@
-在 input 的 type 为 [[01 高级元素的使用#5.5 input作为单选框 radio|radio]] 的时候，如果 **v-model 绑定的是同一个值，本身就是会互斥的。**
+在 input 的 type 为 [[01 高级元素的使用#5.5 input作为单选框 radio|radio(单选框)]] 的时候，如果 **v-model 绑定的是同一个值，本身就是会互斥的。**
 
 使用 v-model 来进行互斥：(默认选择女)
 
