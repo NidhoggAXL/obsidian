@@ -1,9 +1,11 @@
 # 一、注释
+
 **jsx中的注释** :
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175496322300095od7g.png)
 
 # 二、嵌入类型
+
 **JSX嵌入变量作为子元素**：
 
 - 情况一：当变量是Number、String、Array类型时，可以直接显示 
@@ -21,9 +23,10 @@
 - 三元运算符 
 - 执行一个函数
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754964739000gueq3f.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754964739000gueq3f.png)
 
 # 四、绑定属性
+
 jsx绑定属性 
 
 - 比如元素都会有title属性 
@@ -41,12 +44,11 @@ jsx绑定属性
 * 以前是不可以使用 calss 绑定的，因为这里是 JSX 代码，而 class 是一个关键字，不可以使用，要绑定 calss 必须使用 className 。
 * 现在 babel 可以自动解析了，但是还是**建议使用 className**来绑定class。
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754969083000rp1eye.png)
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754969083000rp1eye.png)
 
 动态绑定：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17549789010008duopr.png)
-
 
 使用第三库：classnames
 

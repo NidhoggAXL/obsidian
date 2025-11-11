@@ -21,11 +21,13 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 
 我们谈React生命周期时，**主要谈的类的生命周期**，因为函数式组件是没有生命周期函数的;(后面可以通过hooks来模拟一些生命周期的回调)
 
-> [!tip] 我们是在对这些回调函数进行声明，但是进行回调的是 React ，并不是我们进行的调用。
+> [!tip] 
+> 
+> 我们是在对这些回调函数进行声明，但是进行回调的是 React ，并不是我们进行的调用。
 
 # 二、生命周期解析
 
-组件的生命周期，主要分为两个阶段：Render phase(渲染阶段)、Commit phase(提交阶段)
+组件的生命周期，主要分为两个阶段：**Render phase(渲染阶段)、Commit phase(提交阶段)**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755074217000i6txrg.png)
 
@@ -39,7 +41,7 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
         此阶段仅负责**计算组件的输出**（JSX 结构），不允许修改 DOM、发起网络请求或执行任何可能改变外部状态的操作。
         
     - **可被中断/重启**：  
-        React 可能因高优先级任务（如用户交互）暂停当前渲染，稍后重新开始，确保页面响应流畅（Concurrent Mode 的核心机制）。
+        React 可能因高优先级任务（如用户交互）暂停当前渲染，稍后重新开始，确保页面响应流畅（Concurrent Mode 并发模式的核心机制）。
         
 - **包含的生命周期方法**（类组件）：
     
@@ -94,7 +96,11 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 > 2. **一致性**：确保 DOM 更新是原子操作，避免中间状态暴露给用户。
 > 3. **性能**：将耗时的渲染计算（可中断）与必要的 DOM 操作（不可中断）解耦。
 
-> [!caution] **违反规则的后果**：在 Render Phase 执行副作用（如修改 DOM）会导致 UI 不一致或崩溃，因为该阶段可能被重复执行多次。
+> [!warning] 
+> 
+> **违反规则的后果**：在 Render Phase 执行副作用（如修改 DOM）会导致 UI 不一致或崩溃，因为该阶段可能被重复执行多次。
+
+
 ## 2.3 常用生命周期
 
 最基础、最常用的生命周期函数：
@@ -120,9 +126,9 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 
 **componentDidUpdate** ：
 
-- componentDidUpdate() 会在**更新后会被立即调用**，首次渲染不会执行此方法。 
+- componentDidUpdate() 会在**更新后会被立即调用**，**首次渲染不会执行此方法**。 
 - 当组件更新后，可以在此处对 DOM 进行操作； 
-- 如果你对更新前后的 props 进行了比较，也可以选择在此处进行网络请求；（例如，当 props 未发生变化时，则不会执行网 络请求）。
+- 如果你对更新前后的 props 进行了比较，也可以选择在此处进行网络请求；（例如，当 props 未发生变化时，则不会执行网络请求）。
 
 **componentWillUnmount** 
 
@@ -137,13 +143,13 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 
 除了上面介绍的生命周期函数之外，还有一些不常用 的生命周期函数：
 
-- **getDerivedStateFromProps**：state 的值在任何 时候都依赖于 props时使用；该方法返回一个对象 来更新state； 
+- **getDerivedStateFromProps**：state 的值在**任何时候都依赖于** props 时使用；该方法返回一个对象来更新state； 
 - **getSnapshotBeforeUpdate**：在React更新DOM 之前回调的一个函数，可以获取DOM更新前的一 些信息（比如说滚动位置）；
 	- snapshot - 快照
 	- 第一个参数：prevProps（获取更新前props数据）
 	- 第二个参数：prevState（获取更新前的this.state数据）
 	- 第三个参数：shnapshot（获取更新前的一些信息）
-- **shouldComponentUpdate**：<mark class="hltr-orange">该生命周期函数很常用</mark>，但是我们等待讲性能优化时再来详细讲解； 
+- **shouldComponentUpdate**：**该生命周期函数很常用**，但是我们等待讲性能优化时再来详细讲解； 
 	
 	-  `nextProps`：组件即将用来渲染的下一个 props。将 `nextProps` 与 [`this.props`](https://zh-hans.react.dev/reference/react/Component#props) 进行比较以确定发生了什么变化。
 	
@@ -155,7 +161,7 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 	
 	- 返回的结果为false，则不执行后面的 render ，不会重新渲染
 	
-	- 默认返回的是true，也就是只要state发生改变，就会调用render方法；
+		- 默认返回的是true，也就是只要state发生改变，就会调用render方法；
 
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755160716000qz8tka.png)

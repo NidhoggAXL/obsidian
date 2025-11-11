@@ -9,16 +9,17 @@
 
 安装Babel支持Vue的jsx插件：
 
-```
+```bash
 npm install @vue/babel-plugin-jsx -D
 ```
+
 在babel.config.js配置文件中配置插件：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753414105000dnxsgz.png)
 
 ## 1.2 vite环境
 
-```
+```bash
 npm install @vitejs/plugin-vue-jsx -D
 ```
 

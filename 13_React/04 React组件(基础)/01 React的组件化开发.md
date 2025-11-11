@@ -3,7 +3,8 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755066114000zpcj6h.png)
 
 # 二、React的组件化
-组件化是React的核心思想，也是我们后续课程的重点，前面我们封装的App本身就是一个组件:
+
+组件化是React的核心思想，也是后续知识点的重点，前面封装的App本身就是一个组件:
 
 - 组件化提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造我们的应用。
 - 任何的应用都会被抽象成一颗组件树。
@@ -41,7 +42,7 @@ React的组件相对于Vue更加的灵活和多样，按照不同的方式可以
 **使用class定义一个组件**： 
 
 - **constructor是可选的**，我们通常在constructor中初始化一些数据；
-- this.state中维护的就是我们组件内部的数据； 
+- this.state中**维护**的就是我们**组件内部的数据**； 
 - **render()** 方法是 class 组件中**唯一必须实现的方法**；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755069262000rqiz6n.png)
@@ -63,7 +64,7 @@ React的组件相对于Vue更加的灵活和多样，按照不同的方式可以
 
 函数组件是**使用function来进行定义的函数**，只是这个函数会**返回和类组件中render函数返回一样的内容**。
 
-函数组件有自己的特点（当然，后面会讲hooks，就不一样了）： 
+函数组件有自己的特点（当然，后面知识点hooks，就不一样了）： 
 
 - 没有生命周期，也**会被更新并挂载**，但是没有生命周期函数； 
 - this关键字不能指向组件实例（因为没有组件实例）； 

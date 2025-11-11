@@ -41,6 +41,7 @@ npm run dev
 ### 2.1.1 模块导入
 
 ```js
+// eslint.config.js
 import js from '@eslint/js'  // ESLint 核心规则集
 import globals from 'globals' // 环境全局变量定义
 import reactHooks from 'eslint-plugin-react-hooks' // React Hooks 规则
@@ -51,6 +52,7 @@ import { defineConfig, globalIgnores } from 'eslint/config' // 配置工具
 ### 2.1.2 全局忽略配置
 
 ```js
+// eslint.config.js
 globalIgnores(['dist'])
 ```
 
@@ -63,6 +65,7 @@ globalIgnores(['dist'])
 ### 2.1.3 主配置对象
 
 ```js
+// eslint.config.js
 {
   files: ['**/*.{js,jsx}'], // 应用此配置的文件类型
   extends: [ // 继承的规则集

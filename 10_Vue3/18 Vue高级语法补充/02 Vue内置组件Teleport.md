@@ -1,4 +1,24 @@
-# 一、认识Teleport
+# 一、认识Telepor(传送)
+
+#渲染根节点之外/vue
+
+在组件化开发中，我们封装一个组件A，在另外一个组件B中使用:
+
+- 那么组件A中template的元素，会被挂载到组件B中template的某个位置;- 最终我们的应用程序会形成一颗DOM树结构
+
+但是某些情况下，我们希望组件不是挂载在这个组件树上的，可能是移动到Vue app之外的其他位置
+
+- 比如移动到body元素上，或者我们有其他的 `div#app` 之外的元素上;
+- 这个时候我们就可以通过teleport来完成
+
+Teleport是什么呢?
+
+- 它是一个Vue提供的内置组件，类似于react的[[05 portals和fragment#一、Portals的使用|Portals]];
+- teleport翻译过来是心灵传输、远距离运输的意思，
+
+它有两个属性:
+>to:指定将其中的内容移动到的目标元素，可以使用选择器，
+> disabled:是否禁用 teleport 的功能;
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753404658000ehgh5u.png)
 

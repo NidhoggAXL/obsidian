@@ -26,6 +26,7 @@
 - 在 constructor 里面必须调用 [[02 extends实现继承#二、super关键字|super()]] 函数。
 - 当数据发生变化时，可以**调用 this.setState 来更新数据**，并且通知React进行update操作； 
 	- 在进行update操作时，就会**重新调用render函数**，并且使用最新的数据，来**渲染界面**
+	- 这就是为什么要是使用 this.setState 来改变数据了，使用 this.state 来改变数据，那么组件并不会重新渲染(**执行render函数**)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754830679000m16gfq.png)
 
@@ -45,7 +46,7 @@
 **我们在绑定的函数中，可能想要使用当前对象，比如执行 this.setState 函数，就必须拿到当前对象的this** 
 
 - 我们就需要在传入函数时，给这个函数直接绑定this 
-- 类似于下面的写法：`<button onClick={this.btnClick.bind(index)}>改变文本</button>`
+- 类似于下面的写法：`<button onClick={this.btnClick.bind(this)}>改变文本</button>`
 - 为什么使用 [[01 this的绑定规则|bind]] 呢，是因为**bind可以永久绑定**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754832188000i4hddv.png)

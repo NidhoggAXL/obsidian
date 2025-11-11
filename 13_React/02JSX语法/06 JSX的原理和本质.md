@@ -22,7 +22,7 @@
 
 # 二、Babel官网查看
 
-我们知道默认jsx是通过babel帮我们进行语法转换的，所以我们之前写的jsx代码都需要依赖babel。 
+我们知道默认jsx是通过babel帮助进行语法转换的，所以之前编写的jsx代码都需要依赖babel。 
 
 可以在babel的官网中快速查看转换的过程: https://babeljs.io/repl/#?presets=react
 
@@ -47,17 +47,15 @@
 
 # 三、直接编写jsx代码
 
-我们自己来编写React.createElement代码： 
+自己来编写React.createElement代码： 
 
-- 我们就没有通过jsx来书写了，界面依然是可以正常的渲染。 
+- 没有通过jsx来编写了，界面依然是可以正常的渲染。 
 - 另外，在这样的情况下，你还需要babel相关的内容吗？不需要了 
 	- 所以，type="text/babel"可以被我们删除掉了； 
-	- 所以，可以被我们删除掉了；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755001766000dm8ggg.png)
 
 # 四、虚拟DOM的创建过程
-
 
 通过 React.createElement 最终创建出来一个 ReactElement对象：
 
@@ -75,6 +73,8 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755002867000il1wlp.png)
 
+> [!ps] 
+> 
 > **而ReactElement最终形成的树结构就是Virtual DOM；**
 
 # 五、jsx–虚拟DOM–真实DOM
@@ -84,12 +84,12 @@
 
 # 六、声明式编程
 
-虚拟DOM帮助我们从命令式编程转到了声明式编程的模式 
+虚拟DOM帮助从命令式编程转到了声明式编程的模式 
 
 React官方的说法：Virtual DOM 是一种编程理念。 
 
 - 在这个理念中，UI以一种理想化或者说虚拟化的方式保存在内存中，并且它是一个相对简单的JavaScript对象 
-- 我们可以通过ReactDOM.render让 **虚拟DOM** 和 **真实DOM同步起来**，这个过程中叫做**协调（Reconciliation）**； 
+- 可以通过ReactDOM.render让 **虚拟DOM** 和 **真实DOM同步起来**，这个过程中叫做**协调（Reconciliation）**； 
 
 这种编程的方式赋予了React声明式的API： 
 
@@ -97,7 +97,9 @@ React官方的说法：Virtual DOM 是一种编程理念。
 - React来确保DOM和这些状态是匹配的；
 - 你不需要直接进行DOM操作，就可以从手动更改DOM、属性操作、事件处理中解放出来； 
 
-> [!info] 虚拟DOM自我总结
+> [!abstract]
+>  虚拟DOM自我总结
+>  
 > - 虚拟DOM可以进行多端的使用，一次编写多端使用（因为都是JS对象）
 > - 虚拟DOM赋予了声明式的编程
 > - 虚拟DOM可以使用 differ 算法优化，让没有改变的不需要再次进行重置，提高效率
