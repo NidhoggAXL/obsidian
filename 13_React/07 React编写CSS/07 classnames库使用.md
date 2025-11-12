@@ -28,7 +28,7 @@ npm install classnames
 
 很明显，这是一个用于动态添加classnames的一个库。
 
-该`classNames`函数接受任意数量的参数，可以是字符串或对象。参数`'foo'`是 的缩写`{ foo: true }`。如果与给定键关联的值为 false，则该键将不会包含在输出中。
+该`classNames`函数接受任意数量的参数，可以是字符串或对象。参数`'foo'`的缩写`{ foo: true }`。如果与给定键关联的值为 false，则该键将不会包含在输出中。
 
 ```js
 classNames('foo', 'bar'); // => 'foo bar'

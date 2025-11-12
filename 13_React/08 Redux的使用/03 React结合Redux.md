@@ -17,7 +17,7 @@
 
 尽管这样说，redux依然是和React库结合的更好，因为他们是通过state函数来描述界面的状态，Redux可以发射状态的更新， 让他们作出相应。 
 
-虽然我们之前已经实现了connect、Provider这些帮助我们完成连接redux、react的辅助工具，但是实际上redux官方帮助我们提供了 react-redux 的库，可以直接在项目中使用，并且**实现的逻辑会更加的严谨和高效。**
+虽然之前已经实现了connect、Provider这些帮助我们完成连接redux、react的辅助工具，但是实际上redux官方帮助我们提供了 react-redux 的库，可以直接在项目中使用，并且**实现的逻辑会更加的严谨和高效。**
 
 安装react-redux
 
@@ -27,7 +27,7 @@ yarn add react-redux
 
 store里面的编写和上面编写相同（使用同一个Store）：
 
-- 在全局App中引用store，并使用 Provider 提供，后面的 **store 本质是 value**。
+- 在全局App中引用store，并使用 Provider 提供，后面的 **store 本质是 value**，和 [[05 React非父子的通信#2.2 Context演练|Context.Provider]] 差不多。
 - 需要使用的组件通过 connect 进行转换。
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755415803000lb7ywc.png)

@@ -1,4 +1,3 @@
-
 # 一、Redux测试项目搭建
 
 安装redux：
@@ -30,16 +29,16 @@ yarn add redux
 
 # 二、Redux的使用过程
 
-1. 创建一个对象，作为我们要保存的状态： 
+1. 创建一个对象，作为要保存的状态： 
 2. 创建Store来存储这个state 
 	- 创建store时必须创建reducer； 
-	- 我们可以通过 store.getState 来获取当前的state；
+	- 可以通过 **store.getState 来获取当前的state**；
 3. 通过action来修改state 
-	- 通过dispatch来派发action； 
+	- 通过**dispatch来派发action**； 
 	- 通常action中都会有type属性，也可以携带其他的数据； 
 4. 修改reducer中的处理代码 
 	- 这里一定要记住，**reducer是一个纯函数，不需要直接修改state；** 
-	- 后面我会讲到直接修改state带来的问题a
+	- 后面知识点会讲到直接修改state带来的问题
 5. 可以在派发action之前，监听store的变化：
 
 ```js
@@ -49,6 +48,8 @@ const initState = {
   name: 'axl',
   age: 18
 }
+
+const store = createStore(reduex)
 
 function reduex(state = initState, action) {
   switch(action.type) {
@@ -60,8 +61,6 @@ function reduex(state = initState, action) {
       return state
   }
 }
-
-const store = createStore(reduex)
 
 console.log(store.getState())
 //{ name: 'axl', age: 18 }
@@ -90,9 +89,11 @@ console.log(store.getState())
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755396668000hgylzs.png)
 
+> [!info]
+> 
 > 每次改变如果都需要知道改变了那些值，都需要打印的话太麻烦，可以使用`store.subscribe(() => console.log(store.getState()))`订阅来查看改变了。
 
-> [!tip] 注意：node中对ES6模块化的支持 
+> [!note] 注意：node中对ES6模块化的支持 
 > 
 > - 目前我使用的node版本是v12.16.1，从node v13.2.0开始，node才对ES6模块化提供了支持： 
 > - node v13.2.0之前，需要进行如下操作： 
@@ -101,7 +102,9 @@ console.log(store.getState())
 > 	- node v13.2.0之后，只需要进行如下操作： 
 > 		- 在package.json中添加属性： "type": "module"； 
 
->[!node] 注意：导入文件时，需要跟上.js后缀名；
+>[!node] 
+>
+>注意：导入文件时，需要跟上.js后缀名；
 
 # 四、Redux使用流程
 

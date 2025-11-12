@@ -15,7 +15,7 @@
 - 大量的样式, 代码混乱 
 - 某些样式无法编写(比如[[09 伪类选择器|伪类]]/[[10 伪元素（pseudo-elements）|伪元素]]) 
 
-所以官方依然是希望内联合适和普通的css来结合编写；
+所以官方依然是希望内联样式和普通的css来结合编写；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175532918800091thvl.png)
 

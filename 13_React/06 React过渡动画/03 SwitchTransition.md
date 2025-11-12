@@ -1,7 +1,7 @@
 SwitchTransition可以完成两个组件之间切换的炫酷动画：
 
 - 比如我们有一个按钮需要在on和off之间切换，我们希望看到on先从左侧退出，off再从右侧进入； 
-- 这个动画在vue中被称之为 vue transition modes； 
+- 这个动画在vue中被称之为 [[04 动画的常见属性设置#三、过渡的模式mode(掌握)|vue transition modes]]； 
 - react-transition-group中使用SwitchTransition来实现该动画；
 
 SwitchTransition中主要有一个属性：**mode，有两个值**

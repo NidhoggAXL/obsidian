@@ -16,7 +16,9 @@ npm install react-transition-group --save
 yarn add react-transition-group
 ```
 
->[!tip] react-transition-group本身非常小，不会为我们应用程序增加过多的负担。
+>[!tip] 
+>
+>react-transition-group本身非常小，不会为我们应用程序增加过多的负担。
 
 # 二、react-transition-group主要组件
 

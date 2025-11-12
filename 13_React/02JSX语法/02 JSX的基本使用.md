@@ -51,7 +51,7 @@ jsx绑定属性
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17549789010008duopr.png)
 
-使用第三库：classnames
+使用第三库：[[07 classnames库使用}classnames]]
 
 * https://github.com/JedWatson/classnames
 

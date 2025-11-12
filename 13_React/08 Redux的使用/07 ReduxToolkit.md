@@ -15,30 +15,43 @@ npm install @reduxjs/toolkit react-redux
 
 **Redux Toolkit的核心API主要是如下几个：** 
 
-- **configureStore**：包装createStore以提供简化的配置选项和良好的默认值。它可以自动组合你的 slice reducer，添加你提供 的任何 Redux 中间件，**redux-thunk默认包含，并启用 Redux DevTools Extension**。 
-- **createSlice**：接受reducer函数的对象、切片名称和初始状态值，并自动生成切片reducer，并带有相应的actions。 
-- **createAsyncThunk**: 接受一个动作类型字符串和一个返回承诺的函数，并生成一个`pending/fulfilled/rejected`基于该承诺分 派动作类型的 thunk
+- **configureStore**：包装createStore以提供简化的配置选项和良好的默认值。它可以自动组合你的 slice reducer，添加你提供的任何 Redux 中间件，**redux-thunk默认包含，并启用 Redux DevTools Extension**。 
+- **createSlice**：接受reducer函数的对象、切片名称和初始状态值，并自动生成 slice reducer，并带有相应的actions。 
+- **createAsyncThunk**: 接受一个动作类型字符串和一个返回承诺的函数，并生成一个`pending/fulfilled/rejected`基于该承诺分派的动作类型的 thunk
 
 # 二、创建counter的reducer
 
-我们先对counter的reducer进行重构： 通过createSlice创建一个slice。 
+先对counter的reducer进行重构： 通过createSlice创建一个slice。 
 
 **createSlice主要包含如下几个参数：**
 
-- **name**：用户标记slice的名词 
-	- 在之后的redux-devtool中会显示对应的名词； 
-- **initialState**：初始化值 
-	- 第一次初始化时的值；
+- **name**：用户标记slice的名词，在之后的redux-devtool中会显示对应的名词； 
+- **initialState**：初始化值，第一次初始化时的值；
 - **reducers**：相当于之前的reducer函数 
 	- 对象类型，并且可以添加很多的函数； 
 	- 函数类似于redux原来reducer中的一个case语句； 
 	- 函数的参数：
 		- 参数一：state
 		- 参数二：调用这个action时，传递的action参数
-	- 在这里可以直接修改 state，但是**内部会自动处理这个直接修改，让其变成不是直接对state修改**。
-- <mark class="hltr-orange">createSlice返回值是一个对象，包含所有的actions</mark>
+	- 在这里可以直接修改 state，但是<mark class="hltr-cyan">内部会自动处理这个直接修改，让其变成不是直接对state修改</mark>。
+- <mark class="hltr-cyan">createSlice返回值是一个对象，包含所有的actions</mark>
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755648797000ly3bh5.png)
+
+> [!abstract]
+> 这里的导出中：
+> 
+> - 默认导出类似前面知识点的 reducer 函数
+> 
+> ![[Pasted Image 20250817100815_009.png|500]]
+> 
+> ---
+> 
+> - 解构导出类似前面知识点的 acition 函数，函数的放回值是一个对象。
+> 
+> ![[Pasted Image 20250817100815_082.png]]
+
+
 
 # 三、创建categories的reducer
 
@@ -57,12 +70,14 @@ configureStore用于创建store对象，常见参数如下：
 
 # 五、Redux Toolkit的异步操作
 
-在之前的开发中，我们通过redux-thunk中间件让dispatch中可以进行异步操作。 
+在之前的开发中，通过[[04 Redux的异步操作#四、如何使用redux-thunk|redux-thunk]]中间件让dispatch中可以进行异步操作。 
 
-Redux Toolkit默认已经给我们继承了Thunk相关的功能：createAsyncThunk
+Redux Toolkit默认已经给我们继承了Thunk相关的功能：**createAsyncThunk**
 
-- payload接收其他参数
-- extraInfo(额外信息)接收一个store，里面包含了dispatch、getState，可以通过结构获取
+- 第一个参数：字符串类型，方便 [[05 redux-devtool|redux-devtool]]监测。
+- 第二个参数：一个函数
+	- payload(有效载荷)接收其他参数
+	- extraInfo(额外信息)接收一个store，里面包含了dispatch、getState，可以通过结构获取
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755656559000lh157h.png)
 

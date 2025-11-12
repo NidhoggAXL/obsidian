@@ -1,6 +1,8 @@
 # 一、vite构建工具
 
-> [!warning] vite内置了less，可以无需配置和安装，直接使用
+> [!warning] 
+> 
+> vite内置了less，对less默认进行了配置，只需要安装，直接使用
 ## 1. 安装必要依赖
 
 ```bash
@@ -15,7 +17,8 @@ pnpm add less less-loader -D
 
 在项目根目录修改 `vite.config.js` 文件：
 
-```js
+```js 
+// vit.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -56,13 +59,12 @@ export default defineConfig({
   background: lighten(@primary-color, 40%);
   padding: 20px;
 
-	  h1 {
+  h1 {
     color: @primary-color;
     &:hover {
       color: darken(@primary-color, 10%);
     }
   }
-
   // 使用嵌套语法
   .content {
     font-size: 16px;
@@ -126,10 +128,12 @@ export default function Button() {
 
 ## 6. 常见问题解决
 
-**问题：** 报错 `Inline JavaScript is not enabled`  
+**问题：** 报错 `Inline JavaScript is not enabled` (内联javaScript没有开启)  
 **解决：** 在 `vite.config.js` 中添加：
 
 ```js
+// vit.config.js
+// preprocessor - 预处理器
 preprocessorOptions: {
   less: {
     javascriptEnabled: true
@@ -138,7 +142,7 @@ preprocessorOptions: {
 ```
 
 **问题：** 全局变量不生效  
-**解决：** 确保配置中正确设置了 `additionalData`：
+**解决：** 确保配置中正确设置了 `additionalData` (额外数据)
 
 ```js
 additionalData: `@import "@/styles/global.less";`
@@ -185,5 +189,7 @@ my-vite-app/
 
 因为 [Crate React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app?utm_source=tldrnewsletter)被弃用，webpack如果构建出来的React项目想要使用less，那么就需要使用 [craco](https://github.com/dilanx/craco/issues/707) 对Webpack配置
 
-> [!warning] 具体如何配置，需要查询网络
+> [!warning] 
+> 
+> 具体如何配置，需要查询网络
 

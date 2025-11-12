@@ -8,7 +8,7 @@
 
 在传统的前端开发中，我们通常会将结构（HTML）、样式（CSS）、逻辑（JavaScript）进行分离。 
 
-- 但是在前面的学习中，我们就提到过，React的思想中认为逻辑本身和UI是无法分离的，所以才会有了JSX的语法。 
+- 但是在前面的知识中，就提到过，React的思想中认为逻辑本身和UI是无法分离的，所以才会有了JSX的语法。 
 - 样式呢？**样式也是属于UI的一部分**； 
 - 事实上CSS-in-JS的模式就是一种**将样式（CSS）也写入到JavaScript中的方式**，并且可以方便的使用JavaScript的状态； 
 - 所以React有被人称之为 **All in JS**； 
@@ -148,7 +148,9 @@ props可以传递：
 <HYInput type="password" $left="20px" />
 ```
 
-> [!warning] 非标准的属性（`left` 和 `paddingLeft`）传递给了底层的 DOM `<input>` 元素。React 会警告你这些属性不是有效的 DOM 属性。解决方案是使用 **临时属性**（transient props），即在属性名前加 `$` 符号，这样 styled-components 就知道这些属性只用于样式计算，不会传递给 DOM。
+> [!warning] 
+> 
+> 非标准的属性（`left` 和 `paddingLeft`）传递给了底层的 DOM `<input>` 元素。React 会警告你这些属性不是有效的 DOM 属性。解决方案是使用 **临时属性**（transient props），即在属性名前加 `$` 符号，这样 styled-components 就知道这些属性只用于样式计算，不会传递给 DOM。
 
 props可以被传递给styled组件 
 
@@ -160,7 +162,9 @@ attrs属性可以设置**默认参数**：
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755349302000jx6l7e.png)
 
 
-> [!warning] 注意 $paddingLeft 属性名不可以编写为 $left ，不然会造成错误，形成死亡回调
+> [!warning] 
+> 
+> 注意 $paddingLeft 属性名不可以编写为 $left ，不然会造成错误，形成死亡回调
 > `Uncaught RangeError: Maximum call stack size exceeded`
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175534943500052iaxf.png)

@@ -56,7 +56,7 @@ Redux要求我们**通过action来更新数据**：
 
 但是如何将state和action联系在一起呢？答案就是reducer 
 
-- reducer是一个纯函数； 
+- reducer是一个**纯函数**； 
 - reducer做的事情就是将传入的state和action结合起来生成一个新的state；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755388829000gk7w0i.png)
