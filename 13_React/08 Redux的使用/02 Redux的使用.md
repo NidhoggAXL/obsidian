@@ -89,9 +89,11 @@ console.log(store.getState())
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755396668000hgylzs.png)
 
-> [!info]
+> [!info] subscribe
 > 
 > 每次改变如果都需要知道改变了那些值，都需要打印的话太麻烦，可以使用`store.subscribe(() => console.log(store.getState()))`订阅来查看改变了。
+
+^de6d55
 
 > [!note] 注意：node中对ES6模块化的支持 
 > 

@@ -1,40 +1,71 @@
-
 # 一、为什么需要Hook
 
+Hook是 React 16.8 的新增特性，它可以在**不编写类组件的情况下让函数组件使用 state以及其他的React特性(比如生命周期)**
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17557368160004v5unj.png)
+先来思考一下类组件组件相对于函数式组件有什么优势?比较常见的是下面的优势:
+
+- 类组件可以定义自己的state，用来保存组件自己内部的状态，
+- 函数式组件不可以，因为函数每次调用都会产生新的临时变量;
+- class组件有自己的生命周期，可以在对应的生命周期中完成自己的逻辑
+	- 比如在 [[02 React组件生命周期#2.3 常用生命周期|componentDidMount]] 中发送网络请求，并且该生命周期函数只会执行一次;
+	- 函数式组件在学习hooks之前，如果在函数中发送网络请求，意味着每次重新渲染都会重新发送一次网络请求;
+- 类组件可以在状态改变时只会重新执行render函数以及我们希望重新调用的生命周期函数componentDidUpdate等:
+- 函数式组件在重新渲染时，整个函数都会被执行，似乎没有什么地方可以只让它们调用一次;
+
+> [!abstract]
+> 
+> 所以，在Hook出现之前，对于上面这些情况我们通常都会编写class组件。
+
 
 # 二、Class组件存在的问题
 
 **复杂组件变得难以理解：** 
 
-- 我们在最初编写一个class组件时，往往逻辑比较简单，并不会非常复杂。但是**随着业务的增多**，我们的**class组件会变得越来越复杂**； 
-- 比如[[02 React组件生命周期#2.3 常用生命周期|componentDidMount]]中，可能就会包含大量的逻辑代码：包括**网络请求、一些事件的监听**（还需要在 componentWillUnmount中移除）； 
+- 最初编写一个class组件时，往往逻辑比较简单，并不会非常复杂。但是**随着业务的增多**，**class组件会变得越来越复杂**； 
+- 比如 [[02 React组件生命周期#2.3 常用生命周期|componentDidMount]] 中，可能就会包含大量的逻辑代码：包括**网络请求、一些事件的监听**（还需要在 componentWillUnmount 中移除）； 
 - 而对于这样的class实际上非常难以拆分：因为它们的**逻辑往往混在一起**，强行拆分反**而会造成过度设计，增加代码的复杂度**；
 
 **难以理解的class：** 
 
 - 很多人发现学习ES6的class是学习React的一个障碍。 
 - 比如在class中，我们必须搞清楚[[01 this的绑定规则|this的指向]]到底是谁，所以需要花很多的精力去学习this； 
-- 虽然我认为前端开发人员必须掌握this，但是依然处理起来非常麻烦；
+- 虽然前端开发人员必须掌握this，但是依然处理起来非常麻烦；
 
 **组件复用状态很难：** 
 
 - 在前面为了一些状态的复用我们需要通过[[04 React的高阶组件|高阶组件]]；
-- 像我们之前学习的**redux中[[09 connect原理|connect]]或者react-router中的[[04 Router的代码跳转#函数组件|withRouter]]**，这些高阶组件设计的目的就是为了**状态的复用**； 
-- 或者类似于Provider、Consumer来共享一些状态，但是多次使用[[05 React非父子的通信|Consumer]]时，我们的代码就会存在很多嵌套； 
+- 像我们之前学习的**redux中 [[09 connect原理|connect]] 或者react-router中的 [[04 Router的代码跳转#类组件]]**，这些高阶组件设计的目的就是为了**状态的复用**； 
+- 或者类似于Provider、Consumer来共享一些状态，但是多次使用 [[05 React非父子的通信|Consumer]] 时，我们的代码就会存在很多嵌套； 
 - 这些代码让我们不管是编写和设计上来说，都变得非常困难；
 
 # 三、Hook的出现
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738427000agz03o.png)
+Hook的出现，可以解决上面提到的这些问题;
+
+- 它可以在不编写class的情况下使用state以及其他的React特性;
+- 可以由此延伸出非常多的用法，来让前面所提到的问题得到解决，
+
+Hook的使用场景
+
+- Hook的出现基本可以代替之前所有使用class组件的地方
+- 但是如果是一个旧的项目，你并不需要直接将所有的代码重构为Hooks，因为它完全向下兼容，你可以渐进式的来使用它
+- Hook只能在函数组件中使用，不能在类组件，或者函数组件之外的地方使用
+
+**Hook 的特点：**
+
+- 完全可选的:你无需重写任何已有代码就可以在一些组件中尝试 Hook，但是如果你不想，你不必现在就去学习或使用 Hook
+- 100% 向后兼容的:Hook不包含任何破坏性改动。
+- 现在可用:Hook 已发布于 v16.8.0.
 
 # 四、计数器案例对比
 
-![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738463000fmngra.png)
+类组件：
 
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738463000fmngra.png)
 
-![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738467000e8w5y7.png)
+函数组件：
+
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755738467000e8w5y7.png)
 
 你会发现上面的代码差异非常大： 
 
@@ -43,11 +74,11 @@
 
 # 五、useState解析
 
-那么我们来研究一下核心的一段代码代表什么意思： 
+那么来研究一下核心的一段代码代表什么意思： 
 
 - useState来自react，需要从react中导入，它是一个hook； 
 	- 参数：初始化值，如果不设置为undefined； 
-	- 返回值：数组，包含两个元素； 
+	- 返回值：数组，包含两个元素([[03 TS数据类型#六、tuple类型|元组类型]])； 
 		- **元素一**：当前状态的值（第一调用为初始化值）； 
 		- **元素二**：设置状态值的函数； 
 - 点击button按钮后，会完成两件事情： 

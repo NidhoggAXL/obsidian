@@ -1,6 +1,17 @@
 # 一、认识前端路由
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755678727000c98wmi.png)
+路由其实是网络工程中的一个术语:
+
+- 在架构一个网络时，非常重要的两个设备就是路由器和交换机。
+- 当然，目前在我们生活中路由器也是越来越被大家所熟知，因为我们生活中都会用到路由器
+- 事实上，路由器**主要维护的是一个映射表**;
+- 映射表会决定数据的流向;
+
+路由的概念在软件工程中出现，最早是在后端路由中实现的，原因是web的发展主要经历了这样一些阶段
+
+- 后端路由阶段;
+- 前后端分离阶段;
+- 单页面富应用(SPA);
 
 # 二、后端路由阶段
 
@@ -23,7 +34,9 @@ URL的hash
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17556789390009lyhij.png)
 
-> [!tip] hash的优势就是兼容性更好，在老版IE中都可以运行，但是缺陷是有一个#，显得不像一个真实的路径。
+> [!tip] 
+> 
+> hash的优势就是兼容性更好，在老版IE中都可以运行，但是缺陷是有一个#，显得不像一个真实的路径。
 
 # 五、HTML5的History
 
@@ -50,7 +63,7 @@ history接口是HTML5新增的, 它有六种模式改变URL而不刷新页面：
 
 React Router在最近两年版本更新的较快，并且React Router6.x版本中发生了较大的变化。 （2025年8月20日最新的React Router到7.x版本）
 
-目前React Router6.x已经非常稳定，我们可以放心的使用； 
+目前React Router6.x已经非常稳定，可以放心的使用； 
 
 安装React Router6.x： 
 

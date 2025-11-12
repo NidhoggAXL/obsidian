@@ -1,10 +1,10 @@
 # 一、认识useState
 
-State Hook的API就是 useState，我们在前面已经进行了学习： 
+State Hook的API就是 useStat,在前面已经进行了学习： 
 
 - useState会帮助我们定义一个 state变量，useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。 
 - 一般来说，在函数退出后变量就会”消失”，而 state 中的变量会被 React 保留。
-- useState接受唯一一个参数，在<mark class="hltr-orange">第一次组件被调用时使用来作为初始化值</mark>。（如果没有传递参数，那么初始化值为undefined）。 
+- useState接受唯一一个参数，在**第一次组件被调用时使用来作为初始化值**。（如果没有传递参数，那么初始化值为undefined）。 
 - useState的返回值是一个数组，我们可以通过[[05 解构Destructuring#1.1 数组解构|数组的解构]]，来完成赋值会非常方便。
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring
 
@@ -17,7 +17,7 @@ FAQ：为什么叫 useState 而不叫 createState?
 
 ## 1.1 useState常见错误
 
-<mark class="hltr-orange">useState 在第一次渲染的时候，初始化值就是已经确定的：</mark>
+useState 在第一次渲染的时候，初始化值就是已经确定的：
 
 比如第一次渲染的时候如下面伪代码：
 
@@ -26,18 +26,20 @@ const initCounter = ""
 const [counter, setCounter] = useState(initCounter)
 ```
 
-因为一些原因，不是通过 setCount 改变的 counter 的值，比如网络请求改变了 initCounter 的值，这个时候进行第二次渲染:
+因为一些原因，不是通过 setCount 改变的 initecounter 的值，比如网络请求改变了 initCounter 的值，这个时候进行第二次渲染:
 
 ```jsx
 const initCounter = 'axl'
 const [counter, setCounter] = useState(initCounter)
 ```
 
-> [!warning] 这个时候的 counter 还是 空字符串， 不会因为 initCounter 的改变而改变。
+> [!warning] 
+> 
+> 这个时候的 counter 还是空字符串， 不会因为 initCounter 的改变而改变。
 
-如果遇到这种情况，那么就在 initCounter 改变为不是 空字符 的时候，不要进行渲染(本质是执行 useState)
+如果遇到这种情况，那么就在 initCounter 还没有改变为不是空字符的时候，不要进行渲染(本质是执行 useState)
 
-比如：第一次渲染 Home 组件的时候 initCounter 由外部传入，但是外部组件的内容需要网络请求才可以得到，在第一次渲染的时候 initCounter 就是为空字符串
+**比如**：第一次渲染 Home 组件的时候 initCounter 由外部传入，但是外部组件的内容需要网络请求才可以得到，在第一次渲染的时候 initCounter 就是为非空字符串。
 
 ```jsx
 {
@@ -47,7 +49,7 @@ const [counter, setCounter] = useState(initCounter)
 
 # 二、认识Effect Hook
 
-目前我们已经通过hook在函数式组件中定义state，那么类似于生命周期这些呢？ 
+目前已经通过hook在函数式组件中定义state，那么类似于生命周期这些呢？ 
 
 - Effect Hook 可以让你来完成一些类似于class中[[02 React组件生命周期|生命周期]]的功能； 
 - 事实上，类似于**网络请求、手动更新DOM、一些事件的监听**，都是React更新DOM的一些**副作用（Side Effects**）； 
@@ -79,14 +81,14 @@ export default App
 useEffect的解析： 
 
 - 通过useEffect的Hook，可以告诉React需要在渲染后执行某些操作； 
-- useEffect要求我们传入一个回调函数，在**React执行完更新DOM操作之后**，就会回调这个函数； 
-- 默认情况下，<mark class="hltr-orange">无论是第一次渲染之后，还是每次更新之后</mark>，都会执行这 **回调函数**；
+- useEffect要求我们传入一个回调函数，在**React执行完更新DOM操作之后（render）**，就会回调这个函数； 
+- 默认情况下，**无论是第一次渲染之后，还是每次更新之后**，都会执行这 **回调函数**；
 
 # 三、需要清除Effect
 
-在class组件的编写过程中，某些副作用的代码，我们需要在[[02 React组件生命周期#2.3 常用生命周期|componentWillUnmount]]中进行清除： 
+在class组件的编写过程中，某些副作用的代码，需要在 [[02 React组件生命周期#2.3 常用生命周期|componentWillUnmount]] 中进行清除： 
 
-- 比如我们之前的[[06 自定义事件总线|事件总线]]或Redux中手动调用[[02 Redux的使用#三、Redux结构划分|subscribe]]； 
+- 比如我们之前的[[06 自定义事件总线|事件总线]]或Redux中手动调用 [[02 Redux的使用#^de6d55|subscribe]]； 
 - 都需要在componentWillUnmount有对应的取消订阅； 
 - Effect Hook通过什么方式来模拟componentWillUnmount呢？
 
@@ -143,7 +145,7 @@ export default App
 
 使用Hook的其中一个目的就是解决class中生命周期经常将很多的逻辑放在一起的问题： 
 
-- 比如**网络请求、事件监听、手动修改DOM**，这些往往都会放在[[02 React组件生命周期#2.3 常用生命周期|componentDidMount]]中； 
+- 比如**网络请求、事件监听、手动修改DOM**，这些往往都会放在 [[02 React组件生命周期#2.3 常用生命周期|componentDidMount]] 中； 
 
 使用Effect Hook，我们可以将它们分离到不同的useEffect中：
 
@@ -160,7 +162,7 @@ export default App
 - 某些代码我们只是希望执行一次即可，类似于 **componentDidMount** 和 **componentWillUnmount** 中完成的事情；（比如网络请求、订阅和取消订阅）； 
 - 另外，多次执行也会**导致一定的性能问题**；
 
-我们如何决定useEffect在什么时候应该执行和什么时候不应该执行呢？ 
+如何决定useEffect在什么时候应该执行和什么时候不应该执行呢？ 
 
 - useEffect实际上有两个参数： 
 - **参数一**：执行的回调函数； 

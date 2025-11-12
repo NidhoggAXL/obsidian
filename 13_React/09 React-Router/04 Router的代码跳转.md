@@ -1,14 +1,14 @@
 # 手动路由的跳转
 
-目前我们实现的跳转主要是通过[[02 Router的基本使用#三、路由配置和跳转|Link或者NavLink]]进行跳转的，实际上我们也可以通过JavaScript代码进行跳转。 
+目前我们实现的跳转主要是通过[[02 Router的基本使用#三、路由配置和跳转|Link或者NavLink]]进行跳转的，实际上也可以通过JavaScript代码进行跳转。 
 
 - 我们知道Navigate组件是可以进行路由的跳转的，但是**依然是组件的方式**。 
-- 如果我们希望通过JavaScript代码逻辑进行跳转（比如点击了一个button），那么就**需要获取到navigate对象**。 
+- 如果希望通过JavaScript代码逻辑进行跳转（比如点击了一个button），那么就**需要获取到navigate对象**。 
 
 **在Router6.x版本之后，代码类的API都迁移到了hooks的写法：** 
 
-- 如果我们希望进行代码跳转，需要通过useNavigate的Hook获取到navigate对象进行操作； 
-- 那么如果是一个函数式组件，我们可以直接调用，但是如果是一个类组件呢？
+- 如果希望进行代码跳转，需要通过 useNavigate 的Hook获取到 **navigate对象** 进行操作； 
+- 那么如果是一个函数式组件，可以直接调用，但是如果是一个类组件呢？
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17556926590009pu1eg.png)
 
@@ -18,7 +18,7 @@
 import { useNavigate } from 'react-router-dom';
 
 function MyFunctionComponent() {
-  //这里必须放到顶层作用域，不可以包裹
+  //Hooks必须放到顶层作用域，不可以包裹
   const navigate = useNavigate();
 
   const handleClick = () => {

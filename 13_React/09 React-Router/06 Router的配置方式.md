@@ -30,8 +30,7 @@ npm install react-router
 
 接着，通常需要在应用顶层用 `<BrowserRouter>`（推荐）或 `<HashRouter>` 包裹你的应用组件，以确保路由上下文可用：
 
-```jsx
-// index.js 或 main.jsx
+```jsx title="index.jsx 或 main.jsx"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
@@ -245,7 +244,7 @@ import { Navigate } from 'react-router-dom';
 
 # ⚡ 路由懒加载
 
-对于大型应用，为了优化首屏加载速度，可以使用 React.lazy 和 [[03 Vue内置组件Suspense|Suspense]] 来实现路由组件的懒加载（按需加载）：
+对于大型应用，为了优化首屏加载速度，可以使用 React.lazy 和 Suspense (对标Vue的[[03 Vue内置组件Suspense|Suspense]]) 来实现路由组件的懒加载（按需加载）：
 
 ```jsx
 import React, { Suspense } from 'react';

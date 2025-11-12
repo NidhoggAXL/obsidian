@@ -36,7 +36,7 @@ useMemo实际的目的也是为了进行性能的优化。
 如何进行性能的优化呢？ 
 
 - useMemo返回的也是一个 **memoized（记忆的）值**； 
-- 在依赖不变的情况下，多次定义的时候，<mark class="hltr-orange">返回的值是相同的</mark>；
+- 在依赖不变的情况下，多次定义的时候，<mark class="hltr-cyan">返回的值是相同的</mark>；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755780514000zq74z9.png)
 
