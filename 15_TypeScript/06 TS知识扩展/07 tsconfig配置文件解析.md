@@ -45,21 +45,21 @@ tsconfig.json是用于配置TypeScript编译时的配置选项：  https://www.t
 
 ## 🎯 tsconfig.json 是什么
 
-`tsconfig.json` 是 TypeScript 项目的核心配置文件，通常位于项目根目录。它告诉 TypeScript 编译器如何编译你的项目，例如编译哪些文件、输出到什么目录、使用哪个 ECMAScript 标准等。[](https://developer.aliyun.com/article/1069316)[](https://juejin.cn/post/7549024057036046386)
+`tsconfig.json` 是 TypeScript 项目的核心配置文件，通常位于项目根目录。它告诉 TypeScript 编译器如何编译你的项目，例如编译哪些文件、输出到什么目录、使用哪个 ECMAScript 标准等。
 
-你可以通过执行 `tsc --init` 命令来快速生成一个包含默认配置的 `tsconfig.json` 文件。[](https://developer.aliyun.com/article/1069316)
+你可以通过执行 `tsc --init` 命令来快速生成一个包含默认配置的 `tsconfig.json` 文件。
 
 ## 📦 项目文件管理
 
 这些顶层配置项用于指定编译器需要处理哪些文件。
 
-|配置项|作用描述|示例与备注|
-|---|---|---|
-|`include`|指定要编译的文件或模式。|`["src/**/*"]` 表示编译 `src` 目录下的所有文件。[](https://developer.aliyun.com/article/1069316)[](https://www.nowcoder.com/discuss/513481273562750976)|
-|`exclude`|指定编译时需要排除的文件或模式。**它只影响 `include`**。[](https://juejin.cn/post/7549024057036046386)|通常排除 `node_modules`、`dist`、测试文件等。[](https://developer.aliyun.com/article/1069316)[](http://t.zoukankan.com/mengfangui-p-12263071.html)|
-|`files`|明确列出需要编译的少量文件。|适合文件极少的项目，不能使用通配符。[](https://www.nowcoder.com/discuss/513481273562750976)|
-|`extends`|**继承**另一个 tsconfig 文件的配置。|`"extends": "./base.json"`，这对于统一 Monorepo 中多个包的配置非常有用。[](https://juejin.cn/post/7549024057036046386)[](https://zhuanlan.zhihu.com/p/570939192)|
-|`references`|配置**项目引用**，用于将大型项目拆分成相互依赖的多个子项目。[](https://juejin.cn/post/7549024057036046386)|需要子项目在 `compilerOptions` 中开启 `composite: true`。[](https://juejin.cn/post/7549024057036046386)|
+| 配置项          | 作用描述                                                                              | 示例与备注                                                                                                                                          |
+| ------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `include`    | 指定要编译的文件或模式。                                                                      | `["src/**/*"]` 表示编译 `src` 目录下的所有文件。[](https://developer.aliyun.com/article/1069316)[](https://www.nowcoder.com/discuss/513481273562750976)     |
+| `exclude`    | 指定编译时需要排除的文件或模式。**它只影响 `include`**。[](https://juejin.cn/post/7549024057036046386) | 通常排除 `node_modules`、`dist`、测试文件等。[](https://developer.aliyun.com/article/1069316)[](http://t.zoukankan.com/mengfangui-p-12263071.html)         |
+| `files`      | 明确列出需要编译的少量文件。                                                                    | 适合文件极少的项目，不能使用通配符。[](https://www.nowcoder.com/discuss/513481273562750976)                                                                      |
+| `extends`    | **继承**另一个 tsconfig 文件的配置。                                                         | `"extends": "./base.json"`，这对于统一 Monorepo 中多个包的配置非常有用。[](https://juejin.cn/post/7549024057036046386)[](https://zhuanlan.zhihu.com/p/570939192) |
+| `references` | 配置**项目引用**，用于将大型项目拆分成相互依赖的多个子项目。[](https://juejin.cn/post/7549024057036046386)    | 需要子项目在 `compilerOptions` 中开启 `composite: true`。[](https://juejin.cn/post/7549024057036046386)                                                  |
 
 ## ⚙️ 编译器核心选项 (compilerOptions)
 
@@ -97,7 +97,7 @@ tsconfig.json是用于配置TypeScript编译时的配置选项：  https://www.t
 
 ## 🔍 类型检查与严格模式
 
-开启严格模式是保证代码质量、减少运行时错误的最佳实践。[](https://zhuanlan.zhihu.com/p/570939192) 你可以使用 `"strict": true` 一键开启所有严格检查选项。[](https://juejin.cn/post/7549024057036046386)[](https://www.nowcoder.com/discuss/513481273562750976)
+开启严格模式是保证代码质量、减少运行时错误的最佳实践。 你可以使用 `"strict": true` 一键开启所有严格检查选项。
 
 下表是 `strict` 开启后，一些关键的子选项及其作用：
 
