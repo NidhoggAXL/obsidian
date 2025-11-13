@@ -15,37 +15,215 @@ FAQ：为什么叫 useState 而不叫 createState?
 - 如果每次都创建新的变量，它就不是 “state”了。
 - 这也是 Hook 的名字总是以 use 开头的一个原因。
 
-## 1.1 useState常见错误
+## 1.1 useState基本使用
 
-useState 在第一次渲染的时候，初始化值就是已经确定的：
-
-比如第一次渲染的时候如下面伪代码：
+### 声明状态
 
 ```jsx
-const initCounter = ""
-const [counter, setCounter] = useState(initCounter)
+const [state, setState] = useState(initialValue);
 ```
 
-因为一些原因，不是通过 setCount 改变的 initecounter 的值，比如网络请求改变了 initCounter 的值，这个时候进行第二次渲染:
+### 初始值的不同形式
 
 ```jsx
-const initCounter = 'axl'
-const [counter, setCounter] = useState(initCounter)
+// 直接值
+const [count, setCount] = useState(0);
+
+// 函数式初始值（惰性初始化）
+const [data, setData] = useState(() => {
+  const initialData = localStorage.getItem('data');
+  return initialData ? JSON.parse(initialData) : [];
+});
+
+// 对象状态
+const [user, setUser] = useState({ name: '', age: 0 });
 ```
 
-> [!warning] 
-> 
-> 这个时候的 counter 还是空字符串， 不会因为 initCounter 的改变而改变。
+## 1.2 更新状态的两种方式
 
-如果遇到这种情况，那么就在 initCounter 还没有改变为不是空字符的时候，不要进行渲染(本质是执行 useState)
-
-**比如**：第一次渲染 Home 组件的时候 initCounter 由外部传入，但是外部组件的内容需要网络请求才可以得到，在第一次渲染的时候 initCounter 就是为非空字符串。
+### 直接值更新
 
 ```jsx
-{
-  Object.keys(outData).length && <Home initCounter={outData.initCounter} />
+setCount(10);
+setUser({ name: 'John', age: 25 });
+```
+
+### 函数式更新
+
+```jsx
+setCount(prevCount => prevCount + 1);
+setUser(prevUser => ({ ...prevUser, age: 26 }));
+```
+
+## 1.3 常见错误及解决方法
+
+### 错误1：直接修改状态对象
+
+```jsx
+// ❌ 错误
+const [user, setUser] = useState({ name: 'John', age: 25 });
+user.age = 26; // 直接修改，不会触发重新渲染
+
+// ✅ 正确
+setUser(prevUser => ({ ...prevUser, age: 26 }));
+```
+
+### 错误2：连续同步更新
+
+```jsx
+// ❌ 错误 - 不会累加
+const handleClick = () => {
+  setCount(count + 1);
+  setCount(count + 1); // 两次都是基于同一个 count 值
+};
+
+// ✅ 正确 - 会累加
+const handleClick = () => {
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+};
+```
+
+### 错误3：闭包陷阱
+
+```jsx
+// ❌ 错误 - 定时器中的 state 不会更新
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCount(count + 1); // 总是使用初始的 count
+  }, 1000);
+  return () => clearInterval(timer);
+}, []);
+
+// ✅ 正确
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCount(prev => prev + 1); // 总是使用最新值
+  }, 1000);
+  return () => clearInterval(timer);
+}, []);
+```
+
+### 错误4：异步更新后立即访问状态
+
+```jsx
+// ❌ 错误 - 拿不到最新值
+const handleClick = () => {
+  setCount(100);
+  console.log(count); // 还是旧值
+};
+
+// ✅ 正确 - 使用 useEffect 监听变化
+const handleClick = () => {
+  setCount(100);
+};
+useEffect(() => {
+  console.log('count 更新了:', count);
+}, [count]);
+```
+
+### 错误5：不必要的复杂状态
+
+```jsx
+// ❌ 错误 - 过度耦合的状态
+const [userData, setUserData] = useState({
+  user: null,
+  loading: true,
+  error: null
+});
+
+// ✅ 更好 - 拆分状态
+const [user, setUser] = useState(null);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(null);
+```
+
+## 1.4 最佳实践
+
+### 使用函数式更新
+
+```jsx
+// ✅ 推荐 - 避免闭包问题
+setCount(prev => prev + 1);
+setUser(prev => ({ ...prev, name: 'Alice' }));
+```
+
+### 对象和数组的不可变更新
+
+```jsx
+// 对象更新
+setUser(prev => ({ ...prev, age: 30 }));
+
+// 数组添加
+setItems(prev => [...prev, newItem]);
+
+// 数组删除
+setItems(prev => prev.filter(item => item.id !== idToRemove));
+
+// 数组更新
+setItems(prev => prev.map(item => 
+  item.id === id ? { ...item, completed: true } : item
+));
+```
+
+### 使用自定义 Hook 封装复杂逻辑
+
+```jsx
+function useCounter(initialValue = 0) {
+  const [count, setCount] = useState(initialValue);
+  
+  const increment = useCallback(() => setCount(prev => prev + 1), []);
+  const decrement = useCallback(() => setCount(prev => prev - 1), []);
+  const reset = useCallback(() => setCount(initialValue), [initialValue]);
+  
+  return { count, increment, decrement, reset };
 }
+
+// 使用
+const { count, increment } = useCounter(0);
 ```
+
+## 1.5 性能优化技巧
+
+### 使用 useCallback 避免不必要的重新渲染
+
+```jsx
+const increment = useCallback(() => {
+  setCount(prev => prev + 1);
+}, []);
+```
+
+### 惰性初始状态
+
+```jsx
+// 对于昂贵的计算，使用函数式初始值
+const [data, setData] = useState(() => {
+  return expensiveCalculation(props);
+});
+```
+
+### 使用 [[04 Callback和Memo|useMemo]] 优化派生状态
+
+```jsx
+const expensiveValue = useMemo(() => {
+  return items.filter(item => item.active).length;
+}, [items]);
+```
+
+## 1.6 总结要点
+
+1. **状态更新是异步的** - 不要指望立即拿到新值
+    
+2. **使用函数式更新**解决依赖前状态的更新问题
+    
+3. **保持状态不可变** - 总是返回新对象/数组
+    
+4. **合理拆分状态** - 避免过度耦合的状态对象
+    
+5. **注意闭包陷阱** - 在 useEffect、useCallback 中特别注意
+    
+6. **性能优化** - 使用 useCallback、useMemo 避免不必要的计算和渲染
+
 
 # 二、认识Effect Hook
 

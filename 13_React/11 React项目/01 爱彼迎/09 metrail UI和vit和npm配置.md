@@ -3,7 +3,8 @@
 npm install @mui/material @mui/styled-engine-sc styled-components
 ```
 
-> [!warning] 使用 @metrail-UI必须设置 主题，如果不设置主题机会报错;
+> [!warning] 
+> 使用 @metrail-UI必须设置 主题，如果不设置主题有机会报错;
 
 如果在使用 styled-compoents 的时候，如果使用了主题，那么就需要为两个设置主题，也可以通用一个主题
 
