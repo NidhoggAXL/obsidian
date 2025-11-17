@@ -1,4 +1,5 @@
 # 一、Reflect的作用
+
 Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是反射。
 
 那么这个Reflect有什么用呢？ 
@@ -55,31 +56,33 @@ Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是
 
 
 ```js
-<script>
-  const obj = {
-    _name: "axl",
-    set name(newName) {
-      console.log("obj里面的", this)//this默认obj
-      this._name = newName
-    }
-  }
-  
-  const objProxy = new Proxy(obj, {
-    set: function(target, key, value) {
-      console.log(`监听：${key}进行set改变`)
-      Reflect.set(target, key, value)
-    }
-  })
-  
-  objProxy.name = "mba"
-  //监听：name进行set改变
-  //obj里面的 {_name: 'mba'}
-</script>
+const obj = {
+  _name: "axl",
+  set name(newName) {
+    console.log("obj里面的", this); //this默认obj
+    this._name = newName;
+  },
+};
+
+const objProxy = new Proxy(obj, {
+  set: function (target, key, value) {
+    console.log(`监听：${key}进行set改变`);
+    return Reflect.set(target, key, value); //reflect - 反射
+  },
+});
+
+objProxy.name = "mba";
+//监听：name进行set改变
+// obj里面的 { _name: 'axl', name: [Setter] }
+
+console.log(obj); 
+//{ _name: 'mba', name: [Setter] }
+
 ```
 
-上面代码的运行顺序来看一下图片：**（`obj._name` 是为 mba，下面图片错误）**
+上面代码的运行顺序来看一下图片：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/173219929300001fh4d.png)
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1763346248000u3t1hs.png)
 
 根据打印结果来判断的话，obj 只发生了一次改变。
 
@@ -87,7 +90,7 @@ Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是
 
 Proxy是一个代理的，实质还是对obj创建了一个监听的对象 objProxy 代理，而当 obj 里面的 `_name` 发生改变的时候，是 obj 本身发生了改变并不是 代理发生了改变，所以代理就会监听不到。**（代理对象 objProxy 引起的 obj 本身发生改变）**
 
-**上面从情况就要使用到 Receive 来改变 obj 里面的 thsi**
+**上面从情况就要使用到 Receive 来改变 obj 里面的 this**
 
 ```js
 <script>
@@ -104,7 +107,7 @@ const objProxy = new Proxy(obj, {
     console.log(`监听：${key}进行set改变`)
     console.log(receiver)
     //set 方法传入 receiver 把 objProxy 传入进去
-    Reflect.set(target, key, value, receiver)
+    rturn Reflect.set(target, key, value, receiver)
   }
 })
   
@@ -114,9 +117,13 @@ objProxy.name = "mba"
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1732263635000950dvy.png)
 
-这样就可以对 obj 不管是自身的改变还是代理对象引起发生的改变，都可以进行监听。
+> [!abstract]
+> 这样当通过 objProxy 修改 obj 里面的数据的时候，也可以进行一个监听啦。
+
+
 
 # 五、Reflect Construct
+
 首先：通过前面的知识，如果在一个代码块里面执行另一个代码块的代码如何执行？
 
 [[01 this的绑定规则#1.3.1 call、apply|call、apply]]
@@ -157,4 +164,6 @@ objProxy.name = "mba"
   console.log(stu.__proto__ === Student.prototype)//true
 </script>
 ```
+
+
 

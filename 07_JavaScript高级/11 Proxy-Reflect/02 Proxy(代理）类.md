@@ -14,8 +14,8 @@
 
 ```js
 const obj = {
-	name: "axl",
-	age: 18
+  name: "axl",
+  age: 18
 }
 const objProxy = new Proxy(obj,{})
 ```
@@ -37,6 +37,7 @@ const objProxy = new Proxy(obj,{})
 	* property：被获取的属性key； 
 	* receiver：调用的代理对象；
 
+
 ```js
 <script>
   const obj = {
@@ -57,6 +58,7 @@ const objProxy = new Proxy(obj,{})
 
   console.log(objProxy.name)//监听：获取name  axl
   objProxy.name = "mba"//监听：name发生改变
+  console.log(objProxy)//Proxy(Object) {name: 'mba', age: 18}
   
   //对于监听对象改变，被监听对象也会发生改变
   console.log(obj.name)//mba
@@ -69,9 +71,33 @@ const objProxy = new Proxy(obj,{})
 
 # 四、Proxy的construct和apply
 
-还会看到捕捉器中还有**construct**和**apply**，它们是应用于函数对象的：
+还会看到捕捉器中还有 **construct** 和 **apply** ，它们是应用于函数对象的：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17321938790003wbxkv.png)
+```js
+function foo() {
+  console.log("foo函数被调用", this, arguments)
+  return "foo"
+}
+
+const fooProxy = new Proxy(foo, {
+  apply(target, thisArg, argumentsList) {
+    console.log("apply函数被调用", target, thisArg, argumentsList)
+    return target.apply(thisArg, argumentsList)
+  },
+  construct(target, argumentsList, newTarget) {
+    console.log("construct函数被调用", target, argumentsList, newTarget)
+    return new target(...argumentsList)
+  }
+})
+
+fooProxy("axl", " bastkaball")
+//apply函数被调用 [Function: foo] undefined [ 'axl', ' bastkaball' ]
+// foo函数被调用 undefined [Arguments] { '0': 'axl', '1': ' bastkaball' }
+
+new fooProxy("axl", " bastkaball")
+//construct函数被调用 [Function: foo] [ 'axl', ' bastkaball' ] [Function: foo]
+//construct函数被调用 [Function: foo] [ 'axl', ' bastkaball' ] [Function: foo]
+```
 
 # 五、Receiver
 
