@@ -46,7 +46,9 @@ useMemo实际的目的也是为了进行性能的优化。
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755781178000gmdzm4.png)
 
-> [!note] 这样当点击的时候，sum没有依赖任何东西，那么就不会对 sumAll 的计算操作(和自身的state无关)重复操作
+> [!note] 
+> 
+> 这样当点击的时候，sum没有依赖任何东西，那么就不会对 sumAll 的计算操作(和自身的state无关)重复操作
 
 ## 2.2 案例二
 

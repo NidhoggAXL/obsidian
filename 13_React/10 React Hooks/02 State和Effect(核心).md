@@ -202,7 +202,7 @@ const [data, setData] = useState(() => {
 });
 ```
 
-### 使用 [[04 Callback和Memo|useMemo]] 优化派生状态
+### 使用 [[04 useCallback和useMemo|useMemo]] 优化派生状态
 
 ```jsx
 const expensiveValue = useMemo(() => {
