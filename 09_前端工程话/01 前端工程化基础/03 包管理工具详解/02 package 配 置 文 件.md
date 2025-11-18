@@ -1,4 +1,5 @@
 # 一、npm 的配置文件
+
 那么对于一个项目来说，我们如何使用**npm来管理这么多包**呢?
 
 * 事实上，我们每一个项目都会有一个对应的**配置文件**，无论是前端项目(Vue、React)还是后端项目(Node);
@@ -53,6 +54,7 @@ main属性：
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744112533000pji6ei.png)
 
 ## 3.4 所有类型的 scripts(脚本)
+
 **scripts属性：** 
 
 * **scripts属性用于配置一些脚本命令，以键值对的形式存在；** 

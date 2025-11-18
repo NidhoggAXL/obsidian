@@ -401,6 +401,7 @@ HTML `<img>`元素将一份图像嵌入文档.
 ```
 
 ## 7.4 iframe元素
+
 利用iframe元素可以实现:在一个HTML文档中嵌入其他HTML文档
 
 **frameborder属性**
@@ -412,15 +413,19 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710588248000bffhgb.png)
 
+> [!tip]
+> 
 > 可以看到有一些网页是不允许被嵌套的。
 
 # 八、iframe和a元素的结合使用
+
 **a元素target的其他值:**
 
 * `_parent`:在父窗口中打开URL
 * `_top`:在顶层窗口中打开URL
 
 ## 8.1`_parent`
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710589170000hwaehn.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710589196000531l9m.png)
@@ -428,13 +433,17 @@ HTML `<img>`元素将一份图像嵌入文档.
 `target="_parent"`表示的是在父及打卡，这里使用了嵌套，所以在点击打开淘宝时，实在父级打开的。
 
 ## 8.2 `_top`
+
 **多级嵌套**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710589854000pfvc1v.png)
 
+> [!tip]
+> 
 > 直接是打开最外面的嵌套
 
 # 九、div元素、span元素
+
 **div元素、span元素的历史：**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710590672000ig424a.png)
