@@ -16,7 +16,7 @@
 
 很多人看到useReducer的第一反应应该是[[02 Redux的使用|redux]]的某个替代品，其实并不是。 
 
-useReducer仅仅是[[02 State和Effect(核心)|useState]]的一种替代方案： 
+useReducer仅仅是[[02 useState和useEffect(核心)|useState]]的一种替代方案： 
 
 - 在某些场景下，如果state的处理逻辑比较复杂，我们可以通过useReducer来对其进行拆分； 
 - 或者这次**修改的state需要依赖之前的state时**，也可以使用；
