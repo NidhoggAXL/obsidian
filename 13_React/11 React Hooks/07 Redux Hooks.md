@@ -3,7 +3,9 @@
 - 但是这种方式必须使用高阶函数结合返回的高阶组件； 
 - 并且必须编写：mapStateToProps和 mapDispatchToProps 映射的函数； 
 
-在Redux7.1开始，提供了Hook的方式，我们再也不需要编写connect以及对应的映射函数了
+在Redux7.1开始，提供了Hook的方式，我们再也不需要编写 connect 以及对应的映射函数了
+
+# useSelector
 
 **useSelector** 的作用是将state映射到组件中： 
 
@@ -12,7 +14,7 @@
 
 **useSelector** 默认会比较我们返回的两个对象是否相等； 
 
-- 如何比较呢？ const refEquality = (a, b) => a === b； 
+- 如何比较呢？ `const refEquality = (a, b) => a === b`； 
 - 也就是我们必须返回两个完全相等的对象才可以不引起重新渲染；
 
 先来看两个使用：
@@ -46,6 +48,8 @@ const { count } = useSelector(
   shallowEqual // 使用浅比较而不是引用比较
 );
 ```
+
+# useDispatch
 
 **useDispatch非常简单，就是直接获取dispatch函数，之后在组件中直接使用即可；** 
 
