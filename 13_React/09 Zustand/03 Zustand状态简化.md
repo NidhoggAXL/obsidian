@@ -1,6 +1,8 @@
 # 一、基本状态使用
 
-回忆一下我们在使用`zustand`时，是这样引入状态的(如下),通过解构的方式引入状态，但是这样引入会引发一个问题，例如A组件用到了 `hobby.basketball` 状态，而B组件 没有用到 `hobby.basketball` 状态，但是更新`hobby.basketball`这个状态的时候，A组件和B组件都会重新渲染，这样就导致了不必要的重渲染，因为B组件并没有用到`hobby.basketball`这个状态。
+回忆一下我们在使用`zustand`时，是这样引入状态的(如下),通过解构的方式引入状态，但是这样引入会引发一个问题
+
+例如A组件用到了 `hobby.basketball` 状态，而B组件 没有用到 `hobby.basketball` 状态，但是更新`hobby.basketball`这个状态的时候，A组件和B组件都会重新渲染，这样就导致了不必要的重渲染，因为B组件并没有用到`hobby.basketball`这个状态。
 
 ```jsx
 const { name, age, hobby, setHobbyRap, setHobbyBasketball } = useUserStore()

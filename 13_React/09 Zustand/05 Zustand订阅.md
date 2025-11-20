@@ -4,7 +4,7 @@
 > 
 > zustand 的 subscribe，可以订阅一个状态，当状态变化时，会触发回调函数。
 
-只要store 的 state 发生变化，就会触发回调函数，`另外就是这个订阅可以在组件内部订阅，也可以在组件外部订阅`,如果在组件内部订阅需要放到`useEffect`中,防止重复订阅。
+只要store 的 state 发生变化，就会触发回调函数，**另外就是这个订阅可以在组件内部订阅，也可以在组件外部订阅**,如果在组件内部订阅需要放到`useEffect`中,防止重复订阅。
 
 
 ```tsx
@@ -64,6 +64,7 @@ const store = create(subscribeWithSelector((set) => ({
   age: 0,
   name: '张三',
 })));
+
 const [status,setStatus] = useState('单身')
 //订阅age的变化 并且组件渲染一次
 useStore.subscribe(state => state.age, (age,prevAge) => {
