@@ -40,16 +40,19 @@
 * flex item的布局将受flex container属性的设置来进行控制和布局
 * flex item<mark class="hltr-orange">不再严格区分块级元素和行内级元素</mark>;
 	* 可以理解为<mark class="hltr-orange">行内块级元素</mark>
-* flex item默认情况下是包裹内容的,但是可以设置宽度和高度
+* <mark class="hltr-cyan">flex item默认情况下是包裹内容的</mark>,但是可以设置宽度和高度
 
-**设置 display 属性为 flex 或者inline-flex 可以成为 flex container**
+**设置 display 属性为 flex 或者 inline-flex 可以成为 flex container**
 
 * flex: flex container 以 block-level 形式存在
 * inline-flex:flex container 以 inline-level 形式存在
 
+> [!abstract]
+> 
 > felx container 既可以是块级元素也可以是行内级元素。
 
 # 三、flex布局模型
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1723723438000tdawbl.png)
 
 | 英文         | 中文  |
@@ -174,6 +177,7 @@ justigy-两端对齐
 * 默认值是 0
 
 ## 5.2 align-self
+
 **flex items 可以通过 align-self 覆盖 flex  container 设置的 align-items**
 
 * auto(默认值):遵从fex container 的 align-items 设置
@@ -181,6 +185,7 @@ justigy-两端对齐
 * 效果跟 [[09 Flex布局#四、flex-container属性#4.6 align-iems|align-items]] 一致
 
 ## 5.3 flex-grow
+
 **flex-grow 决定了 flex items 如何扩展(拉伸/成长)**
 
 * 可以设置任意非负数字(正小数、正整数、0)，默认值是 0

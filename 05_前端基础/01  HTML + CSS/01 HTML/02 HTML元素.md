@@ -204,10 +204,13 @@ HTML `<img>`元素将一份图像嵌入文档.
  > target-目标
  
 ## 7.1 target
+
 **当不对target进行属性设置的时候回默认为_self。**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710575386000rq2su3.png)
 
+> [!tip]
+> 
 > 同时可以看出来，target没有定义时是自动默认为_self的。
 
 

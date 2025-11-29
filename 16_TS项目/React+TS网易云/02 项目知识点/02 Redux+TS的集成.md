@@ -70,14 +70,14 @@ export type RootState = ReturnType<typeof reduxStore.getState>;
 */
 ```
 
-官方也给了获取 dispatch 类型：
+官方也获取 dispatch 类型：
 
 ```ts title="src/stores/index.ts"
 export type AppDispath = typeof reduxStore.dispatch;
 //  导出类型 AppDispath，它是从 reduxStore.dispatch 的类型中提取的 这种类型定义通常用于确保组件中的 dispatch 函数调用与 store 的 dispatch 具有相同的类型签名
 ```
 
-类型有了，就是要封装自己的 Hooks了：
+类型有了，就是要封装自己的 Hooks 了：
 
 ```ts title="src/hooks/app.ts"
 import type { AppDispath, RootState } from "@/stores/redux"
@@ -104,4 +104,15 @@ export const useAppDispatch: () => AppDispath = useDispatch
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17636089900004goebx.png)
 
-	
+
+action.payload 为any情况：
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1763725258000b0eqwm.png)
+
+
+> [!tip] 官方：
+> 
+> 所有生成 action 都应该使用 Redux Toolkit 中的 `PayloadAction<T>` 类型定义，该类型将 `action.payload` 字段的类型作为其通用参数。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1763725335000nrou17.png)
+

@@ -119,3 +119,56 @@ export default Discover
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/176354307000071ldsf.png)
  
 
+# 二、类组件
+
+一般只使用到两个泛型的类型参数：
+
+```tsx
+import { PureComponent } from 'react'
+
+interface IProps {
+  name: string,
+  age?: number
+}
+
+interface IState {
+  message: string
+}
+
+export default class Demo extends PureComponent<IProps, IState> {
+  state = {
+    message: "hello world"
+  }
+
+  // 上面等价于下面这种编写方式
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     message: "hello world"
+  //   }
+  // }
+
+  render() {
+    return (
+      <div>
+        <h1>
+          {this.props.name}--{this.props.age}
+        </h1>
+        <h1>{this.state.message}</h1>
+      </div>
+    )
+  }
+}
+
+```
+
+> [!tip] 
+> PureComponent 需要使用泛型来确定 state 和 props 的类型。
+> 
+> ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1763724018000wvg5lh.png)
+> 
+> - 第一个泛型参数类型就是 State 的类型。
+> - 第二个泛型参数类型就是 Props 的类型。
+> - 第三个就是在使用 [[02 React组件生命周期#2.4 不常用生命周期函数|getDerivedStateFromProps]] 的返回值类型。
+
+
