@@ -1,3 +1,4 @@
+# 一、默认Redux的使用
 
 定义reducer：
 
@@ -49,6 +50,8 @@ const addCountBtnClick = () => {
   dispatch(increment())
 }
 ```
+
+# 二、state和dispatch问题
 
 > [!warning] 会报下面的错误！
 > 并不知道 state 的类型，那个就算是 `state.counter.address` 也是不会报错误的，这样并不安全，并且没有提示，这里就需要修改代码，可以正确的推导出 state 的类型。
@@ -105,14 +108,46 @@ export const useAppDispatch: () => AppDispath = useDispatch
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17636089900004goebx.png)
 
 
-action.payload 为any情况：
+action.payload 为 any 情况：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1763725258000b0eqwm.png)
 
+# 三、action中的类型
 
 > [!tip] 官方：
 > 
 > 所有生成 action 都应该使用 Redux Toolkit 中的 `PayloadAction<T>` 类型定义，该类型将 `action.payload` 字段的类型作为其通用参数。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1763725335000nrou17.png)
+
+# 三、createAsyncThunk中的类型
+
+```ts
+export const getDataAction = createAsyncThunk("player/getData", (id, { getState }) => {
+  console.log(id)
+  // getState().player.playList 会报错
+  // getState是一个 unknown 类型
+})
+```
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1764912971000weh8w4.png)
+
+为什么会是一个 unknown 类型呢？在 redux 的默认ts中就是定义了 state 为 unknow 的类型。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1764913239000499xkq.png)
+
+要让 state = getState() 不是 unknow 不是 unknown 类型，那么就要设置类型，通过下面的方法设置：
+
+
+```TS
+// 为createAsyncThunk传入泛型
+// 第一个泛型参数是createAsyncThunk的放回脂肪
+// 第二个泛型参数是传入的 id 的类型
+// 第三个泛型参数就是这是上面 AsyncThunkConfig 的类型，这里设置了里面的 state 的类型
+export const getDataAction = createAsyncThunk<void, number, { state: RootState }>("player/getData", (id, { getState }) => {
+  console.log(id)
+  const data = getState().player.playList 
+  console.log(data)
+})
+```
 
