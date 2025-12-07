@@ -32,17 +32,17 @@
 
 ## 📄 核心文件详解
 
-- **`App.vue`**：这是应用的“外壳”。你可以在 `<style>` 标签内编写所有页面共享的全局CSS样式。更重要的是，你可以在这里使用Vue的生命周期函数来监听**应用级别**的事件，例如应用启动、切换到后台等[](https://uniapp.dcloud.io/tutorial/project.html#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)。
+- **`App.vue`**：这是应用的“外壳”。你可以在 `<style>` 标签内编写所有页面共享的全局CSS样式。更重要的是，你可以在这里使用Vue的生命周期函数来监听**应用级别**的事件，例如应用启动、切换到后台等。
     
-- **`main.js`**：是整个应用的启动引擎。它创建Vue实例，并引入和挂载 `App.vue` 组件。你通常也会在这里注册需要全局使用的库或组件[](https://uniapp.dcloud.io/tutorial/project.html#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)。
+- **`main.js`**：是整个应用的启动引擎。它创建Vue实例，并引入和挂载 `App.vue` 组件。你通常也会在这里注册需要全局使用的库或组件。
     
 - **`pages.json`**：这是uni-app的“路由和导航说明书”。它最主要的功能有两个：
     
-    1. **配置页面路由**：通过 `pages` 数组设置每个页面的访问路径和基础样式[](https://bbs.huaweicloud.com/blogs/442051)。
+    1. **配置页面路由**：通过 `pages` 数组设置每个页面的访问路径和基础样式。
         
-    2. **配置全局导航**：定义整个应用的窗口背景色、导航栏标题样式 (`globalStyle`)，以及如果需要，可以配置原生的底部 `tabBar` 导航栏[](https://bbs.huaweicloud.com/blogs/442051)。
+    2. **配置全局导航**：定义整个应用的窗口背景色、导航栏标题样式 (`globalStyle`)，以及如果需要，可以配置原生的底部 `tabBar` 导航栏。
         
-- **`manifest.json`**：这是应用打包前的“产品说明书”。当你需要为不同平台（如微信小程序、Android App）生成安装包时，就需要在这里配置该平台特有的信息，比如小程序的AppID、App的启动图、应用所需的系统权限列表等[](https://bbs.huaweicloud.com/blogs/442051)。
+- **`manifest.json`**：这是应用打包前的“产品说明书”。当你需要为不同平台（如微信小程序、Android App）生成安装包时，就需要在这里配置该平台特有的信息，比如小程序的AppID、App的启动图、应用所需的系统权限列表等。
 
 
 ### uni.promisify.adaptor.js 详解
@@ -55,5 +55,17 @@
 |**典型使用场景**|当你需要调用 `wx.request()`、`wx.getLocation()` 等小程序原生API，并希望用Promise处理时，这个文件在底层提供支持。|
 |**是否可以删除**|**视情况而定**，但有风险：  <br>1. **可以删除**：如果你的项目完全不使用微信小程序的异步API，或确定所有异步调用都已使用uni-app封装的、本身就返回Promise的API（如 `uni.request`），那么**理论上可以删除**[](https://ask.csdn.net/questions/8069918)[](https://blog.csdn.net/Zmaomao_/article/details/140465750)。  <br>2. **不建议删除**：如果你或你引入的第三方库依赖了此转换功能，删除后可能导致程序运行出错[](https://bbs.itying.com/topic/678e68c54b218c005fa26469)。最稳妥的做法是**保留它**，因为它体积很小，不影响打包。|
 |**官方地位**|它更像是一个**构建时或运行时的内部适配文件**。在DCloud官方最新的工程结构文档中，并未将此文件列为必需或标准文件[](https://uniapp.dcloud.io/tutorial/project.html#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)，这可能是不同HBuilderX模板版本或项目配置的差异所致。|
+
+# 二、开发规范
+
+
+了实现多端兼容，综合考虑编译速度、运行性能等因素，uni-app 约定了如下开发规范：
+
+- 页面文件遵循 Vue 单文件组件 (SFC) 规范
+- 组件标签靠近小程序规范，详见 uni-app 组件规范
+- 接口能力（JS API）靠近微信小程序规范，但需将前缀 wx 替换为 uni，详见uni-app接口规范
+- 数据绑定及事件处理同 Vue.js 规范，同时补充了App及页面的生命周期
+- 为兼容多端运行，建议使用flex布局进行开发，**推荐使用rpx单位（750设计稿）**。
+- 文档直接查看uni-app的官网文档： https://uniapp.dcloud.net.cn/
 
 
