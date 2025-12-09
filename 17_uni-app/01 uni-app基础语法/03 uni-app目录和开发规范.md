@@ -69,3 +69,120 @@
 - 文档直接查看uni-app的官网文档： https://uniapp.dcloud.net.cn/
 
 
+# 三、main.js
+
+
+main.js是 uni-app 的入口文件，主要作用是：
+
+- 初始化vue实例。
+- 定义全局组件。
+- 定义全局属性。
+- 安装插件，如：pinia、vuex 等。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765248783000ts8ke5.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765248788000p8c0km.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765248810000ts5hje.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765248825000latb6b.png)
+
+# 四、App.vue
+
+App.vue入口组件
+
+- App.vue是uni-app的入口组件，所有页面都是在App.vue下进行切换
+- App.vue本身不是页面，这里不能编写视图元素，也就是没有`<template>`元素
+
+App.vue的作用：
+
+- 应用的生命周期
+- 编写全局样式
+- 定义全局数据 globalData
+
+> [!tip]
+> 
+> 注意：应用生命的周期仅可在App.vue中监听，在页面监听无效。
+
+![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17652489850009rmn3q.png)
+
+
+# 五、全局和局部样式
+
+全局样式:
+
+- App.vue 中style的样式为全局样式，作用于每一个页面（**style标签不支持scoped，写了导致样式无效**）。
+	- App.vue 中通过 `@import` 语句可以导入外联样式，一样作用于每一个页面。
+- uni.scss 文件也是用来编写全局公共样式，通常用来定义全局变量。
+	- uni.scss 中通过 `@import` 语句可以导入外联样式，一样作用于每一个页面。
+
+```css
+@import "@/static/css/global.scss";
+```
+
+
+局部样式
+
+- 在 pages 目录下 的 vue 文件的style中的样式为局部样式，只作用对应的页面，并**会覆盖 App.vue 中相同的选择器**。
+- vue文件中的style标签也可支持scss等预处理器，比如：安装dart-sass插件后，style标签便可支持scss写样式了。
+- style标签支持scoped吗？**不支持**，不需写。
+
+```css
+<style lang="scss"></style>
+```
+
+
+# 六、uni.scss
+
+uni.scss 全局样式文件
+
+- 为了方便整体控制应用风格。 默认定义了uni-app框架内置全局变量，当然也可以存放自定义的全局变量等
+- 在uni.scss中定义的变量，我们**无需 `@import` 就可以在任意组件中直接使用。**
+- 使用uni.scss中的变量，需在 HBuilderX 里面安装 scss 插件（dart-sass插件），
+- 然后在该组件的 style 上加 lang=“scss”，重启即可生效。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765249368000ivzntp.png)
+
+> [!tip] 注意事项：
+> 
+>  - 这里的**uni-app框架**内置变量和后面**uni-ui组件库**的内置变量是不一样的。 
+>  - uni.scss定义的变量是全局可以直接使用，App.vue定义的变量只能在当前组件中使用。
+
+# 七、页面调用接口
+
+getApp() 函数( 兼容h5、weapp、app )：用于获取**当前应用实例**，可用于获取globalData 。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765249848000jcbeuh.png)
+
+
+getCurrentPages() 函数( 兼容h5、weapp、app )
+
+- 用于获取当前**页面栈的实例**，以数组形式按栈的顺序给出。
+	- 数组：第一个元素为首页，最后一个元素为当前页面。
+- 仅用于展示页面栈的情况，请勿修改页面栈，以免造成页面状态错误。
+- 常用方法如下图所示：
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17652498600001s5wl9.png)
+
+# 八、page.json
+
+page.json全局页面配置（兼容h5、weapp、app ）
+
+- pages.json 文件用来对 uni-app 进行全局配置，**类似微信小程序中app.json**。
+- 决定页面的路径、窗口样式、原生的导航栏、底部的原生tabbar 等。
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765250232000pprvek.png)
+
+# 九、manifest.json
+
+manifest.json应用配置
+
+- Android平台相关配置
+- iOS平台相关配置
+- Web端相关的配置
+- 微信小程序相关配置
+	- wxbc30134b589795b0
+- ....
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765250284000e4c5mv.png)
+
