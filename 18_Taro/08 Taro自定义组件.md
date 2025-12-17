@@ -24,3 +24,118 @@ yarn install classnames
 yarn install proptypes
 ```
 
+
+使用 CSS Module 编写组件的样式：
+
+```css
+.btn {
+  color: red;
+  font-size: 20px;
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  .text {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+.primary {
+  background-color: blue;
+}
+
+.default {
+  background-color: green;
+}
+
+```
+
+组件的定义：
+
+```jsx
+import { Button, Text } from "@tarojs/components";
+import classNames from "classnames";
+import { memo, useEffect } from "react";
+import styles from "./index.module.scss";
+import { useDidHide, useDidShow, useLoad, useUnload } from "@tarojs/taro";
+
+const XlButton = memo((props) => {
+  // 外部传递出来数据
+  const { type = "default", onBtnClick } = props;
+  //监听按钮点击，并向外部传递数据
+
+  const handleButtonBtn = () => {
+    // 外部点击事件，可以传递数据
+    onBtnClick();
+  };
+
+  //生命周期
+  // React组件的生命周期
+  useEffect(() => {
+    console.log("useEffect 按钮组件加载完成");
+    return () => {
+      console.log("useEffect 按钮组件卸载完成");
+    };
+  });
+  // 小程序的页面周期
+  useLoad(() => {
+    console.log("useLoad 页面加载完成");
+  });
+  useDidShow(() => {
+    console.log("useDidShow 页面加载完成");
+  });
+  useDidHide(() => {
+    console.log("useDidHide 页面加载完成");
+  });
+  useUnload(() => {
+    console.log("useUnload 页面加载完成");
+  });
+
+  return (
+    <Button
+      className={classNames(styles["btn"], styles[type])}
+      onClick={handleButtonBtn}
+    >
+      {/* 插件的使用 */}
+      {props.children || (
+        <Text className={classNames(styles["text"])}>按钮</Text>
+      )}
+    </Button>
+  );
+});
+
+export default XlButton;
+```
+
+使用自定义组件：
+
+```jsx
+import { View, Text } from "@tarojs/components";
+import { useLoad } from "@tarojs/taro";
+import "./index.scss";
+import XlButton from "../../components/xl-button";
+
+export default function Index() {
+  useLoad(() => {
+    console.log("Page loaded.");
+  });
+
+  function handleBtnClikc() {
+    console.log("外部点击事件");
+  }
+
+  return (
+    <View className="index">
+      <Text>Hello world!</Text>
+      <XlButton type="primary" onBtnClick={handleBtnClikc}>
+        <Text>我是buton的内容</Text>
+      </XlButton>
+    </View>
+  );
+}
+
+```
+

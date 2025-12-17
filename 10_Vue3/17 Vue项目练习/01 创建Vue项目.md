@@ -5,6 +5,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748250713000b44327.png)
 
 # 二、创建Vue项目
+
 方式一：Vue CLI 
 
 * 基于webpack工具；
