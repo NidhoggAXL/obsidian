@@ -1,19 +1,25 @@
 [[第12章_MySQL数据类型精讲.pdf]]
 # 一、MySQL 中的数据类型
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1712843763000v74x37.png)
 
 常见的数据类型：
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17128437830006a1kiq.png)
 
 # 二、整型类型
 ## 2.1 类型介绍
+
 整数类型一共有 5 种，包括 TINYINT、SMALLINT、MEDIUMINT、INT（INTEGER）和 BIGINT。 
 
 它们的区别如下表所示：
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1712844520000vc1dco.png)
 
 ## 2.2 可选属性
+
 **整数类型的可选属性有三个：**
+
 ### 2.2.1 M
 表示显示宽度，M的取值范围是(0, 255)。例如，int(5)：当数据宽度小于5位的时候在数字前面需要用 字符填满宽度。该项功能需要配合“ ZEROFILL ”使用，表示用“0”填满宽度，否则指定显示宽度无效。
 
@@ -344,9 +350,11 @@ ts TIMESTAMP );
 在实际的项目中，我们还经常遇到一种数据，就是字符串数据。 
 
 MySQL中，文本字符串总体上分为 **CHAR 、 VARCHAR 、 TINYTEXT 、 TEXT 、 MEDIUMTEXT 、 LONGTEXT 、 ENUM 、 SET** 等类型。
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1713084488000gi0e44.png)
 
 ## 7.1 CHAR与VARCHAR类型
+
 CHAR和VARCHAR类型都可以存储比较短的字符串。
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1713084517000323csi.png)
 
@@ -387,6 +395,7 @@ FROM test_char1;
 	* **MySQL4.0版本以下，varchar(20)：指的是20字节，如果存放UTF8汉字时，只能存6个（每个汉字3字节）** ；
 	* **MySQL5.0版本以上，varchar(20)：指的是20字符**。
 * 检索VARCHAR类型的字段数据时，会保留数据尾部的空格。VARCHAR类型的字段所占用的存储空间为字符串实际长度加1个字节。
+
 > [!tip ] 特别注意：
 > varchar(m) 这里的 m 现在是不可以定义为 65535 ，
 > 因为后面的版本把 字节改为字符，( 65535 / 3=21845 ) ,后面就改为最大为 2185 , 当然最大时多少也和你最开始创建数据库时的 CHARACTER SET 有关。
@@ -420,6 +429,7 @@ VALUES('尚硅谷IT教育');
 
 
 **哪些情况使用 CHAR 或 VARCHAR 更好**
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1713097422000bpegbl.png)
 
 **情况1**：存储很短的信息。比如门牌号码101，201……这样很短的信息应该用char，因为varchar还要占个 byte用于存储信息长度，本来打算节约存储的，结果得不偿失。
@@ -434,6 +444,7 @@ VALUES('尚硅谷IT教育');
 * **InnoDB** 存储引擎，建议使用VARCHAR类型。因为对于InnoDB数据表，内部的行存储格式并没有区分固定长度和可变长度列（所有数据行都使用指向数据列值的头指针），而且**主要影响性能的因素 是数据行使用的存储总量**，由于char平均占用的空间多于varchar，所以除了简短并且固定长度的， 其他考虑varchar。这样节省空间，对磁盘I/O和数据存储总量比较好。
 
 ## 7.2 TEXT 类型
+
 在MySQL中，TEXT用来保存文本类型的字符串，总共包含4种类型，分别为TINYTEXT、TEXT、 MEDIUMTEXT 和 LONGTEXT 类型。
 
 在向TEXT类型的字段保存和查询数据时，系统自动按照实际长度存储，不需要预先定义长度。这一点和 VARCHAR类型相同。 

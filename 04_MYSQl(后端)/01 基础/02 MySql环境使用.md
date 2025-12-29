@@ -4,7 +4,8 @@
 
 ## 1.2 使用命令行工具
 以管理员的方式运行：
-```
+
+```bash
 # 启动 MySQL 服务命令
 net start mysql80
 
@@ -14,10 +15,11 @@ net stop mysql80
 
 # 二、自带客户端的登录和使用
 ## 2.3 MySQL 自带的客户端
+
 开始菜单 -> 所有程序 -> MySQL -> 输入密码
 
-
 ## 2.4 window 自带的
+
 * 格式：
 `mysql -h 主机号 -P 端口号 -u 用户名 -p密码`
 
@@ -29,5 +31,8 @@ net stop mysql80
 `c:\>mysql --version`
 
 ## 2.3 退出登录
-``exit quit``
+
+```bash
+exit quit
+```
 

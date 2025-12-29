@@ -1,5 +1,6 @@
 # 一、SQL 的概述
 ## 1.1 SQL  分类
+
 > [!tip] DDL: (Data Definition Languages) 数据定义语言
 > 这些语句定义了不同的数据库、表、视图、索引等数据库对象，还可以用来创建、删除、修改数据库和数据表的结构。
 > * CREATE - create 创建
@@ -25,57 +26,70 @@
 > * CRANT - crant (赋予相关的权限)
 > * REVOKE - revoke  撤销 (回收相关的权限)
 
+> [!tip] 
 > 因为查询语句使用的非常的频繁，所以很多人把查询语句单拎出来一类:DQL(数据查询语言)还有单独将 COMMIT、ROLLBACK 取出来称为TCL(Transaction Control Language，事务控制语言)
 
 # 二、SQL 语句的规则和规范
 
 ## 2.1 推荐采用统一的书写规范
 
+> [!abstract]
 > * 数据库名、表名、表别名、字段名、字段别名等都小写
 > * SQL关键字、函数名、绑定变量等都大写
 
 ## 2.2 注释
 
+> [!abstract]
 > 单行注释：#注释文字 ( MySQL特有的方式 )
 > 单行注释：-- 注释文字 (--后面必须包含一个空格) 大多数数据库都通用
 > 多行注释：/* 注释文字 */
 
 # 三、基本的SELLECT 语句
 ## 3.0 SELECT……
-```
+
+```sql
 SELECT 1;#没有任何语句
 SELECT 2*3；
 ```
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/171187392700071zsx4.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/171187392700071zsx4.png)
 
 ## 3.1 SELECT…FROM…
-* 语法
-```
+
+```sql
 SELECT 标识选择那些列
 FROM   标识从那个表中选择
 ```
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711874187000twdjol.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711874187000twdjol.png)
 
-* 伪表![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711874275000xyr1ur.png)
+* 伪表
 
-* 查询所有的字段 (或列)![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711874371000ifdl7r.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711874275000xyr1ur.png)
+
+* 查询所有的字段 (或列)
+
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711874371000ifdl7r.png)
 
 ## 3.2 别名(alias)
+
 可以使用下面的方法进行别名的设置：
 * `SELSCT 原名 别名`
 * `SELSCT 原名 AS 别名`
 * `SELSCT 原名 AS "别名"`
 	* 当别名里面有空格时就要使用""号了
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711883064000j4roiv.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711883064000j4roiv.png)
 
 ## 3.3 去除重复行
-默认情况下，查询会放回全部行，包括重复行。
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17118836680003kc2ye.png)
 
-如果不想查询到重复的数据，就要使用关键字 distinct (不同的：明显的) ：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711883771000ax0z7d.png)
+默认情况下，查询会放回全部行，包括重复行。
+
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17118836680003kc2ye.png)
+
+如果不想查询到重复的数据，就要使用关键字 distinct (不同的：明显的) ：
+
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711883771000ax0z7d.png)
 
 > [!tip] distinct使用注意事项
 > 查询多个数据的时候不能把 distinct 放在字段的后面：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17118839300009fp4ex.png)
