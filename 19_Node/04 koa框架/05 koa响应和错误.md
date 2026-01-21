@@ -2,7 +2,7 @@
 
 输出结果：body将响应主体设置为以下之一：
 
- - string ：字符串数据
+ - string ：字符串数据 
  - Buffer ：Buffer数据
  - Stream ：流数据
  - `Object || Array`：对象或者数组

@@ -1,8 +1,9 @@
 这里的html元素和HTML元素的区别：
 * 大写的HTML元素表示的是HTML语言下面的所有元素
-* 小写的heml元素表示的是html里面的 h1/p/img之类的元素
+* 小写的html元素表示的是html里面的 `h1/p/img` 之类的元素
 
 # 一、head元素
+
 **HTML head 元素 规定文档相关的配置信息(也称之为元数据)，包括文档的标题，引用的文档样式和脚本等。**
 
 * 什么是元数据(meta data)，是描述数据的数据;
@@ -12,22 +13,24 @@
 
 **常见的设置有哪些呢?一般会至少包含如下2个设置。**
 
-网页标题：title 元素 title-名称
+**网页标题**：title 元素 title-名称
 
 ```html
 <title>网页标题</title>
 ```
 
-网页的编码:meta元素  meta-元语言
+**网页的编码**:meta元素  meta-元语言
 
 * 可以用于设置网页的字符编码，让浏览器更精准地显示每一个文字，不设置或者设置错误会导致乱码
-* 一般都使用utf-8编码，涵盖了世界上几乎所有的文字;
-
+* 一般都使用 utf-8 编码，涵盖了世界上几乎所有的文字;
 
 # 三、body常见元素
+
 对页面的描述，页面超文本编写的地方。
+
 # 四、h元素
-在一个页面中通常会有一些比较重要的文字作为标题，这个时候我们可以使用h元素。
+
+在一个页面中通常会有一些比较重要的文字作为标题，这个时候可以使用h元素。
 
 `<h1>-<h6>`标题(Heading) 元素呈现了六个不同的级别的标题
 
@@ -38,18 +41,22 @@
 
 
 > [!tip] 注意:
-> h标签通常和SEO优化有关系(什么是SEO，后续再介绍)
+> h标签通常和[[元素语义化及SEO|SEO]]优化有关系
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710493884000vg4z3y.png)
 
 那么浏览器是通过什么来进行区分h1~h6的呢（呈现的时候）？
 
+> [!note]
 > 是通过CSS来进行渲染的，h标签告诉是什么标题，CSS在对不同的标题进行不同的渲染。
+> 
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710494865000ot1m0a.png)
+> 
 > CSS会对不同标签进行区域内容的不同设置，例如：字体大小、颜色，上下间距等。
 
 # 五、P元素
-如果我们想表示一个段落，这个时候可以使用p元素。
+
+如果想表示一个段落，这个时候可以使用p元素。
 
 HTML`<p>`元素(或者说 HTML 段落元素)表示文本的一个段落
 
@@ -61,33 +68,21 @@ HTML`<p>`元素(或者说 HTML 段落元素)表示文本的一个段落
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
 
 <body>
-
   <p>
-
     以广东为例，2020年广东提出要发展十大战略性支柱产业集群，培育十大战略性新兴产业集群。十大战略性支柱产业集群包括新一代电子信息、绿色石化等等，十大战略性新兴产业集群包括半导体与集成电路、高端装备制造等等。广东拥有全国最大、产业链最完整的新一代电子信息产业集群，在全球也有重要位置。
-
   </p>
 
   <p>
-
     央视网消息：2019年，我国提出要把粤港澳大湾区打造成为“具有全球影响力的国际科创中心”。  在世界知识产权组织（WIPO）发布的《2023年全球创新指数》中，全球顶级科技创新集群的排名，前五名中中国有三地上榜。北京位居第四，“上海—苏州”区域位居第五，“深圳—香港—广州”区域位居全球第二！这已经是它在这个排名中连续第四年位列全球第二，可见这一区域在科创方面的实力和国际影响力。
-
   </p>
-
 </body>
 
 </html>
@@ -95,9 +90,9 @@ HTML`<p>`元素(或者说 HTML 段落元素)表示文本的一个段落
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710495534000v1dmmi.png)
 
-
 # 六、img元素
-我们应该如何告诉浏览器来显示一张图片呢?使用img元素。
+
+那么应该如何告诉浏览器来显示一张图片呢?使用img元素。
 
 HTML `<img>`元素将一份图像嵌入文档.
 
@@ -107,34 +102,32 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 **img有两个常见的属性:**
 
-`src`属性:source单词的缩写，表示源
-
-* 是必须的，它包含了你想嵌入的图片的文件路径
-
-`alt`属性:不是强制性的，有两个作用
-
-* 作用一:当图片加载不成功(错误的地址或者图片资源不存在)，那么会显示这段文本;
-* 作用二:屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义;
-
+ - `src`属性:source单词的缩写，表示源
+	 - 是必须的，它包含了你想嵌入的图片的文件路径
+ - `alt`属性:不是强制性的，有两个作用
+	 * **作用一**:当图片加载不成功(错误的地址或者图片资源不存在)，那么会显示这段文本;
+	 * **作用二**:屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义;
 
 **img的实现方法**：使用img占据网页的一些空间
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/171050642600003zug2.png)
 
-
-在这个空间里面使用src找到图片的源路径->同过源可以去服务器上面找到图片->在网页里面用这个替换img占据的空间，如果没有找到图片，那么浏览器就回自动添加一个图片缺少的提示图表。
+在这个空间里面使用src找到图片的源路径->同源可以去服务器上面找到图片->在网页里面用这个替换img占据的空间，如果没有找到图片，那么浏览器就回自动添加一个图片缺少的提示图表。
 
 **所以img也叫可替换元素。**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/171050619400071ayp4.png)
 
 ## 6.1 src属性
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17105065080004hwy0m.png)
 
 ## 6.2 alt属性
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/171050653700070w29n.png)
 
 ## 6.3 img元素中的图片路径
+
 **设置img的src时，需要给图片设置路径:**
 
 * 网络图片:一个URL地址(后续会专门讲URL)
@@ -147,47 +140,35 @@ HTML `<img>`元素将一份图像嵌入文档.
 	* 从电脑的根目录开始一直找到资源的路径，![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17176804250006yuydl.png)
 * 方式二:相对路径(常用);![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1717680497000h3tjng.png)
 	* 相当于当前文件的一个路径;
-	* `.`代表当前文件夹(1个.)，可以省略
+	* `.`代表当前文件夹(1个.)，**可以省略**
 	* `..`代表上级文件夹(2个.)
 
+> [!tip]
+> 
 > 对于网页来说，不管什么操作系统(Windows、Mac、Linux)，路径分隔符都是`/`（斜杆），而不是`\`（反斜杆）
 
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
 
 <body>
-
   <!-- 1.网络图片：使用网络链接 -->
-
   <h1>网络图片</h1>
-
   <img src="https://k.sinaimg.cn/n/sinacn10111/300/w1728h972/20190920/89b2-iewtemz5328342.jpg/w700d1q75cms.jpg" alt="雷姆图片">
-
   <hr/>
 
   <h1>本地图片</h1>
-
   <h2>绝对路径图片</h2>
-
   <img src="D:\cod\web\imgs\xiaodao.jpg" alt="xiaodao">
 
   <h2>相对路径图片</h2>
-
   <img src="../imgs/xiyang.jpg" alt="xiyang">
-
 </body>
 
 </html>
@@ -197,8 +178,10 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 
 # 七、a元素
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710574815000p8sdzw.png)
 
+> [!tip] 
 >  reference-引用
  > blank-空白的
  > target-目标
