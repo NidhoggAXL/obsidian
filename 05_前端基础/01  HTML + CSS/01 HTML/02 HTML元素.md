@@ -213,7 +213,8 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 
 ### 7.2.1 文本链接
-**对sheme进行id属性的设置，a标签里面shiyong`#`来知道要跳转的地方**
+
+**对sheme进行id属性的设置，a标签里面使用`#`来知道要跳转的地方**
 
 文本->文本:
 
@@ -223,51 +224,29 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
-
 <body>
-
   <a href="#leimu">雷姆照片</a>
-
   <p>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br>
-
   </p>
 
   <img src="../imgs/leimu.jpg" alt="" id="leimu">
-
 </body>
-
 </html>
 ```
 
@@ -279,48 +258,28 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
-
 <body>
   <a href="#leimu">
-
     <img src="../imgs/xiaodao.jpg" alt="">
-
   </a>
-
   <p>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
     <br><br><br><br><br><br><br><br><br><br><br>
-
   </p>
 
   <img src="../imgs/leimu.jpg" alt="" id="leimu">
-
 </body>
-
 </html>
 ```
 
@@ -328,61 +287,42 @@ HTML `<img>`元素将一份图像嵌入文档.
  
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
 
 <body>
-
   <h1>雷姆的图片超链接</h1>
-
   <a href="https://www.baidu.com/from=844b/ssid=0/s?word=%E9%9B%B7%E5%A7%86%E5%9B%BE%E7%89%87%E5%A3%81%E7%BA%B8%E8%B6%85%E6%B8%85&sa=re_dl_prs_34689_4&ms=1&rqid=7069369201125033412&rq=NIKE%E8%B6%85%E6%B8%85%E5%A3%81%E7%BA%B8&rsf=68040014&asctag=13544" target="_blank">
-
     <img src="https://k.sinaimg.cn/n/sinacn10111/269/w1200h669/20190920/2b21-iewtemz5328511.jpg/w700d1q75cms.jpg" alt="">
-
   </a>
-
 </body>
-
 </html>
 ```
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710578459000iqpoai.png)
 
 ## 7.3 a元素的其他URL
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17105808670002rbfn5.png)
+
+a 元素也可以来发送邮箱和下载数据，发送到指定的邮箱里面。
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
-
 <body>
-
   <a href="aoao.zip">下载zip压缩包</a>
-
   <a href="mailto:1234@qq.com">发邮件给1234</a>
-
 </body>
-
 </html>
 ```
 
@@ -442,94 +382,53 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
   <style>
-
     .area{
-
       border: 1px solid red;
-
     }
-
     .keyword{
-
       font-size: 30px;
-
       font-weight: 700;
-
       color:blue;
-
     }
-
   </style>
-
 </head>
 
 <body>
-
   <h1>学习前端</h1>
-
-  
-
   <div class="area">
-
   <h3>1. HTML+CSS的学习</h3>
-
     <p>
-
       先学习HTML，后面在学习CSS
-
     </p>
-
   </div>
-
   <div class="area">
-
     <h3>2. JavaScript的学习</h3>
-
     <p>
-
       深入的学习<span class="keyword">JavaScript</span>的学习
-
     </p>
-
   </div>
-
-  
-
-  <div class="area">
-
+  <div class="area"
     <h3>3. 学习一些开发工具的使用</h3>
-
       <p>
-
         对好多的开发工具要学习。
-
       </p>
-
   </div>
-
-  
-
 </body>
-
 </html>
 ```
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710592239000nx1qdp.png)
 
 **这里是希望JavaScript这个重点标识不独自占据一行，所以是使用span而不是div，使用div的话JavaScript会独自占据一行。**
 
 # 十、不常用元素
+
 **strong元素:内容加粗、强调:**
 
 * 通常加粗会使用css样式来完成:
@@ -557,6 +456,7 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 
 # 十一、HTML全局属性
+
 **我们发现某些属性只能设置在特定的元素中**
 
 * 比如img元素的src、a元素的href;
@@ -575,27 +475,18 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 
 ## 11.1 title 
+
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Document</title>
-
 </head>
-
 <body>
-
   <p title="啊哈哈哈">我是一个CoderL</p>
-
 </body>
-
 </html>
 ```
 

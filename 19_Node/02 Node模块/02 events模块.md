@@ -27,8 +27,8 @@ EventEmitter的实例有一些属性，可以记录一些信息：
 
  - emitter.eventNames()：返回当前 EventEmitter对象注册的事件字符串数组；
  - emitter.getMaxListeners()：返回当前 EventEmitter对象的最大监听器数量，可以通过setMaxListeners()来修改，默认是10；
- - emitter.listenerCount(事件名称)：返回当前 EventEmitter对象某一个事件名称，监听器的个数；
- - emitter.listeners(事件名称)：返回当前 EventEmitter对象某个事件监听器上所有的监听器数组；
+ - emitter.listenerCount(事件名称)：返回当前 EventEmitter对象 某一个事件名称，监听器的个数；
+ - emitter.listeners(事件名称)：返回当前 EventEmitter对象 某个事件监听器上所有的监听器数组；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1766040042000pmvqr4.png)
 
