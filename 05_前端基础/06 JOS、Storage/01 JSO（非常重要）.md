@@ -93,6 +93,7 @@ JSON.stringify()方法将一个 JavaScript 对象或值转换为 JSON 字符串:
 ```
 
 ## 42. Stringify的参数space
+
 再后面调用显示的时候会进行换行
 
 ```js
@@ -136,6 +137,7 @@ JSON.stringify()方法将一个 JavaScript 对象或值转换为 JSON 字符串:
 
 
 ## 4.4 parse方法
+
 JSON.parse()方法用来解析JSON字符串，构造由字符串描述的JavaScript值或对象。
 
 * 提供可选的 reviver 函数用以在返回之前对所得到的对象执行变换(操作)。

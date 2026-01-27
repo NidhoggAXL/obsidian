@@ -1,13 +1,14 @@
 # 一、认识中间件
 
-xpress是一个路由和中间件的Web框架，它本身的功能非常少： Express应用程序本质上是一系列中间件函数的调用；
+express是一个路由和中间件的Web框架，它本身的功能非常少： Express应用程序本质上是一系列中间件函数的调用；
 
 中间件是什么呢？
+
  - 中间件的本质是传递给express的一个回调函数；
- - 这个回调函数接受三个参数：
+ - 这个回调函数接受三个参数： 
 	 - 请求对象（request对象）；
 	 - 响应对象（response对象）；
-	 - next函数（在express中定义的用于执行下一个中间件的函数） - 
+	 - next函数（在express中定义的用于执行下一个中间件的函数） 
 
 中间件中可以执行哪些任务呢？
 
@@ -28,10 +29,8 @@ xpress是一个路由和中间件的Web框架，它本身的功能非常少： E
 - express主要提供了两种方式：
 	 - app/router.use；
 	 - app/router.methods；
- - 可以是 app，也可以是router，router我们后续再学习:
+ - 可以是 app，也可以是 [[04 Express路由|router]]，
  - methods指的是常用的请求方式，比如： app.get或app.post等；
-
-先来学习use的用法，因为methods的方式本质是use的特殊情况；
 
 ## 2.1 最普通的中间件
 
@@ -166,7 +165,7 @@ app.listen(8000, () => {
 并非所有的中间件都需要我们从零去编写：
 
  - express有内置一些帮助我们完成对request解析的中间件；
- - registry仓库中也有很多可以辅助我们开发的中间件；
+ - registry仓库中(就是使用npm下载的仓库)也有很多可以辅助我们开发的中间件；
 
 在客户端发送post请求时，会将数据放到body中：
 
@@ -360,7 +359,7 @@ const app = express()
 
 // 创建写入流
 const writeStream = fs.createWriteStream("./logs/access.log")
-// 使用morgan中间件
+// 使用morgan中间件 combined-合并
 app.use(morgan("combined", { stream: writeStream }))
 
 // 中间件
@@ -402,7 +401,7 @@ const app = express();
 const upload = multer({ dest: "./uploads" });
 //dest-desitination(目的地)
 
-// 中间件
+// 中间件 single-单
 app.post("/upload", upload.single("phone"), (req, res, next) => {
   console.log(req.file); //获取到文件的信息
   res.end("文件上传成功~");
@@ -426,6 +425,40 @@ app.listen(8000, () => {
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1766230054000406it1.png)
 
 ### 添加后缀名
+
+**destination** (存储路径)，参数解析：
+
+- `req`：Express 请求对象，可以获取请求信息
+    
+- `file`：上传的文件信息对象
+    
+- `callback(error, destinationPath)`：回调函数
+    
+    - 第一个参数：错误信息（成功时为 `null`）
+        
+    - 第二个参数：存储目录的**相对路径或绝对路径**
+
+
+**filename** (文件名设置)，参数解析：
+
+- `req`：Express 请求对象
+    
+- `file`：上传的文件对象，包含：
+
+```js
+{
+  fieldname: 'phone',        // form-data 的字段名
+  originalname: 'photo.jpg', // 原始文件名
+  encoding: '7bit',          // 编码方式
+  mimetype: 'image/jpeg'     // 文件类型
+}
+```
+
+- `callback(error, fileName)`：回调函数
+    
+    - 第一个参数：错误信息
+        
+    - 第二个参数：自定义的文件名
 
 ```js
 import express from "express";

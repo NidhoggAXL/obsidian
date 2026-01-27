@@ -110,6 +110,10 @@ readStream.on("close", () => {
 
 ## pause、resume方法
 
+| pause | resume | chunk |
+| ----- | ------ | ----- |
+| 暂停    | 恢复     | 块     |
+
 ```js
 readStream.on("data", (chunk) => {
   console.log(chunk)

@@ -28,6 +28,7 @@ express的使用过程有两种方式：
 方式一：安装express-generator
 
  - 安装脚手架
+ - generator-生成器
 
 ```bash
 npm install -g express-generator
@@ -62,10 +63,9 @@ npm init -y
 我们来创建第一个express项目：
 
  - 会发现，之后的开发过程中，可以方便的将请求进行分离：、
-	 - node 中的 http 是统一进行请求的，需要通过 [[02 http模块#五、request对象|http模块中的request对象]] 中获取
+	 - node 中的 http 是统一进行请求的，需要通过 [[02 http模块#五、request对象|http模块中的request对象]] 中获取不同请求参数来进行处理和分类。
  - 无论是不同的URL，还是get、post等请求方式；
  - 这样的方式非常方便我们已经进行维护、扩展；
- - 当然，这只是初体验，接下来我们来探索更多的用法；
 
 ```js
 import express from 'express'
@@ -75,12 +75,12 @@ const app = express()
 
 // /home 的get请求
 app.get("/home", (req, res) => {
-  res.send("get请求home数据")
+  re.end("get请求home数据")
 })
 
 // /login 的post请求
 app.post("/login", (req, res) => {
-  res.send("post请求login登录")
+  res.end("post请求login登录")
 })
 
 // 监听端口

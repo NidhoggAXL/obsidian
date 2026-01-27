@@ -5,7 +5,7 @@
  - 方式一：通过get请求中的URL的params；
  - 方式二：通过get请求中的URL的query；
  - 方式三：通过[[02 Express中间件#3.3 express的中间件|post请求中的body的json格式]]；
- - 方式四：通过[[02 Express中间件#4.2 express.urlencoded|post请求中的body的x-www-form-urlencoded格]]；
+ - 方式四：通过[[02 Express中间件#4.2 express.urlencoded|post请求中的body的x-www-form-urlencoded格式]]；
  - 方式五：通过[[02 Express中间件#解析form-data|post请求中的form-data格式]]；
 
 # 二、传递参数params
@@ -26,8 +26,8 @@ const app = express()
 // 中间件
 app.use("/login/:id/:name", (req, res, next) => {
   console.log(req.params)//[Object: null prototype] { id: '1', name: '2' }
-  res.end(`请求的id=>${req.params.id},name=>${req.params.name}`)
-  //请求的id=>1,name=>2
+  res.end(`请求的params，id=>${req.params.id},name=>${req.params.name}`)
+  //请求的params，id=>1,name=>2
 })
 
 // 监听启动
@@ -69,7 +69,6 @@ app.listen(8000)
 
 **end方法**：类似于http中的response.end方法，用法是一致的
 
-
 ```js
 import express from 'express'
 
@@ -79,7 +78,7 @@ const app = express()
 // 中间件
 app.use((req, res, next) => {
   // 响应数据
-  res.send('hello world')
+  res.end('hello world')
 })
 
 // 监听启动
