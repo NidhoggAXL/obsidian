@@ -20,8 +20,8 @@ express和koa框架他们的核心其实都是中间件：
  - 假如有三个中间件会在一次请求中匹配到，并且按照顺序执行；
  - 我希望最终实现的方案是：
 	 - 在middleware1中，在req.message中添加一个字符串 aaa；
-	 - 在middleware2中，在req.message中添加一个 字符串bbb；
-	 - 在middleware3中，在req.message中添加一个 字符串ccc；
+	 - 在middleware2中，在req.message中添加一个 字符串 bbb；
+	 - 在middleware3中，在req.message中添加一个 字符串 ccc；
 	 - 当所有内容添加结束后，在middleware1中，通过res返回最终的结果；
 
 ## 3.1 Koa同步数据实现
@@ -256,7 +256,7 @@ app.listen(8000, () => {
 Koa 和 Express 的根本区别就是这里的 next() 返回的类型不同，一个 Promsie ，一个是 void，这样就导致：
 
 - 同步数据的时候，两个框架对数据的处理是一样的
-- 异步数据的时候，Koa 可以再任何一个中间件中进行数据的返回，而 Express 框架的话就只能再最后一个中间件进行数据的放回。
+- 异步数据的时候，Koa 可以再任何一个中间件中进行数据的返回，而 <mark class="hltr-cyan">Express 框架的话就只能再最后一个中间件进行数据的放回。</mark>
 
 
 

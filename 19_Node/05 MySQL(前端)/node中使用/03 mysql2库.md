@@ -7,11 +7,11 @@
  - **mysql**：最早的Node连接MySQL的数据库驱动；
  - **mysql2**：在mysql的基础之上，进行了很多的优化、改进；
 
-目前相对来说，我更偏向于使用mysql2，mysql2兼容mysql的API，并且提供了一些附加功能
+目前相对来说，更偏向于使用mysql2，mysql2兼容mysql的API，并且提供了一些附加功能
 
  - **更快/更好的性能**；
  - **Prepared Statement（预编译语句）**：
-	 - 提高性能：将创建的语句模块发送给MySQL，然后MySQL编译（解析、优化、转换）语句模块，并且存储它但是不执行，之后我们在真正执行时会给?提供实际的参数才会执行；就算多次执行，也只会编译一次，所以性能是更高的；
+	 - 提高性能：将创建的语句模块发送给MySQL，然后MySQL编译（解析、优化、转换）语句模块，并且存储它但是不执行，之后我们在真正执行时会给提供实际的参数才会执行；就算多次执行，也只会编译一次，所以性能是更高的；
 	 - 防止SQL注入：之后传入的值不会像模块引擎那样就编译，那么一些SQL注入的内容不会被执行；or 1 = 1不会被执行；
  - **支持Promise**，所以我们可以使用async和await语法
  - 等等....
@@ -40,7 +40,7 @@ const connection = mysql.createConnection({
   database: "music_db",
 });
 
-// 2.编写sql语句
+// 2.编写sql语句 statement-陈述
 const statement = "SELECT * FROM songs_db;";
 
 // 3.执行sql语句
@@ -56,7 +56,7 @@ connection.query(statement, (err, values, fileds) => {
 
 ```
 
-和 MySQL 创建连接后，要进行断开，断开又两种方式，下面两种有什么区别呢？
+和 MySQL 创建连接后，要进行断开，断开有两种方式，下面两种有什么区别呢？
 
 ```js
 connection.end()
@@ -70,6 +70,7 @@ connection.destroy()
     - 会发送一个`COM_QUIT`数据包到MySQL服务器
     - 保证数据的完整性
     - 因此能正确返回结果
+	
 2. `connection.destroy()`：
     
     - 这是一个强制关闭方式
@@ -175,4 +176,42 @@ connection.promise().execute(statement, ["axl", 16]).then((res) => {
 
 ```
 
- 
+# 六、获取连接是否成功
+
+```js
+const mysql = require("mysql2");
+
+// 创建连接池
+const pool = mysql.createPool({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: "yrm1999.1203",
+  database: "xlhub",
+  connectionLimit: 5,
+});
+
+// 获取连接是否成功
+pool.getConnection((err, connection) => {
+  if (err) {
+    console.log("数据库连接失败", err);
+    return
+  } 
+
+  // 测试连接
+  connection.connect(err => {
+    if (err) {
+      console.log("数据库连接失败", err);
+      return
+    } else {
+      console.log("数据库连接成功")
+    }
+  })
+});
+
+// 获取连接对象（promise）
+const connection = pool.promise();
+
+module.exports = connection;
+
+```

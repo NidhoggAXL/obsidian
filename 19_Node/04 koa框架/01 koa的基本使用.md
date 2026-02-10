@@ -1,6 +1,7 @@
 # 一、认识koa
 
 Koa官方的介绍：
+
  - koa：next generation web framework for node.js；
  - koa：node.js的下一代web框架；
 
@@ -8,7 +9,7 @@ Koa官方的介绍：
 
  - 目前团队的**核心开发者TJ的主要精力也在维护Koa**，express已经交给团队维护了；
  - Koa旨在为Web应用程序和API提供**更小、更丰富和更强大的能力**；
- - 相对于express具有更强的异步处理能力（后续我们再对比）；
+ - 相对于express具有更强的异步处理能力；
  - Koa的核心代码只有**1600+行**，是一个**更加轻量级的框架**；
  - 我们可以根据**需要安装和使用中间件**；
 
@@ -92,7 +93,7 @@ koa通过创建的app对象，注册中间件只能通过use方法：
 
 # 四、Koa路由
 
-koa官方并没有给我们提供路由的库，我们可以选择第三方库：koa-router
+koa官方并没有给我们提供路由的库，我们可以选择第三方库：@koa-router
 
 ```bash
 npm install @koa/router

@@ -41,7 +41,7 @@ INSERT INTO songs_db VALUES("axl", 18);
 > [!tip]
 > SQL 查询得到的数据，默认是不会进行这种嵌套，需要使用到 [[13 MySQL 数据类型#十一、JSON 类型|JSON]] 的类型。
 
-案例：要用 JSON_OBJECT;
+案例：要用 JSON_OBJECT; object-目的
 
 ```sql
 SELECT
