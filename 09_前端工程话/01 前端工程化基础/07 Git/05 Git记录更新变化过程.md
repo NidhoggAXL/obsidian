@@ -58,7 +58,7 @@ git add 跟踪的文件
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744813514000xbr1se.png)
 
-# 五、git忽略文件
+# 五、git 忽略文件
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448143850001lhv6u.png)
 

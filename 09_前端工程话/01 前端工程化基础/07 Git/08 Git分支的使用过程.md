@@ -143,7 +143,7 @@ git checkout master
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745137351000piuqc6.png)
 
 
-	# 七、分支开发和合并
+# 七、分支开发和合并
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745137396000wdksrv.png)
 

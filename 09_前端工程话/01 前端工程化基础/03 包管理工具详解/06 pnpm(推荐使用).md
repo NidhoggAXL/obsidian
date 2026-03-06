@@ -15,6 +15,7 @@
 
 
 # 三、硬链接和软连接的概念
+
 硬链接（hard link）： 
 
 * 硬链接（英语：hard link）是电脑文件系统中的多个文件平等地共享同一个文件存储单元； 
@@ -35,9 +36,10 @@
 
 
 # 四、硬链接和软连接的演练
+
 **文件的拷贝：** 文件的拷贝每个人都非常熟悉，会在硬盘中复制出来一份新的文件数据；
 
-```
+```shell
 window: copy 原文件 拷贝文件
 macos: cp 原文件 拷贝文件
 ```
@@ -46,7 +48,7 @@ macos: cp 原文件 拷贝文件
 
 **文件的硬链接：**
 
-```
+```shell
 window: mklink /H 拷贝文件 原文件 
 macos: ln 原文件 拷贝文件
 ```
@@ -55,7 +57,7 @@ macos: ln 原文件 拷贝文件
 
 **文件的软连接：**
 
-```
+```shell
 window: mklink 拷贝文件 原文件 
 macos: ln -s 原文件 拷贝文件
 ```
@@ -63,15 +65,18 @@ macos: ln -s 原文件 拷贝文件
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744187148000tmte9p.png)
 
 # 五、pnpm到底做了什么呢？
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744187643000a6v6a3.png)
 
 
 
 # 六、pnpm创建非扁平的 node_modules 目录
+
 当使用 npm 或 Yarn classic 安装依赖包时，所有软件包都将被提升到 node_modules 的 根目录下。
 
 * 其结果是，源码可以访问 **本不属于当前项目所设定的依赖包**;
 
+> [!note]
 > 就是说我是通过 工具包 安装了 webpack ，但是因为 webpack 依赖一些包，在下载 webpack 的时候就会把依赖的包同时下载出来，
 > 原本应该是放到 webpack 的 node_modules 文件里面的，但是 npm 、yarn……会进行 **扁平** 话处理，
 > 把**依赖的包提升到和 webpack 同等级的目录**，这样在使用 `require("")`的时候就可以导入依赖包并进行使用。为什么可以查找到，查看[[03 require函数解析]]

@@ -92,6 +92,7 @@
 
 可以看到这个**总文件的名字**并没有发生改变：但是我们**子文件的内容是发生改变的。**
 
+> [!note] 
 > 从上面也可以看出，是在文件里面操作的 git 操作，只会对 文件内的所有内容进行改变，并不会改变总文件夹的名字。
 
 比如我们现在创建一个 index.html 本地文件，并把它 push 到远程仓库：
@@ -122,13 +123,13 @@ SSH以**非对称加密实现身份验证**。
 * **公钥需要放在待访问的电脑（服务器）之中，而对应的私钥需要由用户自行保管**；
 
 > [!tip] 公钥和私钥怎么进行验证的
-> 当我们要 clone 远程git服务器的时候，git服务器里面存放了公钥，本地电脑存放私钥，这个时候就会那本地的私钥和远程服务器的公钥进行验证。
+> 当我们要 clone 远程git服务器的时候，git服务器里面存放了公钥，本地电脑存放私钥，这个时候就会用本地的私钥和远程服务器的公钥进行验证。
 
 如果我们以SSH的方式访问Git仓库，那么就需要生产对应的公钥和私钥：
 
 * 在 git bash 中进行产生，cmd中可能不支持这个命令
 
-```
+```bash
 ssh-keygen -t ed25519 -C "your email"
 或者
 ssh-keygen -t rsa -b 2048 -C "your email"
@@ -148,7 +149,7 @@ ssh-keygen -t rsa -b 2048 -C "your email"
 
 ### 2.3.2 添加公钥到服务器
 
-讲公钥 （.pub）后缀的文件内容复制到gitee中的公钥设置里面：
+将公钥 （.pub）后缀的文件内容复制到gitee中的公钥设置里面：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17449013750003jjnde.png)
 
@@ -156,7 +157,7 @@ ssh-keygen -t rsa -b 2048 -C "your email"
 
 ### 2.3.3 本地私钥进行clone
 
-复制 SHH 的密钥进行 clone
+复制 SHH 的连接进行 clone，本地的私钥和服务器的公钥进行校验。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744901541000zn8qjp.png)
 
@@ -171,7 +172,7 @@ ssh-keygen -t rsa -b 2048 -C "your email"
 
 查看远程地址：比如我们之前从Gitee上clone下来的代码，它就是有自己的远程仓库的：
 
-```
+```bash
 git remote 
 git remote –v 
 -v是—verbose的缩写(冗长的)
@@ -189,7 +190,8 @@ git remote add
 git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 ```
 
-> 远程仓库默认名为 origin
+>[!tip] 
+>远程仓库默认名为 origin
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744965482000quhgnl.png)
 
@@ -203,6 +205,7 @@ git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744966659000wf3wth.png)
 
+> [!warning]
 > There is no tracking information for the current branch.
 > 当前分支机构没有跟踪信息。
 > 
@@ -255,7 +258,8 @@ git merge --allow-unrelated-histories
 
 # 五、远程仓库总结
 ## 5.1 从远程仓库直接clone项目
-```
+
+```bash
 git clone 远程仓库地址
 git add .
 git commit -m "提交信息"
@@ -314,6 +318,7 @@ git push
 git checkout --track origin/main
 ```
 
+> [!tip]
 > 这样本地就会有一个 main 的分支是跟踪远程 main 分支了,这个时候就可以对 master 分支进行删除（也可以不删除）。
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451509870002zslh8.png)
 
