@@ -16,7 +16,7 @@
 
 require 的本质是把 exports 进行地址的引用赋值操作，就是把 exports 对象的地址直接复制给 require ， 这样 require 和 exports 都是指向同一个对象。
 
-![[exports和require的本质|600]]
+![[exports和require的本质|100%]]
 
 
 上面模块化完成了什么操作呢?理解下面这句话，Node中的模块化一目了然
@@ -45,6 +45,7 @@ console.log(name)//coderwhy
 console.log(name === exports.name)//false
 ```
 
+> [!tip]
 > 只是 exports.name 地址发生了改变，可以理解为指向name的**地址发生改变**，**但是 exports 对象地址没有发生改变，里面没有进行重新定义的数据也不会发生改变。**
 
 ```js
@@ -63,11 +64,12 @@ console.log(age === exports.age)//true
 ```
 
 # 四、module.exports导出
+
 但是Node中我们经常导出东西的时候，又是通过module.exports导出的：
 
 module.exports和exports有什么关系或者区别呢？
 
-<mark class="hltr-orange">我们追根溯源，通过维基百科中对CommonJS规范的解析： </mark>
+追根溯源，通过维基百科中对CommonJS规范的解析： 
 
 * CommonJS中是没有**module.exports**的概念的； 
 * 但是为了实现模块的导出，Node中使用的是**Module的类，每一个模块都是Module的一个实例，也就是module；** 
@@ -79,7 +81,7 @@ module.exports和exports有什么关系或者区别呢？
 
 * 这是因为module对象的exports属性是exports对象的一个引用；
 
-![[module.exports的实质|600]]
+![[module.exports的实质|100%]]
 
 
 > [!node] 那么肯定会产生怀疑，Node也支持CommonJS，那么已经有一个expots为还要设置一个module.exports呢？
@@ -98,4 +100,3 @@ module.exports和exports有什么关系或者区别呢？
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17438436360000oz6yc.png)
 
-[[04 AMD和CMD(了解)]]

@@ -3,7 +3,7 @@
 我们创建一个 div_ct.js ,通过JavaScript创建了一个元素，并且希望给它设置一些样式；
 
 * 通过 impot 导出，在导入文件数据不使用具体标识符的时候可以省略 export 
-* `export {} from impot ""`
+* `from impot ""`
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744358442000lfp8cp.png)
 

@@ -25,7 +25,7 @@
 * 我们会发现还有一个称之为**package-lock.json的文件**，它的作用是什么？ 
 * 从npm5开始，**npm支持缓存策略（来自yarn的压力），缓存有什么作用**呢？ 
 
-	一幅画出的根据 npm install 的原理图：
+一幅画出的根据 npm install 的原理图：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174411881300083kntu.png)
 
@@ -37,7 +37,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744118620000qau524.png)
 
 
-# 四、npm其他命令
+# 四、npm其他命令z
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744119210000nsea1g.png)
 

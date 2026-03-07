@@ -12,12 +12,13 @@ npm install postcss-loader -D
 
 我修改加载css的loader：（配置文件已经过多，给出一部分了） 
 * 注意：因为postcss需要**有对应的插件**才会起效果，所以我们需要配置它的plugin；
+* 这里就是一个完整的 [[04 编写和打包CSS文件#四、loader配置方式|loader]] 的配置方式
 
 ![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744552929000jcsax2.png)
 
 比如在使用 webpack 打包工具后的 `user-select: none;` 属性，在有些浏览器中不适配的需要添加前缀，这里我们就可以使用 postcss 的 autoprefixer 来添加前缀
 
-> autoprefixer 也需要进行安装(下一节有讲)
+> [!note] autoprefixer 也需要进行安装(下一节有讲)
 >  * autoprefixer 就是 postcss的插件
 
 
@@ -29,9 +30,9 @@ npm install postcss-loader -D
 
 # 二、单独的postcss配置文件
 
-因为我们需要添加前缀，所以要安装autoprefixer：
+因为我们需要添加前缀，所以要安装 autoprefixer：
 
-```
+```bash
 npm install autoprefixer -D
 ```
 
@@ -48,9 +49,9 @@ npm install autoprefixer -D
 
 # 三、postcss-preset-env
 
-事实上，在配置postcss-loader时，我们配置插件并不需要使用 **autoprefixer**。
+事实上，在配置postcss-loader时，配置插件并不需要使用 **autoprefixer**。
 
-我们可以使用另外一个插件：postcss-preset-env 
+可以使用另外一个插件：postcss-preset-env 
 
 * postcss-preset-env**也是一个postcss的插件；** 
 * 它可以帮助我们将一些现代的CSS特性，**转成大多数浏览器认识的CSS**，并且会根据目标浏览器或者运行时环境**添加所需的 polyfill**； 
@@ -61,7 +62,7 @@ npm install autoprefixer -D
 * porset-预设
 * env-环境
 
-```
+```bash
 npm install postcss-preset-env -D
 ```
 

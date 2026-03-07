@@ -1,4 +1,5 @@
 # 一、yarn工具
+
 另一个node包管理工具yarn： 
 
 * yarn是由**Facebook、Google、Exponent 和 Tilde 联合推出**了一个新的 JS 包管理工具； 
@@ -10,18 +11,20 @@ yarn和npm命令的一些区别：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174412024300027if5z.png)
 
-# 二、cnpm工具
+# 二、cnpm工
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744120958000pik9ol.png)
 
 
 # 三、npx 工具
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17441795560001vuk6a.png)
 
 那么如何使用项目（局部）的webpack，常见的是两种方式： 
 
 **方式一**：明确查找到node_module下面的webpack (在终端中使用如下命令（在项目根目录下）)
 
-```cmd
+```bash
 ./node_modules/.bin/webpack --version
 ```
 
@@ -41,7 +44,7 @@ yarn和npm命令的一些区别：
 
 **方式三**：使用npx
 
-```cmd
+```bash
 npx webpack --version
 ```
 

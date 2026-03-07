@@ -2,7 +2,7 @@
 
 我们可以通过webpack进行打包，之后运行打包之后的代码：在目录下直接执行 webpack 命令
 
-```
+```bash
 webpack
 ```
 
@@ -23,7 +23,7 @@ webpack
 
 当然，我们也可以通过配置来指定入口和出口:
 
-```
+```bash
 npx webpack --entry ./src/main.js --output-path ./build
 ```
 

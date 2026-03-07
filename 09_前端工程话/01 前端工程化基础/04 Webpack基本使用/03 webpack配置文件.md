@@ -13,7 +13,7 @@
 
 进行打包的时候使用`webpack.config.js`配置文件来进行打包：继续执行webpack命令，依然可以正常打包：`npm run build`
 
-* 可以我也是可以指定使用的配置文件的，但是默认不指定打包配置的文件的时候
+* 也是可以指定使用的配置文件的，但是默认不指定打包配置的文件的时候
 * webpack会默认找到当前目录下面 webpack.config.js 进行配置，并打包 
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17443534160002vrq3a.png)

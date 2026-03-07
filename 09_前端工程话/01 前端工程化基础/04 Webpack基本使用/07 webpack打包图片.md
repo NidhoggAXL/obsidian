@@ -9,7 +9,7 @@
 
 ![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744633303000427tvn.png)
 
-> [!warning] 这个时候打包会出现错误
+> [!warning] 这个时候打包会出现错误，webpack不可以正确的打包文件。
 
 # 二、认识asset module type
 

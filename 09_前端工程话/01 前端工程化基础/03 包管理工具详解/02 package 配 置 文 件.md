@@ -29,6 +29,7 @@
 
 # 三、常见的属性
 ## 3.1 name、version 
+
 必须填写的属性：name、version 
 
 * name是项目的名称； 
@@ -38,6 +39,7 @@
 * license是开源协议（发布时用到）；
 
 ## 3.2 private(私有)
+
 private属性： 
 
 * private属性记录当前的项目是否是私有的； 

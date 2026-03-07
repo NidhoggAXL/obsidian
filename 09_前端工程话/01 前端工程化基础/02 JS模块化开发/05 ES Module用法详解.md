@@ -1,7 +1,9 @@
 # 一、认识 ES Module
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743939510000dqvnjg.png)
 
 # 二、案例代码结构组件
+
 在浏览器中演示ES6的模块化开发：
 
 ```html
@@ -17,10 +19,11 @@
 
 * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules 
 * 需要注意本地测试 — 如果你通过本地加载Html 文件 (比如一个 file:// 路径的文件), 你将会遇到 CORS 错误，因为 Javascript 模块安全性需要； 
-	* CORS是一种协议，
+	* [[01 跨域问题#3.2 方案一：CORS|CORS]] 是一种协议，
 * 你需要通过一个服务器来测试； 
 
-> [!note] 在浏览器中使用 ES module 的时候，进行 import 导入的时候会去**下载解析导入的文件**，这里面就会使用到 CORS 协议。
+> [!note] 
+> 在浏览器中使用 ES module 的时候，进行 import 导入的时候会去**下载解析导入的文件**，这里面就会使用到 CORS 协议。
 
 **我这里使用的VSCode插件：Live Server**
 
@@ -51,6 +54,7 @@ console.log(name, age, sayHello)
 
 
 # 三、export关键字
+
 export关键字将一个模块中的变量、函数、类等导出； 
 
 我们希望将其他中内容全部导出，它可以有如下的方式： 
@@ -99,7 +103,8 @@ export {
 
 
 # 四、import 关键字
-import关键字负责从另外一个模块中导入内容 :**没有在webpack中时，导入的文件夹必须加上文件后缀，如：.js**
+
+import关键字负责从另外一个模块中导入内容 :**没有在webpack和vite中时，导入的文件夹必须加上文件后缀，如：.js**
 
 导入内容的方式也有多种： 
 
@@ -107,7 +112,7 @@ import关键字负责从另外一个模块中导入内容 :**没有在webpack中
 	* 注意：这里的{}也不是一个对象，里面只是**存放导入的标识符列表内容**；
 * 方式二：导入时给标识符起别名 
 	* 通过as关键字起别名 
-* 方式三：通过 `*` 将模块功能放到一个模块功能对象`（a module object）`上
+* 方式三：通过 `*` 将模块功能放到一个模块功能对象`(a module object)`上
 
 ```js
 // 方式一：
@@ -122,6 +127,7 @@ import * as foo from "./bar.js"
 
 
 # 五、export和import结合使用
+
 补充:export和import可以结合使用
 
 ```js
@@ -130,7 +136,7 @@ export { sum as barSum } from './bar.js';
 
 **为什么要这样做呢?**
 
-* 在开发和封装一个功能库时，通常我们希望将暴露的<mark class="hltr-orange">所有接口放到一个文件中</mark>;
+* 在开发和封装一个功能库时，通常我们希望将暴露的所有接口放到一个文件中;
 * 这样方便指定统一的接口规范，也方便阅读，
 * 这个时候，我们就可以使用export和import结合使用;
 
@@ -154,6 +160,7 @@ export * from './01工具1.js'
 export * from './01工具2.js'
 ```
 
+> [!note]
 > 从 form 导入，并且从 export 导出全部数据，也可以理解为是一种简化的编写。
 > 当然也是可以特定导出的。
 
@@ -162,6 +169,7 @@ export { name, age } from './01工具1.js'
 ```
 
 # 六、default用法
+
 前面的导出功能都是有**名字的导出（named exports）**： 
 
 * 在导出export时指定了名字； 
@@ -177,6 +185,7 @@ export { name, age } from './01工具1.js'
 在一个模块中，**只能有一个默认导出（default export）**；
 
 ## 6.1 第一种导入和导出
+
 导出和导入相同的名字
 
 ```js
@@ -193,6 +202,7 @@ sayHello()//sayHello
 ```
 
 ## 6.2 第二种导入和导出
+
 **导出匿名的标识符，导入任意命名标识符。**
 
 ```js

@@ -7,13 +7,13 @@
 
 我们可以使用less工具来完成它的编译转换
 
-```
+```bash
 npm install less -D
 ```
 
 执行如下命令：
 
-```
+```bash
 npx lessc 转换文件.less 转换后的文件.css
 ```
 
@@ -27,7 +27,7 @@ npx lessc 转换文件.less 转换后的文件.css
 * 这个时候我们就可以使用 less less-loader，来自动使用less工具转换less到css；
 * 如果没有安装 less 的时候就在需要安装 less
 
-```
+```bash
 npm install less less-loader -D
 ```
 
