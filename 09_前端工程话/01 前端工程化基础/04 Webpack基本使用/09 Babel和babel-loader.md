@@ -4,7 +4,7 @@
 
 # 二、Babel命令行使用
 
-babel本身可以作为一个**独立的工具**（和[[06 PostCss工具处理CSS|postcss]]一样），不和webpack等构建工具配置来单独使用。 
+babel本身可以作为一个**独立的工具**（和[[06 PostCss工具处理CSS|postcss]]一样），不用和webpack、vite等构建工具配置来单独使用。 
 
 如果我们希望在命令行尝试使用babel，需要安装如下库： 
 
@@ -81,7 +81,7 @@ npx babel src --out-dir dist --presets=@babel/preset-env
 
 那么我们就需要去安装相关的依赖： 
 
-* 如果之前已经安装了@babel/core，那么这里不需要再次安装；
+* 如果之前已经安装了@babel/core - babel的核心代码，那么这里不需要再次安装；
 
 ```bash
 npm install babel-loader -D
@@ -106,7 +106,7 @@ npm install babel-loader -D
 npm install @babel/preset-env
 ```
 
-	![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744638904000nnobpy.png)
+![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744638904000nnobpy.png)
 
 当然也可以把 bable-loader 的配置抽取出来：
 

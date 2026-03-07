@@ -4,9 +4,10 @@
 
 commit - 提交
 Untracked - 未跟踪
-modifi - 修改
+modified - 修改
 
 # 二、Git操作流程图
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744810866000ui9g2b.png)
 
 **index（索引）指的就是 staged（暂存、缓区）**
@@ -14,9 +15,10 @@ modifi - 修改
 **working directory（工作区）就是编写代码的地方**
 
 # 三、检测文件的状态
+
 在有Git仓库的目录下新建一个文件，查看文件的状态：
 
-```
+```shell
 git status
 ```
 
@@ -29,13 +31,14 @@ Untracked files：未跟踪的文件
 
 我们也可以查看更加简洁的状态信息：
 
-```
+```shell
 git status -s
 git status --short
 ```
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744812933000olxb8n.png)
 
+> [!tip]
 > 左栏指明了暂存区的状态，右栏指明了工作区的状态；
 > **?? 表示处于未跟踪状态状态**
 
@@ -44,7 +47,7 @@ git status --short
 
 跟踪新文件命令： 使用命令 git add 开始跟踪一个文件。
 
-```
+```shell
 git add 跟踪的文件
 ```
 
@@ -75,8 +78,8 @@ git add 跟踪的文件
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744889639000lmx5hm.png)
 
 > [!tip] 注意
-> `git commit -a -m 信息` 这个命令，只可以使用在被追踪后修改的文件，如果一个文件没有被追踪过，那么这个命令是失效的
-	
+> `git commit -a -m 信息` 这个命令，只可以使用在被追踪后修改的文件，如果一个文件从来没有被追踪过，那么这个命令是失效的
+
 # 七、git的校验和(了解)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744889960000nb1kkg.png)
@@ -94,8 +97,8 @@ git add 跟踪的文件
 
 * 不传入任何参数的默认情况下，git log 会按时间先后顺序列出所有的提交，最近的更新排在最上面； 
 * 这个命令会列出每个提交的 **SHA-1 校验和、作者的名字和电子邮件地址、提交时间以及提交说明**；
-	
-```
+
+```shell
 git log
 ```
 
@@ -107,9 +110,17 @@ git log --pretty=oneline
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744891498000586loj.png)
 
-```
+```shell
 git log --pretty=oneline --graph
 //graph-图
+// pretty 意为“漂亮的、美观的”
+
+git log --pretty=oneline      # 每个提交显示在一行（包含完整哈希）
+git log --pretty=short        # 显示提交哈希、作者和标题
+git log --pretty=medium       # 默认格式，显示哈希、作者、日期、标题和日志
+git log --pretty=full         # 包含提交者和作者信息
+git log --pretty=fuller       # 更详细的时间信息
+git log --pretty=raw          # 显示原始格式（包含树对象等）
 ```
 
 **这个命令主要是查看分支的情况的：**
@@ -121,7 +132,7 @@ git log --pretty=oneline --graph
 如果想要进行版本回退，我们需要先知道目前处于哪一个版本：**Git通过HEAD指针记录当前版本。** 
 
 * HEAD 是**当前分支引用的指针**，它总是指向该分支上的最后一次提交； 
-* 理解 HEAD 的最简方式，就是将它看做 **该分支上的最后一次提交** 的快照；
+* 理解 HEAD 的最简单方式，就是将它看做 **该分支上的最后一次提交** 的快照；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744891673000w27ojb.png)
 
@@ -136,12 +147,13 @@ git log --pretty=oneline --graph
 * 我们可以可以**指定某一个commit id**；
 	* commit id 可以是前面几位数字（重复较少的时候）
 
-```
+```shell
 git reset --hard HEAD^ 
 git reset --hard HEAD~1000 
 git reset --hard 2d44982
 ```
 
+> [!tip]
 > HEAD 可以小写，但是一般都是大写
 > hard - 硬
 
@@ -164,7 +176,7 @@ git reflog
 
 输出示例
 
-```text
+```shell
 c0d6f7b (HEAD -> main) HEAD@{0}: reset: moving to HEAD^  # 这是你刚才执行的reset，回到了b
 a1b2c3d HEAD@{1}: commit: 添加了新功能X                 # 这是你的a版本！
 d4e5f6g HEAD@{2}: commit: 修复了某个BUG                # 这是更早的b版本
@@ -196,10 +208,10 @@ git reset --hard <提交哈希>
 
 ### 方法对比
 
-|方法|命令|适用场景|优点|
-|---|---|---|---|
-|**`git reflog`**|`git reflog` → `git reset --hard <hash>`|**强烈推荐**。最适合找回**误操作**（如`reset`, `rebase`）**之前**的版本|精准记录每一步操作，是找回"丢失"提交的最可靠工具|
-|**`git log`**|`git log --oneline --all` → `git reset --hard <hash>`|适合当记得提交信息，并且确定提交就在当前分支历史中时|直接查看项目历史，简单直观|
+| 方法               | 命令                                                    | 适用场景                                               | 优点                        |
+| ---------------- | ----------------------------------------------------- | -------------------------------------------------- | ------------------------- |
+| **`git reflog`** | `git reflog` → `git reset --hard <hash>`              | **强烈推荐**。最适合找回**误操作**（如`reset`, `rebase`）**之前**的版本 | 精准记录每一步操作，是找回"丢失"提交的最可靠工具 |
+| **`git log`**    | `git log --oneline --all` → `git reset --hard <hash>` | 适合当记得提交信息，并且确定提交就在当前分支历史中时                         | 直接查看项目历史，简单直观             |
 
 ### 重要提醒
 
@@ -213,10 +225,4 @@ git reset --hard <提交哈希>
 git branch my-backup-branch  # 创建一个名为my-backup-branch的分支指向当前的a版本
 git reset --hard HEAD^       # 然后再放心地回退
 ```
-
-对于你的情况，使用`git reflog`找到a版本的哈希值，然后使用`git reset --hard`跳回去即可解决问题。
-
-
-
-
 
