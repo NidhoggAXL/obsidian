@@ -15,6 +15,6 @@
 如果我们希望把js文件交给node执行:
 
 * 首先电脑上需要**安装Node.js环境**，安装过程中会**自动配置环境变量**
-* 可以**通过终端命令**node js文件的方式来载入和执行对应的js文件:
+* 可以**通过终端命令** `node JavaScript文件` 文件的方式来载入和执行对应的js文件:
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17436855570004pc1qr.png)

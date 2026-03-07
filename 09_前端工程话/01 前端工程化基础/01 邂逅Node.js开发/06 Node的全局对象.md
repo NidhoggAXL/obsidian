@@ -6,8 +6,7 @@ Node中给我们提供了一些全局对象，方便我们进行一些操作:
 * 某些全局对象并不常用
 * 某些全局对象我们会在后续学习中讲到
 	* 比如module、exports、require()会在模块化中讲到,
-	* 比如Buffer后续会专门讲到:
-
+	* 比如 [[04 Buffer|Buffer]] 后续会专门讲到:
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743748463000c0a9dr.png)
 

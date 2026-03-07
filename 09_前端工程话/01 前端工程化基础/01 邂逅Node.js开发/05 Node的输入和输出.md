@@ -2,13 +2,13 @@
 
 正常情况下执行一个node程序，直接跟上我们对应的文件即可
 
-```
+```bash
 node index.js
 ```
 
 但是，在某些情况下执行node程序的过程中，我们可能希望给node传递一些参数:
 
-```
+```bash
 node index.js (env=development coderwhy)-传递的参数
 ```
 
