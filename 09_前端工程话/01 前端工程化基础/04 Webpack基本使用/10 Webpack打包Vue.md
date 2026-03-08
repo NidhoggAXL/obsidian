@@ -35,7 +35,11 @@ npm install @vue/compiler-sfc -D
 ```js
 const { VueLoaderPlugin } = require('vue-loader/dist/index);
 
-new VueLoaderPlugin()
+module.exports = {
+  plugins: [
+    new VueLoaderPlugin()
+  ]
+}
 ```
 
 > [!tip]
