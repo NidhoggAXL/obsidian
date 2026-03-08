@@ -55,6 +55,10 @@ npm install @babel/plugin-transform-block-scoping -D
 npx babel src --out-dir dist --plugins=@babel/plugin-transform-block-scoping ,@babel/plugin-transform-arrow-functions
 ```
 
+## 3.1 在webpack的配置
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1772974098000hh44tb.png)
+
 
 # 四、Babel的预设preset
 
@@ -81,7 +85,7 @@ npx babel src --out-dir dist --presets=@babel/preset-env
 
 那么我们就需要去安装相关的依赖： 
 
-* 如果之前已经安装了@babel/core - babel的核心代码，那么这里不需要再次安装；
+* 如果之前已经安装了@babel/core (babel的核心代码)，那么这里不需要再次安装；
 
 ```bash
 npm install babel-loader -D
@@ -103,10 +107,13 @@ npm install babel-loader -D
 安装preset-env：
 
 ```bash
-npm install @babel/preset-env
+npm install @babel/preset-env -D
 ```
 
-![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744638904000nnobpy.png)
+配置方式：
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17729744550000x9m56.png)
+
 
 当然也可以把 bable-loader 的配置抽取出来：
 

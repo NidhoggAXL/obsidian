@@ -27,7 +27,7 @@
 
 ![gh|650](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744547006000bkg28o.png)
 
-
+	
 # 四、loader配置方式
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17445473810004kfscg.png)
@@ -36,12 +36,12 @@
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744547527000tkuvhj.png)
 
-# 六、认识style-loader
+# 六、style-loader
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744547664000ax9xfc.png)
 
 
-# 七、配置style-loader
+## 6.1 配置style-loader
 
 那么我们应该如何使用style-loader： 
 
