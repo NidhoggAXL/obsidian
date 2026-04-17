@@ -379,6 +379,7 @@ const app = createApp(App)
 const router = createRouter(createWebHistory())
 app.use(router)
 
+// isRead确定路由加载完成
 router.isReady().then(() => {
   app.mount("#app");
 })

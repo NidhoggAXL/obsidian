@@ -21,11 +21,3 @@
  - OptionsAPI：setup、beforeCreate、created
  - 组合式API：不会执行任何生命周期
 
-
-
-
-
-
-
-
-

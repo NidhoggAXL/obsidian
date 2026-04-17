@@ -63,7 +63,7 @@ my-nuxt-app/
 
 默认情况下，Nuxt 会将此文件视为入口点，并为应用程序的每个路由呈现其内容，常用于：
 
- - 定义页面布局Layout 或 自定义布局，如：NuxtLayout
+ - 定义页面布局 Layout 或 自定义布局，如：NuxtLayout
  - 定义路由的占位，如：NuxtPage
  - 编写全局样式
  - 全局监听路由 等等

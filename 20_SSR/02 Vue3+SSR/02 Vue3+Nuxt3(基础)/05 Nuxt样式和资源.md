@@ -33,7 +33,7 @@ export default defineNuxtConfig({
 
 定义**全局变量**步骤 
 
- - 1.在assets中编写全局样式变量，比如
+ - 1.在assets中编写全局样式变量
  - 2.接着在nuxt.config中的vite选项中配置
  - 3.然后就可以在任意组件中或scss文件中直接使用全局变量
 
