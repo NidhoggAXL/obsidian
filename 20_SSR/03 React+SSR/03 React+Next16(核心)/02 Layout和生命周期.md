@@ -24,7 +24,7 @@
 
 1. **Server Components 直接执行**
     
-    - 它们被渲染成一种叫做 **React Server Component Payload (RSC Payload)** 的紧凑数据格式 [](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
+    - 它们被渲染成一种叫做 **React Server Component Payload (RSC Payload)** 的紧凑数据格式 。
         
     - **关键点**：在这里，你**不能**使用 `useState`、`useEffect` 或任何类组件的生命周期方法。它们只负责获取数据并输出 UI 结构。
         

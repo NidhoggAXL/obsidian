@@ -97,8 +97,8 @@ buf[2] = 0x66
 console.log(buf)
 //<Buffer 77 64 66 00 00 00 00 00>
 
-console.log(buf[1])//100
 console.log(buf[0].toString())//119
+console.log(buf[1])//100
 console.log(buf[2].toString(16))//66
 ```
 

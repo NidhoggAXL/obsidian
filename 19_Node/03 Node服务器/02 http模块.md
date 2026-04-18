@@ -20,7 +20,7 @@ import http from 'http'
 
 // 创建服务器
 const server = http.createServer((request, response) => {
-  response.end('hello world')//通过end来关闭服务器
+  response.end('hello world')//通过end返回数据
 })
 
 // 开启服务器
@@ -58,7 +58,7 @@ server.listen(3000, () => {
 listen函数有三个参数：
 
  - **端口port**: 可以不传, 系统会默认分配端, 后续项目中我们会写入到环境变量中；
- - **主机host**: 通常可以传入localhost、ip地址127.0.0.1、或者ip地址0.0.0.0，默认是0.0.0.0；
+ - **主机host**: 通常可以传入localhost、ip地址127.0.0.1、或者ip地址0.0.0.0，**默认是0.0.0.0**；
 	 - localhost：本质上是一个域名，通常情况下会被解析成127.0.0.1；
 	 - 127.0.0.1：回环地址（Loop Back Address），表达的意思其实是我们主机自己发出去的包，直接被自己接收；
 		 - 正常的数据库包经常 应用层 - 传输层 - 网络层 - 数据链路层 - 物理层 ；

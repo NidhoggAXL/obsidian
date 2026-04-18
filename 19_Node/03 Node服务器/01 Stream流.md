@@ -19,9 +19,9 @@
 
 # 二、读写的Stream
 
-事实上Node中很多对象是基于流实现的：http模块的Request和Response对象；
+事实上Node中很多对象是基于流实现的：**http模块的Request和Response对象；**
 
-官方文档：<mark class="hltr-cyan">另外所有的流都是EventEmitter的实例</mark>，可以使用和EventEmitter的所有方法。
+官方文档：<mark class="hltr-cyan">另外所有的流都是EventEmitter的实例</mark>，可以使用和EventEmitter实例的所有方法。
 
 Node.js中有四种基本流类型：
 
@@ -144,6 +144,7 @@ fs.writeFile("./bbb.txt", "内容", (err) => {
 
  - flags：默认是 w，如果我们希望是追加写入，可以使用 a 或者 a+；
  - start：写入的位置；
+ - encoding：写入的编码方式
 
 案例：一个简单的写入：
 

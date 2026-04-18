@@ -21,7 +21,6 @@ export default function () {
 }
 ```
 
-
 2. 在组件中使用 useCounter.ts 导出的全局状态
 
 ```vue
@@ -71,8 +70,8 @@ Nuxt 应用接入 Pinia
 Pinia 使用步骤：
 
  - 1.在app/stores文件夹中定义一个模块，比如：stores/counter.ts
- - 2.在 stores/counter.ts 中使用defineStore函数来定义 store 对象
- - 3.在组件中使用定义好的 store对象
+ - 2.在 stores/counter.ts 中使用 defineStore函数 来定义 store 对象
+ - 3.在组件中使用定义好的 store 对象
 
 ```ts
 // app/stores/counter.ts

@@ -3,7 +3,7 @@
 在 Next.js 16 (App Router) 中集成 Redux 与 Pages Router 有所不同，核心挑战在于：
 
 1. **Store 必须是请求级别的**：Next.js 服务器会同时处理多个请求，Store 不能是全局单例，否则会跨请求污染数据 [](https://redux.js.org/usage/nextjs)。
-2. **Server Components 不能直接访问 Redux**：RSCs 无法使用 React Context 和 Hooks，所以不能直接在 Server Component 中读取或写入 Store [](https://redux.js.org/usage/nextjs)。
+2. **Server Components 不能直接访问 Redux**：RSCS 无法使用 React Context 和 Hooks，所以不能直接在 Server Component 中读取或写入 Store [](https://redux.js.org/usage/nextjs)。
 3. **Provider 必须是 Client Component**：任何与 Redux 交互的组件（包括 Provider）都必须是客户端组件 [](https://redux.js.org/usage/nextjs)[](https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments)。
 
 # 二、快速开始（官方推荐方式）
