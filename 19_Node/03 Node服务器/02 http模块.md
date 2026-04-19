@@ -228,7 +228,7 @@ server.listen(8000, () => {
 ```
 
 > [!tip] node中对 qs 的说明：
-> `querystring` 的性能优于 `URLSearchParams`，但它并非标准化 API。当性能要求不高或需要与浏览器代码兼容时，请使用 `URLSearchParams`。
+> `querystring(qs)` 的性能优于 `URLSearchParams`，但它并非标准化 API。当性能要求不高或需要与浏览器代码兼容时，请使用 `URLSearchParams`。
 > 
 
 ## 5.3 method
@@ -252,7 +252,6 @@ server.listen(8000, () => {
 请求方式 ：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1766124854000tmc3yq.png)
-
 
 > [!tip]
 > 一定要知道 <mark class="hltr-cyan">request 的本质是一个可读流</mark>，那么就可以使用可读流上面的方法。

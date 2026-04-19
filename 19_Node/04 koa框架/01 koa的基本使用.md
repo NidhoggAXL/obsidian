@@ -34,7 +34,7 @@ import koa from 'koa'
 // 创建服务器
 const app = new koa()
 
-// 监听接口
+// 开启服务器
 app.listen(3000, () => {
   console.log('服务器启动成功')
 })
@@ -67,7 +67,7 @@ app.use((ctx, next) => {
   ctx.response.body = "匹配到的中间件"
 })
 
-// 监听接口
+// 开启服务器
 app.listen(3000, () => {
   console.log('服务器启动成功')
 })
@@ -88,7 +88,7 @@ koa通过创建的app对象，注册中间件只能通过use方法：
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1766304789000g8ozp8.png)
 
 > [!tip]
-> ctx.request 和 ctx.response 里面的大多数数据，都可以直接通过 ctx 来获取，比如：
+> ctx.request 和 ctx.response 里面的大多数数据，都可以直接通过 ctx 直接来获取，比如：
 > `ctx.resquest.path === ctx.path`
 
 # 四、Koa路由

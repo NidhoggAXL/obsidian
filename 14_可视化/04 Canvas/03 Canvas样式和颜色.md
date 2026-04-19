@@ -3,7 +3,7 @@
 什么是路径？ 
 
 - 图形的基本元素是路径。路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。 
-- 路径是可由很多子路径构成，这些子路径都是在一[]()个列表中，列表中所有子路径（线、弧形等）将构成图形。 
+- 路径是可由很多子路径构成，这些子路径都是在一个列表中，列表中所有子路径（线、弧形等）将构成图形。 
 - 一个路径，甚至一个子路径，**通常都是闭合的**。 
 
 使用路径绘制图形的步骤： 
@@ -20,7 +20,7 @@
 - **stroke()**：通过线条来绘制图形轮廓/描边（针对当前路径图形）。 
 - **fill()**：通过填充路径的内容区域生成实心的图形（针对当前路径图形）。
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758251481000m878gy.png)
+![gh|2000](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758251481000m878gy.png)
 
 # 二、绘制直线
 
@@ -75,7 +75,7 @@
 - arc(x, y, radius, startAngle, endAngle, anticlockwise)，该方法有六个参数：
 - x、y：为绘制圆弧所在圆上的圆心坐标。 
 - radius：**为圆弧半径**。 
-- startAngle、endAngle：该参数用弧[]()度定义了开始以及结束的弧度。这些都是以 x 轴为基准。 
+- startAngle、endAngle：该参数用弧度定义了开始以及结束的弧度。这些都是以 x 轴为基准。 
 - anticlockwise：为一个布尔值。为 true ，是逆时针方向，为false，是顺时针方向，默认为false。 
 
 **认识弧度**：弧度(英语:radian)，是平面角的单位。1单位弧度为:圆弧长度等于半径时的圆心角，而一个完整的圆的弧度是 `Math.Pl*2`，半圆弧度是 Math.Pl

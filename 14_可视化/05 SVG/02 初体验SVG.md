@@ -42,7 +42,7 @@ SVG的XML声明格式：`<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
 - XML中外部 DTD 声明（可选）![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758509426000d16qp8.png)
 声明文件代码：
 
-```svg
+```xml
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 ```
 

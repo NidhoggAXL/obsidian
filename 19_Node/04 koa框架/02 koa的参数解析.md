@@ -1,3 +1,4 @@
+
 # 一、params
 
 请求地址：http://localhost:8000/users/123
@@ -11,6 +12,7 @@
 请求地址：http://localhost:8000/login?username=why&password=123
 
 获取query：
+
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1766307569000ppeos3.png)
 

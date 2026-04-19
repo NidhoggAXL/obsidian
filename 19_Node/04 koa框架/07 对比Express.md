@@ -100,7 +100,6 @@ app.use((ctx, next) => {
   console.log("middleware1");
   ctx.msg += "bbb";
   next();
-  console.log("2222222")
 });
 
 // 第三个异步中间件
@@ -256,7 +255,7 @@ app.listen(8000, () => {
 Koa 和 Express 的根本区别就是这里的 next() 返回的类型不同，一个 Promsie ，一个是 void，这样就导致：
 
 - 同步数据的时候，两个框架对数据的处理是一样的
-- 异步数据的时候，Koa 可以再任何一个中间件中进行数据的返回，而 <mark class="hltr-cyan">Express 框架的话就只能再最后一个中间件进行数据的放回。</mark>
+- 异步数据的时候，Koa 可以再任何一个中间件中进行数据的返回，而 <mark class="hltr-cyan">Express 框架的话就只能再最后一个执行完的中间件进行数据的放回。</mark>
 
 
 

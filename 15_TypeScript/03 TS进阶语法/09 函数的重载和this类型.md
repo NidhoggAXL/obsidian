@@ -68,6 +68,7 @@ function getLength(a) {
 ```
 
 ```ts
+//方案三
 function getLength(a: { length: number }) {
   return a.length
 }
