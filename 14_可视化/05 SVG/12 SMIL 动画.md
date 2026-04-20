@@ -53,8 +53,9 @@ SMIL方式实现动画的优势：
 
 `<set>` 案例：
 
-1. 在3秒后自动将长方形瞬间移到右边
-2. 点击长方形后，长方形瞬间移到右边
+1. 点击长方形后，长方形瞬间移到右边
+2. 在3秒后自动将长方形瞬间移到右边
+
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175869796100080hd7d.png)
 
@@ -112,7 +113,7 @@ SMIL方式实现动画的优势：
 `<animateTransform>` 元素
 
 - 指定目标元素的形变（transform）属性，从而允许控制元素的**平移、旋转、缩放或倾斜动画**（类似于 CSS3 的形变）。 
-- 在一个动画元素中，只能用一个 `<animateTransform>` 元素创建动画；存在多个时，后面会覆盖前面的动画。
+- 在一个动画元素中，只能用一个 `<animateTransform>` 元素创建动画；**存在多个时，后面会覆盖前面的动画。**
 
  `<animateTransform>` 元素常用属性：
 
