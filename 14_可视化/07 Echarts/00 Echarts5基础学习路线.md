@@ -3,16 +3,12 @@
 
 ## 1.ECharts 初体验
 
+> [!tip] 
 >  div容器必须要有高度，宽度可选
 
 ```html
-
     <div id="main" style="height: 400px"></div>
-
-
     <script src="../libs/echarts-5.3.3.js"></script>
-
-
     <script>
       // 1.基于准备好的dom，初始化echarts实例
       var myChart = echarts.init(document.getElementById("main"));
@@ -75,8 +71,6 @@ echarts.init(document.getElementById("main"), null, {renderer: "svg"});
 echarts.init(document.getElementById("main"), "dark", {renderer: "svg"});
 ```
 
-
-
 ## 3.配置项（组件）
 
 ### 1.Grid 组件
@@ -94,7 +88,6 @@ echarts.init(document.getElementById("main"), "dark", {renderer: "svg"});
           containLabel: true, // grid 区域是否包含坐标轴的刻度标签
         }
 ```
-
 
 
 ### 2.x，y坐标系 组件

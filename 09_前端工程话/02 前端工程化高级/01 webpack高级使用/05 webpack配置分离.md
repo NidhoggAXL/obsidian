@@ -1,4 +1,4 @@
-webpack的导出大多时候都是一个对象
+ webpack的导出大多时候都是一个对象
 
 ```js
 module.exports = {
