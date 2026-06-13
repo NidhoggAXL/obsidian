@@ -14,12 +14,12 @@
 
 如何展示列表呢？ 
 
-- 在React中，展示列表最多的方式就是使用数组的[[05 数组Array#8.2 map-映射|map高阶函数]]；
+- 在React中，展示列表最多的方式就是使用数组的[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#8.2%20map-映射|map高阶函数)；
 
 很多时候我们在展示一个数组中的数据之前，需要先对它进行一些处理：
 
-- 比如过滤掉一些内容：[[05 数组Array#8.1 filter-过滤|filter函数]] 
-- 比如截取数组中的一部分内容：[[05 数组Array#五、数组的方法-slice、concat、join|slice函数]]
+- 比如过滤掉一些内容：[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#8.1%20filter-过滤|filter函数) 
+- 比如截取数组中的一部分内容：[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#五、数组的方法-slice、concat、join|slice函数)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754998510000nxhvjt.png)
 
@@ -32,6 +32,6 @@
 
 这个警告是告诉我们需要在列表展示的jsx中添加一个key。 
 
-- key主要的作用是为了提高[[12 v-for的diff算法(后续)|diff]]算法时的效率；
+- key主要的作用是为了提高[diff](10_Vue3/02%20Vue基础-模板语法/12%20v-for的diff算法.md)算法时的效率；
 
 

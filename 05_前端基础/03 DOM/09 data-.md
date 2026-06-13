@@ -1,4 +1,4 @@
-当我们在想使用自己定义的[[06 元素的特性attribute|attribute]]的时候会使用getAttribute来获取这个属性
+当我们在想使用自己定义的[attribute](05_前端基础/03%20DOM/06%20元素的特性attribute.md)的时候会使用getAttribute来获取这个属性
 
 那么如果不使用getAttribute的时候就可以使用 `data-*`来自定义属性
 

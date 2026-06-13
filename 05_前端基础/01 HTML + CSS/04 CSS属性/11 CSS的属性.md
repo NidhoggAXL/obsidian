@@ -88,7 +88,7 @@ CSS中有个display属性，能修改元素的显示类型，有4个常用值
 * none:隐藏元素
 
 ## 3.1 block 和 inline 
-![[03 HTML元素类型#二、通过CSS修改元素类型]]
+![](05_前端基础/01%20HTML%20+%20CSS/01%20HTML/03%20HTML元素类型.md#二、通过CSS修改元素类型)
 
 
 ## 3.2 inline-block

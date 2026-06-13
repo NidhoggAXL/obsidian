@@ -82,7 +82,7 @@ console.log(store.getState())
 - 创建store/actionCreators.js文件： 
 - 创建store/constants.js文件：
 
-![[Redux目录结构|100%]]
+![100%](00_obsidian相关/Excalidraw/Redux目录结构.md)
 
 
 调用：

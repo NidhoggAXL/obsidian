@@ -55,7 +55,7 @@ Element-Plus的Icon组件文档中有这么一句话[说明](https://element-plu
 
 ## 3.1 全局注册
 
-为了代码的逻辑性强，会在 src 下面创建一个 global 文件，里面存放 `regitser-icons.ts` 文件，在里面编写[[04 Vue中安装插件的方式|Vue的插件]]：
+为了代码的逻辑性强，会在 src 下面创建一个 global 文件，里面存放 `regitser-icons.ts` 文件，在里面编写[[10_Vue3/18 Vue高级语法补充/04 Vue中安装插件的方式|Vue的插件]]：
 
 ```ts
 import type { App } from 'vue'
@@ -95,7 +95,7 @@ createApp(App).use(router).use(pinia).use(RegisterIcons).mount("#app")
 
 在使用动态的 Icons 的时候，都是根据服务器返回的数据来确定要使用那一个 icon 的，这样就可以根据服务器返回的数据确定不同的 icon。
 
-要使用到 [[03 动态组件的使用|Vue的动态组件]] ，根据服务器返回不同的字符串进行选择不同的 icon。
+要使用到 [[10_Vue3/11 组件化额外知识/03 动态组件的使用|Vue的动态组件]] ，根据服务器返回不同的字符串进行选择不同的 icon。
 
 ```html
 <!-- 服务器类似放回 el-icon-location 的字符串 -->
@@ -411,7 +411,7 @@ export default {
 
 # 六、app外样式
 
-在 Element-Plus 中，有一些样式是设置到 `id='app'` 之外，就是不在组件渲染的结构中，这种渲染在 [[02 Vue内置组件Teleport|Vue内置组件Teleport]] 中有这种的渲染方法。
+在 Element-Plus 中，有一些样式是设置到 `id='app'` 之外，就是不在组件渲染的结构中，这种渲染在 [[10_Vue3/18 Vue高级语法补充/02 Vue内置组件Teleport|Vue内置组件Teleport]] 中有这种的渲染方法。
 
 这个时候如果使用常用的 css 选择器，是不能选择到需要的 class ，这个时候就需要使用到 `:global` 来全局选择
 

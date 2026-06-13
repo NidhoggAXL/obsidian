@@ -1,6 +1,7 @@
 # 一、轮播消息提示
 
 
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1728654673000w18za3.png)
 
 **每过 3 秒，图片和内容会进行替换**

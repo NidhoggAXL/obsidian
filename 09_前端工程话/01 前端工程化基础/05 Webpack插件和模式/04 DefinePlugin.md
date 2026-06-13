@@ -13,5 +13,5 @@ DefinePlugin允许在编译时创建配置的全局常量，是一个webpack内�
 
 # 三、DefinePlugin的默认全局常量
 
-DefinePlugin 有一个默认的全局常量：`process.env.NODE_ENV` 用来判断当前为什么开发环境？[[开发环境和生成环境]]
+DefinePlugin 有一个默认的全局常量：`process.env.NODE_ENV` 用来判断当前为什么开发环境？[开发环境和生成环境](00_obsidian相关/Excalidraw/开发环境和生成环境.md)
 

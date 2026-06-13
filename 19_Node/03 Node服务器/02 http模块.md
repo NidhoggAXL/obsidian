@@ -300,7 +300,7 @@ server.listen(8000, () => {
 
 ```
 
-> [!node] 将JSON字符串格式转成对象类型，通过 [[01 JSO（非常重要）#4.4 parse方法|JSON.parse]] 方法即可。
+> [[05_前端基础/06 JOS、Storage/01 JSO（非常重要）#4.4 parse方法|JSON.parse]] 方法即可。
 
 ## 5.4 Request Header
 

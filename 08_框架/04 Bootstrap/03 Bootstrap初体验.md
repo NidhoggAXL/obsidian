@@ -10,7 +10,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1742041384000v2zn6b.png)
 
 # 三、屏幕尺寸的分割点(Breakpoints)
-Bootstrap的一大核心就是响应式，即开发一套系统便可以**适配不同尺寸的屏幕**。它底层原理是**使用[[17 媒体查询|媒体查询]]来为我们的布局和页面创建合理的断点(Breakpoints)**，然后根据这些合理的断点来**给不同尺寸屏幕应用不同的CSS样式。**
+Bootstrap的一大核心就是响应式，即开发一套系统便可以**适配不同尺寸的屏幕**。它底层原理是**使用[[05_前端基础/01 HTML + CSS/10 知识补充/17 媒体查询|媒体查询]]来为我们的布局和页面创建合理的断点(Breakpoints)**，然后根据这些合理的断点来**给不同尺寸屏幕应用不同的CSS样式。**
 
 Bootstrap 4设了**5个断点**来构建响应式系统，5个断点分别为 Extra-Small、Small、Medium、Large、Extra large
 

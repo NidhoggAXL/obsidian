@@ -2,7 +2,7 @@
 
 在开发中，我们想要给一个组件的显示和消失添加某种过渡动画，可以很好的增加用户体验:
 
-- React框架本身并没有提供任何动画相关的API，所以在React中使用过渡动画我们需要使用一个第三方库 [[01 React的过渡动画|react-transition-group]]
+- React框架本身并没有提供任何动画相关的API，所以在React中使用过渡动画我们需要使用一个第三方库 [[13_React/06 React过渡动画/01 React的过渡动画|react-transition-group]]
 - Vue中为我们提供一些内置组件和对应的API来完成动画，利用它们我们可以方便的实现过渡动画效果
 
 # 二、Vue的transition动画
@@ -10,7 +10,7 @@
 Vue 提供了 transition 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡： 
 
 * 条件渲染 (使用 v-if)条件展示 (使用 v-show) 
-*  [[03 动态组件的使用|动态组件]]
+*  [[10_Vue3/11 组件化额外知识/03 动态组件的使用|动态组件]]
 * 组件根节点
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753419641000u9cqy6.png)

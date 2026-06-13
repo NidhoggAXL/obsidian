@@ -79,7 +79,7 @@
 
 # 五、jsx–虚拟DOM–真实DOM
 
-![[jsx-ReactElement-真实DOM|100%]]
+![100%](00_obsidian相关/Excalidraw/jsx-ReactElement-真实DOM.md)
 
 
 # 六、声明式编程

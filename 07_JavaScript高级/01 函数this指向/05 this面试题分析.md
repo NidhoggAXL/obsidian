@@ -74,7 +74,7 @@ person1.foo4().call(person2); // 上层作用域 - person1
 
 **解析一：**
 
-![[this作用域面试题]]
+![[00_obsidian相关/Excalidraw/this作用域面试题|this作用域面试题]]
 
 # 三、面试题3
 ```js

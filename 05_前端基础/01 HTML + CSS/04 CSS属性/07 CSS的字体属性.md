@@ -215,7 +215,7 @@ line-height 具有继承属性，line-height是字体内容进行设置的，但
 ```
 
 # 八、文字阴影 text-shadow
-`text-shadow`用法类似于[[12 CSS的盒子模型（Box Model）#九、盒子阴影 box-shadow|box-shadow]]，用于给文字添加阴影效果.
+`text-shadow`用法类似于[](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/12%20CSS的盒子模型-Box%20Model.md#九、盒子阴影%20box-shadow|box-shadow)，用于给文字添加阴影效果.
 
 **与box-shadow的区别：**
 * 没有衍生（spread-radius）和向内（insert）

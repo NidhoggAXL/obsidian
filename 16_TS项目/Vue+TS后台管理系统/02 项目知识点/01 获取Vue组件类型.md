@@ -1,4 +1,4 @@
-使用到的知识点：[[06 类型工具和类型体操#2.11 InstanceType`<Type>`|instaceType]]
+使用到的知识点：[[15_TypeScript/05 TS泛型编程/06 类型工具和类型体操#2.11 InstanceType`<Type>`|instaceType]]
 
 ```ts
 type 组件类型你 = instaceType<typeof 组件名>

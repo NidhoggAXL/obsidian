@@ -30,12 +30,12 @@ promis.then().then().then().catch()
 
 Promise有三种状态，那么这个Promise处于什么状态呢？ 
 
-* 当then方法中的回调**函数本身在执行的时候**，那么它处于[[03 Promise状态变化#一、Promise的代码结构|pending]]状态； 
-* 当then方法中的回调函数返回一个结果时，那么它处于[[03 Promise状态变化#一、Promise的代码结构|fulfilled]]状态，并且会将**结果作为resolve的参数**；
+* 当then方法中的回调**函数本身在执行的时候**，那么它处于[](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md#一、Promise的代码结构|pending)状态； 
+* 当then方法中的回调函数返回一个结果时，那么它处于[](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md#一、Promise的代码结构|fulfilled)状态，并且会将**结果作为resolve的参数**；
 	* 情况一：返回一个普通的值； 
 	* 情况二：返回一个Promise； 
 	* 情况三：返回一个thenable值；
-* 当then方法抛出一个异常时，那么它处于[[03 Promise状态变化|reject]]状态；
+* 当then方法抛出一个异常时，那么它处于[reject](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md)状态；
 
 ```js
 <script>

@@ -19,7 +19,7 @@
 
 * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules 
 * 需要注意本地测试 — 如果你通过本地加载Html 文件 (比如一个 file:// 路径的文件), 你将会遇到 CORS 错误，因为 Javascript 模块安全性需要； 
-	* [[01 跨域问题#3.2 方案一：CORS|CORS]] 是一种协议，
+	* [](19_Node/08%20跨域/01%20跨域问题.md#3.2%20方案一：CORS|CORS) 是一种协议，
 * 你需要通过一个服务器来测试； 
 
 > [!note] 

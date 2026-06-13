@@ -8,7 +8,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17447201230002llp1n.png)
 
-该文件中也自动添加了我们打包后的 **`.js`** 文件；[[05 script的defer和async属性#一、defer属性|defer]]
+该文件中也自动添加了我们打包后的 **`.js`** 文件；[](07_JavaScript高级/02%20深入浏览器运行逻辑/05%20script的defer和async属性.md#一、defer属性|defer)
 
 ![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17447200640006c07mb.png)
 

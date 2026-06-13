@@ -4,7 +4,7 @@ defer 属性告诉浏览器不**要等待脚本下载，而继续解析HTML，�
 * 脚本会由浏览器来进行下载，但是不会阻塞DOM Tree的构建过程;
 * 如果脚本提前下载好了，它会等待DOM Tree构建完成，在**DOMContentLoaded（DOM内容加载完成）事件之前先执行defer中的代码**
 
-![[script的defer属性作用效果图]]
+![[00_obsidian相关/Excalidraw/script的defer属性作用效果图|script的defer属性作用效果图]]
 
 
 所以DOMContentLoaded总是会等待defer中的代码先执行完成

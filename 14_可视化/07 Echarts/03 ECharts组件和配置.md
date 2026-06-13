@@ -124,7 +124,7 @@ xAxis: {
 - emphasis：高亮的图形样式和标签样式。 
 - coordinateSystem：该系列**使用的坐标系**，默认值为二维的直角坐标系（笛卡尔坐标系）
 
-![[00 Echarts5基础学习路线#3.series 系列]]
+![[14_可视化/07 Echarts/00 Echarts5基础学习路线#3.series 系列|00 Echarts5基础学习路线]]
 
 # 五、series高亮的样式(emphasis)
 

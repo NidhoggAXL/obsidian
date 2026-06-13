@@ -4,7 +4,7 @@
 
 # 二、Babel命令行使用
 
-babel本身可以作为一个**独立的工具**（和[[06 PostCss工具处理CSS|postcss]]一样），不用和webpack、vite等构建工具配置来单独使用。 
+babel本身可以作为一个**独立的工具**（和[postcss](09_前端工程话/01%20前端工程化基础/04%20Webpack基本使用/06%20PostCss工具处理CSS.md)一样），不用和webpack、vite等构建工具配置来单独使用。 
 
 如果我们希望在命令行尝试使用babel，需要安装如下库： 
 

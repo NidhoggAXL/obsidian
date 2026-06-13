@@ -17,7 +17,7 @@ DOM:文档对象模型(Document 0bject Model)
 BOM:浏览器对象模型(Browser Object Model)
 
 * 简称 BOM，由浏览器提供的用于**处理文档(document))之外的所有内容的其他对象:**
-* 比如[[05 navigator、screen对象(很少使用)|navigator]]、[[03 location对象|location]]、[[04 history对象|history]]等对象;
+* 比如[navigator](05_前端基础/05%20BOM/05%20navigator、screen对象(很少使用).md)、[location](05_前端基础/05%20BOM/03%20location对象.md)、[history](05_前端基础/05%20BOM/04%20history对象.md)等对象;
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1727952835000hc8t1b.png)
 

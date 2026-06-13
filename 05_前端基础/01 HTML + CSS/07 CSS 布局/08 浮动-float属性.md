@@ -90,7 +90,7 @@
 ## 3.1 浮动练习一
 **浮动常用的场景**
 
-* 解决行内级元素、inline-block元素的水平间隙问题[[01 行内级之间的间隙]]
+* 解决行内级元素、inline-block元素的水平间隙问题[01 行内级之间的间隙](05_前端基础/01%20HTML%20+%20CSS/CSS%20常见问题/01%20行内级之间的间隙.md)
 
 **百度页数的选择：**
 
@@ -279,7 +279,7 @@ item1 + item2 + item3 + item4 + item5 + margin-right*5
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1723637701000tjekr4.png)
 
 ## 3.4 浮动练习四
-考拉的购物布局-里面存在[[12 CSS的盒子模型（Box Model）#五、边框-brder|boder]]：（非常难理解的东西）
+考拉的购物布局-里面存在[](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/12%20CSS的盒子模型-Box%20Model.md#五、边框-brder|boder)：（非常难理解的东西）
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17236463190004d586e.png)
 
@@ -322,7 +322,7 @@ item1 + item2 + item3 + item4 + item5 + margin-right*5
 
 **边框的问题首先需要知道，加上边框后的宽度到底是多少：**^float-boder
 
-默认情况下是 content-box，所以在进行边框的添加时需要把[[12 CSS的盒子模型（Box Model）#十一、CSS属性 box-sizing|box-sizing]]设置为 boder-box。
+默认情况下是 content-box，所以在进行边框的添加时需要把[](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/12%20CSS的盒子模型-Box%20Model.md#十一、CSS属性%20box-sizing|box-sizing)设置为 boder-box。
 
 **其次是添加边框的时候会有边框重复的问题，这里可以使用两种方法来解决：**
 
@@ -430,7 +430,7 @@ item1 + item2 + item3 + item4 + item5 + margin-right*5
 
 **最终的解决方案如下：**
 
-* 使用[[10 伪元素（pseudo-elements）|伪元素]]
+* 使用[伪元素](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/10%20伪元素%20pseudo-elements.md)
 * 给父元素增加::after伪元素
 * 纯CSS样式解决，结构与样式分离(推荐)
 

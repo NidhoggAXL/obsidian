@@ -30,7 +30,7 @@ webpack的官方文档是: https://webpack.js.org/
 
 Webpack的运行是依赖**Node环境**的，所以我们电脑上必须有Node环境 
 
-* 所以我们需要先[[03 Node安装和管理|安装Node.js]]，并且同时会安装npm；
+* 所以我们需要先[安装Node.js](09_前端工程话/01%20前端工程化基础/01%20邂逅Node.js开发/03%20Node安装和管理.md)，并且同时会安装npm；
 * Node官方网站: https://nodejs.org/
 
 # 七、webpack的安装

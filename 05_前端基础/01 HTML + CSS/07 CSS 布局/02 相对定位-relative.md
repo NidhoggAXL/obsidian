@@ -24,7 +24,7 @@ left、right、top、bottom用来设置元素的具体位置，对元素的作�
 
 **图片的一直居中显示（不随窗口的改变而改变聚焦的位置）**
 
-* 使用[[13 CSS设置背景#^background-positon|background-positon]]也可以完成
+* 使用[](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/13%20CSS设置背景.md#^background-positon|background-positon)也可以完成
 
 ```html
 <style>
@@ -62,7 +62,7 @@ left、right、top、bottom用来设置元素的具体位置，对元素的作�
 
 思路分析：
 
-![[相对定位]]
+![相对定位](00_obsidian相关/Excalidraw/相对定位.md)
 
 这个过程的目的就是要保证 img 和 div 的中线始终的保持一致。
 先使用 left 让 img 的中线到 div 的开头。

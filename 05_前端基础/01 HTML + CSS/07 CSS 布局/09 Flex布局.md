@@ -182,7 +182,7 @@ justigy-两端对齐
 
 * auto(默认值):遵从fex container 的 align-items 设置
 * stretch、flex-start、flex-end、center、 baseline,
-* 效果跟 [[09 Flex布局#四、flex-container属性#4.6 align-iems|align-items]] 一致
+* 效果跟 [](09%20Flex布局#四、flex-container属性#四、flex-container属性#4.6%20align-iems|align-items) 一致
 
 ## 5.3 flex-grow
 
@@ -263,7 +263,7 @@ justigy-两端对齐
 * 第三个值必须为一个有效的宽度值，并且它会被当作`<flex-basis>`的值。
 
 > [!tip] 重点
-> flex 缩写属性具有一定的[[元素语义化及SEO#二、SEO|SEO]]，在使用过程中尽量使用缩写属性。
+> flex 缩写属性具有一定的[](05_前端基础/01%20HTML%20+%20CSS/03_元素的语义化/元素语义化及SEO.md#二、SEO|SEO)，在使用过程中尽量使用缩写属性。
 
 # 六、flex 常见问题
 

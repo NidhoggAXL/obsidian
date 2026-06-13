@@ -76,7 +76,7 @@ box-shadow:1px1px1px1px #f00;
 > * translate 是浏览器进行渲染的时候进行移动
 > * 定位元素是在结构根本上进行更改
 > 
-> **细节二**：translate 和[[06 position值对比|绝对定位元素]]不一样，进行了设置之后不会脱离标准流但是会覆盖在标准流上面。
+> **细节二**：translate 和[绝对定位元素](05_前端基础/01%20HTML%20+%20CSS/07%20CSS%20布局/06%20position值对比.md)不一样，进行了设置之后不会脱离标准流但是会覆盖在标准流上面。
 
 
 **补充二**：translate是translateX和translateY函数的简写

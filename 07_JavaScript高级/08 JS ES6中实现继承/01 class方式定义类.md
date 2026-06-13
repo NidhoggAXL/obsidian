@@ -143,7 +143,7 @@
 </script>
 ```
 
-> [!tip] 每个传入的 name 都可以进行监听，这就是比起 [[01 Object.defineProperty|对象访问器]] 的好处，每一个对象都是可以进行监听的。
+> [[07_JavaScript高级/06 JS对象增强/01 Object.defineProperty|!tip]] 的好处，每一个对象都是可以进行监听的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1731571328000xa5b0j.png)
 

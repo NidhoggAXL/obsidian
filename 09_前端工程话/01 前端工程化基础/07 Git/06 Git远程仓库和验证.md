@@ -271,7 +271,7 @@ git push //提交本地仓库信息到远程
 
 ### 5.2.1 本地无项目
 
-先创建一个[[06 Git远程仓库和验证#五、远程仓库总结#5.1 从远程仓库直接clone项目|远程的仓库]]，在从远程clone下来项目，在进行项目的搭建
+先创建一个[](06%20Git远程仓库和验证#五、远程仓库总结#五、远程仓库总结#5.1%20从远程仓库直接clone项目|远程的仓库)，在从远程clone下来项目，在进行项目的搭建
 
 ### 5.2.2 本地有项目
 #### 第一种方式
@@ -322,7 +322,7 @@ git checkout --track origin/main
 > 这样本地就会有一个 main 的分支是跟踪远程 main 分支了,这个时候就可以对 master 分支进行删除（也可以不删除）。
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451509870002zslh8.png)
 
-如果要**删除本地的** master 分支，必须使用分支的[[08 Git分支的使用过程#八、查看和删除分支|强制删除]]
+如果要**删除本地的** master 分支，必须使用分支的[](09_前端工程话/01%20前端工程化基础/07%20Git/08%20Git分支的使用过程.md#八、查看和删除分支|强制删除)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745151206000zsm4k5.png)
 

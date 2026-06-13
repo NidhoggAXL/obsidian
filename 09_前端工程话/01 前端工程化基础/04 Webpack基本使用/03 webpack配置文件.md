@@ -7,7 +7,7 @@
 * entry(入口)：确定 webpack 在进行打包时查找的入口
 * output(出口)：
 	* filenname:确定导出文件的文件名
-	* path：确定导出的位置(必须是[[00 前言#^b867a8|绝对路径]])
+	* path：确定导出的位置(必须是[](09_前端工程话/01%20前端工程化基础/04%20Webpack基本使用/00%20前言.md#^b867a8|绝对路径))
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744352652000dfr5kg.png)
 

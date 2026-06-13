@@ -95,7 +95,7 @@ interface ServiceDog extends Dog {
 ```
 
 
-type 使用[[03 交叉类型|交叉类型(&)]]：
+type 使用[[&)](15_TypeScript/03 TS进阶语法/03 交叉类型.md|交叉类型(&)]]：
 
 ```ts
 type Animal = {
@@ -159,7 +159,7 @@ type User = {
 
 ## 3.4 实现(implements)
 
-两者都可以被[[04 TS接口补充#二、接口的实现|类实现]]：
+两者都可以被[[15_TypeScript/04 TS面向对象/04 TS接口补充#二、接口的实现|类实现]]：
 
 ```ts
 // 使用 interface

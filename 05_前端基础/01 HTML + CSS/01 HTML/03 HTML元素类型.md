@@ -57,7 +57,7 @@
 
 ## 3.2 ::before 和 ::after
 
-![[10 伪元素（pseudo-elements）#三、 before 和 after (常用)]]
+![[05_前端基础/01 HTML + CSS/04 CSS属性/10 伪元素 pseudo-elements#三、 before 和 after (常用|10 伪元素 pseudo-elements]])
 
 > [!note] 如果要和行内级元素在一排显示就要使用`display:line-block`在进行设置
 

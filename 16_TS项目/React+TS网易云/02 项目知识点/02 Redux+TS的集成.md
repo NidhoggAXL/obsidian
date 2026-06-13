@@ -62,7 +62,7 @@ const addCountBtnClick = () => {
 > [!abstract]
 > 官方又说明需要如何做：https://cn.redux.js.org/tutorials/typescript-quick-start
 
-首相获取 state ，可以通过 [[02 Redux的使用#二、Redux的使用过程|store.getState()]] 来获取，那么 state 的类型应该就是 store.getState() 的放回值类型，获取返回值类型可以使用 [[06 类型工具和类型体操#2.10 ReturnType`<Type>`|ReturnType`<Type>`]] 来获取。
+首相获取 state ，可以通过 [[13_React/08 Redux的使用/02 Redux的使用#二、Redux的使用过程|store.getState(]]) 来获取，那么 state 的类型应该就是 store.getState() 的放回值类型，获取返回值类型可以使用 [[15_TypeScript/05 TS泛型编程/06 类型工具和类型体操#2.10 ReturnType`<Type>`|ReturnType`<Type>`]] 来获取。
 
 ```ts title="src/stores/index.ts"
 export type RootState = ReturnType<typeof reduxStore.getState>;

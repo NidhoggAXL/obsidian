@@ -31,7 +31,7 @@ Route：Route用于路径的匹配；
 Link和NavLink： 
 
 - 通常路径的跳转是使用Link组件，最终会被渲染成a元素； 
-- [[06 Router的配置方式#1. 路由跳转|NavLink]]是在Link基础之上增加了一些样式属性（后续知识点）； 
+- [](13_React/10%20React-Router/06%20Router的配置方式.md#1.%20路由跳转|NavLink)是在Link基础之上增加了一些样式属性（后续知识点）； 
 - to属性：Link中最重要的属性，用于设置跳转到的路径；
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755680785000v48czy.png)
@@ -46,7 +46,7 @@ Link也有其他的一些属性设置：
 
 # 五、Navigate导航
 
-Navigate用于路由的重定向，当这个组件出现时，就会执行跳转到对应的to路径中： （对标就是Vue的 [[02 Vue-Router基本使用#三、路由的默认路径|路由重定向]] )。
+Navigate用于路由的重定向，当这个组件出现时，就会执行跳转到对应的to路径中： （对标就是Vue的 [](10_Vue3/13%20Vue-Router/02%20Vue-Router基本使用.md#三、路由的默认路径|路由重定向) )。
 
 这里使用这个的一个案例： 
 
@@ -63,7 +63,7 @@ Navigate用于路由的重定向，当这个组件出现时，就会执行跳转
 
 # 六、Not Found页面配置
 
-如果用户随意输入一个地址，该地址无法匹配，那么在路由匹配的位置将什么内容都不显示。 （对标Vue的[[04 动态路由和路由嵌套#四、NotFound|NotFound]]）
+如果用户随意输入一个地址，该地址无法匹配，那么在路由匹配的位置将什么内容都不显示。 （对标Vue的[](10_Vue3/13%20Vue-Router/04%20动态路由和路由嵌套.md#四、NotFound|NotFound)）
 
 很多时候，我们希望在这种情况下，让用户看到一个Not Found的页面。 
 

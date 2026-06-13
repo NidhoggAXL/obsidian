@@ -2,7 +2,7 @@
 # 一、Promise面试题
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1732947165000h3m9al.png)
 
-![[Promise面试题一]]
+![Promise面试题一](00_obsidian相关/Excalidraw/Promise面试题一.md)
 
 
 # 二、Promise async await 面 试 题
@@ -57,9 +57,9 @@ then1
 > ```
 
 ## 2.2 Promise async await 面 试 题二
-![[Promise面试题二.png]]
+![Promise面试题二](00_obsidian相关/excalidraw图片/Promise面试题二.png)
 
-![[Promise面试题二]]
+![Promise面试题二](00_obsidian相关/Excalidraw/Promise面试题二.md)
 
 \
 
@@ -67,17 +67,17 @@ then1
 
 ## 3.1 第一个题目
 
-![[Promise面试题三.png]]
+![Promise面试题三](00_obsidian相关/excalidraw图片/Promise面试题三.png)
 
-![[Promise面试题三]]
+![Promise面试题三](00_obsidian相关/Excalidraw/Promise面试题三.md)
 
 
 
 ## 3.2 第二个题目
-![[Promise面试题四.png]]
+![Promise面试题四](00_obsidian相关/excalidraw图片/Promise面试题四.png)
 
 
-![[Promise面试题四]]
+![Promise面试题四](00_obsidian相关/Excalidraw/Promise面试题四.md)
 
 
 

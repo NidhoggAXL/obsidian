@@ -169,6 +169,6 @@ export default class Demo extends PureComponent<IProps, IState> {
 > 
 > - 第一个泛型参数类型就是 State 的类型。
 > - 第二个泛型参数类型就是 Props 的类型。
-> - 第三个就是在使用 [[02 React组件生命周期#2.4 不常用生命周期函数|getDerivedStateFromProps]] 的返回值类型。
+> - 第三个就是在使用 [[13_React/04 React组件-基础/02 React组件生命周期#2.4 不常用生命周期函数|getDerivedStateFromProps]] 的返回值类型。
 
 

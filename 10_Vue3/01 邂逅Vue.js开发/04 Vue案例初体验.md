@@ -1,12 +1,12 @@
 # 一、案例体验一：动态展示Hello World数据
 
-使用到[[01 Mustache语法|Mustache语法]]： 
+使用到[[10_Vue3/02 Vue基础-模板语法/01 Mustache语法|Mustache语法]]： 
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17452403220001eba3b.png)
 
 # 二、案例体验一：展示列表数据
 
-使用到[[07 v-for列表渲染|v-for列表渲染]]语法：
+使用到[[10_Vue3/02 Vue基础-模板语法/07 v-for列表渲染|v-for列表渲染]]语法：
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745241354000aidn21.png)
 

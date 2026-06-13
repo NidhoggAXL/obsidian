@@ -312,16 +312,16 @@ http://jdev.tw/blog/7066
 > [!OBS] Obsidian内部链接  
 > [[本地笔记路径]]  
 > [[本地笔记路径|特定的显示文字]]  
-> [[本地笔记路径#标题]]  
+> [[本地笔记路径#标题|本地笔记路径]]  
 > [[本地笔记路径^区块代码]]
 
 ## 13. 图片
 
 > [!TIP] 语法
 > 
->    ![显示文字](图片网址链接 "提示文字")
->    ![显示文字|显示宽度](图片网址链接 "提示文字")
->    ![显示文字|显示宽度x高度](图片网址链接 "提示文字")
+>    ![[图片网址链接 "提示文字"|显示文字]]
+>    ![[图片网址链接 "提示文字"|显示文字|显示宽度]]
+>    ![[图片网址链接 "提示文字"|显示文字|显示宽度x高度]]
 >    ![显示文字][引用代码]
 > 
 > [引用代码]: 网址链接
@@ -335,7 +335,7 @@ http://jdev.tw/blog/7066
 > 
 > ![[内部链接]]  
 > ![[内部链接|特定显示文字]]  
-> ![[内部链接#标题]]  
+> ![[内部链接#标题|内部链接]]  
 > ![[内部链接^区块代码]]
 
 [![简睿随笔](http://jdev.tw/blog/wp-content/uploads/2012/12/jerry-20130318.jpg "提示文字")](http://jdev.tw/)
@@ -371,7 +371,7 @@ http://jdev.tw/blog/7066
 24. [^数字或注脚代码]：指定注脚，自动以数字显示
 25. [^数字或注解代码]: 说明文字`：注脚说明
 
-Markdown标记语言[1](http://jdev.tw/blog/7066#fn-7066:%E8%AA%9E%E8%A8%80)由 John Grube发明。
+Markdown标记语言[[http://jdev.tw/blog/7066#fn-7066:語言|7066]]由 John Grube发明。
 
 ## 17. 任务
 
@@ -399,7 +399,7 @@ Markdown标记语言[1](http://jdev.tw/blog/7066#fn-7066:%E8%AA%9E%E8%A8%80)由 
 
 核心支援。
 
-- [Online FlowChart & Diagrams Editor - Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNpVkE1qw0AMha8itEohvoAXhcZOsgmk0Ow8WQiPnBmS-WEsU4Ltu3ccU2i1kt77nhAasQ2ascRbomjgUisPuT6ayiTbi6P-CkXxPh1ZwAXPzwl2m2OA3oQYrb-9rfxugaAaTwvGIMb6-7xa1St_9jxB3ZwoSojXv87lO0ywb-ynyev_OyZxTh2ajsqOipYSVJReCG7RcXJkdT59XBSFYtixwjK3mjsaHqJQ-TmjQ9QkvNdWQsJS0sBbpEHC19O3v_PK1JbyI9wqzj8k-lxH)
+- [[https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNpVkE1qw0AMha8itEohvoAXhcZOsgmk0Ow8WQiPnBmS-WEsU4Ltu3ccU2i1kt77nhAasQ2ascRbomjgUisPuT6ayiTbi6P-CkXxPh1ZwAXPzwl2m2OA3oQYrb-9rfxugaAaTwvGIMb6-7xa1St_9jxB3ZwoSojXv87lO0ywb-ynyev_OyZxTh2ajsqOipYSVJReCG7RcXJkdT59XBSFYtixwjK3mjsaHqJQ-TmjQ9QkvNdWQsJS0sBbpEHC19O3v_PK1JbyI9wqzj8k-lxH|edit]]
 
 ```mermaid
 sequenceDiagram

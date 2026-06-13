@@ -36,7 +36,7 @@ npm install rollup -D
 > [!tip] f 的意思就是format-格式
 > 1. node环境，支持commonjs使用 `-f cjs`
 > 2. browser环境，有全局对象使用 `-f iife`
-> 3. [[04 AMD和CMD(了解)|AMD]]环境使用 `-f amd`
+> 3. [AMD](09_前端工程话/01%20前端工程化基础/02%20JS模块化开发/04%20AMD和CMD-了解.md)环境使用 `-f amd`
 > 4. UMD所有环境，使用 `-f umd`
 
 ```shell

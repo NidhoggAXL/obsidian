@@ -8,7 +8,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743770632000fvq7fu.png)
 
-在 main 中使用导入的数据的时候，都需要 utls 的前缀会比较麻烦，这个时候我们就可以使用[[05 解构Destructuring|解构]]来简化代码：
+在 main 中使用导入的数据的时候，都需要 utls 的前缀会比较麻烦，这个时候我们就可以使用[解构](07_JavaScript高级/08%20JS%20ES6中实现继承/05%20解构Destructuring.md)来简化代码：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174377085300035n68a.png)
 
@@ -16,7 +16,7 @@
 
 require 的本质是把 exports 进行地址的引用赋值操作，就是把 exports 对象的地址直接复制给 require ， 这样 require 和 exports 都是指向同一个对象。
 
-![[exports和require的本质|100%]]
+![100%](00_obsidian相关/Excalidraw/exports和require的本质.md)
 
 
 上面模块化完成了什么操作呢?理解下面这句话，Node中的模块化一目了然
@@ -81,7 +81,7 @@ module.exports和exports有什么关系或者区别呢？
 
 * 这是因为module对象的exports属性是exports对象的一个引用；
 
-![[module.exports的实质|100%]]
+![100%](00_obsidian相关/Excalidraw/module.exports的实质.md)
 
 
 > [!node] 那么肯定会产生怀疑，Node也支持CommonJS，那么已经有一个expots为还要设置一个module.exports呢？

@@ -2,7 +2,7 @@
 
 ## 1.1 根组件挂载
 
-首先定义一个 product.vue 组件：会使用到 ES Module 里面的ES module中export的[[05 ES Module用法详解#六、default用法|defalut]]来进行**导出**
+首先定义一个 product.vue 组件：会使用到 ES Module 里面的ES module中export的[[09_前端工程话/01 前端工程化基础/02 JS模块化开发/05 ES Module用法详解#六、default用法|defalut]]来进行**导出**
 
 ```html
 <template>
@@ -114,7 +114,7 @@ app.mount('#app')
 
 # 二、使用局部组件
 
-以上面的 [[#1.2 其他组件挂在到根组件|其他组件挂载到根组件]] 为例，让 demo 为局部组件的话，需要到 product.vue 里面设置 [[06 Vue的options|options]] 的 components。
+以上面的 [[#1.2 其他组件挂在到根组件|其他组件挂载到根组件]] 为例，让 demo 为局部组件的话，需要到 product.vue 里面设置 [[10_Vue3/01 邂逅Vue.js开发/06 Vue的options|options]] 的 components。
 
 首先需要把 main.js 里面的全局注册删除：
 
@@ -137,7 +137,7 @@ app.mount('#app')
 
 ```
 
-使用局部组件就需要在 product.vue 里面导入 demo.vue 的组件：[[03 注册Vue的布局组件|布局组件]]
+使用局部组件就需要在 product.vue 里面导入 demo.vue 的组件：[[10_Vue3/05 Vue基础-组件化/03 注册Vue的布局组件|布局组件]]
 
 ```html
 <template>

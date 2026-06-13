@@ -12,7 +12,7 @@ npm install postcss-loader -D
 
 我修改加载css的loader：（配置文件已经过多，给出一部分了） 
 * 注意：因为postcss需要**有对应的插件**才会起效果，所以我们需要配置它的plugin；
-* 这里就是一个完整的 [[04 编写和打包CSS文件#四、loader配置方式|loader]] 的配置方式
+* 这里就是一个完整的 [](09_前端工程话/01%20前端工程化基础/04%20Webpack基本使用/04%20编写和打包CSS文件.md#四、loader配置方式|loader) 的配置方式
 
 ![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744552929000jcsax2.png)
 

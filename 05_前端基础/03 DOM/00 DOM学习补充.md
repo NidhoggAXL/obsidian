@@ -22,7 +22,7 @@
 </body>
 ```
 
-[[04 获取元素|querySelector]]  [[10 改变元素#一、创建元素|createElement]] [[05 Node节点属性#三、innerHTML、outerHTML、textContent|textContent]]
+[querySelector](05_前端基础/03%20DOM/04%20获取元素.md)  [](05_前端基础/03%20DOM/10%20改变元素.md#一、创建元素|createElement) [](05_前端基础/03%20DOM/05%20Node节点属性.md#三、innerHTML、outerHTML、textContent|textContent)
 
 # 二、动态显示当前时间案例
 

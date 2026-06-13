@@ -95,7 +95,7 @@ const Board = memo(() => {
 ```
 
 > [!tip]
-> zustand的set函数会帮我们合并第一层状态，回想一下 [[02 useState和useEffect(核心)|useState]] 
+> zustand的set函数会帮我们合并第一层状态，回想一下 [useState](13_React/11%20React%20Hooks/02%20useState和useEffect(核心).md) 
 > ```jsx
 > import { useState } from 'react'
 > 

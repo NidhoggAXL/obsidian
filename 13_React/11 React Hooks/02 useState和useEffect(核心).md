@@ -5,7 +5,7 @@ State Hook的API就是 useStat,在前面已经进行了学习：
 - useState会帮助我们定义一个 state变量，useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。 
 - 一般来说，在函数退出后变量就会”消失”，而 state 中的变量会被 React 保留。
 - useState接受唯一一个参数，在**第一次组件被调用时使用来作为初始化值**。（如果没有传递参数，那么初始化值为undefined）。 
-- useState的返回值是一个数组，我们可以通过[[05 解构Destructuring#1.1 数组解构|数组的解构]]，来完成赋值会非常方便。
+- useState的返回值是一个数组，我们可以通过[](07_JavaScript高级/08%20JS%20ES6中实现继承/05%20解构Destructuring.md#1.1%20数组解构|数组的解构)，来完成赋值会非常方便。
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring
 
 FAQ：为什么叫 useState 而不叫 createState? 
@@ -202,7 +202,7 @@ const [data, setData] = useState(() => {
 });
 ```
 
-### 使用 [[04 useCallback和useMemo|useMemo]] 优化派生状态
+### 使用 [useMemo](13_React/11%20React%20Hooks/04%20useCallback和useMemo.md) 优化派生状态
 
 ```jsx
 const expensiveValue = useMemo(() => {
@@ -229,7 +229,7 @@ const expensiveValue = useMemo(() => {
 
 目前已经通过hook在函数式组件中定义state，那么类似于生命周期这些呢？ 
 
-- Effect Hook 可以让你来完成一些类似于class中[[02 React组件生命周期|生命周期]]的功能； 
+- Effect Hook 可以让你来完成一些类似于class中[生命周期](13_React/04%20React组件-基础/02%20React组件生命周期.md)的功能； 
 - 事实上，类似于**网络请求、手动更新DOM、一些事件的监听**，都是React更新DOM的一些**副作用（Side Effects**）； 
 - 所以对于完成这些功能的Hook被称之为 **Effect Hook**； 
 
@@ -264,9 +264,9 @@ useEffect的解析：
 
 # 三、需要清除Effect
 
-在class组件的编写过程中，某些副作用的代码，需要在 [[02 React组件生命周期#2.3 常用生命周期|componentWillUnmount]] 中进行清除： 
+在class组件的编写过程中，某些副作用的代码，需要在 [](13_React/04%20React组件-基础/02%20React组件生命周期.md#2.3%20常用生命周期|componentWillUnmount) 中进行清除： 
 
-- 比如我们之前的[[06 自定义事件总线|事件总线]]或Redux中手动调用 [[02 Redux的使用#^de6d55|subscribe]]； 
+- 比如我们之前的[事件总线](07_JavaScript高级/17%20防抖、节流、深拷贝%20事件总线/06%20自定义事件总线.md)或Redux中手动调用 [](13_React/08%20Redux的使用/02%20Redux的使用.md#^de6d55|subscribe)； 
 - 都需要在componentWillUnmount有对应的取消订阅； 
 - Effect Hook通过什么方式来模拟componentWillUnmount呢？
 
@@ -323,7 +323,7 @@ export default App
 
 使用Hook的其中一个目的就是解决class中生命周期经常将很多的逻辑放在一起的问题： 
 
-- 比如**网络请求、事件监听、手动修改DOM**，这些往往都会放在 [[02 React组件生命周期#2.3 常用生命周期|componentDidMount]] 中； 
+- 比如**网络请求、事件监听、手动修改DOM**，这些往往都会放在 [](13_React/04%20React组件-基础/02%20React组件生命周期.md#2.3%20常用生命周期|componentDidMount) 中； 
 
 使用Effect Hook，我们可以将它们分离到不同的useEffect中：
 

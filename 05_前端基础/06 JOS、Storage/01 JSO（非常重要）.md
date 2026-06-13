@@ -1,4 +1,5 @@
 # 一、JOS的由来
+
 在目前的开发中，JSON是一种非常重要的**数据格式**，它**并不是编程语言**，而是一种可以在服务器和客户端之间传输的数据格式
 
 JSON的全称是**JavaScript Object Notation**(JavaScript对象符号)
@@ -23,6 +24,7 @@ JSON的全称是**JavaScript Object Notation**(JavaScript对象符号)
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17292340750002dsvuy.png)
 
 # 二、JSON基本语法
+
 JSON的顶层支持三种类型的值:
 
 * **简单值**:数字(Number)、字符串(String，不支持单引号)、布尔类型(Boolean)、null类型;

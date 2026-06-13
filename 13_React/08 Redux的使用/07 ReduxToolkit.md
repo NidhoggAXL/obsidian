@@ -43,13 +43,13 @@ npm install @reduxjs/toolkit react-redux
 > 
 > - 默认导出类似前面知识点的 reducer 函数
 > 
-> ![[Pasted Image 20250817100815_009.png|500]]
+> ![500](00_obsidian相关/excalidraw图片/Pasted%20Image%2020250817100815_009.png)
 > 
 > ---
 > 
 > - 解构导出类似前面知识点的 acition 函数，函数的放回值是一个对象。
 > 
-> ![[Pasted Image 20250817100815_082.png]]
+> ![Pasted Image 20250817100815_082](00_obsidian相关/excalidraw图片/Pasted%20Image%2020250817100815_082.png)
 
 
 
@@ -63,18 +63,18 @@ configureStore用于创建store对象，常见参数如下：
 
 - **reducer**，将slice中的reducer可以组成一个对象传入此处； 
 - **middleware**：可以使用参数，传入其他的中间件（自行了解）； 
-- **devTools**：是否配置[[05 redux-devtool|devTools]]工具，默认为true；
+- **devTools**：是否配置[devTools](13_React/08%20Redux的使用/05%20redux-devtool.md)工具，默认为true；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755648989000b2tmvo.png)
 
 
 # 五、Redux Toolkit的异步操作
 
-在之前的开发中，通过[[04 Redux的异步操作#四、如何使用redux-thunk|redux-thunk]]中间件让dispatch中可以进行异步操作。 
+在之前的开发中，通过[](13_React/08%20Redux的使用/04%20Redux的异步操作.md#四、如何使用redux-thunk|redux-thunk)中间件让dispatch中可以进行异步操作。 
 
 Redux Toolkit默认已经给我们继承了Thunk相关的功能：**createAsyncThunk**
 
-- 第一个参数：字符串类型，方便 [[05 redux-devtool|redux-devtool]]监测。
+- 第一个参数：字符串类型，方便 [redux-devtool](13_React/08%20Redux的使用/05%20redux-devtool.md)监测。
 - 第二个参数：一个函数
 	- payload(有效载荷)接收其他参数
 	- extraInfo(额外信息)接收一个store，里面包含了dispatch、getState，可以通过结构获取

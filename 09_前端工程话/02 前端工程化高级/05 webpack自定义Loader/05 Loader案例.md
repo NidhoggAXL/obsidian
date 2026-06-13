@@ -21,7 +21,7 @@ npm install @babel/core -D
 npm installl marked -D
 ```
 
-为了方便把解析后的md文档显示到页面，需要使用到 [[03 Html-Webpack-Plugin|Html-Webpack-Plugin]] 来打包出一个 html 。
+为了方便把解析后的md文档显示到页面，需要使用到 [Html-Webpack-Plugin](09_前端工程话/01%20前端工程化基础/05%20Webpack插件和模式/03%20Html-Webpack-Plugin.md) 来打包出一个 html 。
 
 ```shell
 npm install html-webpack-plugin -D

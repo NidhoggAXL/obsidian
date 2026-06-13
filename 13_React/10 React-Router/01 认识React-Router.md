@@ -59,7 +59,7 @@ history接口是HTML5新增的, 它有六种模式改变URL而不刷新页面：
 
 - Angular的ngRouter 
 - React的ReactRouter 
-- Vue的[[02 Vue-Router基本使用|vue-router]]
+- Vue的[vue-router](10_Vue3/13%20Vue-Router/02%20Vue-Router基本使用.md)
 
 React Router在最近两年版本更新的较快，并且React Router6.x版本中发生了较大的变化。 （2025年8月20日最新的React Router到7.x版本）
 

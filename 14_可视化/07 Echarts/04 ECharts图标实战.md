@@ -2,19 +2,19 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1759042851000bblo2b.png)
 
-![[00 Echarts5基础学习路线#1.柱形图]]
+![[14_可视化/07 Echarts/00 Echarts5基础学习路线#1.柱形图|00 Echarts5基础学习路线]]
 
 # 二、折线图
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17590453210000283b4.png)
 
-![[00 Echarts5基础学习路线#2.折线图]]
+![[14_可视化/07 Echarts/00 Echarts5基础学习路线#2.折线图|00 Echarts5基础学习路线]]
 
 # 三、拼图
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17590453630004q0stt.png)
 
-![[00 Echarts5基础学习路线#3.饼图]]
+![[14_可视化/07 Echarts/00 Echarts5基础学习路线#3.饼图|00 Echarts5基础学习路线]]
 
 
 # 三、地图

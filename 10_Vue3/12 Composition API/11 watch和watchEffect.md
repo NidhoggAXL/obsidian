@@ -1,6 +1,6 @@
 # 一、监听数据的变化
 
-在前面的Options API中，我们可以通过[[04 监听器watch选项使用|watch]]选项来侦听data或者props的数据变化，当数据变化时执行某一些操作。 
+在前面的Options API中，我们可以通过[[10_Vue3/03 Vue基础-Options API/04 监听器watch选项使用|watch]]选项来侦听data或者props的数据变化，当数据变化时执行某一些操作。 
 
 在Composition API中，我们可以使用watchEffect和watch来完成响应式数据的侦听； 
 

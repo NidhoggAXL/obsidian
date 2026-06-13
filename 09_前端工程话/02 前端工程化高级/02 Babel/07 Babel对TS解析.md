@@ -71,7 +71,7 @@ webpack.config.js 里面的rule配置：
 使用ts-loader（TypeScript Compiler）
 
  - 来直接编译TypeScript，那么只能将ts转换成js；
- - 如果我们还希望在这个过程中添加对应的[[05 babel和polyfill|polyfill]]，那么ts-loader是无能为力的；
+ - 如果我们还希望在这个过程中添加对应的[polyfill](09_前端工程话/02%20前端工程化高级/02%20Babel/05%20babel和polyfill.md)，那么ts-loader是无能为力的；
  - 我们需要借助于babel来完成polyfill的填充功能；
 
 使用babel-loader（Babel）

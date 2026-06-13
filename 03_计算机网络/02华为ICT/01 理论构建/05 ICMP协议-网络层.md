@@ -109,7 +109,7 @@ Approximate round trip times in milli-seconds:
 C:\Users\20764>ping
 
 Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
-            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [[-j host-list|-r count]]
             [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
             [-4] [-6] target_name
 

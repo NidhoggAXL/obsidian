@@ -14,7 +14,7 @@ axios.get({
 })
 ```
 
-token携带的封装：首先就是对网络请求 [[01 TS封装axios|TS封装axios]] ，然后在其创建实例的时候添加 [[07 路由导航守卫钩子|路由守卫钩子]] ，当发送网络请求成功的时候，进行一个拦截，对拦截的的配置中添加 headers 的配置。
+token携带的封装：首先就是对网络请求 [[15_TypeScript/07 TS应用封装/01 TS封装axios|TS封装axios]] ，然后在其创建实例的时候添加 [[10_Vue3/13 Vue-Router/07 路由导航守卫钩子|路由守卫钩子]] ，当发送网络请求成功的时候，进行一个拦截，对拦截的的配置中添加 headers 的配置。
 
 ```ts
 import MYAxios from "./request"
