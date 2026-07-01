@@ -1,4 +1,5 @@
 # 一、什么是标准流
+
  默认情况下，元素都是按照normal flow(标准流、常规流、正常流、文档流【document flow】)进行排布
 
 * 从左到右、从上到下按顺序摆放好
@@ -7,6 +8,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1723188282000ec6rih.png)
 
 # 二、margin-padding位置调整
+
 **在标准流中，可以使用margin、padding对元素进行定位**
 
 * 其中margin还可以设置负数
@@ -22,6 +24,7 @@
 * `position:fixed` fixed-固定
 
 # 三、认识元素定位
+
 **定位允许您从正常的文档流布局中取出元素，并使它们具有不同的行为:**
 
 * 例如放在另一个元素的上面:
@@ -30,6 +33,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1723205919000gju4av.png)
 
 # 四、认识position
+
 利用position可以对元素进行定位，常用取值有5个:
 
 | static | relative | absolute | sticky | fixed |
@@ -46,6 +50,7 @@
 * sticky:粘性定位
 
 # 五、静态定位-static
+
 **position属性的默认值**
 
 * 元素按照normal flow布局

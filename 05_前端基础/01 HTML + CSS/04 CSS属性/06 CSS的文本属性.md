@@ -1,4 +1,5 @@
 # text-decoration(常用)
+
 > decoration-装饰、装修
 
 a元素默认添加下划线(underline):
@@ -20,6 +21,7 @@ a元素默认添加下划线(underline):
 
 
 # text-transform(一般)
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17116070740006zw4gc.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17116072970007q68q3.png)
@@ -35,6 +37,7 @@ text-indent: 2em;刚好是缩进父元素`font-size:;`的两倍大小。
 
 
 # text-align(重要)
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/171160989400027o556.png)
 
 
@@ -60,6 +63,7 @@ text-indent: 2em;刚好是缩进父元素`font-size:;`的两倍大小。
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711610579000fi0jor.png)
 
 ## justify
+
 在div中当没有进行设置的时候是默认left对齐的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711611953000yrn2gk.png)
@@ -77,6 +81,7 @@ text-indent: 2em;刚好是缩进父元素`font-size:;`的两倍大小。
 
 
 # word/letter-spacing(了解)
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711612790000lyqc9l.png)
 
 

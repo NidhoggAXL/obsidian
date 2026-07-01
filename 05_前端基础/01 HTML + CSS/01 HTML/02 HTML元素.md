@@ -41,7 +41,7 @@
 
 
 > [!tip] 注意:
-> h标签通常和[[元素语义化及SEO|SEO]]优化有关系
+> h标签通常和[[05_前端基础/01 HTML + CSS/03_元素的语义化/元素语义化及SEO|SEO]]优化有关系
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710493884000vg4z3y.png)
 
@@ -198,6 +198,7 @@ HTML `<img>`元素将一份图像嵌入文档.
 
 
  **target属性值设置为_blank时。为在创建一个空白的网页，在这个网页中跳转到百度**
+ 
  ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710575612000mme6v6.png)
 
 ## 7.2 a元素跳转到网页中的具体位置

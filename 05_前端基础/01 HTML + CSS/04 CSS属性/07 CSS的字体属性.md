@@ -38,6 +38,7 @@ body {
 
 
 # 三、font-weight(重要)
+
 font-weight用于设置文字的粗细](重量)
 
 **常见的取值:**
@@ -54,6 +55,7 @@ font-weight用于设置文字的粗细](重量)
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711626547000bb2v5o.png)
 
 # 四、font-style(一般)
+
 **font-style用于设置文字的常规、斜体显示:**
 
 * normal:常规显示
@@ -66,6 +68,7 @@ font-weight用于设置文字的粗细](重量)
 
 
 # 五、font-variant(基本不用)
+
 **font-variant可以影响小写字母的显示形式:**
 
 * variant是变形的意思,
@@ -78,6 +81,7 @@ font-weight用于设置文字的粗细](重量)
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711627307000ly10xy.png)
 
 # 六、font-heigth(重要)
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1714635924000azc22c.png)
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1714636802000o4avzr.png)
@@ -87,9 +91,11 @@ font-weight用于设置文字的粗细](重量)
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1714637105000i4tz7g.png)
 
 ## 小结
+
 这里的 line-height 是对文本自己本身的一个操作，对于你给它的块级元素是没有关系的。
 
 ### 举例1：
+
 给一个块级元素 100px 文本的 line-height 300px 
 
 ```html
@@ -159,6 +165,7 @@ line-height 具有继承属性，line-height是字体内容进行设置的，但
 > content 里面有内容，就会继承父级元素的 line-height 
 
 # 七、font
+
 **font是一个缩写属性：**
 
 * font 属性可以用来作为 font-style, font-variant, font-weight,font-size, line-height 和 font-family 属性的简写,
@@ -215,6 +222,7 @@ line-height 具有继承属性，line-height是字体内容进行设置的，但
 ```
 
 # 八、文字阴影 text-shadow
+
 `text-shadow`用法类似于[](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/12%20CSS的盒子模型-Box%20Model.md#九、盒子阴影%20box-shadow|box-shadow)，用于给文字添加阴影效果.
 
 **与box-shadow的区别：**

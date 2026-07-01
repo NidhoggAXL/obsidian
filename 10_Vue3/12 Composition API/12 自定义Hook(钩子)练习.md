@@ -6,7 +6,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747634937000ca9z5k.png)
 
-在 App.vue 里面进行return的时候也可以使用[[06 展开运算符|展开运算符]]：
+在 App.vue 里面进行return的时候也可以使用[展开运算符](07_JavaScript高级/09%20ECMA6特性/06%20展开运算符.md)：
 
 ```js
 return {

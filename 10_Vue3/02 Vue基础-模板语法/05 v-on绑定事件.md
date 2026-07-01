@@ -15,8 +15,8 @@ v-on的使用:
 * 预期: `Function | Inline Statement | Object`
 * 参数: `event`
 * 修饰符
-	* `.stop` - 调用 [[)](|event.stopPropagation()]])对象.md)。
-	* `.prevent` - 调用 [[)](|event.preventDefault()]])对象.md)。
+	* `.stop` - 调用 [event.stopPropagation()]()))对象.md)。
+	* `.prevent` - 调用 [event.preventDefault()]()))对象.md)。
 	* `.capture` - 添加事件侦听器时使用 capture 模式。
 	* `.self` - 只当事件是从侦听器绑定的元素本身触发时才触发回调。
 	* `.{keyAlias}` - 仅当事件是从特定键触发时才触发回调。
@@ -49,7 +49,7 @@ v-on的使用:
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745647080000t82mu1.png)
 
-**案例**：在 div 标签里面存在一个 button 按钮，当按钮发生点击的时候阻止发生其[[05_前端基础/04 JavaScript事件处理/03 事件(event|冒泡]]对象.md)。
+**案例**：在 div 标签里面存在一个 button 按钮，当按钮发生点击的时候阻止发生其[冒泡](05_前端基础/04%20JavaScript事件处理/03%20事件(event)对象.md)。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745647771000nfsh7o.png)
 

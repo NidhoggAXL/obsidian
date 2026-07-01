@@ -34,9 +34,9 @@
 * 某些情况下我们是直接显示这段文字； 
 * 某些情况下我们需要对这段文字进行**反转**；
 * 反转的思路是
-	* 字符串->数组（[[05 数组Array#^ffadfe|splice]]）
-	* 数组进行反转（[[05 数组Array#七、数组的排序|reverse]]）
-	* 数组->字符串（[[05 数组Array#五、数组的方法-slice、concat、join|join]]）
+	* 字符串->数组（[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#^ffadfe|splice)）
+	* 数组进行反转（[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#七、数组的排序|reverse)）
+	* 数组->字符串（[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#五、数组的方法-slice、concat、join|join)）
 
 
 **可以有三种实现思路：** 
@@ -69,7 +69,7 @@
 
 思路三的实现：computed实现 
 
-* 注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，后面的[[03 computed的set和get|setter和getter]]有说明
+* 注意：计算属性看起来像是一个函数，但是我们在使用的时候不需要加()，后面的[setter和getter](10_Vue3/03%20Vue基础-Options%20API/03%20computed的set和get.md)有说明
 * 我们会发现无论是直观上，还是效果上计算属性都是更好的选择； 
 * 并且计算属性是<mark class="hltr-orange">有缓存</mark>的；
 

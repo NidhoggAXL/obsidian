@@ -10,7 +10,7 @@
 * 而类似于`img/span/a`元素, 通常是**对内容的某一个细节的特殊描述, 没有必要独占一行,**
 
 
-**为了区分哪些元素需要独占一行,哪些元素不需要独占一行,HTML将元素区分(<mark class="hltr-cyan">本质是通过CSS的</mark>)成了两类:**
+**为了区分哪些元素需要独占一行,哪些元素不需要独占一行,HTML将元素区分(本质是通过CSS的)成了两类:**
 
 * **块级元素(block-level elements)**:独占父元素的一行
 * **行内级元素(inline-level elements)**:多个行内级元素可以在父元素的同一行中显示
@@ -57,7 +57,7 @@
 
 ## 3.2 ::before 和 ::after
 
-![[10 伪元素 pseudo-elements#三、 before 和 after (常用|10 伪元素 pseudo-elements]])
+![[05_前端基础/01 HTML + CSS/04 CSS属性/10 伪元素 pseudo-elements#三、 before 和 after (常用|10 伪元素 pseudo-elements]])
 
 > [!note] 如果要和行内级元素在一排显示就要使用`display:line-block`在进行设置
 

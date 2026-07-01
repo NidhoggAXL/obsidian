@@ -19,7 +19,7 @@
 这个组件中我们可以获得非常多的特性： 
 
 * 代码的高亮； 
-* ES6、[[02 CommonJS和Node|CommonJS]] 的模块化能力； 
+* ES6、[CommonJS](09_前端工程话/01%20前端工程化基础/02%20JS模块化开发/02%20CommonJS和Node.md) 的模块化能力； 
 * 组件作用域的CSS； 
 * 可以使用预处理器来构建更加丰富的组件，比如 TypeScript、Babel、Less、Sass等；
 
@@ -33,7 +33,7 @@
 ```
 
 > [!tip]
-> 虽然vue默认是集成了less，但是在使用的时候还是需要下载less的[[10 Webpack打包Vue#App.vue的打包过程|loader]]
+> 虽然vue默认是集成了less，但是在使用的时候还是需要下载less的[](09_前端工程话/01%20前端工程化基础/04%20Webpack基本使用/10%20Webpack打包Vue.md#App.vue的打包过程|loader)
 # 三、如何支持SFC
 
 如果我们想要使用这一的SFC的.vue文件，比较常见的是两种方式：

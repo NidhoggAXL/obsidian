@@ -17,7 +17,7 @@ Vuex 使用单一状态树:
 
 # 二、组件获取状态
 
-处理在 template 中使用插值语法获取状态，也可以在使用 [[01 computed计算属性使用|position API 的 computed]] 
+处理在 template 中使用插值语法获取状态，也可以在使用 [position API 的 computed](10_Vue3/03%20Vue基础-Options%20API/01%20computed计算属性使用.md) 
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17478351740005sr5zx.png)
 
@@ -56,7 +56,7 @@ Vuex 使用单一状态树:
 
 ## 3.1 解构和toRef结合使用(推荐)
 
-[[05 解构Destructuring}|解构]] 和 [[05 ref知识点补充|toRefs]] 联合使用
+[解构](05%20解构Destructuring}) 和 [toRefs](10_Vue3/12%20Composition%20API/05%20ref知识点补充.md) 联合使用
 
 * toRefs 保证是响应式
 * 解构中如果有和data重复的数据，则可以起别名

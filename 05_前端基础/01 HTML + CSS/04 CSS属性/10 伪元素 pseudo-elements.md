@@ -1,18 +1,20 @@
 # 一、伪元素概括
+
 常用的伪元素有
 * `:first-line`、`::first-line`
 * `:first-letter`、`::first-letter`
 * `:before`、`::before`
 * `:after`、`::after`
 
+> [!note] 
 > * 上面的每列是同一种伪元素，只是不同的写法
 > * 建议：伪元素使用双冒号`::`来表示，和伪类分开
 
 
 # 二、::first-line 和 ::first-letter （了解）
+
 * `::first-line`可以针对首行**文本设置**属性
 * `::first-letter`可以针对首**字母设置**属性
-
 
 ```html
 <head>
@@ -48,6 +50,7 @@
 
 
 # 三、::before 和 ::after (常用)
+
 `::before`和`::after`用来在一个元素的内容之前或之后插入其他内容(可以是文字、图片)
 * 常通过 content 属性来为一个元素添加修饰性的内容。
 
@@ -88,6 +91,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1714897747000jpmcxs.png)
 
+> [!note] 
 > 这样的好处就是可以定义一个 class 类型就可以对多条元素进行设置，不用每一个元素的前后都使用 span 元素来设置
 
 但是也存在一个问题，当想对不用元素前后类型进行区别设置的时候有不好进行设置，这个就需要使用到[](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/08%20CSS的常见选择器-selecttor.md#7.1%20交集选择器|交集选择器)来进行一个区别的设置
@@ -128,10 +132,8 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1714898464000qd1ewa.png)
 
-
-> 这样在编写的时候如果想添加什么类型就选择不同的交集选择器就好了
-
 ## 3.1 运用场景
+
 多行元素前后插入相同元素
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1714895914000plh5d8.png)

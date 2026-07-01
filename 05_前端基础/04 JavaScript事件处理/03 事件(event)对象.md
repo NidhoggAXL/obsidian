@@ -20,7 +20,7 @@
 * **type**:事件的类型;
 * **target**:当前事件发生的元素;
 * **currentTarget**:当前处理事件的元素
-* **eventPhase**:事件所处的阶段[[02 事件冒泡捕获#^d8d748|冒泡、捕获]]
+* **eventPhase**:事件所处的阶段[](05_前端基础/04%20JavaScript事件处理/02%20事件冒泡捕获.md#^d8d748|冒泡、捕获)
 * offsetX、offsetY:事件发生在元素内的位置;
 * clientX、clientY:事件发生在客户端内的位置;
 * pageX、pageY:事件发生在客户端相对于document的位置:

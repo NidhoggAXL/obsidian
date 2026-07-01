@@ -61,6 +61,6 @@ reactive的应用场景
 
 ref的应用场景:
 
-* 其他的场景基本都用ref和[[07 computed函数使用|computed]]
+* 其他的场景基本都用ref和[computed](10_Vue3/12%20Composition%20API/07%20computed函数使用.md)
 * 定义本地的一些简单数据
 * 定义从网络中获取的数据也是使用ref

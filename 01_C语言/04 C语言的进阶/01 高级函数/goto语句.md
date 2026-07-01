@@ -14,7 +14,7 @@ int main()
 
 * goto语言真正适合的场景如下：
 	* 跳出生层次的嵌套结构![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1705212826000y9miok.png)
-		*  ![[关机代码|字符串关机代码]]
+		*  ![[01_C语言/C语言代码/C语言学习过程的代码/关机代码|字符串关机代码]]
 
 
 *  代码：

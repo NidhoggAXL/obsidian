@@ -1,6 +1,6 @@
 qsort-库函数-排序
 quick-sort-快速排序
-[[03 特殊指针类型 void]]
+[[01_C语言/03 指针/03 特殊指针类型 void]]
 ```C
 函数的声明为：
 void qsort(void* base,

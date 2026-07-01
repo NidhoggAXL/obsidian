@@ -1,12 +1,12 @@
 # 一、认识网页背景
+
 在开发中,为了让网页更加美观,我们经常会设置各种各样的背景:
 
 # 二、background-image
 
-**background-image用于设置元素的背景图片** ^aed421
+**background-image用于设置元素的背景图片** 
 
 * 会盖在(不是覆盖)background-color的上面如果设置了多张图片
-
 
 **设置的第一张图片将显示在最上面，其他图片按顺序层叠在下面**
 
@@ -19,6 +19,7 @@
 
 
 # 二、background-repeat
+
 **background-repeat用于设置背景图片是否要平铺**
 
 * 如果没有进行过图片设置的话，是默认平铺的
@@ -45,6 +46,7 @@
 
 
 # 三、background-size
+
 **语法：**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17169542220009sevs6.png)
@@ -59,6 +61,7 @@
 * length:具体的大小，比如100px
 
 # 四、background-position
+
 **background-position用于设置背景图片在水平、垂直方向上的具体位置**
 
 * 可以设置具体的数值 比如 20px 30px(是可以设置为负值的);
@@ -74,7 +77,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17169544590004grirr.png)
 
 
-**background-position 练习：**^background-positon
+**background-position 练习：**
 
 让图片随着网页的缩小而缩小，并且把图片的 center 重要的一直显示出来
 
@@ -92,6 +95,7 @@
 
 
 # 五、background-attachment（了解）
+
 **background-attachment决定背景图像的位置是在视口内固定，或者随着包含它的区块滚动**
 
 attachment - 附件
@@ -126,6 +130,7 @@ attachment - 附件
 
 
 # 七、background-image和img对比
+
 **利用background-image和img都能够实现显示图片的需求，在开发中该如何选择?**
 
 |              |     img      | background-image |

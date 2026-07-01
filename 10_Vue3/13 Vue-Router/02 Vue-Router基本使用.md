@@ -90,6 +90,6 @@ router-link事实上有很多属性可以配置：
 	 * 如果添加的 active-class 就会替换掉 router-link-active 的 class
 	![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17477238300005sucie.png)
 	 
- * exact-active-class属性：[[04 动态路由和路由嵌套#6.1 精准路由|路由嵌套的精准路由]] 
+ * exact-active-class属性：[](10_Vue3/13%20Vue-Router/04%20动态路由和路由嵌套.md#6.1%20精准路由|路由嵌套的精准路由) 
 	 * 链接精准激活时，应用于渲染的`<a>`的 class，默认是router-link-exact-active；
 
