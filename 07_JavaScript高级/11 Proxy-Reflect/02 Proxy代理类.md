@@ -101,7 +101,7 @@ new fooProxy("axl", " bastkaball")
 
 # 五、Receiver
 
-![[07_JavaScript高级/11 Proxy-Reflect/04 Reflect反射#四、Receiver的作用|Receiver的作用]]
+![](04%20Reflect反射.md#四、Receiver的作用|Receiver的作用)
 
 
 

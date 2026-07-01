@@ -15,8 +15,8 @@ v-on的使用:
 * 预期: `Function | Inline Statement | Object`
 * 参数: `event`
 * 修饰符
-	* `.stop` - 调用 [[)](05_前端基础/04 JavaScript事件处理/03 事件(event|event.stopPropagation()]]对象.md)。
-	* `.prevent` - 调用 [[)](05_前端基础/04 JavaScript事件处理/03 事件(event|event.preventDefault()]]对象.md)。
+	* `.stop` - 调用 [[)](|event.stopPropagation()]])对象.md)。
+	* `.prevent` - 调用 [[)](|event.preventDefault()]])对象.md)。
 	* `.capture` - 添加事件侦听器时使用 capture 模式。
 	* `.self` - 只当事件是从侦听器绑定的元素本身触发时才触发回调。
 	* `.{keyAlias}` - 仅当事件是从特定键触发时才触发回调。

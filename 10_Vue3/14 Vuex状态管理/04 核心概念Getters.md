@@ -35,7 +35,7 @@ getters中的函数本身，可以返回一个函数，那么在使用的地方�
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747984864000yjrtxk.png)
 
-当然也可以是和[[10_Vue3/14 Vuex状态管理/03 核心概念State#3.1 解构和toRef结合使用(推荐|03 核心概念State]]|%20state%20)一样使用 toRefs 来进行响应式处理更加方便
+当然也可以是和[[03 核心概念State#3.1 解构和toRef结合使用(推荐|03 核心概念State]]|%20state%20)一样使用 toRefs 来进行响应式处理更加方便
 
 也可以使用下面的操作：
 

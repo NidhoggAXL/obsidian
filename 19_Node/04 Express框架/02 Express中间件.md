@@ -29,7 +29,7 @@ express是一个路由和中间件的Web框架，它本身的功能非常少： 
 - express主要提供了两种方式：
 	 - app/router.use；
 	 - app/router.methods；
- - 可以是 app，也可以是 [[19_Node/04 Express框架/04 Express路由|router]]，
+ - 可以是 app，也可以是 [router](04%20Express路由.md)，
  - methods指的是常用的请求方式，比如： app.get或app.post等；
 
 ## 2.1 最普通的中间件

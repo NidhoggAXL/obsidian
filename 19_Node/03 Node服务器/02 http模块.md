@@ -300,7 +300,7 @@ server.listen(8000, () => {
 
 ```
 
-> [[05_前端基础/06 JOS、Storage/01 JSO（非常重要）#4.4 parse方法|JSON.parse]] 方法即可。
+> [](01%20JSO（非常重要）.md#4.4%20parse方法|JSON.parse) 方法即可。
 
 ## 5.4 Request Header
 

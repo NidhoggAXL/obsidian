@@ -97,7 +97,7 @@
 - 第四步：调用stroke()函数来描边，或者调用fill()函数来填充（使用填充 fill 时，路径会自动闭合）。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758266484000os5lx4.png)
-[[14_可视化/04 Canvas/03 Canvas样式和颜色|03 Canvas样式和颜色]]
+[03 Canvas样式和颜色](03%20Canvas样式和颜色.md)
 ![gh|200](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/175826649200008nwr2.png)
 
 

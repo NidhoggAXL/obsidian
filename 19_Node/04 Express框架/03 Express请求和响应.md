@@ -4,9 +4,9 @@
 
  - 方式一：通过get请求中的URL的params；
  - 方式二：通过get请求中的URL的query；
- - 方式三：通过[[19_Node/04 Express框架/02 Express中间件#3.3 express的中间件|post请求中的body的json格式]]；
- - 方式四：通过[[19_Node/04 Express框架/02 Express中间件#4.2 express.urlencoded|post请求中的body的x-www-form-urlencoded格式]]；
- - 方式五：通过[[19_Node/04 Express框架/02 Express中间件#解析form-data|post请求中的form-data格式]]；
+ - 方式三：通过[](02%20Express中间件.md#3.3%20express的中间件|post请求中的body的json格式)；
+ - 方式四：通过[](02%20Express中间件.md#4.2%20express.urlencoded|post请求中的body的x-www-form-urlencoded格式)；
+ - 方式五：通过[](02%20Express中间件.md#解析form-data|post请求中的form-data格式)；
 
 # 二、传递参数params
 

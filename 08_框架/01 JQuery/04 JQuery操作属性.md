@@ -105,7 +105,7 @@
 **.addClass(className)、.addClass(classNames)、.addClass(funcntion)**
 
 * 将指定的类添加到匹配元素集合中的每个元素，每次都是追加class。
-* 底层调用的是[[property|setAttribute]])("class",finalValue |[07 元素的属性(property)|setAttribute]]方法添加class.
+* 底层调用的是[setAttribute](property))("class",finalValue |[07 元素的属性(property)|setAttribute]]方法添加class.
 
 
 **.hasClass(className)**

@@ -14,7 +14,7 @@ Reflect也是ES6新增的一个API，它是一个**对象**，字面的意思是
 * 但是Object作为一个构造函数，这些操作实际上放到它身上**并不合适**； 
 * 另外还包含一些类似于 **in、delete操作符**，让JS看起来是**会有一些奇怪**的； 
 * 所以在ES6中新增了Reflect，让我们这些操作都集中到了Reflect对象上；
-* 另外在使用[[07_JavaScript高级/11 Proxy-Reflect/02 Proxy代理类|Proxy]]时，可以做到**不操作原对象**；
+* 另外在使用[Proxy](02%20Proxy代理类.md)时，可以做到**不操作原对象**；
 
 那么Object和Reflect对象之间的API关系，可以参考MDN文档： https://developer.mozilla.org/zhCN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
 
@@ -126,7 +126,7 @@ objProxy.name = "mba"
 
 首先：通过前面的知识，如果在一个代码块里面执行另一个代码块的代码如何执行？
 
-[[07_JavaScript高级/01 函数this指向/01 this的绑定规则#1.3.1 call、apply|call、apply]]
+[](01%20this的绑定规则.md#1.3.1%20call、apply|call、apply)
 
 ```js
 <script>

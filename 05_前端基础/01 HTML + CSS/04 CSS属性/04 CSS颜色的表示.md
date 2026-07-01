@@ -22,4 +22,4 @@ RGB各个原色的取值范围是0~255;
 * 十六进制表示的缩写![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1711530660000ty98hd.png)
 
 # 三、RGBA
-![](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/11%20CSS的属性.md#4.3%20rgba：)
+![[11 CSS的属性#4.3 rgba：]]

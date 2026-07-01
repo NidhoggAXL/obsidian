@@ -157,31 +157,31 @@ dayjs.utc("2018-01-01", "YYYY-MM-DD"); // with CustomParseFormat plugin
 
 Day.js 默认使用用户本地时区来解析和展示时间。 如果想要使用 UTC 模式来解析和展示时间，可以使用 `dayjs.utc()` 而不是 `dayjs()`
 
-### [[https://day.js.org/docs/zh-CN/plugin/utc#dayjsutc-dayjsutcdatetype-string-number-date-dayjs-format-string|utc]]
+### [](https://day.js.org/docs/zh-CN/plugin/utc#dayjsutc-dayjsutcdatetype-string-number-date-dayjs-format-string|utc)
 
 `dayjs.utc(dateType?: string | number | Date | Dayjs, format? string)`
 
 返回一个使用 UTC 模式的 `Dayjs` 对象。
 
-### [[https://day.js.org/docs/zh-CN/plugin/utc#use-utc-time-utc|utc]]
+### [](https://day.js.org/docs/zh-CN/plugin/utc#use-utc-time-utc|utc)
 
 `.utc()`
 
 返回一个复制的包含使用 UTC 模式标记的 `Dayjs` 对象。
 
-### [[https://day.js.org/docs/zh-CN/plugin/utc#use-local-time-local|utc]] 
+### [](https://day.js.org/docs/zh-CN/plugin/utc#use-local-time-local|utc) 
 
 `.local()`
 
 返回一个复制的包含使用本地时区标记的 `Dayjs` 对象。
 
-### [[https://day.js.org/docs/zh-CN/plugin/utc#set-utc-offset-utcoffset|utc]]
+### [](https://day.js.org/docs/zh-CN/plugin/utc#set-utc-offset-utcoffset|utc)
 
 `.utcOffset()`
 
 返回一个复制的使用 UTC 模式的 Day.js 对象。
 
-### [[https://day.js.org/docs/zh-CN/plugin/utc#isutc-mode-isutc|utc]] 
+### [](https://day.js.org/docs/zh-CN/plugin/utc#isutc-mode-isutc|utc) 
 
 `.isUTC()`
 

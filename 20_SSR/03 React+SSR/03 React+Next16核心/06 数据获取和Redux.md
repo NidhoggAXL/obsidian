@@ -4,7 +4,7 @@
 
 1. **Store 必须是请求级别的**：Next.js 服务器会同时处理多个请求，Store 不能是全局单例，否则会跨请求污染数据 [](https://redux.js.org/usage/nextjs)。
 2. **Server Components 不能直接访问 Redux**：RSCS 无法使用 React Context 和 Hooks，所以不能直接在 Server Component 中读取或写入 Store [](https://redux.js.org/usage/nextjs)。
-3. **Provider 必须是 Client Component**：任何与 Redux 交互的组件（包括 Provider）都必须是客户端组件 [](https://redux.js.org/usage/nextjs)[[https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments|setting-up-redux-toolkit-in-nextjs-38k9]]。
+3. **Provider 必须是 Client Component**：任何与 Redux 交互的组件（包括 Provider）都必须是客户端组件 [](https://redux.js.org/usage/nextjs)[](https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments|setting-up-redux-toolkit-in-nextjs-38k9)。
 
 # 二、快速开始（官方推荐方式）
 
@@ -14,7 +14,7 @@
 npx create-next-app --example with-redux my-app
 ```
 
-这会自动生成一个已配置好 Redux Toolkit 和 React-Redux 的 Next.js 项目，包含 Counter 示例 [](https://react-redux.js.org/introduction/getting-started?source=post_page-----5bbf09c3d483---------------------------------------)[](https://gitcode.com/gh_mirrors/rea/react-redux?utm_source=gitcode_repo_files&from_link=c84a07454254c934e6197a3cb323f3f3)[[https://react.redux.js.cn/introduction/getting-started#help-and-discussion|getting-started]]。
+这会自动生成一个已配置好 Redux Toolkit 和 React-Redux 的 Next.js 项目，包含 Counter 示例 [](https://react-redux.js.org/introduction/getting-started?source=post_page-----5bbf09c3d483---------------------------------------)[](https://gitcode.com/gh_mirrors/rea/react-redux?utm_source=gitcode_repo_files&from_link=c84a07454254c934e6197a3cb323f3f3)[](https://react.redux.js.cn/introduction/getting-started#help-and-discussion|getting-started)。
 
 # 三、手动集成（完整 TypeScript 示例）
 
@@ -280,10 +280,10 @@ export default function StoreProvider({ children }) {
 
 | 要点                                | 说明                                                                                                                                                                |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Provider 必须是 Client Component** | 必须添加 `'use client'` 指令，因为 Redux 依赖 React Context [](https://redux.js.org/usage/nextjs)[[https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments|setting-up-redux-toolkit-in-nextjs-38k9]] |
+| **Provider 必须是 Client Component** | 必须添加 `'use client'` 指令，因为 Redux 依赖 React Context [](https://redux.js.org/usage/nextjs)[](https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments|setting-up-redux-toolkit-in-nextjs-38k9) |
 | **Store 按请求创建**                   | 使用 `makeStore()` 函数而非全局单例，避免请求间数据污染 [](https://redux.js.org/usage/nextjs)                                                                                         |
 | **Server Components 不访问 Redux**   | RSCs 无法使用 `useSelector`/`useDispatch`，只能在 Client Components 中使用                                                                                                   |
-| **使用类型化 Hooks**                   | `useAppDispatch`、`useAppSelector` 提供完整 TypeScript 支持 [[https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments|setting-up-redux-toolkit-in-nextjs-38k9]]                                  |
+| **使用类型化 Hooks**                   | `useAppDispatch`、`useAppSelector` 提供完整 TypeScript 支持 [](https://dev.to/devtush/setting-up-redux-toolkit-in-nextjs-38k9#comments|setting-up-redux-toolkit-in-nextjs-38k9)                                  |
 | **SSR 兼容性**                       | 使用 `useRef` 确保 store 只在客户端创建一次，避免服务端渲染时的内存泄漏 [](https://redux.js.org/usage/nextjs)                                                                                |
 
 ## 五、常见问题

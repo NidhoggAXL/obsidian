@@ -66,7 +66,7 @@ Taro 当前的架构主要分为：编译时 和 运行时。
 
 我们推荐使用 [VSCode](https://code.visualstudio.com/) 或 [WebStorm](https://www.jetbrains.com/webstorm/)（或其它支持 Web 开发的 Jetbrains IDE）。
 
-当你使用 VSCode 时，推荐安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)，如果你使用 TypeScript，别忘了配置 `eslint.probe` 参数。如果使用 Vue，推荐安装 [[Vue2)](Vue2|Vetu(Vue2)]]) 或者 **Valor(Vue3)** 插件。
+当你使用 VSCode 时，推荐安装 [ESLint 插件](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)，如果你使用 TypeScript，别忘了配置 `eslint.probe` 参数。如果使用 Vue，推荐安装 [Vetu(Vue2)](Vue2))) 或者 **Valor(Vue3)** 插件。
 
 如果你愿意花钱又懒得折腾可以选择 [WebStorm](https://www.jetbrains.com/webstorm/)（或其它支持 Web 开发的 Jetbrains IDE），基本不需要配置。
 

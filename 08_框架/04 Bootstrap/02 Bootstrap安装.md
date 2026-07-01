@@ -39,7 +39,7 @@ Bootstrap框架的CDN地址
 ```
 
 > [!tip] 特别注意
-当引入了 Bootstrap 框架以后，CSS文件的 box-size的属性值都设置为border-box。[[05_前端基础/01 HTML + CSS/04 CSS属性/12 CSS的盒子模型-Box Model#十一、CSS属性 box-sizing|box-sizing属性]]
+当引入了 Bootstrap 框架以后，CSS文件的 box-size的属性值都设置为border-box。[](12%20CSS的盒子模型-Box%20Model.md#十一、CSS属性%20box-sizing|box-sizing属性)
 
 # 三、方式二：下载源码
 

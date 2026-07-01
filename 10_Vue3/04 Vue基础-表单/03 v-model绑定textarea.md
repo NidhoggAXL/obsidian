@@ -1,5 +1,5 @@
 
-什么是：[[05_前端基础/01 HTML + CSS/05 高级元素/01 高级元素的使用#5.7 textarea 的使用|textarea]]
+什么是：[[01 高级元素的使用#5.7 textarea 的使用|textarea]]
 
 ```html
 <body>

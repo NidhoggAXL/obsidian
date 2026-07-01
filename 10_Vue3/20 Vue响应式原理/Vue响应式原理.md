@@ -113,7 +113,7 @@ dep.notify()
 * 方式一：通过 Object.defineProperty的方式（vue2采用的方式）； 
 * 方式二：通过new Proxy的方式（vue3采用的方式）；
 
-这里以 [[07_JavaScript高级/11 Proxy-Reflect/02 Proxy代理类#二、Proxy的set和get捕获器|Proxy(代理]]) 的方式来监听：
+这里以 [[02 Proxy代理类#二、Proxy的set和get捕获器|Proxy(代理]]) 的方式来监听：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753442481000wttrm1.png)
 
@@ -124,7 +124,7 @@ dep.notify()
 * 但是实际开发中会有不同的对象，另外会有不同的属性需要管理； 
 * 如何可以使用一种数据结构来管理不同对象的不同依赖关系呢？ 
 
-在前学习过[[07_JavaScript高级/09 ECMA6特性/09 数据结构-Map映射|WeakMap]]，并且在学习WeakMap的时候我讲到了后面通过WeakMap如何管理这种响应式的数据依赖：
+在前学习过[[09 数据结构-Map映射|WeakMap]]，并且在学习WeakMap的时候我讲到了后面通过WeakMap如何管理这种响应式的数据依赖：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753442555000r5tbio.png)
 

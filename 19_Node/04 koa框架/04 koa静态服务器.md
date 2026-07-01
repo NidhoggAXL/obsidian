@@ -5,7 +5,7 @@ koa并没有内置部署相关的功能，所以我们需要使用第三方库�
 npm install koa-static
 ```
 
-部署的过程类似于[[19_Node/04 Express框架/05 Express静态服务器|Express]]：
+部署的过程类似于[Express](05%20Express静态服务器.md)：
 
 ```js
 import koa from "koa";

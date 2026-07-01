@@ -87,7 +87,7 @@ arguments 之和传入的**实参有关**，和形参无关：
 **array-like意味着它不是一个数组类型，而是一个对象类型:**
 
 * 但是它却拥有数组的一些特性，比如说length，比如可以通过index索引来访问:
-* 但是它却没有数组的一些方法，比如[[05_前端基础/02 JavaScript基础/06 常见内置类/05 数组Array#8.1 filter-过滤}|filter]]、[[05_前端基础/02 JavaScript基础/06 常见内置类/05 数组Array#8.2 map-映射|map]]等;
+* 但是它却没有数组的一些方法，比如[](05%20数组Array.md#8.1%20filter-过滤}|filter)、[](05%20数组Array.md#8.2%20map-映射|map)等;
 
 ```js
 <script>

@@ -24,7 +24,7 @@ payload为对象类型
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747986188000sejzh4.png)
 
-定义mutation：使用到 [[07_JavaScript高级/08 JS ES6中实现继承/06 ES6对象的增强|计算属性名]]
+定义mutation：使用到 [[06 ES6对象的增强|计算属性名]]
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747986198000eo8uv2.png)
 

@@ -52,7 +52,7 @@
 
 # 二、ECharts渲染原理
 
-浏览器端的图表库大多会选择 [[14_可视化/05 SVG/01 邂逅SVG|SVG]] 或者 [[14_可视化/04 Canvas/01 邂逅Canvas|Canvas]] 进行渲染。 
+浏览器端的图表库大多会选择 [SVG](01%20邂逅SVG.md) 或者 [Canvas](01%20邂逅Canvas.md) 进行渲染。 
 
 **ECharts 最开始时一直都是使用 Canvas 绘制图表**。直到 ECharts v4.0 版本，才发布支持 SVG 渲染器。 
 

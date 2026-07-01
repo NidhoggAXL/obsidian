@@ -13,7 +13,7 @@
 
 Teleport是什么呢?
 
-- 它是一个Vue提供的内置组件，类似于react的[[13_React/05 React组件-进阶/05 portals和fragment#一、Portals的使用|Portals]];
+- 它是一个Vue提供的内置组件，类似于react的[[05 portals和fragment#一、Portals的使用|Portals]];
 - teleport翻译过来是心灵传输、远距离运输的意思，
 
 它有两个属性:

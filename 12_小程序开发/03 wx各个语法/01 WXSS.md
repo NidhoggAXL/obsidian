@@ -4,7 +4,7 @@
 
 # 二、WXSS支持的选择器
 
-[[05_前端基础/01 HTML + CSS/04 CSS属性/09 伪类选择器|伪类选择器]]、[[05_前端基础/01 HTML + CSS/04 CSS属性/10 伪元素 pseudo-elements|伪元素]]
+[伪类选择器](09%20伪类选择器.md)、[伪元素](10%20伪元素%20pseudo-elements.md)
 
 <div style="
   height: 500px; 

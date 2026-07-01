@@ -34,7 +34,7 @@
 当我们通过new关键字操作类的时候，会调用这个constructor函数，并且执行如下操作： 
 
 * 在内存中创建一个新的对象（空对象）； 
-* 这个**对象内部的`[[prototype]]`（显式属性）属性会被赋值为该类的`prototype`（隐式原型）属性；** 
+* 这个**对象内部的`[prototype](prototype)`（显式属性）属性会被赋值为该类的`prototype`（隐式原型）属性；** 
 * 构造函数内部的this，会指向创建出来的新对象； 
 * 执行构造函数的内部代码（函数体代码）； 
 * 如果构造函数**没有返回非空对象**，则返回创建出来的新对象；
@@ -143,7 +143,7 @@
 </script>
 ```
 
-> [[07_JavaScript高级/06 JS对象增强/01 Object.defineProperty|!tip]] 的好处，每一个对象都是可以进行监听的。
+> [!tip](01%20Object.defineProperty.md) 的好处，每一个对象都是可以进行监听的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1731571328000xa5b0j.png)
 

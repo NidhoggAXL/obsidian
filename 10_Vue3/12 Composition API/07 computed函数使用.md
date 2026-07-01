@@ -1,4 +1,4 @@
-在前面知识点[[10_Vue3/03 Vue基础-Options API/01 computed计算属性使用|计算属性computed]]：当我们的某些属性是依赖其他状态时，我们可以使用计算属性来处理 
+在前面知识点[[01 computed计算属性使用|计算属性computed]]：当我们的某些属性是依赖其他状态时，我们可以使用计算属性来处理 
 
 * 在前面的Options API中，是使用computed选项来完成的； 
 * 在Composition API中，我们可以在 setup 函数中使用 computed 方法来编写一个计算属性；

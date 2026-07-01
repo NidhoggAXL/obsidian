@@ -115,8 +115,8 @@ let、const和var的另一个重要区别是作用域提升:
 
 > [!tip] 总结就是：
 > let、const、var声明的变量都保存在 Global Environment Records（全局环境记录）中。
-> * var 保存在全局环境记录的`[[ObjectRecord]]`就是 global object（全局对象-Window）
-> * let、const在全局环境记录的`[[DeclarativeRecord]]`(声明环境记录)
+> * var 保存在全局环境记录的`[ObjectRecord](ObjectRecord)`就是 global object（全局对象-Window）
+> * let、const在全局环境记录的`[DeclarativeRecord](DeclarativeRecord)`(声明环境记录)
 
 
 

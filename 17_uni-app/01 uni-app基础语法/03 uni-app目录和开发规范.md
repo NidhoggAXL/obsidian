@@ -19,11 +19,11 @@
 
 一个功能完整的项目通常会包含以下目录：
 
-- **`pages/`**：这是你开发工作的核心。每个子目录（如 `pages/index/`）代表一个页面，其中必须包含一个 `.vue` 文件（如 `index.vue`）作为页面组件[[https://uniapp.dcloud.io/tutorial/project.html#目录结构|project.html]]。页面路径需要在 `pages.json` 中注册。
+- **`pages/`**：这是你开发工作的核心。每个子目录（如 `pages/index/`）代表一个页面，其中必须包含一个 `.vue` 文件（如 `index.vue`）作为页面组件[](https://uniapp.dcloud.io/tutorial/project.html#目录结构|project.html)。页面路径需要在 `pages.json` 中注册。
     
 - **`components/`**：为了提高代码复用性，应将可复用的界面模块（如按钮、导航栏、卡片）抽取为Vue组件放在这里[](https://bbs.huaweicloud.com/blogs/442051)。
     
-- **`static/`**：项目所有的本地静态资源都应放在这里[[https://uniapp.dcloud.io/tutorial/project.html#目录结构|project.html]]。在代码中，可以使用绝对路径（如 `/static/logo.png`）或相对路径引用它们[](https://uniapp.dcloud.net.cn/tutorial/page-static-assets.html)。需要注意，此目录内容会直接拷贝到最终产物中，要避免存放未使用的大文件。
+- **`static/`**：项目所有的本地静态资源都应放在这里[](https://uniapp.dcloud.io/tutorial/project.html#目录结构|project.html)。在代码中，可以使用绝对路径（如 `/static/logo.png`）或相对路径引用它们[](https://uniapp.dcloud.net.cn/tutorial/page-static-assets.html)。需要注意，此目录内容会直接拷贝到最终产物中，要避免存放未使用的大文件。
     
 - **`uni_modules/`**：当你从uni-app插件市场安装符合 `uni_modules` 规范的组件或库时，它们会存放在这里，通常可以按需引入，非常方便。
     
@@ -54,7 +54,7 @@
 |**主要作用**|**异步API转换适配器**。用于将微信小程序等平台**传统的回调风格API转换为Promise风格**，方便开发者使用 `async/await` 进行异步编程[](https://ask.csdn.net/questions/8069918)[](https://blog.csdn.net/Zmaomao_/article/details/140465750)[](https://bbs.itying.com/topic/678e68c54b218c005fa26469)。|
 |**典型使用场景**|当你需要调用 `wx.request()`、`wx.getLocation()` 等小程序原生API，并希望用Promise处理时，这个文件在底层提供支持。|
 |**是否可以删除**|**视情况而定**，但有风险：  <br>1. **可以删除**：如果你的项目完全不使用微信小程序的异步API，或确定所有异步调用都已使用uni-app封装的、本身就返回Promise的API（如 `uni.request`），那么**理论上可以删除**[](https://ask.csdn.net/questions/8069918)[](https://blog.csdn.net/Zmaomao_/article/details/140465750)。  <br>2. **不建议删除**：如果你或你引入的第三方库依赖了此转换功能，删除后可能导致程序运行出错[](https://bbs.itying.com/topic/678e68c54b218c005fa26469)。最稳妥的做法是**保留它**，因为它体积很小，不影响打包。|
-|**官方地位**|它更像是一个**构建时或运行时的内部适配文件**。在DCloud官方最新的工程结构文档中，并未将此文件列为必需或标准文件[[https://uniapp.dcloud.io/tutorial/project.html#目录结构|project.html]]，这可能是不同HBuilderX模板版本或项目配置的差异所致。|
+|**官方地位**|它更像是一个**构建时或运行时的内部适配文件**。在DCloud官方最新的工程结构文档中，并未将此文件列为必需或标准文件[](https://uniapp.dcloud.io/tutorial/project.html#目录结构|project.html)，这可能是不同HBuilderX模板版本或项目配置的差异所致。|
 
 # 二、开发规范
 

@@ -13,7 +13,7 @@
 * 监听 data 里面的属性时，在 watch 里面的<mark class="hltr-orange">对应函数名必须是和监听 data 的属性相同</mark>
 * 监听会默认传入两个参数：参数一（新的属性值）、参数二（旧的参数值）
 
-**当然监听也有语法糖**：[[05_前端基础/04 JavaScript事件处理/01 认识事件处理#一、认识事件（Event）|handler]]
+**当然监听也有语法糖**：[[01 认识事件处理#一、认识事件（Event）|handler]]
 
 ```js
 watch: {
@@ -37,7 +37,7 @@ watch: {
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674607000a84erw.png)
 
-会发现如果改变的是对象就会拿到 [[07_JavaScript高级/11 Proxy-Reflect/02 Proxy代理类|代理对象]]，如果真的想<mark class="hltr-orange">拿到原对象</mark>，就要使用 [[10_Vue3/15 Pinia状态管理/03 Pinia核心概念State#3.3 toRaw|toRaw(]])  方法如下的代码：
+会发现如果改变的是对象就会拿到 [[02 Proxy代理类|代理对象]]，如果真的想<mark class="hltr-orange">拿到原对象</mark>，就要使用 [[03 Pinia核心概念State#3.3 toRaw|toRaw(]])  方法如下的代码：
 
 ```js
 console.log(Vue.toRaw(newValue))//{name: 'axl'}

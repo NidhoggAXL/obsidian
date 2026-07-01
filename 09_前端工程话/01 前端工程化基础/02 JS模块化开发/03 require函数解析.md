@@ -31,7 +31,7 @@ requrire("axl")
 
 查找顺序如下：
 
-![[00_obsidian相关/Excalidraw/require情况三查找顺序|1200]]
+![1200](require情况三查找顺序.md)
 
 如果查找到根目录（最上层目录还是没有，那么就会报错：not found）
 

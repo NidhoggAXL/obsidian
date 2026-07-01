@@ -50,7 +50,7 @@ SVG 是允许我们定义一些可复用元素的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1758621557000wf5gz3.png)
 
-> [[14_可视化/05 SVG/04 视口和视口框#一、视口-viewport|用户坐标系]]**
+> [](04%20视口和视口框.md#一、视口-viewport|用户坐标系)**
 
 # 三、引入元素(use)
 

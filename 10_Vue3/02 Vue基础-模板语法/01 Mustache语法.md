@@ -2,7 +2,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745407538000wx5rkn.png)
 
-[[10_Vue3/02 Vue基础-模板语法/11 Vue的虚拟DOM|虚拟DOM]]
+[[11 Vue的虚拟DOM|虚拟DOM]]
 # 二、双大括号语法
 如果我们希望把数据显示到模板（template）中，使用最多的语法是 “Mustache”语法 (双大括号) 的文本插值。 
 

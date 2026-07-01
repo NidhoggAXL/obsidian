@@ -12,10 +12,10 @@
 
 |         组件类型         | 执行环境 | 生命周期执行情况                                                                                                                                                                                                                                                                                                                                                                                        |
 | :------------------: | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   Server Component   | 服务器端 | **不执行任何生命周期方法**（包括 `useEffect`、`componentDidMount` 等）。  <br>只执行纯渲染逻辑和异步数据获取（`async/await`）[[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。                           |
-|                      | 客户端  | **不执行**。代码不会被打包发送给浏览器 [[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。                                                                                               |
-| **Client Component** | 服务器端 | **只执行预渲染**（生成静态 HTML），执行 `render` 方法。  <br>**不执行** `useEffect` 或 `componentDidMount`（因为此时 DOM 还不存在）[[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。                  |
-|                      | 客户端  | **执行完整生命周期**。  <br>1. 首次加载：执行水合（hydration）[[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。  <br>2. 挂载后：执行 `useEffect` 或 `componentDidMount`。  <br>3. 更新/卸载：执行正常生命周期。 |
+|   Server Component   | 服务器端 | **不执行任何生命周期方法**（包括 `useEffect`、`componentDidMount` 等）。  <br>只执行纯渲染逻辑和异步数据获取（`async/await`）[](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。                           |
+|                      | 客户端  | **不执行**。代码不会被打包发送给浏览器 [](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。                                                                                               |
+| **Client Component** | 服务器端 | **只执行预渲染**（生成静态 HTML），执行 `render` 方法。  <br>**不执行** `useEffect` 或 `componentDidMount`（因为此时 DOM 还不存在）[](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。                  |
+|                      | 客户端  | **执行完整生命周期**。  <br>1. 首次加载：执行水合（hydration）[](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。  <br>2. 挂载后：执行 `useEffect` 或 `componentDidMount`。  <br>3. 更新/卸载：执行正常生命周期。 |
 
 
 ### 🖥️ 服务器端执行细节
@@ -30,7 +30,7 @@
         
 2. **Client Components 预渲染 HTML**
     
-    - Next.js 也会在服务器上执行 Client Components，但只是运行它们的 `render` 方法（或函数组件的函数体），生成静态的 HTML 字符串 [[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
+    - Next.js 也会在服务器上执行 Client Components，但只是运行它们的 `render` 方法（或函数组件的函数体），生成静态的 HTML 字符串 [](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
         
     - **注意**：在这个阶段，即使你在 Client Component 中写了 `useEffect(() => {...}, [])`，它**不会**在服务器上执行。类组件的 `componentDidMount` 同样不会被调用。
 
@@ -41,7 +41,7 @@
 
 1. **首次加载：水合**
     
-    - 这是 React 在客户端将事件处理程序附加到现有 HTML 上的过程，使页面变得可交互 [[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
+    - 这是 React 在客户端将事件处理程序附加到现有 HTML 上的过程，使页面变得可交互 [](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
         
     - 在水合期间：
         
@@ -53,7 +53,7 @@
     
     - 当你在应用中通过 Link 组件跳转时，Next.js **不会**再次请求完整的 HTML。
         
-    - 它会仅获取 RSC Payload，然后**只在客户端重新渲染** Client Components，此时 Server Components 不再参与 [[https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components]][](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
+    - 它会仅获取 RSC Payload，然后**只在客户端重新渲染** Client Components，此时 Server Components 不再参与 [](https://nextjscn.org/docs/app/getting-started/server-and-client-components#examples|server-and-client-components)[](https://nextjs.org/docs/app/getting-started/server-and-client-components?utm_source=slothbytes.beehiiv.com&utm_medium=referral&utm_campaign=react-server-components-for-dummies)。
         
     - 在后续导航中，生命周期会完全按照 React 的正常机制运行（例如 `props` 改变触发 `componentDidUpdate` 或 `useEffect` 重新执行）。
 
