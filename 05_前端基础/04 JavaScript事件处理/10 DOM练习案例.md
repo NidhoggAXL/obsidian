@@ -154,7 +154,7 @@ span {
 
 body：
 
-```js
+```html
 <body>
   <div class="top-bar">
     <div class="delete">
@@ -188,7 +188,7 @@ body：
 
 那么如果同时在 deleteEl 上面进行改变高度和remover操作呢？
 
-```js
+```html
 <script>
 	var barEl = document.querySelector(".top-bar")
 	var deleteEl = barEl.querySelector(".delete")
@@ -233,7 +233,10 @@ body：
   </div>
 ```
 
-```js
+---
+
+
+```html
 <script>
 	// 1.获取元素
 	var iconEls = document.querySelectorAll(".icon")
@@ -261,7 +264,7 @@ body：
 
 当一个被选中的时候，其他的不被选中（排他思想）
 
-```js
+```html
 <div class="tab_control">
 	<div class="item active">精品栏目</div>
 	<div class="line"></div>
@@ -370,7 +373,7 @@ body：
 </div>
 ```
 
-```js
+```html
 <script>
 	var titleEl = document.querySelector(".title-list")
 	var activeTitleEl = titleEl.querySelector(".active")

@@ -5,7 +5,7 @@
 
 这是因为在浏览器内部，调用event handler是绑定到**当前的currentTarget上的**
 
-```js
+```html
 <button class="btn">我是按钮</button>
 
 <script>

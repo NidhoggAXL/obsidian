@@ -12,7 +12,7 @@
 * 方案二：在ul中监听点击，并且通过event.target拿到对应的li进行处理；
 	* 因为这种方案并不需要遍历后给每一个li上添加事件监听，所以它更加高效；
 
-```js
+```html
 <body>
   <ul>
     <li>1</li>
@@ -54,7 +54,7 @@
 
 比如多个按钮的点击，区分点击了哪一个按钮：
 
-```js
+```html
 <body>
   <div class="box">
     <button data-action="add">增加</button>
