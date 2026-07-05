@@ -38,7 +38,7 @@ bar.running()//why
 bar.eatting()//18
 ```
 
-这样的好处是当我们后面进行对象的命名该改变的时候，就不需要对寒素内部进行改变，使**对象里面的属性和对象名进行分隔**，不用进行参数的传入。
+这样的好处是当我们后面进行对象的命名该改变的时候，就不需要对函数内部进行改变，使**对象里面的属性和对象名进行分隔**，不用进行参数的传入。
 
 **如果不使用 this 的话就是下面这段代码：**
 
@@ -58,7 +58,7 @@ bar.running(bar)//why
 bar.eatting(bar)//18
 ```
 
-[JavaScript高级this绑定](07_JavaScript高级/01%20函数this指向/01%20this的绑定规则.md)
+[[01 this的绑定规则|this的绑定规则]]
 
 # 二、创建一系列对象
 
@@ -66,7 +66,7 @@ bar.eatting(bar)//18
 
 ```js
 function creatStudent(name, age, height) {
-  var student = {}
+  var student = {
   student.name = name
   student.age = age
   student.height = height
@@ -84,7 +84,6 @@ console.log(typeof(student1))//Object - 对象
 方法二：使用 this 
 
 ```js
-<script>
   function Student(name,age,height) {
     this.name = name
     this.age = age
@@ -100,7 +99,6 @@ console.log(typeof(student1))//Object - 对象
   //Student {name: 'coder', age: 18, height: 19.8, eating: ƒ}
   
   console.log(typeof student)//object
-</script>
 ```
 
 ## 2.1 认识构造函数
@@ -120,7 +118,7 @@ console.log(typeof(student1))//Object - 对象
 
 * 比如系统默认给我们提供的Date就是一个构造函数，也可以看成是一个类，
 * 在ES5之前，我们都是通过function来声明一个构造函数(类)的，之后通过new关键字来对其进行调用
-* 在ES6之后，JavaScript可以像别的语言一样，通过[class](07_JavaScript高级/08%20JS%20ES6中实现继承/01%20class方式定义类.md)来声明一个类;****
+* 在ES6之后，JavaScript可以像别的语言一样，通过[[01 class方式定义类|class]]来声明一个类;****
 
 > [!tip] 开发中
 > 为了区分构造函数和普通函数，**构造函数使用大驼峰，普通函数使用小驼峰**
@@ -140,7 +138,7 @@ JavaScript中的构造函数是怎么样的?
 如果一个函数被使用new操作符调用了，那么它会执行如下操作:
 
 * 在内存中创建一个新的对象(空对象);
-* 这个对象内部的`[prototype](prototype)`属性会被赋值为该构造函数的[prototype](07_JavaScript高级/07%20JS%20ES5中实现继承/01%20对象和函数的原型-prototype.md)属性
+* 这个对象内部的`[[prototype]]`属性会被赋值为该构造函数的[[01 对象和函数的原型-prototype|prototype]]属性
 * 构造函数内部的this，会指向创建出来的新对象;
 * 执行函数的内部代码(函数体代码);
 * 如果构造函数没有返回非空对象，则返回创建出来的新对象，

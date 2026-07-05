@@ -1,7 +1,7 @@
 # 一、动态列表输入案例
 通过prompt接收用户的输入，根据输入创建一个列表
 
-```js
+```html
 <body>
   <ul class="list"></ul>
   <script>
@@ -22,11 +22,11 @@
 </body>
 ```
 
-[querySelector](05_前端基础/03%20DOM/04%20获取元素.md)  [](05_前端基础/03%20DOM/10%20改变元素.md#一、创建元素|createElement) [](05_前端基础/03%20DOM/05%20Node节点属性.md#三、innerHTML、outerHTML、textContent|textContent)
+其他DOM操作：[[04 获取元素|querySelector]]  [[10 改变元素#一、创建元素|createElement]] [[05 Node节点属性#三、innerHTML、outerHTML、textContent|textContent]]
 
 # 二、动态显示当前时间案例
 
-```js
+```html
 <body>
   <div class="time"></div>
   <script>
@@ -56,7 +56,7 @@
 
 # 三、倒计时
 
-```js
+```html
 <body>
   <div class="box">
     <span class="item houer"></span>

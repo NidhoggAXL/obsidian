@@ -41,7 +41,7 @@
 
 
 > [!tip] 注意:
-> h标签通常和[[05_前端基础/01 HTML + CSS/03_元素的语义化/元素语义化及SEO|SEO]]优化有关系
+> h标签通常和[[元素语义化及SEO|SEO]]优化有关系
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1710493884000vg4z3y.png)
 

@@ -11,7 +11,7 @@
 
 比如：不断点击的时候增加元素的宽度，这个时候通过CSS就修改不了，就要使用style属性
 
-```js
+```html
 <body>
   <div class="box" style="background-color: red; width: 100px;">
     我是div元素

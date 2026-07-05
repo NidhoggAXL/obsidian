@@ -4,7 +4,7 @@
 * 是一种CSS图像合成技术，将各种小图片合并到一张图片上，**然后利用CSS的背景定位来显示对应的图片部分**
 * 有人翻译为:CSS雪碧、CSS精灵
 
-**使用CSs Sprite的好处**
+**使用CSS Sprite的好处**
 
 * 减少网页的http请求数量，加快网页响应速度，减轻服务器压力
 * 减小图片总大小
@@ -16,6 +16,7 @@
 * 方法2:https://www.toptal.com/developers/css/sprite-generator
 
 ## 4.2 CSS Sprite 的使用
+
 **精灵图如何使用呢?**
 
 * 精灵图的原理是通过只显示图片的很小一部分来展示的;

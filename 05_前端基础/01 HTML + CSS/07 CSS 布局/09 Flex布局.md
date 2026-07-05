@@ -29,7 +29,8 @@
 
 * 我们可以在 https://caniuse.com/ 上查询到具体的兼容性
 
-# 二、flex布局的理解
+# 二、flex布局的理解 
+
 **两个重要的概念:**
 
 * 开启了 flex 布局的元素叫 flex container(容器)
@@ -38,9 +39,9 @@
 **当flex container中的子元素变成了flex item时,具备一下特点:**
 
 * flex item的布局将受flex container属性的设置来进行控制和布局
-* flex item<mark class="hltr-orange">不再严格区分块级元素和行内级元素</mark>;
-	* 可以理解为<mark class="hltr-orange">行内块级元素</mark>
-* <mark class="hltr-cyan">flex item默认情况下是包裹内容的</mark>,但是可以设置宽度和高度
+* flex item不再严格区分块级元素和行内级元素;
+	* 可以理解为行内块级元素
+* flex item默认情况下是包裹内容的,但是可以设置宽度和高度
 
 **设置 display 属性为 flex 或者 inline-flex 可以成为 flex container**
 
@@ -48,7 +49,6 @@
 * inline-flex:flex container 以 inline-level 形式存在
 
 > [!abstract]
-> 
 > felx container 既可以是块级元素也可以是行内级元素。
 
 # 三、flex布局模型
@@ -74,6 +74,7 @@ item 默认按照主轴排列
 * align-content
 
 ## 4.1 flex-direction
+
 direction-方向
 
 **flex items 默认都是沿着 main axis(主轴)从 main start 开始往 main end 方向排布**
@@ -182,7 +183,7 @@ justigy-两端对齐
 
 * auto(默认值):遵从fex container 的 align-items 设置
 * stretch、flex-start、flex-end、center、 baseline,
-* 效果跟 [](09%20Flex布局#四、flex-container属性#四、flex-container属性#4.6%20align-iems|align-items) 一致
+* 效果跟 [](09%20Flex布局#四、flex-container属性#四、flex-container属性#四、flex-container属性#四、flex-container属性#四、flex-container属性#四、flex-container属性#四、flex-container属性#四、flex-container属性#4.6%20align-iems|align-items) 一致
 
 ## 5.3 flex-grow
 
@@ -263,7 +264,7 @@ justigy-两端对齐
 * 第三个值必须为一个有效的宽度值，并且它会被当作`<flex-basis>`的值。
 
 > [!tip] 重点
-> flex 缩写属性具有一定的[](05_前端基础/01%20HTML%20+%20CSS/03_元素的语义化/元素语义化及SEO.md#二、SEO|SEO)，在使用过程中尽量使用缩写属性。
+> flex 缩写属性具有一定的[](元素语义化及SEO.md#二、SEO|SEO)，在使用过程中尽量使用缩写属性。
 
 # 六、flex 常见问题
 

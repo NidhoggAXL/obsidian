@@ -44,7 +44,8 @@
 
 上面代码中的 box 中的 font-size 的 em 是父元素的字体大小
 
-但是其中的根本其实是对 box 的 fon-size 是先继承了 container 的字体大小 20px ，后买的宽度和高度的设置是 继承过来作为自己的 font-size 为单位进行设置的。
+> [!tip] 
+> 但是其中的根本其实是对 box 的 fon-size 是先继承了 container 的字体大小 20px ，后买的宽度和高度的设置是 继承过来作为自己的 font-size 为单位进行设置的。
 
 
 

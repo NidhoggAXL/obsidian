@@ -1,4 +1,5 @@
 # 一、认识固定定位
+
 元素**脱离normal flow(脱离标准流、脱标)**
 * 不占据位置
 * 覆盖在标准流之上
@@ -25,6 +26,7 @@
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17233619110003opxdb.png)
 
 # 二、固定定位练习
+
 ```css
 <style>
 	.box {

@@ -128,7 +128,7 @@ padding 并非必须是四个值,也可以有其他值，
 
 ## 4.4 padding的弊端
 
-![[05_前端基础/01 HTML + CSS/04 CSS属性/12 CSS的盒子模型-Box Model#6.2.1 padding改变外元素内边距]]
+![](12%20CSS的盒子模型-Box%20Model.md#6.2.1%20padding改变外元素内边距)
 
 # 五、边框-border
 
@@ -452,7 +452,7 @@ margin也并非必须是四个值，也可以有其他值;
 > 黑色的边框就是浏览器默认添加的外轮廓
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1715239050000a4rppi.png)
 
-那如何来删除这个外轮廓呢？就可以使用伪类元素或者使用属性选择器[[05_前端基础/01 HTML + CSS/04 CSS属性/09 伪类选择器#二、 动态伪类（dynamic pseude-classes）|outline:none动态伪类]];
+那如何来删除这个外轮廓呢？就可以使用伪类元素或者使用属性选择器[](09%20伪类选择器.md#二、%20动态伪类（dynamic%20pseude-classes）|outline:none动态伪类);
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1715239348000gblpzq.png)
 

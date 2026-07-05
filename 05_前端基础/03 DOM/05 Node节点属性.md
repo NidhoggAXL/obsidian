@@ -1,4 +1,4 @@
-目前，我们已经可以获取到节点了，接下来我们来看一下节点中有哪些常见的属性:
+目前，已经可以获取到节点了，接下来我们来看一下节点中有哪些常见的属性:
 
 * 当然，不同的节点类型有可能有不同的属性;
 * 这里我们主要讨论**节点共有的属性**
@@ -8,7 +8,7 @@
 * nodeType 属性提供了一种获取**节点类型**的方法;
 * 它有一个**数值型值(numeric value);**
 
-```js
+```html
 <body>
   <!-- 我是注释 -->
   我是文本
@@ -29,11 +29,12 @@
 其他类型可以査看MDN文档: https://developer.mozilla.org/zh-CN/docs/Web/AP!/Node/nodeType
 
 # 二、nodeName、tagName
+
 **nodeName**:获取node节点的名字:
 
 **tagName**:获取元素的标签名词;
 
-```js
+```html
 <body>
   <!-- 我是注释 -->
   我是文本
@@ -68,7 +69,7 @@
 
 获取：
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -86,7 +87,7 @@
 
 设置内容：
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -111,7 +112,7 @@
 
 获取
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -131,7 +132,7 @@
 
 设置内容：
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -152,7 +153,7 @@
 
 * 仅仅获取元素中的文本内容
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -170,7 +171,7 @@
 
 设置：
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -193,7 +194,7 @@
 
 innerHTML：
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -211,7 +212,7 @@ innerHTML：
 
 textContent：
 
-```js
+```html
 <body>
   <div class="box">
     <h1>我是标题</h1>
@@ -251,15 +252,17 @@ nodeValue/data
 
 
 # 五、节点的其他属性
+
 **hidden属性**:也是一个全局属性，可以用于设置元素隐藏。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17283866580000nlqgy.png)
 
+> [!tip] 
 > 其本质是添加了hidden属性会把设置这个元素 display: none;
 
 hidden 属性的使用：
 
-```js
+```html
 <body>
   <button class="btn">切换</button>
   <div class="box">我是div元素</div>

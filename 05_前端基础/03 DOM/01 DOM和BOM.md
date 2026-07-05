@@ -9,7 +9,6 @@
 * 我们已经学习了**JavaScript语法部分的Object、Array、Date**等;
 * 另外还有**DOM、BOM部分**
 
-
 DOM:文档对象模型(Document 0bject Model)
 
 * 简称 DOM，将**页面所有的内容表示为可以修改的对象**

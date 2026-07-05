@@ -1,4 +1,5 @@
 # 一、认识绝对定位
+
 **元素脱离normal flow(脱离标准流、脱标)**
 
 **可以通过left、right、top、bottom进行定位**
@@ -11,6 +12,7 @@
 > * 也就是position值为relative、absolute、fixed的元素
 
 # 二、案例练习
+
 **父盒子里面包含子盒子，子盒子里面包含内容：**
 
 ```html
@@ -52,6 +54,8 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1723451992000igxhke.png)
 
 # 三、绝对定位元素的特点
+
+> [!note] 
 > 需要知道的是，这里的据对定位元素是指 absolute 和 fixed 的，
 > 而 position 设置的是定位元素。
 > 所以 absolute 和 fixed 是定位元素，并且是绝对定位元素。
@@ -85,7 +89,6 @@
 </div>
 ```
 
-**脱标元素内部默认还是按照标准流布局**
 
 **绝对定位元素(absolutely positioned element)**
 

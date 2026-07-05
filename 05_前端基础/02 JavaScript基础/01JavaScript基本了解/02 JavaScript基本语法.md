@@ -1,4 +1,5 @@
 # 一、JavaScript编写方式
+
 方式一：HTML代码行内（不推荐）
 
 ```html
@@ -88,6 +89,7 @@ JavaScript有如下和用户交互的手段:
 |  prompt  | 提示  |
 
 # 五、Chrome调试工具
+
 在前面我们利用Chrome的调试工具来调试了HTML、CSS，它也可以帮助我们来调试JavaScript。
 
 当我们在JavaScript中通过console函数显示一些内容时，也可以使用Chrome浏览器来查看:
@@ -138,7 +140,7 @@ JavaScript的注释主要分为三种:
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17272727220001ka82g.png)
 
 ```
-/**(简写) 在按huiche vscoder 的自带插件就会进行文档的注释
+/**(简写) 在按回车 vscoder 的自带插件就会进行文档的注释
 每一个注释写完按 tab 键就会跳转到下一个注释点
 ```
 

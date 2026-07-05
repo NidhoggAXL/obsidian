@@ -44,12 +44,13 @@ px是pixel单词的缩写，翻译为像素。
 **我们可以通过JavaScript中的screen.width和screen.height获取到电脑的逻辑分辨率:**
 
 ## 2.2 DPR、PPI
+
 **DPR: device pixel ratio**
 
 * 2010年，iPhone4问世，不仅仅带来了**移动互联网**，还带来了**Retina**屏幕
 * Retina屏幕翻译为**视网膜显示屏**，可以为用户带来更好的显示;
 * 在Retina屏幕中，一个逻辑像素在长度上对应两个物理像素，这个比例称之为设备像素比(device pixel ratio);
-* 我们可以通过**window.devicePixelRatio**获取到当前屏幕上的DPR值;
+* 我们可以通过 **window.devicePixelRatio** 获取到当前屏幕上的DPR值;
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1726405609000fvxxnb.png)
 

@@ -6,6 +6,7 @@
 
 
 # 二、JavaScript历史
+
 1994年，网景公司(Netscape)发布了Navigator浏览器0.9版
 
 * 这是历史上第一个比较成熟的网络浏览器，轰动一时。
@@ -62,6 +63,7 @@ Brendan Eich曾经这样描述过JavaScript:
 
 
 # 三、JavaScript组成
+
 ECMAScript是JavaScript的标准，描述了该语言的语法和基本对象，
 
 * JavaScript是ECMAScript的语言层面的实现;

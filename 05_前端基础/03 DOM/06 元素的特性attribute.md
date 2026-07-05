@@ -8,9 +8,10 @@
 ```
 
 # 三、attribute的操作
+
 对于所有的attribute访问都支持如下的方法:
 
-* elem.hasAttribute(name)- 检查特性是否存在。
+* elem.hasAttribute(name) - 检查特性是否存在。
 * elem.getAttribute(name) - 获取这个特性值。
 * elem.setAttribute(name, value)- 设置这个特性值。
 * elem.removeAttribute(name) - 移除这个特性,
@@ -65,5 +66,6 @@ attribute具备以下特征:
 </body>
 ```
 
+> [!tip] 
 > 会发现我拿到的是一个空的字符串，但是我们在使用的时候是希望给我们返回一个布尔类型的更好一点，方便我们进行操作
 

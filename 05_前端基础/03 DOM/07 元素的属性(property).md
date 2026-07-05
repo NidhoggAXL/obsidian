@@ -1,6 +1,6 @@
 **在元素中的属性叫做attribute，对象中的属性叫做property**
 
-```js
+```html
 <body>
   <!-- class叫做attribu -->
   <div class="box"></div>
@@ -18,7 +18,7 @@
 >* 对于**标准的attribute**，会在DOM对象上创建**与其对应的property属性**:
 >* 标准的attribute通过点（`.`）就可以获取到属性
 
-```js
+```html
 <body>
   <input type="checkbox" checked>
   <script>
@@ -31,6 +31,7 @@
 </body>
 ```
 
+> [!tip] 
 > 这样的好处是得到的属性是一个布尔类型，而不是字符串，这样就避免了得到一个空字符不好操作
 
 
@@ -39,7 +40,7 @@
 * 改变property，通过attribute获取的值，会随着改变;
 * 通过attribute操作修改，property的值会随着改变
 
-```js
+```html
 <body>
   <div class="box" id="01" title="标题"></div>
   <script>

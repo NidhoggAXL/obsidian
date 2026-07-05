@@ -2,7 +2,7 @@
 
 那么如果不使用getAttribute的时候就可以使用 `data-*`来自定义属性
 
-```js
+```html
 <div class="box" data-height="18.8" data-age="18"></div>
 
 <script>

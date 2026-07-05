@@ -11,7 +11,6 @@
 * blur: 毛玻璃(高斯模糊)效果;
 * gradient:颜色渐变函数;
 
-
 # 二、var
 **var**:variable(变量)
 
@@ -93,6 +92,7 @@ radius - 半斤    blur - 模糊
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1726319325000tyd0xj.png)
 
+> [!tip] 
 > fiter 是有继承性的，上面的例子也可以对 box 进行设置
 
 **backdrop-filter的使用：**

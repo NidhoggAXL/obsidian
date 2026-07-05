@@ -29,6 +29,7 @@
 
 
 ## 1.2 name 
+
 name 的值非常多，具体内容查看文档：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta/name
 
 **几个常用的：**
@@ -47,6 +48,7 @@ name 的值非常多，具体内容查看文档：https://developer.mozilla.org/
 
 
 # 二、link
+
 Favicon是favoritesicon的缩写，亦被称为websiteicon(站点图标)、pageicon(页面图标);
 
 ```html
@@ -82,11 +84,11 @@ Favicon是favoritesicon的缩写，亦被称为websiteicon(站点图标)、pagei
 
 1. 文件的开头的 Unicode byte-order(字节顺序标记)字符值。
 	* https://en.wikipedia.org/wiki/Byte_order_markV
-1. 由Content-Type:HTTP header 中的 charset 属性给出的值或用于提供样式表的协议中的等效值。
-2. CSS @规则 @charset.
-3. 使用参考文档定义的字符编码:`<link>`元素的 charset 属性。
+2. 由 Content-Type:HTTP header 中的 charset 属性给出的值或用于提供样式表的协议中的等效值。
+3. CSS @规则 @charset.
+4. 使用参考文档定义的字符编码:`<link>`元素的 charset 属性。
 	* 该方法在 HTML5 标准中已废除，无法使用。
-1. 假设文档是 UTF-8。
+5. 假设文档是 UTF-8。
 
 > [!tip] 开发建议
 > 开发中推荐在CSS的开头编写@charset指定编码
