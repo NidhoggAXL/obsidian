@@ -37,7 +37,7 @@ URLSearchParams 定义了一些实用的方法来处理 URL的**查询字符串�
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17291728780003cv69j.png)
 
 
-> 查询字符串
+> [!note] 查询字符串
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17291728200008razga.png)
 
 URLSearchParams常见的方法有如下:

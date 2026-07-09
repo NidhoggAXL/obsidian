@@ -22,7 +22,7 @@
 
 **普通模式下：表示Window**
 
-```js
+```html
 <script>
 	// 1.普通的函数被默认调用
 	function fool() {
@@ -44,7 +44,7 @@
 
 **严格（strict）模式下：表示undefined**
 
-```js
+```html
   <script>
     //严格模式下-strict(严格)
     "use strict"
@@ -69,7 +69,7 @@
 
 **在高阶函数中作为参数传入调用也是默认调用**
 
-```js
+```html
 <script>
     var bar = {
       name: "axl",
@@ -89,7 +89,7 @@
 
 * 也就是它的调用位置中，是通过**某个对象发起的函数调用**。
 
-```js
+```html
   <script>
     //bar被隐士绑定到了this上面
     function foo() {
@@ -105,7 +105,7 @@
   </script>
 ```
 
-```js
+```html
 <script>
   function foo() {
     console.log(this)
@@ -126,7 +126,7 @@
 ```
 
 
-```js
+```html
 <script>
   function foo() {
     console.log(this)
@@ -156,7 +156,7 @@
 
 ### 1.3.1 call、apply
 
-```js
+```html
   <script>
     var bar = {
       name: "axl"
@@ -180,7 +180,7 @@ JavaScript所有的函数都可以使用call和apply(应用)方法
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17302916950007fa7hc.png)
 
 
-```js
+```html
   <script>
     function fool(name, age) {
       console.log(this, name, age)
@@ -204,7 +204,7 @@ JavaScript所有的函数都可以使用call和apply(应用)方法
 * 使用bind方法，bind()方法创建一个新的**绑定函数(bound function，BF):**
 * 绑定函数是一个 exotic function object(**怪异函数对象，ECMAScript 2015 中的术语)**
 
-```js
+```html
   <script>
     function fool(name, age) {
       console.log(this, name, age)
@@ -230,7 +230,7 @@ JavaScript中的函数可以**当做一个类的构造函数来使用**，也就
 3. 这个新对象会绑定到函数调用的this上(this的绑定在这个步骤完成);
 4. 如果函数没有返回其他对象，表达式会返回这个新对象;
 
-```js
+```html
 <script>
   function foo() {
     this.name = "axl"
@@ -245,7 +245,8 @@ JavaScript中的函数可以**当做一个类的构造函数来使用**，也就
 </script>
 ```
 
-进行 `new foo()` 的时候就会进行打印啦（先执行foo函数里面的代码快，才会进行 new 操作），通过赋值给 bar 可以可以看到 new 出来的是一个对象。
+> [!tip] 
+> 进行 `new foo()` 的时候就会进行打印啦（先执行foo函数里面的代码快，才会进行 new 操作），通过赋值给 bar 可以可以看到 new 出来的是一个对象。
 
 ## 1.5 内置函数的绑定this思考
 有些时候，我们会调用一些JavaScript的内置函数，或者一些第三方库中的内置函数。

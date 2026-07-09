@@ -36,6 +36,7 @@ window对象在浏览器中可以从两个视角来看待:
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1729171152000xv4jda.png)
 
 # 四、window常见的方法
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1729171611000y6bn8m.png)
 
 

@@ -1,7 +1,7 @@
 # 一、with
 with语句 扩展一个语句的作用域链
 
-```js
+```html
   <script>
     var obj = {
       message: "hello"
@@ -27,7 +27,7 @@ with语句 扩展一个语句的作用域链
 * eval是一个**特殊的函数**，它可以**将传入的字符串当做JavaScript代码来运行**
 * eval会将**最后一句执行语句的结果，作为返回值;**
 
-```js
+```html
 <script>
   var statement = `var message = "hello"; console.log(message)`
   

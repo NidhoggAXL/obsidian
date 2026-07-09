@@ -1,6 +1,6 @@
-Object.defineProperties()方法直接在一个对象上定义 多个 新的属性或修改现有属性，并且返回该对象。
+Object.defineProperties()方法直接在一个对象上定义 **多个** 新的属性或修改现有属性，并且返回该对象。
 
-```js
+```html
 <script>
   var obj = {
     name: "axl",

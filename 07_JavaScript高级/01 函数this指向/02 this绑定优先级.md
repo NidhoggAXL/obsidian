@@ -4,7 +4,7 @@
 
 * **毫无疑问**，默认规则的优先级是最低的，因为存在其他规则时，就会通过其他规则的方式来绑定this
 
-```js
+```html
   <script>
     function fool() {
       console.log(this)//默认绑定
@@ -24,7 +24,7 @@
 
 2. 显示绑定优先级高于隐式绑定
 
-```js
+```html
   <script>
     function fool() {
       console.log(this)
@@ -43,7 +43,7 @@
 
 3. new绑定优先级高于隐式绑定
 
-```js
+```html
   <script>
     function fool() {
       this.age = 18
@@ -65,7 +65,7 @@
 * new绑定和call、apply是**不允许同时使用**的，所以**不存在谁的优先级更高**
 * new绑定可以和bind一起使用，**new绑定优先级更高**
 
-```js
+```html
   <script>
     function fool() {
       this.name = "axl"
@@ -84,7 +84,7 @@
 
 5. 显示绑定中bind优先级高于call、apply
 
-```js
+```
   <script>
     function fool() {
       console.log(this)//默认绑定
@@ -96,6 +96,8 @@
   
     //显示apply、call绑定
     // box.apply("aaa")//String {'bbb'}
-    box.call("aaa")//String {'bbb'}
+    // box.call("aaa")//String {'bbb'}
   </script>
 ```
+
+ 

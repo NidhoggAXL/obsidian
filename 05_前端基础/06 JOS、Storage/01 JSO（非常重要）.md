@@ -40,7 +40,7 @@ JOSN语法里面具有严格的代码规范，不支持注释和单引号，同�
  * 比如我们希望将一个对象保存到**localStorage（本地存储）**中;
 * 但是如果我们直接存放一个对象，这个对象会被转化成` [object Object]`格式的字符串，并不是我们想要的结果;
 
-```js
+```html
 <script>
 	var obj = {
 	  name: "why",
@@ -73,7 +73,7 @@ JSON.stringify()方法将一个 JavaScript 对象或值转换为 JSON 字符串:
 * 如果指定了一个 replacer 函数，则可以选择性地替换值,
 * 如果指定的 replacer 是数组，则可选择性地仅包含数组指定的属性,
 
-```js
+```html
   <script>
     var obj = {
       name: "why",
@@ -98,7 +98,7 @@ JSON.stringify()方法将一个 JavaScript 对象或值转换为 JSON 字符串:
 
 再后面调用显示的时候会进行换行
 
-```js
+```html
   <script>
     var obj = {
       name: "why",
@@ -119,7 +119,7 @@ JSON.stringify()方法将一个 JavaScript 对象或值转换为 JSON 字符串:
 
 如果对象本身包含toJSON方法，那么会直接使用toJSON方法的结果:
 
-```js
+```html
   <script>
     var obj = {
       name: "why",
@@ -144,7 +144,7 @@ JSON.parse()方法用来解析JSON字符串，构造由字符串描述的JavaScr
 
 * 提供可选的 reviver 函数用以在返回之前对所得到的对象执行变换(操作)。
 
-```js
+```html
   <script>
     var obj = {
       name: "axl",

@@ -43,7 +43,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 * 当我们直接在一个对象上定义某个属性时，这个属性的Configurable为true;
 
-```js
+```html
 <script>
   var obj = {
     name: "axl"
@@ -59,7 +59,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 * 当我们通过属性描述符定义一个属性时，这个属性的Configurable默认为false;
 
-```js
+```html
 <script>
   var obj = {
     name: "axl"
@@ -81,7 +81,7 @@ Object.defineProperty(obj, prop, descriptor)
 * 当我们直接在一个对象上定义某个属性时，这个属性的Enumerable为true;
 * 当我们通过属性描述符定义一个属性时，这个属性的Enumerable默认为false;
 
-```js
+```html
 <script>
   var obj = {
     name: "axl",
@@ -100,7 +100,7 @@ Object.defineProperty(obj, prop, descriptor)
 * 当我们直接在一个对象上定义某个属性时，这个属性的Writable为true;
 * 当我们通过属性描述符定义一个属性时，这个属性的Writable默认为false;
 
-```js
+```html
 <script>
   var obj = {
     name: "axl",
@@ -121,7 +121,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 * 默认情况下这个值是undefined;
 
-```js
+```html
 <script>
   var obj = {
     name: "axl",
@@ -158,7 +158,7 @@ Get：获取属性时会执行的函数。默认undefined
 
 Set：设置属性时会执行的函数。默认undefined
 
-```js
+```html
 <script>
   var obj = {
     name: "axl"

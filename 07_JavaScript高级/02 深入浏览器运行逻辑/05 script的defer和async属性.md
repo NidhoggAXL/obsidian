@@ -2,9 +2,9 @@
 defer 属性告诉浏览器不**要等待脚本下载，而继续解析HTML，构建DOM Tree.**
 
 * 脚本会由浏览器来进行下载，但是不会阻塞DOM Tree的构建过程;
-* 如果脚本提前下载好了，它会等待DOM Tree构建完成，在**DOMContentLoaded（DOM内容加载完成）事件之前先执行defer中的代码**
+* 如果脚本提前下载好了，它会等待DOM Tree构建完成，在[[07 常见事件#四、文档加载事件|DOMContentLoaded]]（DOM内容加载完成）事件之前先执行defer中的代码
 
-![script的defer属性作用效果图](script的defer属性作用效果图.md)
+![[script的defer属性作用效果图]]
 
 
 所以DOMContentLoaded总是会等待defer中的代码先执行完成
@@ -22,6 +22,7 @@ defer 属性告诉浏览器不**要等待脚本下载，而继续解析HTML，�
 </body>
 ```
 
+> [!tip] 
 > 一定会等第一个脚本执行完，才会指向第二个脚本
 
 **从元素中:某种角度来说，defer可以提高页面的性能，并且推荐放到head**

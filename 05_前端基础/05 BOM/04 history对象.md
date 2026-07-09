@@ -24,5 +24,4 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17291749250006xzqhp.png)
 
-> history和hash目前是vue、react等框架实现路由的底层原理
-
+history和hash目前是vue、react等框架实现路由的底层原理
