@@ -14,7 +14,7 @@ const关键字:
 * 它表示**保存的数据一旦被赋值，就不能被修改;**
 * 但是**如果赋值的是引用类型，那么可以通过引用找到对应的对象，修改对象**的内容:
 
-```js
+```html
 <script>
   const obj = {
     name: "axl"
@@ -35,12 +35,13 @@ let info = ""
 ```
 
 # 二、let、const作用域提升
+
 let、const和var的另一个重要区别是作用域提升:
 
 * var声明的变量是会进行作用域提升的;
 * 但是如果我们使用let声明的变量，在声明之前访问会报错;
 
-```js
+```html
 <script>
   console.log(info)
   //Uncaught ReferenceError: Cannot access 'info' before initialization
@@ -54,7 +55,8 @@ let、const和var的另一个重要区别是作用域提升:
 * 事实上并不是这样的，我们可以看一下ECMA262对let和const的描述;
 * 这些变量会被创建在包含他们的词法环境被实例化时，但是是不可以访问它们的，直到词法绑定被求值:
 
-> **总结就是**：它在没有进行实例化（初始化）的时候（执行上下文的词法环境创建出来的时候）**已经被创建出来了（和var一样），只是这里不可以提前进行访问**
+> [!note] **总结就是**：
+> 它在没有进行实例化（初始化）的时候（执行上下文的词法环境创建出来的时候）**已经被创建出来了（和var一样），只是这里不可以提前进行访问**
 
 那么let、const到底有没有作用域提升呢？
 
@@ -74,7 +76,7 @@ let、const和var的另一个重要区别是作用域提升:
 
 * 使用术语“temporal”是因为区域取决于**执行顺序(时间)，而不是编写代码的位置;**
 
-```js
+```html
 <script>
   function foo() {
     console.log(message)
@@ -84,11 +86,11 @@ let、const和var的另一个重要区别是作用域提升:
 </script>
 ```
 
-> foo调用的执行里面代码的时候，message已经进行了实例化。
+foo调用的执行里面代码的时候，message已经进行了实例化。
 
 * 智时性死区形成之后，在该区域内这个标识符不能访间
 
-```js
+```html
 <script>
   function foo() {
     console.log(message)
@@ -99,7 +101,6 @@ let、const和var的另一个重要区别是作用域提升:
 </script>
 ```
 
-
 # 四、Window对象添加属性
 我们知道，在全局通过var来声明一个变量，事实上会在window上添加一个属性:
 
@@ -109,6 +110,7 @@ let、const和var的另一个重要区别是作用域提升:
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17318517450000usqw8.png)
 
+> [!note] 
 > 全局环境记录在逻辑上是单个记录，但它被指定为封装,对象环境记录和声明性环境记录。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1731851817000qxg4bk.png)

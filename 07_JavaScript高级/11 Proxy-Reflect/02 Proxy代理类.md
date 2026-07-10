@@ -10,7 +10,7 @@
 
 * 首先，我们需要**new Proxy对象**，并且传入需要**侦听的对象**以及**一个处理对象**，处理对象可以称之为handler； 
 	* `const p = new Proxy(target, handler) `
-* 其次，我们之后的操作都是<mark class="hltr-cyan">直接对Proxy的操作，而不是原有的对象</mark>，因为需要在handler里面进行侦听；
+* 其次，我们之后的操作都是直接对Proxy的操作，而不是原有的对象，因为需要在handler里面进行侦听；
 
 ```js
 const obj = {
@@ -38,7 +38,7 @@ const objProxy = new Proxy(obj,{})
 	* receiver：调用的代理对象；
 
 
-```js
+```html
 <script>
   const obj = {
     name: "axl",

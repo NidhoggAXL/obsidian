@@ -1,7 +1,7 @@
 # 一、Promise的代码结构
 看一下Promise代码结构：
 
-```js
+```html
 <script>
   const promis = new Promise((resolve, reject) => {
     //1. pending 待定状态
@@ -42,16 +42,17 @@ Executor是在创建Promise时需要传入的一个回调函数，这个回调�
 * 通过 **resolve**，可以兑现（**fulfilled**）Promise的状态，我们也可以称之为**已决议**（**resolved**）； 
 * 通过 **reject**，可以拒绝（**rejected**）Promise的状态；
 
-
-这里需要注意：一旦状态被确定下来，Promise的状态会被 锁死，该Promise的状态是不可更改的 
+> [!tip] 
+> 这里需要注意：一旦状态被确定下来，Promise的状态会被锁死，该Promise的状态是不可更改的 
 
 * 在我们**调用resolve**的时候，如果**resolve传入的值本身不是一个Promise**，那么会将该Promise的状态变成 **兑现（fulfilled）**； 
-* 在之后**我们去调用reject时，已经不会有任何的响应了**（<mark class="hltr-orange">并不是这行代码不会执行，而是无法改变Promise状态</mark>）；
+* 在之后**我们去调用reject时，已经不会有任何的响应了**（并不是这行代码不会执行，而是无法改变Promise状态）；
 
 # 三、resolve不同值的区别（理解）
+
 **情况一**：如果resolve传入一个**普通的值或者对象**，那么**这个值会作为then回调的参数；**
 
-```js
+```html
 <script>
   const promis = new Promise((resolve, reject) => {
     resolve({name: "axl"})
@@ -66,7 +67,7 @@ Executor是在创建Promise时需要传入的一个回调函数，这个回调�
 
 **情况二**：如果resolve中传入的是**另外一个Promise**，那么**这个新Promise会决定原Promise的状态**： 
 
-```js
+```html
 <script>
   const p = new Promise((resolve, reject) => {
     resolve("p里面的res")
@@ -83,9 +84,10 @@ Executor是在创建Promise时需要传入的一个回调函数，这个回调�
 </script>
 ```
 
-**情况三**：如果resolve中传入的是**一个对象**，并且这个对象**有实现then方法**，那么**会执行该then方法**，并且根据**then方法的结 果来决定Promise的状态：**
 
-```js
+**情况三**：如果resolve中传入的是**一个对象**，并且这个对象**有实现then方法**，那么**会执行该then方法**，并且根据**then方法的结果来决定Promise的状态：**
+
+```html
 <script>
   const promis = new Promise((resolve, reject) => {
     resolve({
@@ -101,6 +103,35 @@ Executor是在创建Promise时需要传入的一个回调函数，这个回调�
     //对象里面的then方法
   })
 </script>
+```
+
+**分析过程（核心机制：Thenable 展开）：**
+
+1. **执行同步代码**：创建 Promise，执行器函数立即调用 `resolve`，传入一个对象 `{ name: "axl", then: ... }`。
+    
+2. **关键步骤（微任务）**：由于该对象拥有 `then` 方法，它被视为一个 **Thenable**（类 Promise 对象）。JavaScript 引擎并不会直接将该对象作为成功结果，而是会调度一个微任务去执行该对象的 `then` 方法，并将外部 Promise 的 `resolve` 和 `reject` 作为参数传进去。
+    
+3. **执行微任务**：引擎调用该对象的 `then` 方法：
+
+```js
+// 此时相当于执行
+then(resolveFromOutside, rejectFromOutside) 
+```
+
+4. 你定义的方法没有接收任何参数（`() => {...}`），因此它忽略了传入的 `resolve` 和 `reject` 函数，仅仅执行了 `console.log("对象里面的then方法")`。
+    
+5. **Promise 永久 pending**：因为该对象的 `then` 方法没有调用传入的 `resolve`，所以外部 `promis` 的状态**永远停留在 pending（进行中）**，永远不会变为 fulfilled（已完成）。
+    
+6. **后续 .then 不执行**：由于 `promis` 永远不被解决，所以 `promis.then()` 中注册的回调函数（打印 `"获取res的值"`）永远不会被执行。
+    
+
+**补充说明**：如果你想让打印 `"获取res的值"` 也执行，需要在对象的 `then` 方法中手动调用传入的第一个参数（即 `resolve`），例如：
+
+```js
+then: (resolve) => {
+  console.log("对象里面的then方法");
+  resolve(this); // 显式调用，才能让外部 Promise 完成
+}
 ```
 
 # 四、状态先后的执行效果
@@ -161,6 +192,7 @@ promis.catch(err => {
 //res回调 undefined
 ```
 
+> [!warning] 
 > reject 决定的 promise 状态，后面的 res 回调还是会打印，但是 resolve 回调的参数不会传递给 then 的，所以打印的 res 是 undefined
 
 

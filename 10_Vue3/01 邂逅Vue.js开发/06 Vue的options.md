@@ -12,7 +12,7 @@ export default {
 }
 ```
 
-当然也可以使用[](07_JavaScript高级/08%20JS%20ES6中实现继承/06%20ES6对象的增强.md#^6b8366|ES6对象的增强)写法：
+当然也可以使用[](12%20ES6对象的增强.md#^6b8366|ES6对象的增强)写法：
 
 ```js
 export default {

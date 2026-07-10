@@ -13,17 +13,17 @@ let main = {
   d: 'd'
 }
 console.log(main[0]);//a
-console.log(main.d);//a
+console.log(main.d);//d
 // console.log(main.0);这样会报错，是错误的使用
 
 ```
 
-> [!inof] 如果给一个字符串使用 Object() 的话就会变成上门 mian 变量的样子,只是我添加了一个 d 的属性,来进行测试.
+> [!info] 如果给一个字符串使用 Object() 的话就会变成上面 mian 变量的样子,只是我添加了一个 d 的属性,来进行测试.
 > 只有 Object(String) 语法创建出来的 **对象** ,才可以使用 **`main[0]`** 的语法,且不可以使用对象的正常语法,除非在 main 对象里面添加**如上面 d 一样的正常属性,才可以正常的访问你正常编写的属性**.
 
 ## 2.1 代码演示
 
-```js
+```html
 <script>
   function foo(name, age) {
     console.log(this, name, age)
@@ -96,7 +96,9 @@ Function.prototype.myexe = function(thisArg, otherArgs) {
         
     - **`foo` 内部的 `this`**：指向 `thisArg` 对象（隐式绑定规则）
 # 二、bind
-```js
+
+
+```html
 <script>
   function foo(name, age, height, adress) {
     console.log(this, name, age, height, adress)
@@ -114,9 +116,9 @@ Function.prototype.myexe = function(thisArg, otherArgs) {
     })
     return (...newotherArgs) => {
       // this()
-      //箭头函数没有this，会向上层作用域查找
+      // 箭头函数没有this，会向上层作用域查找
 
-      //对象调用fn函数，隐式绑定this指向调用的对象
+      // 对象调用fn函数，隐式绑定this指向调用的对象
       // thisArg.fn()
 
       //合并参数

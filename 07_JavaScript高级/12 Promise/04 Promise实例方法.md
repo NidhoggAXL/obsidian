@@ -26,18 +26,19 @@ then方法本身是有返回值的，它的**返回值是一个Promise**，所�
 promis.then().then().then().catch()
 ```
 
+> [!tip] 
 > 但是then方法返回的Promise到底处于什么样的状态呢？
 
 Promise有三种状态，那么这个Promise处于什么状态呢？ 
 
-* 当then方法中的回调**函数本身在执行的时候**，那么它处于[](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md#一、Promise的代码结构|pending)状态； 
-* 当then方法中的回调函数返回一个结果时，那么它处于[](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md#一、Promise的代码结构|fulfilled)状态，并且会将**结果作为resolve的参数**；
+* 当then方法中的回调**函数本身在执行的时候**，那么它处于[[03 Promise状态变化#一、Promise的代码结构|pending]]状态； 
+* 当then方法中的回调函数返回一个结果时，那么它处于[[03 Promise状态变化#一、Promise的代码结构|fulfilled]]状态，并且会将**结果作为resolve的参数**；
 	* 情况一：返回一个普通的值； 
 	* 情况二：返回一个Promise； 
 	* 情况三：返回一个thenable值；
-* 当then方法抛出一个异常时，那么它处于[reject](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md)状态；
+* 当then方法抛出一个异常时，那么它处于[[03 Promise状态变化|reject]]状态；
 
-```js
+```html
 <script>
   const p = new Promise((resolve, reject) => {
     resolve("p中的resolve")
@@ -94,7 +95,7 @@ catch方法也是Promise对象上的一个方法（实例方法）：
 # 五、catch方法-返回值
 事实上catch方法也是会返回一个Promise对象的，所以catch方法后面我们可以继续调用then方法或者catch方法： 
 
-```js
+```html
 <script>
   const promis = new Promise((resolve, reject) => {
     resolve("promis回调")
@@ -109,7 +110,7 @@ catch方法也是Promise对象上的一个方法（实例方法）：
 </script>
 ```
 
-```js
+```html
 <script>
   const promis = new Promise((resolve, reject) => {
     reject("promis失败")
@@ -128,7 +129,7 @@ catch方法也是Promise对象上的一个方法（实例方法）：
 
 那么如果我们希望后续继续执行catch，那么需要抛出一个异常：
 
-```js
+```html
 <script>
   const promis = new Promise((resolve, reject) => {
     reject("promis失败")
@@ -148,7 +149,7 @@ catch方法也是Promise对象上的一个方法（实例方法）：
 > 后续执行的 catch 中，会把 Error 里面的错误在 cath 回调的时候，把 Error 传入 cath 的形参里面。
 
 # 六、finally方法
-finally是在ES9（ES2018）中新增的一个特性：表示无论Promise对象无论变成fulfilled还是rejected状态，最终都会被执行 的代码。
+finally是在ES9（ES2018）中新增的一个特性：表示无论Promise对象无论变成fulfilled还是rejected状态，最终都会被执行的代码。
 
 finally方法是不接收参数的，因为无论前面是fulfilled状态，还是rejected状态，它都会执行。
 

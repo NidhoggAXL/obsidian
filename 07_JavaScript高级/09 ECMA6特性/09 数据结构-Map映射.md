@@ -5,7 +5,7 @@
 
 * 事实上我们对象存储映射关系只能用**字符串(ES6新增了Symbol)作为属性名(key)**
 
-```js
+```html
 <script>
   const obj1 = {name: "axl"}
   const obj2 = {height: 19.8}
@@ -20,13 +20,13 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17321045930001gifa3.png)
 
-> 虽然看起来是可以用对象作为属性名的，其实**本质还是把对象隐式转换为`[Object Object](Object%20Object)`的字符串**。**并且那对象作为属性名还会进行覆盖**（obj1）这个就是被覆盖了。
+虽然看起来是可以用对象作为属性名的，其实**本质还是把对象隐式转换为`[Object Object](Object%20Object)`的字符串**。**并且那对象作为属性名还会进行覆盖**（obj1）这个就是被覆盖了。
 
 * 某些情况下我们可能希望通过**其他类型作为key，比如对象**，这个时候**会自动将对象转成字符串来作为key;**
 
 使用map：
 
-```js
+```html
 <script>
   const obj1 = {name: "axl"}
   const obj2 = {height: 19.8}
@@ -53,9 +53,9 @@ Map常见的方法：
 * **forEach(callback, [, thisArg])**：通过forEach遍历Map； 
 
 
-Map也可以通过for of进行遍历,不过遍历打印的解构不同。
+Map也可以通过for of进行遍历,不过遍历打印的结果不同。
 
-```js
+```html
 <script>
   const obj1 = {name: "axl"}
   const obj2 = {height: 19.8}

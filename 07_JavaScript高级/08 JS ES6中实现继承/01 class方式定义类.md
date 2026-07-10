@@ -1,5 +1,6 @@
 # 一、认识class类
-我们会发现，按照前面的构造函数形式创建类，不仅仅和编写普通的函数过于相似，而且代码并不容易理解。 
+
+会发现，按照前面的ES5构造函数形式创建类，不仅仅和编写普通的函数过于相似，而且代码并不容易理解。 
 
 * 在ES6（ECMAScript2015）新的标准中使用了class关键字来直接定义类； 
 * 但是类本质上依然是前面所讲的构造函数、原型链的语法糖而已； 
@@ -9,7 +10,7 @@
 
 * 可以使用两种方式来声明类：**类声明和类表达式；**
 
-```js
+```html
 <script>
   //类声明
   class Perong {}
@@ -20,26 +21,28 @@
 ```
 
 # 二、类和构造函数的异同
+
 我们来研究一下类的一些特性:你会发现它和我们的构造函数的特性**其实是一致的;**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17315072270000ti3fu.png)
 
 # 三、类的构造函数
+
 如果我们希望在创建对象的时候给类传递一些参数，这个时候应该如何做呢？ 
 
-* 每个类都可以有一个**自己的构造函数（方法）**，这个方法的名称是固定的**constructor**； 
+* 每个类都可以有一个**自己的构造函数（方法）**，这个方法的名称是固定的**constructor**
 * 当我们通过**new操作符**，操作一个类的时候会**调用这个类的构造函数constructor；** 
 * 每个类**只能有一个构造函数，如果包含多个构造函数，那么会抛出异常；**
 
 当我们通过new关键字操作类的时候，会调用这个constructor函数，并且执行如下操作： 
 
 * 在内存中创建一个新的对象（空对象）； 
-* 这个**对象内部的`[prototype](prototype)`（显式属性）属性会被赋值为该类的`prototype`（隐式原型）属性；** 
+* 这个**对象内部的`[[prototype]]`（隐式属性）属性会被赋值为该类的`prototype`（显式原型）属性；** 
 * 构造函数内部的this，会指向创建出来的新对象； 
 * 执行构造函数的内部代码（函数体代码）； 
 * 如果构造函数**没有返回非空对象**，则返回创建出来的新对象；
 
-```js
+```html
 <script>
   class Persong {
     //类中的构造函数
@@ -63,7 +66,7 @@
 * 这个时候我们可以直接在类中定义；
 
 
-```js
+```html
 <script>
   class Persong {
     //类的构造函数
@@ -95,7 +98,7 @@
 
 对象访问器方法的编写：
 
-```js
+```html
 <script>
   var obj = {
     name: "axl"
@@ -111,11 +114,12 @@
 </script>
 ```
 
+> [!tip] 
 > 只能对 obj 对象中的 name 进行监听。
 
 类的访问器方法的编写：
 
-```js
+```html
 <script>
   class Person {
     constructor(name) {
@@ -143,7 +147,7 @@
 </script>
 ```
 
-> [!tip](01%20Object.defineProperty.md) 的好处，每一个对象都是可以进行监听的。
+[[01 Object.defineProperty|Object.defineProperty]]的好处，每一个对象都是可以进行监听的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1731571328000xa5b0j.png)
 

@@ -8,7 +8,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743770632000fvq7fu.png)
 
-在 main 中使用导入的数据的时候，都需要 utls 的前缀会比较麻烦，这个时候我们就可以使用[解构](07_JavaScript高级/08%20JS%20ES6中实现继承/05%20解构Destructuring.md)来简化代码：
+在 main 中使用导入的数据的时候，都需要 utls 的前缀会比较麻烦，这个时候我们就可以使用[解构](11%20解构Destructuring.md)来简化代码：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174377085300035n68a.png)
 

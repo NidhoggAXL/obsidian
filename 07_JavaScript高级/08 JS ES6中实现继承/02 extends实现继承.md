@@ -2,7 +2,6 @@
 在ES6中新增了使用extends关键字，可以方便的帮助我们实现继承：
 
 ```js
-<script>
   class Person {
     constructor(name, age) {
       this.name = name
@@ -26,7 +25,6 @@
   
   var stu = new Student("axl", 18, 100, 90)
   console.log(stu)
-</script>
 ```
 
 # 二、super关键字
@@ -35,10 +33,11 @@
 Class为我们的方法中还提供了super关键字:
 
 * 执行 super.method(..) 来调用一个父（超类）类方法。method - 方法
-* 执行 super(...) 来调用一个父类 constructor(只能在我们的 constructor 中)
+* 执行 super(...) 来调用一个父类 constructor(只能在自己的 constructor 中)
 
 
->[!warning] 在子（**派生**）类的构造函数中使用this或者返回默认对象之前，**<mark class="hltr-orange">必须</mark>先通过super调用父类的构造函数！** 
+>[!warning] 
+>在子（**派生**）类的构造函数中使用this或者返回默认对象之前，**必须先通过super调用父类的构造函数！** 
 
 **super的使用位置有三个**：子类的构造函数、实例方法、静态方法；
 
@@ -47,7 +46,6 @@ Class为我们的方法中还提供了super关键字:
 调用父类的示例方法和静态方法：
 
 ```js
-<script>
   class Person {
     running() {
       console.log("running")
@@ -78,14 +76,13 @@ Class为我们的方法中还提供了super关键字:
   //running
 
   Student.eatting()//eatting apply
-</script>
 ```
 
 # 三、继承内置类
 
 我们也可以让我们的类继承自内置类，比如Array：
 
-```js
+```html
 <script>
   class AxlArray extends Array {
     //获取数组示例最后一个数据

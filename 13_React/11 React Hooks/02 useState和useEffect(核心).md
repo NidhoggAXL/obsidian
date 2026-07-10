@@ -5,7 +5,7 @@ State Hook的API就是 useStat,在前面已经进行了学习：
 - useState会帮助我们定义一个 state变量，useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。 
 - 一般来说，在函数退出后变量就会”消失”，而 state 中的变量会被 React 保留。
 - useState接受唯一一个参数，在**第一次组件被调用时使用来作为初始化值**。（如果没有传递参数，那么初始化值为undefined）。 
-- useState的返回值是一个数组，我们可以通过[](07_JavaScript高级/08%20JS%20ES6中实现继承/05%20解构Destructuring.md#1.1%20数组解构|数组的解构)，来完成赋值会非常方便。
+- useState的返回值是一个数组，我们可以通过[](11%20解构Destructuring.md#1.1%20数组解构|数组的解构)，来完成赋值会非常方便。
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring
 
 FAQ：为什么叫 useState 而不叫 createState? 

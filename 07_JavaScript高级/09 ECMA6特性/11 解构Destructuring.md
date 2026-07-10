@@ -71,7 +71,7 @@ console.log(b); // 1
 
 ## 1.2 对象解构
 
-对象解构允许我们<mark class="hltr-cyan">按照属性名提取值</mark>。
+对象解构允许我们按照属性名提取值。
 
 **基本用法：**
 
@@ -90,11 +90,12 @@ console.log(name); // John
 console.log(age);  // 30
 ```
 
-> [!note] 这里的变量 `name` 和 `age` 必须与对象中的属性名一致。
+> [!important] 
+> 这里的变量 `name` 和 `age` 必须与对象中的属性名一致。
 
 **重命名变量:** 如果你不想使用对象中的属性名作为变量名，可以使用冒号 `:` 来重命名。
 
-```JS
+```js
 let user = {
   name: "John",
   age: 30
@@ -111,7 +112,7 @@ console.log(userAge);  // 30
 
 **默认值**：和数组一样，你也可以为对象的属性提供默认值，以防该属性不存在或其值为 `undefined`。
 
-```JS
+```js
 let user = {
   name: "John"
 };
@@ -125,7 +126,7 @@ console.log(isAdmin);  // false (因为原对象中没有 isAdmin，使用默认
 
 **使用 `...` 剩余操作符:** 可以使用剩余模式 `...` 将对象的剩余部分收集到另一个对象中。
 
-```JS
+```js
 const info = {
   name: 'axl',
   age: 18,
@@ -147,7 +148,7 @@ console.log(rest)
 
 **结合重命名和默认值**：你可以同时使用重命名和默认值。
 
-```JS
+```js
 let options = {
   title: "Menu"
 };
@@ -161,7 +162,7 @@ console.log(h);      // 200 (options 中没有 height，使用默认值)
 
 **嵌套对象解构**:对于嵌套的对象，解构也可以同样处理。
 
-```JS
+```js
 let company = {
   name: "Tech Corp",
   location: {
@@ -179,14 +180,15 @@ let {
 console.log(name); // Tech Corp
 console.log(city); // San Francisco
 console.log(state); // CA
-// location 本身没有被赋值，它只是一个用于定位的模式
-// console.log(location); // ReferenceError
-
 ```
+
+> [!tip] 
+> - location 本身没有被赋值，它只是一个用于定位的模式
+> - console.log(location); // ReferenceError
 
 如果你想同时提取 `location` 本身，可以这样做：
 
-```JS
+```js
 let {
   name,
   location,        // 将 company.location 赋值给变量 location
@@ -204,13 +206,13 @@ console.log(city);     // San Francisco
 
 * 比如在开发中拿到一个变量时，自动对其进行解构使用； 
 
-```JS
+```js
 const { name, age } = infos
 ```
 
 * 比如对函数的参数进行解构；
 
-```JS
+```js
 // 一个接收配置对象的函数，没有解构
 function showMenu(options) {
   let title = options.title || "Untitled";
@@ -236,7 +238,7 @@ showMenu({
 
 **为了确保即使不传参数也不会报错（即 `undefined` 被解构），你可以为整个参数设置一个空对象 `{}` 作为默认值。**
 
-```JS
+```js
 function showMenu({ title = "Untitled", width = 100 } = {}) {
   console.log(title, width);
 }

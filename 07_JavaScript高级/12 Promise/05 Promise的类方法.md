@@ -43,9 +43,9 @@ Promise.reject传入的参数**无论是什么形态**，都会直接作为rejec
 * 它的作用是**将多个Promise包裹在一起形成一个新的Promise**； 
 * 新的Promise状态由包裹的**所有Promise共同决定**： 
 
-当**所有的**Promise状态变成[fulfilled状态](07_JavaScript高级/12%20Promise/03%20Promise状态变化.md)时，新的Promise状态为fulfilled，并且会**将所有Promise的返回值组成一个数组**； 
+当**所有的**Promise状态变成[[03 Promise状态变化|fulfilled状态]]时，新的Promise状态为fulfilled，并且会**将所有Promise的返回值组成一个数组**； 
 
-```js
+```html
 <script>
   const p1 = new Promise((reslove, reject) => {
     setTimeout(() => {
@@ -74,7 +74,7 @@ Promise.reject传入的参数**无论是什么形态**，都会直接作为rejec
 
 当**有一个**Promise状态为reject时，新的Promise状态为reject，并且会将**第一个reject的返回值作为参数**；
 
-```js
+```html
 <script>
   const p1 = new Promise((reslove, reject) => {
     setTimeout(() => {
@@ -114,7 +114,7 @@ all方法有一个缺陷：当有其中一个Promise变成reject状态时，新P
 * 该方法会在**所有的Promise都有结果（settled）**，无论是fulfilled，还是rejected时，才会有最终的状态； 
 * 并且这个Promise的**结果一定是fulfilled的**；
 
-```js
+```html
 <script>
   const p1 = new Promise((reslove, reject) => {
     setTimeout(() => {
@@ -160,7 +160,7 @@ any方法是ES12中新增的方法，和race方法是类似的：
 * any方法会**等到一个fulfilled状态，才会决定新Promise的状态**； 
 
 
-```js
+```html
 <script>
   const p1 = new Promise((reslove, reject) => {
     setTimeout(() => {
