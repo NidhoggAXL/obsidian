@@ -65,6 +65,7 @@ fetch(url, {
 
 
 # 五、Fetch 优化过程(了解)
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1733909755000ptbqqk.png)
 
 

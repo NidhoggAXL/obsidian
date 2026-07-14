@@ -17,7 +17,7 @@ v-for同时也支持数字的遍历： 每一个item都是一个数字；
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745653273000ypbctt.png)
 
 
-v-for也可以遍历其他(Iterable)[](07_JavaScript高级/13%20Iterator-Generator/01%20迭代器和可迭代对象.md#二、可迭代对象|可迭代对象)
+v-for也可以遍历其他(Iterable)[](01%20迭代器和可迭代对象.md#二、可迭代对象|可迭代对象)
 
 
 

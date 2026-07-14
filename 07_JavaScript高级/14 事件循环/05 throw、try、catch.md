@@ -38,7 +38,7 @@ throw {errMessage: "错误信息", errCode: -101}
 
 但是每次写这么长的对象又有点麻烦，所以我们可以创建一个类：
 
-```js
+```html
 <script>
   class MyError {
     constructor(errMessage, errCode) {
@@ -64,7 +64,7 @@ function foo() {
  * **name**：Error的名称，通常和类的名称一致； 
  * **stack**：整个Error的错误信息，包括函数的调用栈，当我们直接打印Error对象时，打印的就是stack；
 
-> 通常只使用第一个参数（message）
+>[!tip] 通常只使用第一个参数（message）
 
 Error有一些自己的子类： 
 
@@ -85,7 +85,7 @@ Error有一些自己的子类：
 * 但是test函数依然没有处理，就会继续传递到我们的全局代码逻辑中； 
 * 依然没有被处理，这个时候程序会终止执行，后续代码都不会再执行了；
 
-```js
+```html
 <script>
   function foo() {
     throw "coderAxl error message"
@@ -105,13 +105,13 @@ Error有一些自己的子类：
 ```
 
 # 五、异常捕获
-但是很多情况下当出现异常时，我们并不希望程序直接推出，而是希望可以正确的处理异常： 
+但是很多情况下当出现异常时，我们并不希望程序直接退出，而是希望可以正确的处理异常： 
 
 * 这个时候我们就可以使用try catch
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1732969546000r9h2fv.png)
 
-```js
+```html
 <script>
   function foo() {
     throw "coderAxl error message"
@@ -141,7 +141,7 @@ Error有一些自己的子类：
 * **注意：如果try和finally中都有返回值，那么会使用finally当中的返回值；**
 
 
-```js
+```html
 <script>
   function foo() {}
   

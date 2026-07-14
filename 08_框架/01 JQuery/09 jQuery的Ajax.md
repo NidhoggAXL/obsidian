@@ -20,7 +20,6 @@ jQuery中也有AJAX模块，该模块是在XMLHttpRequest的基础上进行了�
 初体验jQuery中的AJAX: https://httpbin.org
 (是一个专门提供:免费测试http服务的网站)
 
-
 # 二、JAAX请求参数（parameters）
 请求参数(Parameters)
 

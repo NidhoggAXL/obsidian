@@ -4,7 +4,7 @@
 * 获取**匹配到元素集合中每个元素**组合的文本内容，包括它们的后代，或设置匹配到元素的文本内容。
 * 相当与原生元素的textContent属性。
 
-```js
+```html
   <script>
   //1.监听文档解析完成
   $(function() {
@@ -24,7 +24,7 @@
 * 获取**匹配到元素集合中第一个元素**的**HTML内容**，包括它们的后代，或设置每个匹配元素的 HTML 内容:
 * 相当与原生元素的innerHTML属性。
 
-```js
+```html
  <script>
   //1.监听文档解析完成
   $(function() {
@@ -38,7 +38,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1737802545000v7i3pl.png)
 
 
-```js
+```html
  <script>
   //1.监听文档解析完成
   $(function() {
@@ -61,7 +61,7 @@
 * 该.val()方法主要**用于获取input,select和等表单元素的值。**
 * 相当与获取原生元素的value属性。
 
-```js
+```html
  <input type="text" class="user">
  <input type="text" class="password">
  <button class="btn">登陆</button>
@@ -91,7 +91,7 @@
 * .css("width")和.width()之间的区别
 	* width()返回一个无单位的像素值(例如，400)，而css()返回一个具有完整单位的值(例如，400px)
 
-```js
+```html
  <script>
   //1.监听文档解析完成
   $(function() {
@@ -102,11 +102,11 @@
 ```
 
 # 三、jQuery对Class属性的操作
+
 **.addClass(className)、.addClass(classNames)、.addClass(funcntion)**
 
 * 将指定的类添加到匹配元素集合中的每个元素，每次都是追加class。
-* 底层调用的是[setAttribute](property))("class",finalValue |[07 元素的属性(property)|setAttribute]]方法添加class.
-
+* 底层调用的是[[07 元素的属性(property)|setAttribute]]方法添加class.
 
 **.hasClass(className)**
 

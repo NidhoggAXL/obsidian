@@ -81,7 +81,7 @@ main属性：
 
 
 > [!tip] 开发环境和生成环境
-> ![500](00_obsidian相关/Excalidraw/开发环境和生成环境.md)
+> ![[开发环境和生成环境|500]]
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744115050000jf19jk.png)
 

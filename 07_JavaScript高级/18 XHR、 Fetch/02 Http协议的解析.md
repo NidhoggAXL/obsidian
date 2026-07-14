@@ -73,6 +73,7 @@ HTTP是一个客户端（用户）和服务端（网站）之间请求和响应�
 
 
 # 六、HTTP Request Header
+
 在request对象的header中也包含很多有用的信息，客户端会默认传递过来一些信息：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1733714271000wopyvg.png)

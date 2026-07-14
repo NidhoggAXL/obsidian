@@ -19,7 +19,7 @@
 
 * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules 
 * 需要注意本地测试 — 如果你通过本地加载Html 文件 (比如一个 file:// 路径的文件), 你将会遇到 CORS 错误，因为 Javascript 模块安全性需要； 
-	* [](19_Node/08%20跨域/01%20跨域问题.md#3.2%20方案一：CORS|CORS) 是一种协议，
+	* [[01 跨域问题#3.2 方案一：CORS|CORS]] 是一种协议，
 * 你需要通过一个服务器来测试； 
 
 > [!note] 
@@ -91,7 +91,7 @@ export { name, age, sayHello}
 // export { name: "axl"}
 ```
 
-* **方式三**：导出时给标识符起一个别名：<mark class="hltr-orange">通过as关键字起别名</mark>
+* **方式三**：导出时给标识符起一个别名：**通过as关键字起别名**
 
 ```js
 export {
@@ -109,7 +109,7 @@ import关键字负责从另外一个模块中导入内容 :**没有在webpack和
 导入内容的方式也有多种： 
 
 * 方式一：import {标识符列表} from '模块'；
-	* 注意：这里的{}也不是一个对象，里面只是**存放导入的标识符列表内容**；
+	* 注意：这里的`{}`也不是一个对象，里面只是**存放导入的标识符列表内容**；
 * 方式二：导入时给标识符起别名 
 	* 通过as关键字起别名 
 * 方式三：通过 `*` 将模块功能放到一个模块功能对象`(a module object)`上

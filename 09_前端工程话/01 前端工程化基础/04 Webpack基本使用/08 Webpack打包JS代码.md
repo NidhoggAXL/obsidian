@@ -1,3 +1,3 @@
 webpack 默认打包的就是 js 文件，只是我们会编写 ES6 以及后面的代码，有一些浏览器会对 ES6~ 的特性有一些不支持，
 
-所以后面还要学习[Babel](07_JavaScript高级/08%20JS%20ES6中实现继承/03%20Babel的ES6转ES5.md)
+后面还要学习[Babel](07_JavaScript高级/08%20JS%20ES6中实现继承/03%20Babel的ES6转ES5.md)

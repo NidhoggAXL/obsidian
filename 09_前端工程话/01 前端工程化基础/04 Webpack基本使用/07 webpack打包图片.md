@@ -9,7 +9,8 @@
 
 ![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744633303000427tvn.png)
 
-> [!warning] 这个时候打包会出现错误，webpack不可以正确的打包文件。
+> [!warning] 
+> 这个时候打包会出现错误，webpack不可以正确的打包文件。
 
 # 二、认识asset module type
 
@@ -94,7 +95,8 @@ asset 在导出一个 data URI 和发送一个单独的文件之间**自动选�
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17446352270008bsf56.png)
 
- > [!note] **这样的好处是**：符合 test 的资源才会打包到这个文件里面
+ > [!note] 
+ > **这样的好处是**：符合 test 的资源才会打包到这个文件里面
 
 我们这里介绍几个最常用的**placeholder（占位符）**： 
 
@@ -102,9 +104,10 @@ asset 在导出一个 data URI 和发送一个单独的文件之间**自动选�
 	* 扩展名是自带点`.`的所以路径里面没有点
 * `[name]`：处理文件的名称； 
 * `[hash]`：文件的内容，使用MD4的散列函数处理，生成的一个128位的hash值（32个十六进制）；
-	* `[hash:6`是区前面 6 位使用
+	* `[hash:6]`是区前面 6 位使用
 
-> [!note] `img/`是创建一个 img 文件夹来存放后面占位符所表示的文件
+> [!note] 
+> `img/`是创建一个 img 文件夹来存放后面占位符所表示的文件
 
 
 # 四、url-loader的limit效果

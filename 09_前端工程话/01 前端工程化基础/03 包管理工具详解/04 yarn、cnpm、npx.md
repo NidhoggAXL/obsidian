@@ -11,7 +11,7 @@ yarn和npm命令的一些区别：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174412024300027if5z.png)
 
-# 二、cnpm工
+# 二、cnpm
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744120958000pik9ol.png)
 

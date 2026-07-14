@@ -138,6 +138,7 @@ jQuery使用CDN方式引入
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17375515120001umb4n.png)
 
 ## 7.3 下载源码
+
 下载jQuery的源码
 
 * 官网下载:https://jquery.com/download/
@@ -148,6 +149,7 @@ jQuery使用CDN方式引入
 
 
 # 八、jQuery初体验-计数器
+
 原生js代码：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1737555677000qwqmpi.png)
@@ -158,7 +160,7 @@ jQuery代码：
 
 # 九、jQuery监听文档加载
 
-jQuery监听document的[](07%20常见事件.md#四、文档加载事件|DOMContentLoaded)事件的四种方案
+jQuery监听document的[[07 常见事件#四、文档加载事件|DOMContentLoaded]]事件的四种方案
 
 handler - 处理程序   deprecated - 弃用
 
@@ -167,7 +169,7 @@ handler - 处理程序   deprecated - 弃用
 * `$().ready(handler): deprecated-弃用`
 * `$(handler)`:**推荐用这种写法，其它可以使用但是不推荐**
 
-```js
+```html
 <script src="../libs/jquery-3.6.0.js"></script>
 
 <script>
@@ -190,14 +192,14 @@ handler - 处理程序   deprecated - 弃用
 </script>
 ```
 
-监听window的[](07%20常见事件.md#四、文档加载事件|load)事件，即网页所有资源(外部连接，图片等)加载完
+监听window的[[07 常见事件#四、文档加载事件|load]]事件，即网页所有资源(外部连接，图片等)加载完
 
 * `.load(handler)`: This APl has been **removed in jQuery 3.0**
 * `$(window).on('load',handler)`:推荐写法
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1737558312000xqoqfo.png)
 
-```js
+```html
 <script>
  // $(window).load(function() {}) 3.0 remove
 
@@ -210,6 +212,7 @@ handler - 处理程序   deprecated - 弃用
 
 
 # 十、jQuery与其它库的变量名冲突
+
 和 jQuery库一样，许多JavaScript库也会使用$作为函数名或变量名。
 
 * 在 jQuery 中，**`$`是jQuery的别名,**

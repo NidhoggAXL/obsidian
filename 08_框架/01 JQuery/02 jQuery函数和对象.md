@@ -8,7 +8,7 @@ jQuery是一个**工厂函数**( 别名`$`)-类似与new操作的函数，调用
 * 如果传入回调函数:返回的是**包含document元素集合,并且当文档加载完成会回调该函数**
 * 因为函数也是对象，所以该函数还包含了很多已封装好的类方法。如:`jQuery.noConflict`、`jQuery.ready`等
 
-```js
+```html
 <script src="../libs/jquery-3.6.0.js"></script>
 <script>
  //1.假值：'' null undefined NAN false ……

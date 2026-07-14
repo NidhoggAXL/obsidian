@@ -41,7 +41,7 @@ action也有对应的辅助函数：
 
 Action 通常是异步的，那么如何知道 action 什么时候结束呢？ 
 
-* 我们可以通过让action返回Promise，在Promise的then中来处理完成后的操作；[异步函数](07_JavaScript高级/13%20Iterator-Generator/07%20异步函数.md)
+* 我们可以通过让action返回Promise，在Promise的then中来处理完成后的操作；[异步函数](07%20异步函数.md)
 
 
 请求的数据：

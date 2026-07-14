@@ -11,7 +11,7 @@
 
 # 二、项目安装
 
-项目安装会在当前目录下生成一个 node_modules 文件夹，[require](09_前端工程话/01%20前端工程化基础/02%20JS模块化开发/03%20require函数解析.md) 查找顺序时有讲解过这个包在什么情况下被 查找； 
+项目安装会在当前目录下生成一个 node_modules 文件夹，[[03 require函数解析|require]] 查找顺序时有讲解过这个包在什么情况下被 查找； 
 
 局部安装分为开发时依赖和生产时依赖：
 
@@ -37,7 +37,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744118620000qau524.png)
 
 
-# 四、npm其他命令z
+# 四、npm其他命令
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744119210000nsea1g.png)
 

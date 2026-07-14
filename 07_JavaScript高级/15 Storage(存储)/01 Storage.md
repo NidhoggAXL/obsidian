@@ -21,7 +21,7 @@
 
 一般在编写的时候代码：
 
-```js
+```html
 <script>
   let token = localStorage.getItem("token")
   if (!token) {
@@ -65,7 +65,7 @@ Storage有如下的属性和方法：
 
 # 四、localStorage工具封装
 
-```js
+```html
 <script>
   class Cache {
     constructor(isLocal = true) {

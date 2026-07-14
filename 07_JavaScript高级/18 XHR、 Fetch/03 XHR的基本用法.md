@@ -14,9 +14,10 @@
 
  
 # 二、XMLHttpRequest的state（状态）
+
 事实上，我们在一次网络请求中看到状态发生了很多次变化
 
-```js
+```html
 <script>
   // 创建XMLHttpRequest对象
   const xhr = new XMLHttpRequest()
@@ -53,6 +54,7 @@ console.log("++++")
 console.log("----")
 ```
 
+>[!tip] 
 >**同步请求**：只有等 xhr.end 发送请求得到全部数据后**才会**执行后面的打印代码
 >**异步请求**：**不需要**等到得到全部数据，会先指向后面的打印代码
 
@@ -76,10 +78,11 @@ xhr.onload = function() {
 ```
 
 # 四、响应数据和响应类型
+
 发送了请求后，我们需要获取对应的结果：response属性 
 
 * XMLHttpRequest **response属性** 返回响应的正文内容； 
-* 返回的类型取决于r**esponseType**的属性设置；
+* 返回的类型取决于**responseType**的属性设置；
 
 通过responseType可以设置获取数据的类型 
 
@@ -124,9 +127,10 @@ console.log(xhr.statusText)
 
 
 # 七、AJAX网络请求封装(了解)
+
 **在开发中有非常好的工具库来使用，这里了解这个思路就好**
 
-```js
+```html
 <script>
   function xlajax({
     url,

@@ -41,6 +41,7 @@ jQuery架构设计图如下:
 
 
 # 二、jQuery的选择器（selecotors）
+
 jQuery函数支持大部分的CSS选择器，语法:jQuery('字符串格式的选择器")
 
 1. 通用选择器`(*)`

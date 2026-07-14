@@ -13,14 +13,14 @@ Web页面经常需要和用户之间进行交互，而交互的过程中我们�
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1738482641000l5jlxs.png)
 
-> onclick方式的话，如果后面在继续这个元素上面编写这个方法的话，会覆盖原来元素上面编写的onclik
+> [!note] onclick方式的话，如果后面在继续这个元素上面编写这个方法的话，会覆盖原来元素上面编写的onclik
 
 **jQuery事件监听方法:**
 
 * 事件监听方式一:直接**调用jQuery对象中的事件处理函数**来监听，例如:click，mouseenter..
 * 事件监听方式二:调用jQuery对象中的**on函数**来监听，使用off函数来取消监听。
 
-> 底层是调用原生的 addEventListener 方法
+>[!note] 底层是调用原生的 addEventListener 方法
 
 ```js
 //on方式
@@ -34,6 +34,7 @@ $('ul').click(function() {
 })
 ```
 
+> [!tip] 
 > 这种方式的编写，并**不会进行覆盖**，当点击ul的时候会进行两次打印
 
 ## 1.1 off函数取消监听
@@ -57,6 +58,7 @@ $('button').click(function() {
 
 
 ## 1.2 自动触发事件
+
 自动触发事件，用与一些测试当中，模拟用户点击。trigger-触发器
 
 ```js
@@ -65,8 +67,9 @@ $('ul').trigger('click')
 
 当进行网页的加载的时候，已加载完成就会进行ul的自行点击事件。
 
-
 # 二、click和on的区别
+
+
 click和on的区别:
 
 * click是on的**简写**。它们重复监听，**不会出现覆盖情况，都支持事件委托**，底层用的是addEventListener。
@@ -82,6 +85,7 @@ $('ul').on('click.axl', function() {})
 $('ul').on('click', '字符串类型选择器', function() {})
 ```
 
+> [!tip] 
 > **命名空间的作用**：如果ul元素上面有两个点击事件，可以通过命名空间改变点击名字，这样就不会通过`$('ul').off('click')`全部删除点击事件
 > 
 > **selector参数的作用**：在后面的事件委托会用到
@@ -95,7 +99,7 @@ click和on的this指向:
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17384856170003ytxih.png)
 
 # 四、jQuery事件冒泡
-我们会发现默认情况下事件是从最内层(如下图span)向外依次传递的顺序，这个顺序我们称之为事件冒泡(Event Bubble)
+我们会发现默认情况下事件是从最内层向外依次传递的顺序，这个顺序我们称之为事件冒泡(Event Bubble)
 
 事实上，还有另外一种监听事件流的方式就是从外层到内层(如:body ->span)，这种称之为事件捕获(Event Capture)
 
@@ -187,6 +191,7 @@ $('ul').hover(function() {
 })
 ```
 
+> [!note] 
 > 可以同时进行悬浮和离开的监听，底层是调用了 mouseenter 和 mouseleave 
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1738500614000ahyhfq.png)
 

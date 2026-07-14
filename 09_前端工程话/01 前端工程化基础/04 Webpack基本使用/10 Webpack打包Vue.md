@@ -18,7 +18,7 @@
 npm install vue-loader -D
 ```
 
-在webpack的 [](09_前端工程话/01%20前端工程化基础/04%20Webpack基本使用/04%20编写和打包CSS文件.md#四、loader配置方式|模板规则) 中进行配置：
+在webpack的 [[04 编写和打包CSS文件#四、loader配置方式|loader配置方式]] 中进行配置：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744716830000g475pt.png)
 

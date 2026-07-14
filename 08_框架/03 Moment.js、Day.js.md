@@ -1,4 +1,5 @@
 # 一、认识
+
 Moment库，官网的描述:
 
 * Moment 是一个 JavaScript 库，可以帮助我们**快速处理时间和日期**，已在数百万的项目中使用。
@@ -29,6 +30,7 @@ Day.js库，官网的描述:
 
 
 # 三、Day.js简单的构架
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17418747880009jn0ll.png)
 
 
@@ -51,6 +53,7 @@ var c = dayjs().
 ```
 
 # 四、获取设置时间
+
 获取(Get)+ 设置(Set)
 
 * .year()、.month、.date()--获取年、月、日
@@ -58,7 +61,7 @@ var c = dayjs().
 * .day()-获取星期几
 * .format()-格式化日期
 
-```js
+```html
 <script>
  //1.获取是时间
  var date1 = dayjs()
@@ -127,7 +130,7 @@ Day.js的插件应用
     - API接口传递时间建议使用UTC
     - 前端展示时再转换为本地时间
 
-## 8.2 装换UTC
+## 8.2 转换UTC
 
 UTC 增加了 `.utc` `.local` `.isUTC` APIs 使用 UTC 模式来解析和展示时间。
 
@@ -157,36 +160,15 @@ dayjs.utc("2018-01-01", "YYYY-MM-DD"); // with CustomParseFormat plugin
 
 Day.js 默认使用用户本地时区来解析和展示时间。 如果想要使用 UTC 模式来解析和展示时间，可以使用 `dayjs.utc()` 而不是 `dayjs()`
 
-### [](https://day.js.org/docs/zh-CN/plugin/utc#dayjsutc-dayjsutcdatetype-string-number-date-dayjs-format-string|utc)
+`dayjs.utc(dateType?: string | number | Date | Dayjs, format? string)`：返回一个使用 UTC 模式的 `Dayjs` 对象。
 
-`dayjs.utc(dateType?: string | number | Date | Dayjs, format? string)`
+`.utc()`：返回一个复制的包含使用 UTC 模式标记的 `Dayjs` 对象。
 
-返回一个使用 UTC 模式的 `Dayjs` 对象。
+`.local()`：返回一个复制的包含使用本地时区标记的 `Dayjs` 对象。
 
-### [](https://day.js.org/docs/zh-CN/plugin/utc#use-utc-time-utc|utc)
+`.utcOffset()`：返回一个复制的使用 UTC 模式的 Day.js 对象。
 
-`.utc()`
-
-返回一个复制的包含使用 UTC 模式标记的 `Dayjs` 对象。
-
-### [](https://day.js.org/docs/zh-CN/plugin/utc#use-local-time-local|utc) 
-
-`.local()`
-
-返回一个复制的包含使用本地时区标记的 `Dayjs` 对象。
-
-### [](https://day.js.org/docs/zh-CN/plugin/utc#set-utc-offset-utcoffset|utc)
-
-`.utcOffset()`
-
-返回一个复制的使用 UTC 模式的 Day.js 对象。
-
-### [](https://day.js.org/docs/zh-CN/plugin/utc#isutc-mode-isutc|utc) 
-
-`.isUTC()`
-
-返回一个 `boolean` 来展示当前 Day.js 对象是不是在 UTC 模式下。
-
+`.isUTC()`：返回一个 `boolean` 来展示当前 Day.js 对象是不是在 UTC 模式下。
 
 ## 8.3 装换封装
 

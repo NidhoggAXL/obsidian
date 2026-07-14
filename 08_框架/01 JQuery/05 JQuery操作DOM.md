@@ -50,6 +50,7 @@ $('ul').append($('.li-6'))
 
 
 ## 1.2 插入内容二
+
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1738477255000vcy69x.png)
 
 **.appendTo(target)**

@@ -8,7 +8,7 @@
 
 如果项目很多的话，每一个项目下载相同的库就会造成电脑磁盘空间的肿大，同一个库下载了多份。
 
-![600](00_obsidian相关/Excalidraw/pnpm出现前的疼点.md)
+![[pnpm出现前的疼点|600]]
 
 # 二、什么是pnpm呢？
 
@@ -80,7 +80,7 @@ macos: ln -s 原文件 拷贝文件
 > [!note]
 > 就是说我是通过 工具包 安装了 webpack ，但是因为 webpack 依赖一些包，在下载 webpack 的时候就会把依赖的包同时下载出来，
 > 原本应该是放到 webpack 的 node_modules 文件里面的，但是 npm 、yarn……会进行 **扁平** 话处理，
-> 把**依赖的包提升到和 webpack 同等级的目录**，这样在使用 `require("")`的时候就可以导入依赖包并进行使用。为什么可以查找到，查看[03 require函数解析](09_前端工程话/01%20前端工程化基础/02%20JS模块化开发/03%20require函数解析.md)
+> 把**依赖的包提升到和 webpack 同等级的目录**，这样在使用 `require("")`的时候就可以导入依赖包并进行使用。为什么可以查找到，查看[[03 require函数解析|require函数解析]]
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744197058000zp696k.png)
 

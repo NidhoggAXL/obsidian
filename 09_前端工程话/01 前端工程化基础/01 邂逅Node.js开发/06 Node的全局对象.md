@@ -6,7 +6,7 @@ Node中给我们提供了一些全局对象，方便我们进行一些操作:
 * 某些全局对象并不常用
 * 某些全局对象我们会在后续学习中讲到
 	* 比如module、exports、require()会在模块化中讲到,
-	* 比如 [Buffer](19_Node/02%20Node模块/04%20Buffer.md) 后续会专门讲到:
+	* 比如 [[04 Buffer|Buffer]] 后续会专门讲到:
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1743748463000c0a9dr.png)
 
@@ -45,7 +45,7 @@ console对象:提供了简单的调试控制台，在前面讲解输入内容时
 * **`setlnterval(callback,delay[,..args])`**:callback每delay毫秒重复执行一次;
 * **`setlmmediate(callback[,..args])`**:callback的 l/O 事件后的回调的“立即”执行;
 	* 这里先不展开讨论它和setTimeout(callback,0)之间的区别;
-	* 因为它涉及到事件循环的阶段问题，会在后续详细讲解[事件循环](07_JavaScript高级/14%20事件循环/02%20浏览器进程、线程.md)相关的知识;
+	* 因为它涉及到事件循环的阶段问题，会在后续详细讲解[[02 浏览器进程、线程|事件循环]]相关的知识;
 * **`process.nextTick(callback[, .args])`**:添加到下-次tick队列中;具体的讲解，也放到事件循环中说明;
 
 # 四、global对象
@@ -55,10 +55,10 @@ global是一个全局对象，事实上前端提到的process、console、setTim
 * 之前讲过:在新的标准中还有一个globalThis，也是指向全局对象的;
 * 类似于浏览器中的window:
 
-![Node和Window中全局对象的区别](00_obsidian相关/Excalidraw/Node和Window中全局对象的区别.md)
+![[Node和Window中全局对象的区别|100%]]
 
 
-# 五、blobal和window的区别
+# 五、global和window的区别
 
 在浏览器中，全局变量都是在window上的，比如有document、setinterval、setTimeout、alert、console等等
 
