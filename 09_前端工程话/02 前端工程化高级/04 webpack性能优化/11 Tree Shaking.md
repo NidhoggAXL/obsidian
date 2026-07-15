@@ -5,7 +5,7 @@
  - Tree Shaking是一个术语，在计算机中表示消除死代码（dead_code）；
  - 最早的想法起源于LISP，用于消除未调用的代码（纯函数无副作用，可以放心的消除，这也是为什么要求我们在进行函数式
 
-编程时，尽量使用纯函数的原因之一）；
+编程时，尽量使用纯函数的原因之一；
 
  - 后来Tree Shaking也被应用于其他的语言，比如JavaScript、Dart；
 
@@ -13,11 +13,10 @@
 
 JavaScript的Tree Shaking：
 
- - 对JavaScript进行Tree Shaking是源自打包工具rollup（后面我们也会讲的构建工具）；
- - 这是因为Tree Shaking依赖于ES Module的静态语法分析（不执行任何的代码，可以明确知道模块的依赖关系）；
+ - 对JavaScript进行Tree Shaking是源自打包工具[[01 rollup基本使用|rollup]]
+ - 这是因为Tree Shaking依赖于ES Module的静态语法分析（不执行任何的代码，可以明确知道模块的依赖关系）
  - webpack2正式内置支持了ES2015模块，和检测未使用模块的能力；
- - 在webpack4正式扩展了这个能力，并且通过 package.json的 sideEffects属性作为标记，告知webpack在编译时，哪里文
-件可以安全的删除掉；
+ - 在webpack4正式扩展了这个能力，并且通过 package.json 的 **sideEffects 属性作为标记，告知webpack在编译时，哪里文件可以安全的删除掉**；
  - webpack5中，也提供了对部分CommonJS的tree shaking的支持；
 	 - https://github.com/webpack/changelog-v5#commonjs-tree-shaking
 
@@ -66,7 +65,7 @@ console.log(name, age)
  - usedExports设置为true时，mul函数有被移除掉；
 
 > [!tip] 
-> usedExports实现Tree Shaking是结合Terser来完成的。
+> usedExports实现Tree Shaking是结合[[09 代码压缩|Terser]]来完成的。
 
 ## 2.3 sideEffects
 
@@ -99,8 +98,7 @@ sideEffects用于告知webpack compiler哪些模块时有副作用的：
 上面我们学习的都是关于JavaScript的Tree Shaking，那么CSS是否也可以进行Tree Shaking操作呢？
 
  - CSS的Tree Shaking需要借助于一些其他的插件；
- - 在早期的时候，我们会使用PurifyCss插件来完成CSS的tree shaking，但是目前该库已经不再维护了（最新更新也是在4年前
-了）；
+ - 在早期的时候，我们会使用PurifyCss插件来完成CSS的tree shaking，但是目前该库已经不再维护了（最新更新也是在4年前了）；
  - 目前我们可以使用另外一个库来完成CSS的Tree Shaking：PurgeCSS，也是一个帮助我们删除未使用的CSS的工具；
 
 安装PurgeCss的webpack插件：

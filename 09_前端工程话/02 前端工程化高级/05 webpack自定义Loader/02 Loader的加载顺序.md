@@ -30,7 +30,7 @@
 enforce一共有四种方式：
 
  - 默认所有的loader都是normal；
- - 在行内设置的loader是inline（import 'loader1!loader2!./test.js'）；
+ - 在行内设置的loader是`inline（import 'loader1!loader2!./test.js'）`；
  - 也可以通过enforce设置 pre 和 post；
 
 在Pitching和Normal它们的执行顺序分别是：

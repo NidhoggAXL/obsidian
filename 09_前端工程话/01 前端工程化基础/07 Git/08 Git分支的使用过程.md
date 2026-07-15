@@ -46,6 +46,7 @@ blob 说明是一个二进制文件，如果要查看内容的话就是是用`gi
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745131731000rsfkse.png)
 
+> [!tip] 
 > 可以看到这里面存放就是创建的两个文件内容，这样可以得出，**git的本质是把文件与内容保存到 objects 里面。**
 
  3. 那么git commit 操作会是什么样子呢？
@@ -62,7 +63,7 @@ blob 说明是一个二进制文件，如果要查看内容的话就是是用`gi
 
 可以看出这两个文件，一个文件是存放着文件的索引，另一个是存放着提交的信息。
 
-提交信息中有一个 tree 这个又是什么呢？这个就是提交的另外一个存放打印内容的文件（362f）。
+提交信息中有一个 tree 这个又是什么呢？这个就是存放文件所有的文件文件信息。
 
 而 git 是如何找到本次提交的呢？`git log`查看一下提交的时候 commi id 是什么
 
@@ -203,5 +204,6 @@ git checkout master
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745140793000dr9cpp.png)
 
+> [!note] 
 > hotfix 分支指针已经不存在。
 

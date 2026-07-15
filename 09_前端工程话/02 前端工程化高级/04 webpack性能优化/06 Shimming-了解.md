@@ -3,8 +3,7 @@
 shimming是一个概念，是某一类功能的统称：
 
  - shimming翻译过来我们称之为 垫片，相当于给我们的代码填充一些垫片来处理一些问题；
- - 比如我们现在依赖一个第三方的库，这个第三方的库本身依赖lodash，但是默认没有对lodash进行导入（认为全局存在
-lodash），那么我们就可以通过ProvidePlugin来实现shimming的效果；
+ - 比如我们现在依赖一个第三方的库，这个第三方的库本身依赖lodash，但是默认没有对lodash进行导入（认为全局存在lodash），那么我们就可以通过ProvidePlugin来实现shimming的效果；
 
 注意：webpack并不推荐随意的使用shimming
 
@@ -13,7 +12,7 @@ lodash），那么我们就可以通过ProvidePlugin来实现shimming的效果�
 
 # 二、Shimming预支全局变量
 
-目前我们的lodash、dayjs都使用了CDN进行引入，所以相当于在全局是可以使用_和dayjs的
+目前我们的lodash、dayjs都使用了CDN进行引入，所以相当于在全局是可以使用`_`和`dayjs`的
 
 假如一个文件中我们使用了axios，但是没有对它进行引入，那么下面的代码是会报错的；
 

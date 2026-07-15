@@ -12,7 +12,7 @@ Polyfill是什么呢？
  - 我们可以使用polyfill来填充或者说打一个补丁，那么就会包含该特性了；
 
 > [!tip] 
-> Babel装换的是高级语法，而不是API，比如一些高级的API是不会装换的，比如Promise 就是在有些老的浏览器中根本就不知道。
+> Babel转换的是高级语法，而不是API，比如一些高级的API是不会装换的，比如Promise 就是在有些老的浏览器中根本就不知道。
 
 # 二、如何使用polyfill？
 
@@ -34,8 +34,6 @@ npm install core-js regenerator-runtime --save
  - **corejs**：设置corejs的版本，目前使用较多的是3.x的版本
 	 - 另外corejs可以设置是否对提议阶段的特性进行支持；
 	 - 设置 proposals 属性为true即可；
-
-
 # 四、useBuiltIns属性设置
 
 

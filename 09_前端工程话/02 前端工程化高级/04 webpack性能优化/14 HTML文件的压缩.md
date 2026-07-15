@@ -1,4 +1,4 @@
-我们之前使用了[HtmlWebpackPlugin](09_前端工程话/01%20前端工程化基础/05%20Webpack插件和模式/03%20Html-Webpack-Plugin.md)插件来生成HTML的模板，事实上它还有一些其他的配置：
+我们之前使用了[[03 Html-Webpack-Plugin|HtmlWebpackPlugin]]插件来生成HTML的模板，事实上它还有一些其他的配置：
 
 inject：设置打包的资源插入的位置
 

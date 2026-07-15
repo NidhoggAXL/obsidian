@@ -1,6 +1,6 @@
 # 一、Webpack和Tapable
 
-知道webpack有两个非常重要的类：Compiler和Compilation
+知道webpack有两个非常重要的类：Compiler（编译器）和Compilation（汇编）
 
  - 他们通过注入插件的方式，来监听webpack的所有生命周期；
  - 插件的注入离不开各种各样的Hook，而他们的Hook是如何得到的呢？

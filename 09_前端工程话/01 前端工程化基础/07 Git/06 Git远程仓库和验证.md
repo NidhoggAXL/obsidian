@@ -2,9 +2,7 @@
 
 ![gh|600](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17448924110001jyrw9.png)
 
-**服务器和Git服务器的关系：**
-
-* Git 服务器是搭建在 一台服务器 上面的，**并不是说有专门的一种服务器是Git服务器**
+**服务器和Git服务器的关系：** Git 服务器是搭建在一台服务器上面的，**并不是说有专门的一种服务器是Git服务器**
 
 ![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744892487000wkqk2w.png)
 
@@ -55,7 +53,8 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/174489745600000shjq.png)
 
-> [!note] 这样就可以不用每次都要输入凭证啦
+> [!note] 
+> 这样就可以不用每次都要输入用户名和密码。
 
 ### 2.1.1 从远程仓库clone操作
 
@@ -103,7 +102,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744899302000ccv0i3.png)
 
-> [!warning] 这样就可以明显的看出来，子文件的改变了。
+> [!tip] 这样就可以明显的看出来，子文件的改变了。
 
 
 ## 2.2 删除凭证
@@ -218,7 +217,7 @@ git remote add origin https://gitee.com/aoDraco/web-git-demo.git
 
 **原因**:当前分支没有和远程的 origin/master 分支进行跟踪
 
-* 在没有跟踪的情况下，我们直接执行pul操作的时候必须指定从哪一个远程仓库中的哪一个分支中获取内容;
+* 在没有跟踪的情况下，我们直接执行pull操作的时候必须指定从哪一个远程仓库中的哪一个分支中获取内容; 
 * 前面已经更改了远程仓库在本地的名字，所以要使用 demo 而不是 origin。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17449668830000d148r.png)
@@ -259,7 +258,7 @@ git merge --allow-unrelated-histories
 # 五、远程仓库总结
 ## 5.1 从远程仓库直接clone项目
 
-```bash
+```shell
 git clone 远程仓库地址
 git add .
 git commit -m "提交信息"
@@ -271,7 +270,7 @@ git push //提交本地仓库信息到远程
 
 ### 5.2.1 本地无项目
 
-先创建一个[](06%20Git远程仓库和验证#五、远程仓库总结#五、远程仓库总结#5.1%20从远程仓库直接clone项目|远程的仓库)，在从远程clone下来项目，在进行项目的搭建
+先创建一个[[06 Git远程仓库和验证#五、远程仓库总结#五、远程仓库总结#五、远程仓库总结#五、远程仓库总结#5.1 从远程仓库直接clone项目|远程的仓库]]，在从远程clone下来项目，在进行项目的搭建
 
 ### 5.2.2 本地有项目
 #### 第一种方式
@@ -322,7 +321,7 @@ git checkout --track origin/main
 > 这样本地就会有一个 main 的分支是跟踪远程 main 分支了,这个时候就可以对 master 分支进行删除（也可以不删除）。
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451509870002zslh8.png)
 
-如果要**删除本地的** master 分支，必须使用分支的[](09_前端工程话/01%20前端工程化基础/07%20Git/08%20Git分支的使用过程.md#八、查看和删除分支|强制删除)
+如果要**删除本地的** master 分支，必须使用分支的[[08 Git分支的使用过程#八、查看和删除分支|强制删除]]
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745151206000zsm4k5.png)
 
@@ -340,7 +339,7 @@ git checkout --track origin/main
 
 **进行ssh的clone操作，错误:**
 
-```text
+```shell
 ssh: connect to host github.com port 22: Connection refused
 连接到主机github.com端口22：连接被拒绝
 

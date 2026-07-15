@@ -7,8 +7,7 @@
 * 方式一：**初始化一个Git仓库**，并且可以将当前项目的文件都添加到Git仓库中（目前很多的脚手架在创建项目时都会默认创建一个Git仓库）； 
 * 方式二：从其它服务器 **克隆（clone） 一个已存在的 Git 仓库**（第一天到公司通常我们需要做这个操作）；
 
-在初始化仓库的时候，我们希望是使用 git Bash 的命令标识行来进行命令的编写，因为会比 CMD 增加一些 git 的命令。
-通过下载 Git 后有了 Git Bash，这个时候需要就可以在 VS Coder 中修改默认终端啦
+在初始化仓库的时候，我们希望是使用 git Bash 的命令标识行来进行命令的编写，因为会比 CMD 增加一些 git 的命令。通过下载 Git 后有了 Git Bash，这个时候需要就可以在 VS Coder 中修改默认终端啦
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744807820000co20zf.png)
 

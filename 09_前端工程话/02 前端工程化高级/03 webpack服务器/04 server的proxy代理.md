@@ -9,7 +9,7 @@ proxy是我们开发中非常常用的一个配置选项，它的目的设置代
 我们可以进行如下的设置：
 
  - **target**：表示的是代理到的目标地址，比如 /api 会被代理到 http://localhost:9000
- - **pathRewrite**：默认情况下，我们的 /api-hy 也会被写入到URL中，如果希望删除，可以使用pathRewrite；
+ - **pathRewrite**：默认情况下，我们的 `/api` 也会被写入到URL中，如果希望删除，可以使用pathRewrite；
  - **changeOrigin**：它表示是否更新代理后请求的headers中host地址；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1773058695000cu71t6.png)
@@ -22,8 +22,8 @@ proxy是我们开发中非常常用的一个配置选项，它的目的设置代
 
 这个 changeOrigin官方说的非常模糊，通过查看源码我发现其实是要修改代理请求中的headers中的host属性：
 
- - 因为我们真实的请求，其实是需要通过 http://localhost:9000 来请求的；
- - 但是因为使用了代理，默认情况下它的值时 http://localhost:8080
+ - 因为我们真实的请求，其实是需要通过 http://localhost:8080 来请求的；
+ - 但是因为使用了代理，默认情况下它的值时 http://localhost9000
  - 如果我们需要修改，那么可以将changeOrigin设置为true即可；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1773059237000jb844q.png)

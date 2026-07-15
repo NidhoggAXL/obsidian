@@ -54,7 +54,6 @@ main文件引入：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidia
 > [!note] 需要配置webpack的devtool
 > ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1772958886000y4m4o1.png)
 
-
   - 第二步：在转换后的代码，最后添加一个注释，它指向sourcemap；
 	  - **无论是开发环境还是生成环境，webpack默认会进行添加**
 
@@ -81,7 +80,7 @@ main文件引入：![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidia
 
 上面格式化后
 
-```js
+```json
 {
   "version": 3,
   "file": "bundle.js",

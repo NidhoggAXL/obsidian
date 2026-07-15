@@ -1,4 +1,3 @@
-
 像之前一样，我们可以将babel的配置信息放到一个独立的文件中，babel给我们提供了两种配置文件的编写：
 
  - `babel.config.json`（或者.js，.cjs，.mjs）文件；

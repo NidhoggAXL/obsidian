@@ -3,7 +3,7 @@
 远程分支是也是一种分支结构： 
 
 * 以 `<remote>/<branch>` 的形式命名的； 
-
+	
 如果我们刚刚clone下来代码，分支的结构如下： 
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17451480010009r2yoe.png)
