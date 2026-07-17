@@ -17,7 +17,6 @@
 	- `.camel`-将 kebab-case attribute 名转换为 camelCase.
 - 用法:**动态地绑定一个或多个 attribute，或一个组件 prop 到表达式**。
 
-
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745501325000quyqrl.png)
 
 > [!note]
@@ -25,7 +24,7 @@
 > 在开发中，我们通常会使用语法糖的形式，因为这样更加简洁。
 # 二、绑定基本属性
 
-v-bind用于**绑定一个或多个属性值**，或者向另一个组件[传递props值](10_Vue3/08%20父子组件间通信/03%20父组件传递子组件.md)
+v-bind用于**绑定一个或多个属性值**，或者向另一个组件[[03 父组件传递子组件|传递props值]]
 
 在开发中，有哪些属性需要动态进行绑定呢？ 
 

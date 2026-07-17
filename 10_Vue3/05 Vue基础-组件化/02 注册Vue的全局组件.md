@@ -11,16 +11,16 @@
 
 **注册组件分成两种：** 
 
-* <mark class="hltr-orange">全局组件</mark>：在任何其他的组件中都可以使用的组件； 
-* <mark class="hltr-orange">局部组件</mark>：只有在注册的组件中才能使用的组件；
+* 全局组件：在任何其他的组件中都可以使用的组件； 
+* 局部组件：只有在注册的组件中才能使用的组件；
 
 # 二、注册全局组件
 
 先来学习一下全局组件的注册： 
 
-* 全局组件需要使用全局创建的<mark class="hltr-orange">app来注册组件</mark>； 
-* 通过<mark class="hltr-orange">component方法</mark>传入<mark class="hltr-orange">组件名称、组件对象</mark>即可注册一个全局组件了； 
-* 之后，可以在<mark class="hltr-orange">App组件的template中</mark>直接使用这个<mark class="hltr-orange">全局组件</mark>：
+* 全局组件需要使用全局创建的app来注册组件； 
+* 通过component方法传入组件名称、组件对象即可注册一个全局组件了； 
+* 之后，可以在App组件的template中直接使用这个全局组件：
 
 ```js
 app.component(组件名词, 组件对象)
@@ -48,7 +48,7 @@ app.component(组件名词, 组件对象)
 </body>
 ```
 
-但是根组件会有不同，根组件就不需要使用到 createApp 里面，使用 template 就可以创建 <mark class="hltr-orange">标签的元素</mark>，这里也可以把 html 内容抽取出来。
+但是根组件会有不同，根组件就不需要使用到 createApp 里面，使用 template 就可以创建标签的元素，这里也可以把 html 内容抽取出来。
 
 ```html
 <body>
@@ -91,7 +91,7 @@ app.component(组件名词, 组件对象)
 
 # 四、全局组件的特点
 
-<mark class="hltr-orange">只要注册的是全局组件，就可以在任意的 template 中使用：</mark>
+只要注册的是全局组件，就可以在任意的 template 中使用：
 
 * 其中根组件 id="app" 默认就是一个 template 模板
 
@@ -152,7 +152,7 @@ app.component('my-component-name', {})
 
 **方式二：使用PascalCase（驼峰标识符）** 
 
-* 当使用 PascalCase (<mark class="hltr-orange">首字母大写命名</mark>) 定义一个组件时，你在引用这个自定义元素时两种命名法都可以使用。 
+* 当使用 PascalCase (首字母大写命名) 定义一个组件时，你在引用这个自定义元素时两种命名法都可以使用。 
 * 也就是说`<my-component-name>` 和 `MyComponentName` 都是可接受的；
 
 ```js

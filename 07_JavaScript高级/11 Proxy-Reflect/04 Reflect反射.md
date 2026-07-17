@@ -97,7 +97,7 @@ Proxy是一个代理的，实质还是对obj创建了一个监听的对象 objPr
 const obj = {
   _name: "axl",
   set name(newName) {
-    console.log("obj里面的", this)//this默认obj
+    console.log("obj里面的", this)//this修改为代理对象
     this._name = newName
   }
 }
@@ -107,7 +107,7 @@ const objProxy = new Proxy(obj, {
     console.log(`监听：${key}进行set改变`)
     console.log(receiver)
     //set 方法传入 receiver 把 objProxy 传入进去
-    rturn Reflect.set(target, key, value, receiver)
+    return Reflect.set(target, key, value, receiver)
   }
 })
   
@@ -119,7 +119,6 @@ objProxy.name = "mba"
 
 > [!abstract]
 > 这样当通过 objProxy 修改 obj 里面的数据的时候，也可以进行一个监听啦。
-
 
 
 # 五、Reflect Construct

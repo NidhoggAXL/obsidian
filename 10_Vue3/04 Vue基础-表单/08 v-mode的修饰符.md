@@ -1,14 +1,15 @@
 # 一、lazy(懒惰)
+
 lazy修饰符是什么作用呢？ 
 
-* 默认情况下，v-model在进行双向绑定时，绑定的是 **input事件**，那么会在每次内容输入后就将最新的值和绑定的属性进行同 步； 
-* 如果我们在v-model后跟上lazy修饰符，那么会将绑定的事件切换为 **change** 事件，只有在提交时（比如回车）才会触发；
+* 默认情况下，v-model在进行双向绑定时，绑定的是 **input事件**，那么会在每次内容输入后就将最新的值和绑定的属性进行同步，这个就是一个[[惰性和急切|急切]]的 
+* 如果我们在v-model后跟上lazy修饰符，那么会将绑定的事件切换为 **change** 事件，只有在提交时（比如回车）才会触发，变为[[惰性和急切|惰性]]的。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746088724000v5r0du.png)
 
 # 二、numble(数字)
 
-我们先来看一下v-model绑定后的值是什么类型的： 
+先来看一下v-model绑定后的值是什么类型的： 
 
 * **message总是string类型**，即使在**我们设置type为number也是string类型**；
 * 不管我们设置的类型是什么，v-model 也会默认为 **string类型**
@@ -17,7 +18,8 @@ lazy修饰符是什么作用呢？
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746089468000k93m1b.png)
 
->[!ps] 并且 message2 里面是**不可以输入数字之外的**
+>[!warning] 
+>并且 message2 里面是**不可以输入数字之外的**
 
 
 如果我们希望转换为数字类型，那么可以使用 **.number 修饰符：**

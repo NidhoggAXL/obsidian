@@ -53,7 +53,8 @@ vite对TypeScript是原生支持的，它会直接使用ESBuild来完成编译�
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1773585585000qg0j8y.png)
 
-> [!note] ts文件里面确实js的代码。
+> [!note] 
+> ts文件里面存在的是js代码。
 
 # 四、Vite打包项目
 

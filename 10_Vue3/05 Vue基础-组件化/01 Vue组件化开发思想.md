@@ -9,24 +9,24 @@
 - 如果我们将一个个功能块拆分后，就可以像搭建积木一下来搭建我们的项目
 
 # 二、组件化开发
-**现在可以说整个的大前端开发都是组件化的天下**：无论从<mark class="hltr-orange">三大框架（Vue、React、Angular）</mark>，还是跨平台方案的 <mark class="hltr-orange">Flutter</mark>，甚至是<mark class="hltr-orange">移动端</mark>都在转向组件化开发，包括<mark class="hltr-orange">小程序的 开发</mark>也是采用组件化开发的思想。 
+**现在可以说整个的大前端开发都是组件化的天下**：无论从三大框架（Vue、React、Angular），还是跨平台方案的 Flutter，甚至是移动端都在转向组件化开发，包括小程序的 开发也是采用组件化开发的思想。 
 
-所以，学习组件化最重要的是<mark class="hltr-orange">它的思想</mark>，每个框架或者平台可能实现方法不同，但是思想都是一样的。
+所以，学习组件化最重要的是它的思想，每个框架或者平台可能实现方法不同，但是思想都是一样的。
 
 **我们需要通过组件化的思想来思考整个应用程序：** 
 
 * 我们将一个完整的页面分成很多个组件； 
-* 每个组件都用于实现页面的一个<mark class="hltr-orange">功能块</mark>； 
+* 每个组件都用于实现页面的一个功能块； 
 * 而每一个组件又可以进行细分； 
-* 而组件本身又可以在多个地方进行<mark class="hltr-orange">复用</mark>；
+* 而组件本身又可以在多个地方进行复用；
 
 # 三、Vue的组件化
 
-**组件化是Vue、React、Angular的核心思想，也是学习后面知识的重点(包括以后实战项目):**
+**组件化是Vue、React、Angular的核心思想，也是学习后面知识的重点:**
 
-* 前面的 createApp 函数传入了一个<mark class="hltr-orange">对象App</mark>，这个对象其实本质上就是<mark class="hltr-orange">一个组件</mark>，也是我们应用程序的<mark class="hltr-orange">根组件</mark>
-* 组件化提供了一种抽象，让我们可以开发出<mark class="hltr-orange">一个个独立可复用的小组件</mark>来构造我们的应用
-* 任何的应用都会被抽象成一颗<mark class="hltr-orange">组件树</mark>;
+* 前面的 createApp 函数传入了一个对象App，这个对象其实本质上就是一个组件，也是我们应用程序的根组件
+* 组件化提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造我们的应用
+* 任何的应用都会被抽象成一颗组件树;
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17461014710006deu8g.png)
 

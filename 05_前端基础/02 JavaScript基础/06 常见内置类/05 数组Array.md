@@ -78,9 +78,9 @@ console.log(bar)//['haha', 'hehe', 'b', 'c']
 
 ## 2.4 splice利器
 
-**arr.splice 方法可以说是处理数组的利器，它可以做所有事情:添加，删除和替换元素。** ^c6d11c
+**arr.splice 方法可以说是处理数组的利器，它可以做所有事情:添加，删除和替换元素。**
 
-arr.splice的语法结构如下:(**重点使用**) ^ffadfe
+arr.splice的语法结构如下:(**重点使用**) 
 
 `array.splice(start[,deleteCount[,iteml[,item2[,·..]]]])`
 

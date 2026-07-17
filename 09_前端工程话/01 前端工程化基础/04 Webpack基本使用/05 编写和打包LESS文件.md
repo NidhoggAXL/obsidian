@@ -3,7 +3,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1744548937000894q6u.png)
 
 
-# 二、fLess工具处理
+# 二、Less工具处理
 
 我们可以使用less工具来完成它的编译转换
 

@@ -1,4 +1,3 @@
-
 # 一、解决commonjs问题
 
 为什么需要解决commonjs呢？
@@ -92,7 +91,7 @@ npm install @rollup/plugin-node-resolve -D
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1773500403000h7hu7d.png)
 
-如果不想打包到 出口文件里面就需要配置：
+如果不想同时把lodash打包到出口文件里面就需要配置：
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1773500762000zivu29.png)
 

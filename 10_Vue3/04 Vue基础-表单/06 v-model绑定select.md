@@ -1,14 +1,14 @@
-使用的是：[](05_前端基础/01%20HTML%20+%20CSS/05%20高级元素/01%20高级元素的使用.md#5.8%20select%20和%20option%20的使用|select)
+使用的是：[[01 高级元素的使用#5.8 select 和 option 的使用|select]]
 
 **单选：只能选中一个值**
 
 * v-model绑定的是一个值； 
-* 当我们选中option中的一个时，会将它对应的value赋值到 <mark class="hltr-orange">select</mark> 中； 
+* 当我们选中option中的一个时，会将它对应的value赋值到 select 中； 
 
 **多选：可以选中多个值** 
 
 * v-model绑定的是一个数组； 
-* 当选中多个值时，就会将选中的option对应的value添加到数组 <mark class="hltr-orange">current</mark> 中；
+* 当选中多个值时，就会将选中的option对应的value添加到数组 current 中；
 
 **select分为单选和多选：**
 

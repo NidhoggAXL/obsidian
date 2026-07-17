@@ -78,7 +78,7 @@ components: {
 
 这样就可以在 h1-compoent 局部组件里面使用 p-compoent 局部组件。
 
-看着还是不舒服，<mark class="hltr-orange">那么可以把 局部组件整体抽取出来。</mark>
+看着还是不舒服，那么可以把 局部组件整体抽取出来。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746107999000v4d5kq.png)
 

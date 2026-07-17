@@ -10,10 +10,10 @@
 
 * 选项：watch 
 * 类型：`{ [key: string]: string | Function | Object | Array}`
-* 监听 data 里面的属性时，在 watch 里面的<mark class="hltr-orange">对应函数名必须是和监听 data 的属性相同</mark>
+* 监听 data 里面的属性时，在 watch 里面的对应**函数名必须是和监听 data 的属性相同**
 * 监听会默认传入两个参数：参数一（新的属性值）、参数二（旧的参数值）
 
-**当然监听也有语法糖**：[](05_前端基础/04%20JavaScript事件处理/01%20认识事件处理.md#一、认识事件（Event）|handler)
+**当然监听也有语法糖**：
 
 ```js
 watch: {
@@ -37,7 +37,7 @@ watch: {
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745674607000a84erw.png)
 
-会发现如果改变的是对象就会拿到 [代理对象](07_JavaScript高级/11%20Proxy-Reflect/02%20Proxy代理类.md)，如果真的想<mark class="hltr-orange">拿到原对象</mark>，就要使用 [](10_Vue3/15%20Pinia状态管理/03%20Pinia核心概念State.md#3.3%20toRaw|toRaw())  方法如下的代码：
+会发现如果改变的是对象就会拿到 [[02 Proxy代理类|代理对象]]，如果真的想拿到原对象，就要使用 [[03 Pinia核心概念State#3.3 toRaw|toRaw]]  方法如下的代码：
 
 ```js
 console.log(Vue.toRaw(newValue))//{name: 'axl'}
@@ -56,7 +56,7 @@ console.log(Vue.toRaw(oldValue) === oldValue) // true
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677354000l6xpwz.png)
 
-这是因为默认情况下，<mark class="hltr-orange">watch只是在侦听info的引用变化</mark>，对于<mark class="hltr-orange">内部属性的变化是不会做出响应</mark>的： 
+这是因为默认情况下，watch只是在侦听info的引用变化，对于内部属性的变化是不会做出响应的： 
 
 * 这个时候我们可以使用一个选项 **deep** 进行更深层的侦听； 
 	* 默认为 false，深度监听为 true
@@ -65,13 +65,13 @@ console.log(Vue.toRaw(oldValue) === oldValue) // true
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17456775480007t6azf.png)
 
 > [!tip] 为什么 newValue 和 oldValue 是同一个对象？
-> <mark class="hltr-orange">改变的是 info 中的属性 name，并没有改变 info 的地址</mark>，所以说并发生改变我们监听的 info 的地址的，还是对 info 的同一个引用，所以 newValue 和 oldValue 还是同一个对象并且 oldValue 不为 undifined。
+> 改变的是 info 中的属性 name，并没有改变 info 的地址，所以说并发生改变我们监听的 info 的地址的，还是对 info 的同一个引用，所以 newValue 和 oldValue 还是同一个对象并且 oldValue 不为 undifined。
 
 
 **还有另外一个属性，是希望一开始的就会立即执行一次：**
 
 * 这个时候我们使用 **immediate** 选项； 
-* 这个时候无论后面数据是否有变化，侦听的函数都会<mark class="hltr-orange">有限执行一次</mark>；
+* 这个时候无论后面数据是否有变化，侦听的函数都会**有限执行一次**；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1745677910000jycj04.png)
 

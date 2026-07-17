@@ -15,8 +15,8 @@
 
 目前webpack和rollup分别应用在什么场景呢？
 
- - 通常在实际项目开发过程中，我们都会使用webpack（比如react、angular项目都是基于webpack的）；
- - 在对库文件进行打包时，我们通常会使用rollup（比如vue、react、dayjs源码本身都是基于rollup的，Vite底层使用Rollup）；
+ - 通常在实际项目开发过程中，我们都会使用webpack（比如react、angular项目都是基于webpack的）
+ - 在对库文件进行打包时，我们通常会使用rollup（比如vue、react、dayjs源码本身都是基于rollup的，[[01 认识Vite核心概念|Vite]]底层使用Rollup）
 
 
 # 二、Rollup基本使用
@@ -31,13 +31,9 @@ npm install rollup -D
 
 ```
 
+
 创建main.js文件，打包到bundle.js文件中：
 
-> [!tip] f 的意思就是format-格式
-> 1. node环境，支持commonjs使用 `-f cjs`
-> 2. browser环境，有全局对象使用 `-f iife`
-> 3. [AMD](09_前端工程话/01%20前端工程化基础/02%20JS模块化开发/04%20AMD和CMD-了解.md)环境使用 `-f amd`
-> 4. UMD所有环境，使用 `-f umd`
 
 ```shell
 # 打包浏览器的库
@@ -49,6 +45,12 @@ npx rollup ./src/main.js -f cjs -o dist/bundle.js
 # 打包通用的库（必须跟上name）
 npx rollup ./src/main.js -f umd --name mathUtil -o dist/bundle.js
 ```
+
+> [!tip] f 的意思就是format-格式
+> 1. node环境，支持commonjs使用 `-f cjs`
+> 2. browser环境，有全局对象使用 `-f iife`
+> 3. [[04 AMD和CMD-了解|AMD]]环境使用 `-f amd`
+> 4. UMD所有环境，使用 `-f umd`
 
 # 三、Rollup的配置文件
 
