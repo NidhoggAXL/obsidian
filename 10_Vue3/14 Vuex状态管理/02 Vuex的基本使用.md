@@ -18,10 +18,10 @@ npm install vuex
 
 **Vuex和单纯的全局对象有什么区别呢？**
 
-* 第一：Vuex的状态<mark class="hltr-cyan">存储是响应式</mark>的 
+* 第一：Vuex的状态存储是响应式的 
 	* 当Vue组件从store中读取状态的时候，若store中的状态发生变化，那么相应的组件也会被更新； 
 * 第二：你不能直接改变store中的状态 
-	* 改变store中的状态的<mark class="hltr-cyan">唯一途径就显示提交mutation(转变)</mark>； 
+	* 改变store中的状态的唯一途径就显示提交mutation(转变)； 
 	* 这样使得可以方便的跟踪每一个状态的变化，从而能够通过一些工具更好的管理应用的状态；
 
 **使用步骤：** 

@@ -11,7 +11,7 @@
 * 答案是否定的； 
 * 这是因为默认情况下，我们在**切换组件后，about组件会被销毁掉，再次回来时会重新创建组件；**
 
-但是，在开发中某些情况我们希望<mark class="hltr-orange">继续保持组件的状态，而不是销毁掉</mark>，这个时候我们就可以使用一个内置组件：keep-alive。
+但是，在开发中某些情况我们希望继续保持组件的状态，而不是销毁掉，这个时候我们就可以使用一个内置组件：keep-alive。
 
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17468670530009t9f8u.png)
@@ -27,14 +27,14 @@ keep-alive有一些属性：
 
 **include 和 exclude  属性允许组件有条件地缓存：** 
 
-* 二者都可以用<mark class="hltr-orange">逗号分隔字符串、正则表达式或一个数组</mark>来表示； 
+* 二者都可以用逗号分隔字符串、正则表达式或一个数组来表示； 
 * 匹配首先检查组件自身的 name 选项；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746867155000lp189r.png)
 
 # 三、缓存组件的生命周期
 
-对于缓存的组件来说，再次进入时，我们是<mark class="hltr-orange">不会执行created（组件创建完成）或者mounted（挂载组件）等生命周期函数</mark>的： 
+对于缓存的组件来说，再次进入时，我们是不会执行created（组件创建完成）或者mounted（挂载组件）等生命周期函数的： 
 
 * 但是有时候我们确实希望监听到何时重新进入到了组件，何时离开了组件； 
 * 这个时候我们可以使用 **activated（活跃的）** 和 **deactivated（不活跃的）** 这两个生命周期钩子函数来监听；

@@ -61,8 +61,6 @@ npm install vue-router
 * path配置的是根路径: `/` 
 * **redirect是重定向**, 也就是将根路径重定向到 `/home` 的路径下, 这样就可以得到想要的结果了.
 
-
-
 # 四、history路由模式使用
 
 另外一种选择的模式是history模式：
@@ -78,10 +76,12 @@ npm install vue-router
 router-link事实上有很多属性可以配置： 
 
 * to属性： 
+	
 	* 是一个字符串，或者是一个对象 
 	* 目的确定占位路由是哪一个
 	
  * replace属性： 
+    
 	 * 设置 replace 属性的话，当点击时，会调用 router.replace()，而不是 router.push()； 
 	 * 目的是不记录历史记录，当点击返回的时候会直接回到浏览器搜索页面
 	

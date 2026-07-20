@@ -14,7 +14,7 @@ npm install @vue/babel-plugin-jsx -D
 ```
 
 在babel.config.js配置文件中配置插件：
-
+ 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753414105000dnxsgz.png)
 
 ## 1.2 vite环境
@@ -31,5 +31,5 @@ npm install @vitejs/plugin-vue-jsx -D
 	
 # 二、计数器案例
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753414198000kqayo9.png)
+![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753414198000kqayo9.png)
 

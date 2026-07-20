@@ -6,7 +6,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747634937000ca9z5k.png)
 
-在 App.vue 里面进行return的时候也可以使用[展开运算符](07_JavaScript高级/09%20ECMA6特性/06%20展开运算符.md)：
+在 App.vue 里面进行return的时候也可以使用[[06 展开运算符|展开运算符]]：
 
 ```js
 return {
@@ -24,7 +24,22 @@ return {
 
 完成一个监听界面滚动位置的Hook：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747636561000h2ubwg.png)
+```js
+import { ref } from "vue";
+
+export function useScrollPosition() {
+  const scrollX = ref(0)
+  const scrollY = ref(0)
+
+  document.addEventListener('scroll', () => {
+    scrollX.value = window.scrollX
+    scrollY.value = window.scrollY
+  })
+
+  return { scrollX, scrollY }
+}
+```
+
 
 
 

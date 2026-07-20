@@ -12,7 +12,7 @@ Action类似于mutations，不同在于：
 * **context是一个和store实例均有相同方法和属性的context对象**；
 * 所以可以从其中获取到commit方法来提交一个mutation，或者通过 context.state 和 context.getters 来获取 state 和 getters；
 
-但是为什么<mark class="hltr-orange">它不是store对象</mark>呢？这个等到我们讲[Modules](10_Vue3/14%20Vuex状态管理/07%20核心概念Modules.md)时再具体来说；
+但是为什么它不是store对象呢？这个等到我们讲[Modules](10_Vue3/14%20Vuex状态管理/07%20核心概念Modules.md)时再具体来说；
 
 # 二、actions的分发操作
 

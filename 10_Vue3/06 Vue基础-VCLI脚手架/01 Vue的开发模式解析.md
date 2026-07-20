@@ -32,8 +32,7 @@
 ```
 
 > [!tip]
-> 虽然vue默认是集成了less，但是在使用的时候还是需要下载less的[[10 Webpack打包Vue#App.vue的打包过程|loader]]
-
+> 虽然vue默认是集成了less，但是在使用的时候还是需要下载less
 
 # 三、如何支持SFC
 

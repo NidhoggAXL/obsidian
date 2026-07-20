@@ -2,8 +2,8 @@
 
 在Vue中有渲染作用域的概念： 
 
-* 父级模板里的所有内容都是在<mark class="hltr-orange">父级作用域中编译</mark>的； 
-* 子模板里的所有内容都是在<mark class="hltr-orange">子作用域中编译</mark>的；
+* 父级模板里的所有内容都是在父级作用域中编译的； 
+* 子模板里的所有内容都是在子作用域中编译的；
 
 如何理解这句话呢？我们来看一个案例： 
 
@@ -14,9 +14,9 @@
 
 # 二、作用域插槽
 
-**但是有时候我们希望插槽可以访问到父组件中的内容是非常重要的：** 
+**但是有时候我们希望插槽可以访问到不在同一个作用域的内容是非常重要的：** 
 
-* 当一个组件被用来渲染一个<mark class="hltr-orange">数组元素时</mark>，我们使用插槽，并且希望插槽中显示每项的内容； 
+* 当一个组件被用来渲染一个数组元素时，我们使用插槽，并且希望插槽中显示每项的内容； 
 * 这个时候Vue给我们提供了作用域插槽；
 
 我们来看下面的一个案例： 
@@ -36,7 +36,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746791196000c1ktmp.png)
 
-并且如果我们的插槽只有默认插槽时<mark class="hltr-orange">(一个插槽)</mark>，<mark class="hltr-orange">组件的标签可以被当做插槽的模板来使用</mark>，这样，我们就可以将 v-slot 直接用在组件上：
+并且如果我们的插槽只有默认插槽时(一个插槽)，组件的标签可以被当做插槽的模板来使用，这样，我们就可以将 v-slot 直接用在组件上：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746791247000h2bszt.png)
 

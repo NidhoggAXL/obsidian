@@ -43,7 +43,7 @@ store有三个核心概念:
 > 
 > 返回的函数统一使用useX作为命名方案，这是约定的规范；use + name 使用小驼峰命名
 
-当 Store 要使用其他 Store 的 [](10_Vue3/15%20Pinia状态管理/04%20Pinia核心概念Getters.md#^0c656b|state、getters、actiongs) 的时候，就更加的具有通用性
+当 Store 要使用其他 Store 的 [[04 Pinia核心概念Getters#^0c656b|state、getters、actiongs]] 的时候，就更加的具有通用性
 
 **这种设计的好处：**
 

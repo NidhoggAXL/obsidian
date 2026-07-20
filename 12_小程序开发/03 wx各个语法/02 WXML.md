@@ -8,7 +8,7 @@ WXML基本格式:
 开发中,界面上展示的数据并不是写死的,而是会根据服务器返回的数据，或者用户的操作来进行改变
 
 - 如果使用原生JS或者jQuery的话,我们需要通过操作DOM来进行界面的更新
-- 小程序和Vue一样,提供了插值语法: Mustache语法(双大括号)
+- 小程序和Vue一样,提供了插值语法:[[01 Mustache语法| Mustache语法]]
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/175361698000065tjku.png)
 

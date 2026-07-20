@@ -27,8 +27,8 @@ const imgUrl = new URL("../assets/logo.png", import.meta.url).href;
 
 ## 三、开发环境 vs 生产环境
 
-1. **开发环境**  
-    Vite 服务器直接返回转换后的路径：
+1. **开发环境** ：Vite 服务器直接返回转换后的路径：
+
 ```js
 // 转换结果
 http://localhost:3000/src/assets/logo.png?import
@@ -232,9 +232,8 @@ export default {
   background: url(v-bind(bannerUrl));
 }
 
-<script>
+
 // 在JS中处理
 const bannerUrl = new URL('@/assets/banner.jpg', import.meta.url).href;
-</script>
 ```
 

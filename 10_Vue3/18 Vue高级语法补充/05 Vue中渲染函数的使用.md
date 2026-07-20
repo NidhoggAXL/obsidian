@@ -2,10 +2,10 @@
 
 Vue推荐在绝大数情况下使用模板来创建你的HTML，然后一些特殊的场景，你真的需要**JavaScript的完全编程的能力**，这个时 候你可以使用 **渲染函数** ，它比模板更接近**编译器**；
 
-前面我们讲解过[](10_Vue3/02%20Vue基础-模板语法/11%20Vue的虚拟DOM.md#一、认识VNode|VNode)和[VDOM](10_Vue3/02%20Vue基础-模板语法/11%20Vue的虚拟DOM.md)的概念： 
+前面我们讲解过[[11 Vue的虚拟DOM#一、认识VNode|VNode]]和[[11 Vue的虚拟DOM|VDOM]]的概念： 
 
 * Vue在生成真实的DOM之前，会将**我们的节点转换成VNode**，而VNode组合在一起形成**一颗树结构**，就是虚拟DOM （VDOM）； 
-* 事实上，我们之前编写的 template 中的HTML 最终也是使用**渲染函数生成对应的VNode**； 
+* 事实上，我们之前编写的 [[02 Vue内置组件Teleport|Template]] 中的HTML 最终也是使用**渲染函数生成对应的VNode**；
 * 那么，如果你想充分的利用JavaScript的编程能力，我们可以自己来编写 **createVNode 函数，生成对应的VNode**；
 
 那么我们应该怎么来做呢？使用 h()函数： 
@@ -43,8 +43,6 @@ h函数可以在两个地方使用：
 
 ## 4.1 Opsiton API
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753411888000952z88.png)
-
 ```js
 <script>
 import { h } from 'vue';
@@ -79,9 +77,61 @@ export default {
 
 不使用 setup 语法糖编写：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753412217000595w5y.png)
+```vue
+<script>
+import { h, ref } from 'vue';
+import Home from "./Home.vue";
+
+export default {
+  setup() {
+    const counter = ref(0);
+
+    const increment = () => {
+      counter.value++;
+    };
+
+    const decrement = () => {
+      counter.value--;
+    };
+
+    return () => h("div", { className: "app" }, [
+      h("h2", null, "当前计数: ${counter.value}"),
+      h("button", { onClick: increment }, "+1"),
+      h("button", { onClick: decrement }, "-1"),
+      h(Home)
+    ]);
+  }
+};
+</script>
+```
 
 使用 setup 语法糖编写：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753412710000g2o01t.png)
+```vue
+<script setup>
+import { h, ref } from 'vue';
+
+const count = ref(0);
+const increment = () => {
+  count.value++;
+};
+
+const decrement = () => {
+  count.value--;
+};
+
+const render = () => h('div', [
+  h('h1', '渲染函数的使用'),
+  h('p', '当前计数: ${count.value}'),
+  h('button', { onClick: increment }, '增加'),
+  h('button', { onClick: decrement }, '减少')
+]);
+</script>
+
+<template>
+  <render />
+</template>
+```
+
+
 

@@ -14,7 +14,6 @@ Button组件用于创建按钮，默认**块级元素**
 # 三、open-type属性
 
 
-
 <div style="
   height: 500px; 
   overflow-y: auto;

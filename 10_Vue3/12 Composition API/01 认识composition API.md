@@ -21,7 +21,7 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746884610000zjv6mu.png)
 
 
-如果我们能将同一个<mark class="hltr-orange">逻辑关注点相关的代码收集在一起</mark>会更好。这就是Composition(组成) API想要做的事情，以及可以帮助我们完成的事情。 也有人把Vue Composition API简称为VCA。
+如果我们能将同一个逻辑关注点相关的代码收集在一起会更好。这就是Composition(组成) API想要做的事情，以及可以帮助我们完成的事情。 也有人把Vue Composition API简称为VCA。
 
 # 三、认识composition API
 
@@ -35,6 +35,5 @@ setup其实就是组件的另外一个选项:
 - 只不过这个选项**强大到可以用它来替代之前所编写的大部分其他选项生命周期**等等;
 - 比如methods、computed、watch、 data、生命周期等等
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746884724000oznt8g.png)
 
 

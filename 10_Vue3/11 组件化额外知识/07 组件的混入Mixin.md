@@ -4,9 +4,9 @@
 
 在Vue2和Vue3中都支持的一种方式就是**使用Mixin来完成**： 
 
-* Mixin提供了一种非常灵活的方式，来<mark class="hltr-orange">分发Vue组件中的可复用功能</mark>； 
-* 一个Mixin<mark class="hltr-orange">对象</mark>可以包含<mark class="hltr-orange">任何组件选项</mark>； 
-* 当组件使用Mixin对象时，所有<mark class="hltr-yellow">Mixin对象的选项将被 混合 进入该组件本身的选项中</mark>
+* Mixin提供了一种非常灵活的方式，来分发Vue组件中的可复用功能； 
+* 一个Mixin对象可以包含任何组件选项； 
+* 当组件使用Mixin对象时，所有Mixin对象的选项将被 混合 进入该组件本身的选项中
 
 # 二、Mixin的基本使用
 
@@ -36,8 +36,8 @@
 
 如果组件中的某些选项，是所有的组件都需要拥有的，那么这个时候我们可以使用**全局的mixin：** 
 
-* 全局的Mixin可以使用 <mark class="hltr-orange">应用app的方法</mark> mixin 来完成注册； 
-* 一旦注册，那么<mark class="hltr-orange">全局混入的选项将会影响每一个组件</mark>；
+* 全局的Mixin可以使用 应用app的方法 mixin 来完成注册； 
+* 一旦注册，那么全局混入的选项将会影响每一个组件；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17468828220001i7pat.png)
 

@@ -13,14 +13,13 @@
 
 Teleport是什么呢?
 
-- 它是一个Vue提供的内置组件，类似于react的[](13_React/05%20React组件-进阶/05%20portals和fragment.md#一、Portals的使用|Portals);
+- 它是一个Vue提供的内置组件，类似于react的[[05 portals和fragment#一、Portals的使用|Portals]];
 - teleport翻译过来是心灵传输、远距离运输的意思，
 
 它有两个属性:
->to:指定将其中的内容移动到的目标元素，可以使用选择器，
-> disabled:是否禁用 teleport 的功能;
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753404658000ehgh5u.png)
+ - to:指定将其中的内容移动到的目标元素，可以使用选择器，
+ - disabled:是否禁用 teleport 的功能;
 
 # 二、Teleport效果
 

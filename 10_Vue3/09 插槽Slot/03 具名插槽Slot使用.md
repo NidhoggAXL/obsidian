@@ -2,7 +2,7 @@
 
 测试一个知识点：如果一个组件中含有**多个插槽**，我们插入多个内容时是什么效果？ 
 
-我们会发现默认情况下<mark class="hltr-orange">每个插槽都会获取到我们插入的内容来显示</mark>；
+我们会发现默认情况下每个插槽都会获取到我们插入的内容来显示；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17467808110009cnjhc.png)
 
@@ -10,8 +10,8 @@
 # 二、具名插槽的使用
 事实上，我们希望达到的效果是插槽对应的显示，这个时候我们就可以使用 **具名插槽**： 
 
-* 具名插槽顾名思义就是给插槽起一个名字， <mark class="hltr-orange">元素有一个特殊的 attribute：name</mark>； 
-* 一个<mark class="hltr-orange">不带 name 的slot，会带有隐含的名字 default</mark>；
+* 具名插槽顾名思义就是给插槽起一个名字， 元素有一个特殊的 attribute：name； 
+* 一个不带 name 的slot，会带有隐含的名字 default；
 	* `<solt></solt> 等价于 <solt name="default"></solt>`
 	* 在使用的时候如果不指定插槽名字就会默认使用name为default的插槽
 
@@ -19,9 +19,9 @@
 
 
 > [!tip] App.vue使用注意事项
-> 在使用的具名插槽的时候，需要在使用元素外<mark class="hltr-orange">使用template包裹</mark>，并在template中使用 <mark class="hltr-orange">v-slot: 来确定组件里面要插入地方的名字。</mark>
+> 在使用的具名插槽的时候，需要在使用元素外使用template包裹，并在template中使用 v-slot: 来确定组件里面要插入地方的名字。
 > 
-> <mark class="hltr-orange">还有语法糖的编写方式，使用 `#` 号来确定要插槽的位置：</mark>
+> 还有语法糖的编写方式，使用 `#` 号来确定要插槽的位置：
 > `<template v-slot:center></template>`等价与`<template #center></template`
 
 

@@ -1,6 +1,6 @@
 # 一、Mutation基本使用
 
-更改 Vuex 的 store 中的状态的<mark class="hltr-cyan">唯一方法是提交 mutation</mark>：
+更改 Vuex 的 store 中的状态的唯一方法是提交 mutation：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747985748000lt39f6.png)
 
@@ -24,7 +24,7 @@ payload为对象类型
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747986188000sejzh4.png)
 
-定义mutation：使用到 [计算属性名](12%20ES6对象的增强.md)
+定义mutation：使用到 [[12 ES6对象的增强|计算属性名]]
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747986198000eo8uv2.png)
 
@@ -51,10 +51,6 @@ payload为对象类型
 * 每一条mutation被记录，**devtools都需要捕捉到前一状态和后一状态的快照**；
 * 但是在mutation中执行异步操作，就无法追踪到数据的变化
 
-所以Vuex的重要原则中要求 mutation 必须是同步函数； 
+**所以Vuex的重要原则中要求 mutation 必须是同步函数**； 
 
 * 但是如果希望在Vuex中发送网络请求的话需要如何操作呢？
-
-
-
-

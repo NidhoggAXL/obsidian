@@ -1,20 +1,34 @@
-
 # 一、认识自定义指令
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/175317359900028pw4l.png)
+在Vue的模板语法中我们学习过各种各样的指令:v-show、v-for、v-model等等，除了使用这些指令之外，Vue也允许我们来自定义自己的指令。
+
+ - 注意:在Vue中，代码的复用和抽象主要还是通过组件;
+ - 通常在某些情况下，你需要对DOM元素进行底层操作，这个时候就会用到自定义指令
+
+自定义指令分为两种:
+
+ - 自定义局部指令:组件中通过directives选项，只能在当前组件中使用;
+ - 自定义全局指令:app的directive方法，可以在任意组件中被使用;
+
+比如我们来做一个非常简单的案例:当某个元素挂载完成后可以自定获取焦点
+
+ - 实现方式一:如果我们使用默认的实现方式;
+ - 实现方式二:自定义一个v-focus的局部指令;
+ - 实现方式三:自定义一个v-focus的全局指令;
 
 ## 1.1 实现方式一：聚焦的默认实现
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753173643000rcj95d.png)
 
 ## 1.2 实现方式二：局部自定义指令
+
 实现方式二：自定义一个 v-focus 的局部指令 
 
 * 这个自定义指令实现非常简单，我们只需要在组件选项中使用 **directives** 即可； 
-* 它是一个对象，在对象中编写我们自定义指令的名称（注意：<mark class="hltr-orange">这里不需要加v-</mark>）； 
+* 它是一个对象，在对象中编写我们自定义指令的名称（注意：这里不需要加v-）； 
 * 自定义指令有一个生命周期，是在组件挂载后调用的 **mounted**，我们可以在其中完成操作；
 
-```html
+```vue
 <script>
 // 自定义指令:option API使用
 export default {
@@ -87,6 +101,7 @@ app.mount('#app')
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17531807760008ibttc.png)
 
 # 二、指令的生命周期
+
 一个指令定义的对象，Vue提供了如下的几个钩子函数： 
 
 * **created**：在绑定元素的 attribute 或事件监听器被应用之前调用；
@@ -120,7 +135,7 @@ app.mount('#app')
 
 * 在开发中，大多数情况下从服务器获取到的都是时间戳； 
 * 我们需要将时间戳转换成具体格式化的时间来展示； 
-* 在Vue2中我们可以通过[](08_框架/01%20JQuery/03%20JQuery的整体架构.md#四、jQuery过滤器（filtering）的API|过滤器)来完成； 
+* 在Vue2中我们可以通过[[03 JQuery的整体架构#四、jQuery过滤器（filtering）的API|过滤器]]来完成； 
 * 在Vue3中我们可以通过 计算属性（computed） 或者 自定义一个方法（methods） 来完成； 
 * 其实我们还可以通过一个自定义的指令来完成；
 

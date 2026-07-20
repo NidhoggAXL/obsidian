@@ -7,7 +7,7 @@
 
 props非常好理解，它其实就是**父组件传递**过来的**属性**会被**放到props对象中**，我们在setup中如果需要使用，那么就可以直接通过props参数获取:
 
--  对于定义props的类型，还是和之前的options API规则是一样的，在**props选项中定义**
+- 对于定义props的类型，还是和之前的options API规则是一样的，在**props选项中定义**
 - 并且在template中依然是可以正常去使用props中的属性，比如message;
 - **如果在setup函数中想要使用props，那么不可以通过 this 去获取**
 - 因为props有直接作为参数传递到setup函数中，所以我们可以**直接通过参数来使用即可**

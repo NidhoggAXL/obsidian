@@ -19,7 +19,7 @@
 > 当使用模块的时候，会把 getters、mutations、actions 都进行合并
 > 
 > - 如果命名相同，就会存在问题，这是时候就需要使用module的命名空间
-> - <mark class="hltr-cyan">state 并不会进行合并</mark>，在使用 state 的时候需要指定模板，就不会存在重复
+> - state 并不会进行合并，在使用 state 的时候需要指定模板，就不会存在重复
 
 后面两个参数：
 
@@ -32,7 +32,7 @@
 
 # 三、module的命名空间
 
-默认情况下，模块内部的action和mutation仍然是<mark class="hltr-cyan">注册在全局的命名空间中</mark>的： 
+默认情况下，模块内部的action和mutation仍然是注册在全局的命名空间中的： 
 
 * 这样使得多个模块能够对同一个 action 或 mutation 作出响应；
 * Getter 同样也默认注册在全局命名空间；

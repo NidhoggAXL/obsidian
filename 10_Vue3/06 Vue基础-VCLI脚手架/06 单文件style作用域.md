@@ -55,7 +55,7 @@ export default {
 要解决这个问题,那么就需要为style设置 **scoped（作用域）** 的属性
 
 >[!abstract] 
->本质是为元素自动添加不同的 <mark class="hltr-orange">data- 属性</mark>
+>本质是为元素自动添加不同的 data- 属性
 
 ```html
 <style scoped> </style>
@@ -64,11 +64,11 @@ export default {
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747143794000r7x1fr.png)
 
 >[!tip] 在开发中
->基本上所有的style都希望设计自己的组件,不要和其他的有影响所以基本<mark class="hltr-orange">都需要为style添加 scoped(作用域) 属性</mark>
+>基本上所有的style都希望设计自己的组件,不要和其他的有影响所以基本都需要为style添加 scoped(作用域) 属性
 
 # 二、BUG
 
-如果子组件并没有<mark class="hltr-orange">进行一个包裹</mark>的时候，这个 style 的 scoped 就不生效：
+如果子组件的并没有使用一个根标签进行包裹的时候，这个 style 的 scoped 就不生效：
 
 demo.vue 子组件：
 
@@ -115,7 +115,7 @@ export default {
 </style>
 ```
 
-<mark class="hltr-orange">这个时候的 data-属性 会变成相同的</mark>
+这个时候的 data-属性 会变成相同的
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747143854000aa08hd.png)
 

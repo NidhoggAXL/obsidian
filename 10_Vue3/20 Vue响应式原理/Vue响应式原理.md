@@ -13,7 +13,7 @@ conle.log(m * 2)
 m = 40
 ```
 
-上面的这样一种<mark class="hltr-cyan">可以自动响应数据变量的代码机制，就称之为是响应式的。</mark>
+上面的这样一种可以自动响应数据变量的代码机制，就称之为是响应式的。
 
 那么我们再来看一下对象的响应式:
 
@@ -53,11 +53,9 @@ m = 40
 * 这些对象需要监听的不只是一个属性，它们很多属性的变化，都会有对应的响应式函数； 
 * 不可能在全局维护一大堆的数组来保存这些响应函数； 
 
-所以要**设计一个类**，这个类用于管理<mark class="hltr-cyan">某一个对象的某一个属性</mark>的**所有响应式函数**： 
+所以要**设计一个类**，这个类用于管理某一个对象的某一个属性的**所有响应式函数**： 
 
 * 相当于替代了原来的简单 reactiveFns 的数组；
-
-![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753435727000koyljq.png)
 
 ```js
 const obj = {
@@ -104,16 +102,16 @@ console.log("---------")
 //进行通知存在的依赖
 dep.notify()
 
-
 ```
+
 # 五、监听对象的变化
 
 那么接下来就可以通过之前学习的方式来监听对象的变量： 
 
-* 方式一：通过 Object.defineProperty的方式（vue2采用的方式）； 
-* 方式二：通过new Proxy的方式（vue3采用的方式）；
+* 方式一：通过 Object.defineProperty 的方式（vue2采用的方式）； 
+* 方式二：通过 new Proxy 的方式（vue3采用的方式）；
 
-这里以 [](07_JavaScript高级/11%20Proxy-Reflect/02%20Proxy代理类.md#二、Proxy的set和get捕获器|Proxy(代理)) 的方式来监听：
+这里以 [[02 Proxy代理类#二、Proxy的set和get捕获器|Proxy-代理]] 的方式来监听：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753442481000wttrm1.png)
 
@@ -124,31 +122,39 @@ dep.notify()
 * 但是实际开发中会有不同的对象，另外会有不同的属性需要管理； 
 * 如何可以使用一种数据结构来管理不同对象的不同依赖关系呢？ 
 
-在前学习过[WeakMap](07_JavaScript高级/09%20ECMA6特性/09%20数据结构-Map映射.md)，并且在学习WeakMap的时候我讲到了后面通过WeakMap如何管理这种响应式的数据依赖：
+在前学习过 [[09 数据结构-Map映射#三、WeakMap的使用|WeakMap]]，并且在学习WeakMap的时候我讲到了后面通过WeakMap如何管理这种响应式的数据依赖：
+
+> [!tip] 最难理解
+> 1. dep对象数据结构的管理
+> - 每一个对象的每一个属性都会对应一个dep对象
+> - 同一个对象的多个属性的dep对象是存放一个map对象中
+> - 多个对象的map对象，会被存放到一个objMap的对象中
+> 2. 依赖收集:当执行get函数，自动的添加fn函数
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1753442555000r5tbio.png)
+
 
 # 七、对象依赖管理的实现
 
 我们可以写一个getDepend函数专门来管理这种依赖关系：
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17534530370004oyfst.png)
-
 ```js
 //定义变量map保存对象的objmap
 const targetMap = new WeakMap()
 const getDepends = (obj, key) => {
-  //obj -> 对象的映射
+  //objMap 映射 mpa 对象
+  //获取传出的 obj对象 映射的 map对象
   let objMap = targetMap.get(obj)
   if (!objMap) {
     objMap = new Map()
     targetMap.set(obj, objMap)
   }
   
-  //对象映射：{key, depend}
+  //map对象属性映射dep对象
   let depend = objMap.get(key)
   if (!depend) {
     depend = new Depend()
+    // 设置map对象中属性对应的 dep对象
     objMap.set(key, depend)
   }
   

@@ -17,7 +17,7 @@ state 是 store 的核心部分，因为store是用来帮助我们管理状态�
 
 ## 2.2 $reset重置
 
-**重置 State**： 你可以通过调用 store 上的 <mark class="hltr-cyan">$reset() 方法将状态重置到其初始值</mark>；
+**重置 State**： 你可以通过调用 store 上的 $reset() 方法将状态重置到其初始值；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748159571000yyccs2.png)
 
@@ -26,7 +26,7 @@ state 是 store 的核心部分，因为store是用来帮助我们管理状态�
 **改变State：** 
 
 * 除了直接用 store.counter++ 修改 store，你还可以调用 $patch 方法； 
-* 它允许您使用部分“state”对象<mark class="hltr-cyan">同时应用多个更改</mark>；
+* 它允许您使用部分“state”对象同时应用多个更改；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748159608000n60o9i.png)
 
@@ -42,7 +42,7 @@ state 是 store 的核心部分，因为store是用来帮助我们管理状态�
 
 # 三、State原始数据
 
-state的本质其实是一个代理对象(Proxy)，这样他才可以做到响应式，那如何拿到原始的对象呢，而不是一个代理对象呢？
+state的本质其实是一个[[02 Proxy代理类|代理对象(Proxy)]]，这样他才可以做到响应式，那如何拿到原始的对象呢，而不是一个代理对象呢？
 
 ## 3.1 storeToRefs(推荐)
 

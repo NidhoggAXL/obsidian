@@ -4,15 +4,15 @@
 
 **什么是Vue脚手架？** 
 
-* 所以在真实开发中，我们通常会使用<mark class="hltr-orange">脚手架</mark>来创建一个项目，Vue的项目我们使用的就是<mark class="hltr-orange">Vue的脚手架</mark>； 
-* 脚手架其实是建筑工程中的一个概念，在软件工程中也会将一些<mark class="hltr-orange">帮助我们搭建项目的工具称之为脚手架</mark>；
-* <mark class="hltr-orange">Vue的脚手架里面已经默认集成了 webpack 了.</mark>
+* 所以在真实开发中，我们通常会使用脚手架来创建一个项目，Vue的项目我们使用的就是Vue的脚手架； 
+* 脚手架其实是建筑工程中的一个概念，在软件工程中也会将一些帮助我们搭建项目的工具称之为脚手架；
+* Vue的脚手架里面已经默认集成了 webpack 了.
 
 **Vue的脚手架就是Vue CLI：** 
 
-* CLI是<mark class="hltr-orange">Command-Line Interface,</mark> 翻译为<mark class="hltr-orange">命令行界面</mark>； 
-* 我们可以通过CLI<mark class="hltr-orange">选择项目的配置和创建</mark>出我们的项目； 
-* Vue CLI已经<mark class="hltr-orange">内置了webpack相关的配置</mark>，我们不需要从零来配置；
+* CLI是Command-Line Interface, 翻译为命令行界面； 
+* 我们可以通过CLI选择项目的配置和创建出我们的项目； 
+* Vue CLI已经内置了webpack相关的配置，我们不需要从零来配置；
 
 # 二、Vue CLI安装和使用
 
@@ -51,7 +51,7 @@ Vue create 项目的名称
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746171100000a5jmag.png)
 
-2. 如果选择<mark class="hltr-orange">手动获取到特性</mark>就会有如下的选项，按住空格选择一个，a选择全部
+2. 如果选择手动获取到特性就会有如下的选项，按住空格选择一个，a选择全部
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746171222000kcpsfh.png)
 

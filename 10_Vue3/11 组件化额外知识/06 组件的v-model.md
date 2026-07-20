@@ -2,6 +2,8 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746872071000hooa17.png)
 
+[[02 v-model绑定原理#一、v-model的原理|表单v-mode原理]]
+
 # 二、组件v-model的实现
 
 那么，为了 MyInput组件 可以正常的工作，在这个组件内必须： 

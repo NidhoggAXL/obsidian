@@ -12,12 +12,14 @@
 **reset.css:**
 
 * 这个是自己再次添加的一些重置样式的CSS
-* ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17482661140002kud2t.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17482661140002kud2t.png)
 
 **common.css：** 
 
 * 一些公共的CSS文件，比如字体、字号
-* ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748266269000zxbw9w.png)
+
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748266269000zxbw9w.png)
 
 
 > [!tip] 这里的 reset.css 和 common.css 是否都再main里面引入呢?
@@ -30,6 +32,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1748266633000hf089e.png)
 
+> [!note]
 > 两个是独立的css样式,所以就对两个都同时进行引入.
 
 

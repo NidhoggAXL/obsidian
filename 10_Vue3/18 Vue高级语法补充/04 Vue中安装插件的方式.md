@@ -2,12 +2,12 @@
 
 通常向Vue全局添加一些功能时，会采用插件的模式，它有两种编写方式:
 
-- **对象类型**：一个对象，但是必须<mark class="hltr-cyan">包含一个 install 的函数</mark>，该函数会在安装插件时执行;
-- **函数类型**：一个function，这个函数会在安装插件时<mark class="hltr-cyan">自动执行函数类型</mark>:
+- **对象类型**：一个对象，但是必须包含一个 install 的函数，该函数会在安装插件时执行;
+- **函数类型**：一个function，这个函数会在安装插件时自动执行函数类型:
 
 插件可以完成的功能没有限制，比如下面的几种都是可以的:
 
-- 添加全局方法或者 property，通过把它们<mark class="hltr-cyan">添加到 config.globalProperties 上实现</mark>;
+- 添加全局方法或者 property，通过把它们添加到 config.globalProperties 上实现;
 - 添加全局资源：指令/过滤器/过渡等
 - 通过全局 mixin 来添加一些组件选项
 - 一个库，提供自己的 API，同时提供上面提到的一个或多个功能
@@ -32,7 +32,7 @@
 
 使用的时候：
 
-```
+```shell
 app.use(对象) 或者 app.use(函数)
 ```
 

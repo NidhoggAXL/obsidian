@@ -14,7 +14,7 @@ npm init vue@latest
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17462614370001tqzw5.png)
 
-**创建出来的项目是<mark class="hltr-orange">没有依赖</mark>的,可以通过 `npm install` 进行依赖的下载:**
+**创建出来的项目是没有依赖的,可以通过 `npm install` 进行依赖的下载:**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746261521000oa8hup.png)
 

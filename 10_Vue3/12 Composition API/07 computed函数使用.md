@@ -1,4 +1,4 @@
-在前面知识点[计算属性computed](10_Vue3/03%20Vue基础-Options%20API/01%20computed计算属性使用.md)：当我们的某些属性是依赖其他状态时，我们可以使用计算属性来处理 
+在前面知识点[[01 computed计算属性使用|计算属性computed]]：当我们的某些属性是依赖其他状态时，我们可以使用计算属性来处理 
 
 * 在前面的Options API中，是使用computed选项来完成的； 
 * 在Composition API中，我们可以在 setup 函数中使用 computed 方法来编写一个计算属性；
@@ -6,9 +6,26 @@
 如何使用computed呢？ 
 
 * 方式一：**接收一个getter函数**，并为 getter 函数返回的值，返回一个**不变的 ref 对象**； 
+
+```js
+const fullName = conputed(() => {
+  return firstName.value + "" + lastName.value
+})
+```
+
 * 方式二：接收一个具有 get 和 set 的对象，返回一个可变的（可读写）ref 对象；
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747558879000zzcgpb.png)
+```js
+const fullName = computed({
+  get: () => {
+    return firstName.value + "" + lastName.value;
+  },
+  set: newValue => {
+    const names = newValue.split(" ");
+    firstName.value = names[0];
+    lastName.value = name[1];
+  }
+})
+```
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747558883000gvfvwy.png)
 

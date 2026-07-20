@@ -1,4 +1,5 @@
 # 一、页面page配置文件
+
 每一个小程序页面也可以使用 .json 文件来对本页面的窗口表现进行配置。 
 
 * 页面中配置项在当前页面会覆盖 app.json 的 window 中相同的配置项。 
@@ -16,7 +17,7 @@
 
 ## 2.1 编译后默认显示某个页面
 
-第一种方式：修改[全局配置文件app.json](03%20全局配置文件app.json.md)的 pages （默认先加载和显示第一个页面）
+第一种方式：修改[[03 全局配置文件app.json|全局配置文件app.json]]的 pages （默认先加载和显示第一个页面）
 
 ```json
 {
@@ -40,6 +41,7 @@
 favor 页面配置文件中（favor.json）添加：`"onReachBottomDistance": 50`
 
 ```json
+// favor.json
 {
   "usingComponents": {},
   "onReachBottomDistance": 50

@@ -5,7 +5,7 @@ Vuex 使用单一状态树:
 - 用一个对象就包含了全部的应用层级的状态，
 - 采用的是 **SSOT**，Single Source of Truth，也可以翻译成**单一数据源;**
 
-这也意味着，<mark class="hltr-cyan">每个应用将仅仅包含一个 store 实例</mark>;
+这也意味着，每个应用将仅仅包含一个 store 实例;
 - 单状态树和模块化并不冲突，后面我们会讲到module的概念;
 
 单一状态树的优势:
@@ -17,7 +17,7 @@ Vuex 使用单一状态树:
 
 # 二、组件获取状态
 
-处理在 template 中使用插值语法获取状态，也可以在使用 [position API 的 computed](10_Vue3/03%20Vue基础-Options%20API/01%20computed计算属性使用.md) 
+处理在 template 中使用插值语法获取状态，也可以在使用 [[01 computed计算属性使用|position API 的 computed]] 
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/17478351740005sr5zx.png)
 
@@ -25,8 +25,8 @@ Vuex 使用单一状态树:
 
 * mapState的方式一：对象类型； 
 * mapState的方式二：数组类型； 
-* 也可以使用<mark class="hltr-cyan">展开运算符和来原有的computed混合在一起</mark>；
-* <mark class="hltr-cyan">展开运算后得到的就是每一个字符串匹配数据的 computed 的函数，例如上面 computed 中的 count 函数</mark>
+* 也可以使用展开运算符和来原有的computed混合在一起；
+* 展开运算后得到的就是每一个字符串匹配数据的 computed 的函数，例如上面 computed 中的 count 函数
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747835671000fbqkpb.png)
 
@@ -54,9 +54,9 @@ Vuex 使用单一状态树:
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747837244000o6nnbm.png)
 
-## 3.1 解构和toRef结合使用(推荐)
+## 3.1 解构和toRef结合使用-推荐
 
-[解构](05%20解构Destructuring}) 和 [toRefs](10_Vue3/12%20Composition%20API/05%20ref知识点补充.md) 联合使用
+[[05 解构Destructuring}|解构]] 和 [[05 ref知识点补充|toRefs]] 联合使用
 
 * toRefs 保证是响应式
 * 解构中如果有和data重复的数据，则可以起别名

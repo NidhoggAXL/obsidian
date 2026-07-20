@@ -35,6 +35,28 @@ const name = toRef(state, "name")
 
 # 三、ref其他的API
 
-![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1747557609000yr4i4t.png)
+unref
+
+ - 如果我们想要获取一个ref引用中的value，那么也可以通过unref仿法:
+ - 如果参数是一个ref，则返回内部值，否则返回参数本身;
+ - 这是 `val =isRef(val)?val.value:val` 的语法糖函数;
+
+isRef：判断值是否是一个ref对象。
+
+shallowRef：创建一个浅层的ref对象;
+
+triggerRef：手动触发和shallowRef相关联的副作用:
+
+```js
+const info = shallowRef({name: "axl"})
+
+// 下面的修改不是响应式的
+const changeInfo = () => {
+  info.value.name = "coderaxl"
+  // 手动触发
+  triggerRef(info)
+}
+```
+
 
 

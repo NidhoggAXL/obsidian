@@ -5,9 +5,9 @@
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2024/1746171385000jspjf3.png)
 
 
-<mark class="hltr-orange">browserslistrc</mark>：主要时对浏览器的兼容的问题
+[[03 浏览器兼容性配置|browserslistrc]]：主要时对浏览器的兼容的问题
 
-<mark class="hltr-orange">@vue/cli 5.0.8还会创建一个 jsconfig.json 文件</mark>：这个文件主要是对 VScode 进行一定的设置，这样可以有更好的代码提示。
+@vue/cli 5.0.8还会创建一个 jsconfig.json 文件：这个文件主要是对 VScode 进行一定的设置，这样可以有更好的代码提示。
 
 # 二、默认搭建如来的页面
 
