@@ -13,7 +13,7 @@ useCallback实际的目的是为了进行性能的优化。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755773045000ywt73n.png)
 
-[](07_JavaScript高级/04%20JS内存管理和闭包/03%20闭包.md#一、闭包的定义|闭包)在函数被定义的时候就以及形成啦，那么这个时候 `setCount(count + 2)`通过闭包查询到上层作用域的 count 为 0 ，当点击的时候调用 addCount 后 count + 2 = 2
+[[03 闭包#一、闭包的定义|闭包]]在函数被定义的时候就以及形成啦，那么这个时候 `setCount(count + 2)`通过闭包查询到上层作用域的 count 为 0 ，当点击的时候调用 addCount 后 count + 2 = 2
 
 当再次点击的时候因为 useCallback 的第二参数，没有依赖返回的值是相同的，那么还是上一个函数(**同一个函数**)，而上一个函数依赖的 count 还是 0， 所以页面显示是 2.
 
@@ -25,7 +25,7 @@ useCallback实际的目的是为了进行性能的优化。
 
 > [!tip] 函数组件是否渲染，跟父组件是否渲染以及props是否改变有关
 
-如果还希望，**当子组件点击的时候也还是不进行渲染**，那么可以使用 [useRef](13_React/11%20React%20Hooks/05%20useRef和LayoutEffect.md)：这样useCallback放回的还是用一个函数，但是函数内部改变了count。
+如果还希望，**当子组件点击的时候也还是不进行渲染**，那么可以使用 [[05 useRef和LayoutEffect|useRef]]：这样useCallback放回的还是用一个函数，但是函数内部改变了count。
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755777948000l5e4vf.png)
 
@@ -36,7 +36,7 @@ useMemo实际的目的也是为了进行性能的优化。
 如何进行性能的优化呢？ 
 
 - useMemo返回的也是一个 **memoized（记忆的）值**； 
-- 在依赖不变的情况下，多次定义的时候，<mark class="hltr-cyan">返回的值是相同的</mark>；
+- 在依赖不变的情况下，多次定义的时候，返回的值是相同的；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755780514000zq74z9.png)
 

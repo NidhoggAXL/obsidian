@@ -187,9 +187,9 @@ my-vite-app/
 
 # 二、Webpack构建工具
 
-因为 [Crate React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app?utm_source=tldrnewsletter)被弃用，webpack如果构建出来的React项目想要使用less，那么就需要使用 [craco](https://github.com/dilanx/craco/issues/707) 对Webpack配置
+因为 [Crate React App](https://react.dev/blog/2025/02/14/sunsetting-create-react-app?utm_source=tldrnewsletter) 被弃用，webpack如果构建出来的React项目想要使用less，那么就需要使用 [craco](https://github.com/dilanx/craco/issues/707) 对Webpack配置
 
 > [!warning] 
 > 
-> 具体如何配置，需要查询网络
+> 具体如何配置，需要查询使用，
 

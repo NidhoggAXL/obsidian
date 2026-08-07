@@ -1,6 +1,6 @@
 # 手动路由的跳转
 
-目前我们实现的跳转主要是通过[](13_React/10%20React-Router/02%20Router的基本使用.md#三、路由配置和跳转|Link或者NavLink)进行跳转的，实际上也可以通过JavaScript代码进行跳转。 
+目前我们实现的跳转主要是通过[[02 Router的基本使用#三、路由配置和跳转|Link或者NavLink]]进行跳转的，实际上也可以通过JavaScript代码进行跳转。 
 
 - 我们知道Navigate组件是可以进行路由的默认跳转的，但是**依然是组件的方式**。 
 - 如果希望通过JavaScript代码逻辑进行跳转（比如点击了一个button），那么就**需要获取到navigate对象**。 

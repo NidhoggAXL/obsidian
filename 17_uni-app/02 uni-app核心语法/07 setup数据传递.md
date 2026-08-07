@@ -1,6 +1,6 @@
 # 一、URL传递
 
-```html
+```vue
 <navigator url="/pages/about/about?name=axl&age=18">about</navigator>
 
 
@@ -27,7 +27,7 @@ onLoad((option) => {
 
 # 二、eventChannel
 
-```js
+```vue
 <script setup>
 function handleBtn() {
 	uni.navigateTo({
@@ -42,26 +42,26 @@ function handleBtn() {
 </script>
 ```
 
-```js
+```vue
 // 接收数据
 <script setup>
 import { getCurrentInstance, ref } from 'vue';
 import { onLoad } from "@dcloudio/uni-app"
 
-	// 就是获取vue组件的实例 === this
-	const $instance = ref(getCurrentInstance().proxy)
-	onLoad((option) => {
-		const eventChannel = $instance.value.getOpenerEventChannel()
-		eventChannel.on("aboutData", (value) => {
-			console.log(value);
-		})
+// 就是获取vue组件的实例 === this
+const $instance = ref(getCurrentInstance().proxy)
+onLoad((option) => {
+	const eventChannel = $instance.value.getOpenerEventChannel()
+	eventChannel.on("aboutData", (value) => {
+		console.log(value);
 	})
+})
 </script>
 ```
 
 # 三、事件总线
 
-```html
+```vue
 // 发送数据
 <template>
 	<view>
@@ -83,7 +83,7 @@ import { onLoad } from "@dcloudio/uni-app"
 ```
 
 
-```html
+```vue
 // 接收数据
 <template>
 	<view>

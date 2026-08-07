@@ -11,7 +11,7 @@
 - **必须通过setState来告知React数据已经发生了变化**;
 	
 	- 就算调用 setState 里面**并没有数据进行更改**，**默认情况下也是会进行重新渲染的**
-	- 到底要不要渲染，可以进行设置[](13_React/04%20React组件-基础/02%20React组件生命周期.md#2.4%20不常用生命周期函数|shouldComponentUpdate)来判断
+	- 到底要不要渲染，可以进行设置[[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]来判断
 
 **疑惑**：在组件中并没有实现setState的方法，为什么可以调用呢?
 
@@ -49,7 +49,7 @@ this.setState({ key: value })
 setState的更新是异步的？
 
 - 最终打印结果是Hello World； 
-- 可见<mark class="hltr-cyan">setState是异步的操作</mark>，我们并不能在执行完setState之后立马拿到最新的state的结果
+- 可见setState是异步的操作，我们并不能在执行完setState之后立马拿到最新的state的结果
 
 为什么setState设计为异步呢？ 
 
@@ -75,7 +75,7 @@ setState设计为异步，可以**显著的提升性能**；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551700300005z3amo.png)
 
-当然，我们也可以在 [](13_React/04%20React组件-基础/02%20React组件生命周期.md#2.3%20常用生命周期|生命周期) 函数：
+当然，我们也可以在 [[02 React组件生命周期#2.3 常用生命周期|生命周期]] 函数：
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/17551700400009mzlli.png)
 
@@ -116,7 +116,7 @@ console.log(this.state.counter)//1000
 
 > [!tip] 批处理自我理解：
 > 
-> 和[节流](01%20认识防抖和节流.md)一样，在规定时间内执行一次，不管事件的多少都是在一定时间内统一执行
+> 和[[01 认识防抖和节流|节流]]一样，在规定时间内执行一次，不管事件的多少都是在一定时间内统一执行
 
 
 

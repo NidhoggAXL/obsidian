@@ -57,21 +57,21 @@ React在props或state发生改变时，会调用React的render方法，会创建
 
 我们使用之前的一个嵌套案例： 
 
-- 在App中，我们增加了一个[](13_React/01%20邂逅React开发/04%20React其他案例实现.md#二、计数器|计数器的代码)； 
+- 在App中，我们增加了一个[[04 React其他案例实现#二、计数器|计数器的代码]]； 
 - 当点击+1时，会重新调用App的render函数； 
 - 而当App的render函数被调用时，**所有的子组件的render函数都会被重新调用**；
 
-那么，我们可以思考一下，在以后的开发中，<mark class="hltr-cyan">只要是修改了 App 中的数据，所有的组件都需要重新render</mark>，进行diff算法， 性能必然是很低的：
+那么，我们可以思考一下，在以后的开发中，只要是修改了 App 中的数据，所有的组件都需要重新render，进行diff算法， 性能必然是很低的：
 
 - 事实上，很多的组件没有必须要重新render； 
 - 它们调用render应该有一个前提，就是依赖的数据（state、 props）发生改变时，再调用自己的render方法；
 
-如何来控制render方法是否被调用呢？ 通过shouldComponentUpdate方法即可；
+如何来控制render方法是否被调用呢？ 通过[[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]方法即可；
 
 # 五、shouldComponentUpdate
 
-React给我们提供了一个生命周期方法 <mark class="hltr-orange">shouldComponentUpdate（很多时候，我们简称为SCU）</mark>，这个方法接受参数，并且需要有 返回
-![](13_React/04%20React组件-基础/02%20React组件生命周期.md#2.4%20不常用生命周期函数|shouldComponentUpdate)
+React给我们提供了一个生命周期方法 shouldComponentUpdate（很多时候，我们简称为SCU），这个方法接受参数，并且需要有 返回
+![[02 React组件生命周期#2.4 不常用生命周期函数|shouldComponentUpdate]]
 
 **比如我们在App中增加一个message属性：** 
 
@@ -86,13 +86,13 @@ React给我们提供了一个生命周期方法 <mark class="hltr-orange">should
 
 如果所有的**类组件**，我们都需要手动来实现 shouldComponentUpdate，那么会给我们开发者增加非常多的工作量。 
 
-- 设想一下s houldComponentUpdate 中的各种判断的目的是什么？ 
+- 设想一下shouldComponentUpdate 中的各种判断的目的是什么？ 
 - **props或者state中的数据是否发生了改变**，决定shouldComponentUpdate返回true或者false； 
 
 事实上React已经考虑到了这一点，所以React已经默认帮我们实现好了，如何实现呢？ 
 
 * 将class继承自PureComponent（纯组件）。
-* 是一个<mark class="hltr-cyan">浅层比较</mark>
+* 是一个浅层比较
 
 
 ```jsx
@@ -165,7 +165,7 @@ export default Banner
 
 要修改 this.state 里面的数据，都需要进行一个拷贝在操作，操作附件，完成后再把附件赋值给 this.state 。
 
-就算是深层的内容改变，也要先进行拷贝，操作附件，<mark class="hltr-cyan">这种不可以对原数据的直接改变的方式就成为不可变数据的力量。</mark>
+就算是深层的内容改变，也要先进行拷贝，操作附件，这种不可以**对原数据的直接改变的方式就成为不可变数据的力量。**
 
 
 

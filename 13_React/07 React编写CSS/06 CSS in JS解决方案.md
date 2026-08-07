@@ -42,7 +42,7 @@ yarn add styled-components
 
 # 三、ES6标签模板字符串
 
-ES6中增加了[模板字符串](07_JavaScript高级/09%20ECMA6特性/04%20模板字符串的详解.md)的语法，这个对于很多人来说都会使用。 
+ES6中增加了[[04 模板字符串的详解|模板字符串]]的语法，这个对于很多人来说都会使用。 
 
 但是模板字符串还有另外一种用法：**标签模板字符串（Tagged Template Literals）。**
 
@@ -92,7 +92,7 @@ styled-components的本质是通过函数的调用，最终创建出一个组件
 
 - 支持直接子代选择器或后代选择器，并且直接编写样式； 
 - 可以**通过&符号获取当前元素**； 
-- 直接[伪类选择器](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/09%20伪类选择器.md)、[伪元素](05_前端基础/01%20HTML%20+%20CSS/04%20CSS属性/10%20伪元素%20pseudo-elements.md)等；
+- 直接[[09 伪类选择器|伪类选择器]]、[[10 伪元素 pseudo-elements|伪元素]]等；
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755345591000u1v2cp.png)
 

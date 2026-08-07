@@ -151,11 +151,11 @@ React内部为了告诉我们当前处于哪些阶段，会对我们组件内部
 	- 第三个参数：shnapshot（获取更新前的一些信息）
 - **shouldComponentUpdate**：**该生命周期函数很常用**，但是我们等待讲性能优化时再来详细讲解； 
 	
-	-  `nextProps`：组件即将用来渲染的下一个 props。将 `nextProps` 与 [](https://zh-hans.react.dev/reference/react/Component#props) 进行比较以确定发生了什么变化。
+	-  `nextProps`：组件即将用来渲染的下一个 props。将 `nextProps` 与 props 进行比较以确定发生了什么变化。
 	
-	- `nextState`：组件即将渲染的下一个 state。将 `nextState` 与 [](https://zh-hans.react.dev/reference/react/Component#props) 进行比较以确定发生了什么变化。
+	- `nextState`：组件即将渲染的下一个 state。将 `nextState` 与 state 进行比较以确定发生了什么变化。
 	
-	- `nextContext`：组件将要渲染的下一个 context。将 `nextContext` 与 [](https://zh-hans.react.dev/reference/react/Component#context) 进行比较以确定发生了什么变化。仅当你指定了 [](https://zh-hans.react.dev/reference/react/Component#static-contexttype) 时才可用。
+	- `nextContext`：组件将要渲染的下一个 context。将 `nextContext` 与 context 进行比较以确定发生了什么变化。仅当你指定了 static-contexttype 时才可用。
 	
 	- 返回的结果为true（默认值），则执行后面的 render ，重新渲染
 	

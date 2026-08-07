@@ -13,7 +13,7 @@ CSSTransition执行过程中，有三个状态：appear(出现)、enter(进入)�
 - in：触发进入或者退出状态
 	- 如果添加了**unmountOnExit={true}**，那么该组件**会在执行退出动画结束后被移除掉**； 
 	- **当in为true时，触发进入状态**，会添加-enter、-enter-acitve的class开始执行动画，当动画执行结束后，会移除两个class， 并且添加-enter-done的class； 
-	- **当in为false时，触发退出状态**，会添加-exit、-exit-active的class开始执行动画，当动画执行结束后，会移除两个class，并 且添加-enter-done的class；
+	- **当in为false时，触发退出状态**，会添加-exit、-exit-active的class开始执行动画，当动画执行结束后，会移除两个class，并且添加-enter-done的class；
 - classNames：动画class的名称 
 	- 决定了在编写css时，对应的class名称：比如card-enter、card-enter-active、card-enter-done；
 - timeout：过渡动画的时间

@@ -225,7 +225,7 @@ function HomePage() {
 }
 ```
 
-**对于类组件**，React Router v6 及以上版本不再提供 withRouter 高阶组件。你需要自己创建一个 [HOC ](13_React/10%20React-Router/04%20Router的代码跳转.md)来注入 navigate 函数，或者更**推荐的方式是将类组件转换为函数组件**。
+**对于类组件**，React Router v6 及以上版本不再提供 withRouter 高阶组件。你需要自己创建一个 [[04 Router的代码跳转|HOC ]]来注入 navigate 函数，或者更**推荐的方式是将类组件转换为函数组件**。
 
 ## 2. 路由重定向
 
@@ -245,7 +245,7 @@ import { Navigate } from 'react-router-dom';
 
 # ⚡ 路由懒加载
 
-对于大型应用，为了优化首屏加载速度，可以使用 React.lazy 和 Suspense (对标Vue的[Suspense](10_Vue3/18%20Vue高级语法补充/03%20Vue内置组件Suspense.md)) 来实现路由组件的懒加载（按需加载）：
+对于大型应用，为了优化首屏加载速度，可以使用 React.lazy（ 和 Suspense (对标Vue的[[03 Vue内置组件Suspense|Suspense]]) 来实现路由组件的懒加载（按需加载）：
 
 ```jsx
 import React, { Suspense } from 'react';

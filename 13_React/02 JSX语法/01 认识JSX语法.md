@@ -13,7 +13,7 @@
 
 - JSX是一种JavaScript的语法扩展（extension），也在很多地方称之为JavaScript XML，因为看起就是一段XML语法； 
 - 它用于描述UI界面，并且其完全可以和JavaScript融合在一起使用； 
-- 它不同于Vue中的模块语法，你不需要专门学习模块语法中的一些指令（比如[v-for](10_Vue3/02%20Vue基础-模板语法/08%20v-for渲染类型.md)、[v-if、v-else](10_Vue3/02%20Vue基础-模板语法/06%20Vue的条件渲染.md)、[v-bind](10_Vue3/02%20Vue基础-模板语法/03%20v-bind绑定属性.md)）；
+- 它不同于Vue中的模块语法，你不需要专门学习模块语法中的一些指令（比如[[08 v-for渲染类型|v-for]]、[[06 Vue的条件渲染|v-if、v-else]]、[[03 v-bind绑定属性|v-bind]]）；
 
 
 # 二、为什么Recat选择了JSX
@@ -30,8 +30,8 @@ React认为**渲染逻辑本质上与其他UI逻辑存在内在耦合**
 
 JSX的书写规范:
 
-- JSX的顶层只能有一个根元素，所以我们很多时候会在外层包裹一个div元素(或者使用知识点的[](13_React/05%20React组件-进阶/05%20portals和fragment.md#二、fragment(片段)|Fragment));
-- 为了方便阅读，**通常在isx的外层包裹一个小括号(html)**，这样可以方便阅读，并且jsx可以进行换行书写;
+- JSX的顶层只能有一个根元素，所以我们很多时候会在外层包裹一个div元素或者[[05 portals和fragment#二、fragment-片段|fragment]]
+- 为了方便阅读，**通常在jsx的外层包裹一个小括号(html)**，这样可以方便阅读，并且jsx可以进行换行书写;
 - JSX中的标签可以是单标签，也可以是双标签，
 
 > [!tip]

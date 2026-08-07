@@ -23,7 +23,7 @@
 参与界面更新的数据我们也可以称之为是**参与数据流**，这个数据是定义在当前对象的state中 
 
 - 可以通过在构造函数中 **this.state = {定义的数据}** 
-- 在 constructor 里面必须调用 [](07_JavaScript高级/08%20JS%20ES6中实现继承/02%20extends实现继承.md#二、super关键字|super()) 函数。
+- 在 constructor 里面必须调用 [[02 extends实现继承#二、super关键字|super]] 函数。
 - 当数据发生变化时，可以**调用 this.setState 来更新数据**，并且通知React进行update操作； 
 	- 在进行update操作时，就会**重新调用render函数**，并且使用最新的数据，来**渲染界面**
 	- 这就是为什么要是使用 this.setState 来改变数据了，使用 this.state 来改变数据，那么组件并不会重新渲染(**执行render函数**)
@@ -47,7 +47,7 @@
 
 - 我们就需要在传入函数时，给这个函数直接绑定this 
 - 类似于下面的写法：`<button onClick={this.btnClick.bind(this)}>改变文本</button>`
-- 为什么使用 [bind](07_JavaScript高级/01%20函数this指向/01%20this的绑定规则.md) 呢，是因为**bind可以永久绑定**
+- 为什么使用 [[01 this的绑定规则#1.3.2 bind|bind]] 呢，是因为**bind可以永久绑定**
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1754832188000i4hddv.png)
 

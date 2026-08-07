@@ -16,7 +16,7 @@
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1765890807000cvfzu3.png)
 
-为了后面方便使用需要先安装两个库：[classnames](07%20classnames库使用.md)、protypes
+为了后面方便使用需要先安装两个库：[[07 classnames库使用|classnames]]、protypes
 
 ```bash
 yarn install classnames

@@ -75,7 +75,7 @@ export default function Index() {
 
 ## 3.1 多端组件
 
-- 多端组件（属性，方法，事件等需统）： 针对不同的端写不同的组件代码
+- 多端组件（属性，方法，事件等需统一）： 针对不同的端写不同的组件代码
 
 ```jsx title = "index.jsx"
 import { Button } from "@tarojs/components";

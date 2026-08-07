@@ -70,8 +70,7 @@ export default definePageConfig({
 
 # 四、项目配置(project.x.json)
 
-
-了适配不同的小程序， Taro支持各个小程序平台添加各自项目配置文件。
+适配不同的小程序， Taro支持各个小程序平台添加各自项目配置文件。
 
  - 默认 project.config.json 配置只能用于微信小程序。
 

@@ -46,7 +46,7 @@ npm info @tarojs/cli
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/176580386400099z1m4.png)
 
-第二种方式：全局取消 eslink 对于no-undef 的检测。
+第二种方式：全局取消 eslink 对于 no-undef 的检测。
 
 ```json title=".eslintrc"
 {

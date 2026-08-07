@@ -1,6 +1,6 @@
 # 一、Spread Attributes
 
-我们实现一个一层层传递的案例:[](https://zh-hans.react.dev/learn/passing-props-to-a-component#forwarding-props-with-the-jsx-spread-syntax)
+我们实现一个一层层传递的案例:https://zh-hans.react.dev/learn/passing-props-to-a-component#forwarding-props-with-the-jsx-spread-syntax
 
 有时候，传递 props 会变得非常重复：
 
@@ -101,7 +101,7 @@ const MyContext = React.createContext(defaultValue);
 
 - 这里，React 组件也可以订阅到 context 变更。这能让你在 **函数式组件** 中完成订阅 context。 
 - 这里需要 **函数作为子元素**（function as child）这种做法； 
-- 这个函数接收当前的 context 值，返回一个 React 节点；
+- 这个函数接收当前的 context 值，**返回一个 React 节点**；
 
 ```jsx
 <MyContext.Consumer>

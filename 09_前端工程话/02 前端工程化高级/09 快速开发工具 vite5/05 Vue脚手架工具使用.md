@@ -12,7 +12,7 @@
 ```shell
 npm create vite
 yarn create vite
-pnpm create viteq
+pnpm create vite
 ```
 
 

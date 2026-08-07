@@ -1,6 +1,6 @@
 # 一、useContext的使用
 
-在之前的开发中，我们要在组件中使用共享的[](13_React/05%20React组件-进阶/04%20React的高阶组件.md#3.2%20共享context|Context)有两种方式： 
+在之前的开发中，我们要在组件中使用共享的[[04 React的高阶组件#3.2 共享context|Context]]方式： 
 
 - 类组件可以通过 **类名.contextType = MyContext** 方式，在类中获取context； 
 - 多个Context或者在函数式组件中通过 **MyContext.Consumer** 方式共享context；
@@ -14,9 +14,9 @@
 
 # 二、useReducer
 
-很多人看到useReducer的第一反应应该是[redux](13_React/08%20Redux的使用/02%20Redux的使用.md)的某个替代品，其实并不是。 
+很多人看到useReducer的第一反应应该是[[02 Redux的使用|redux]]的某个替代品，其实并不是。 
 
-useReducer仅仅是[useState](13_React/11%20React%20Hooks/02%20useState和useEffect(核心).md)的一种替代方案： 
+useReducer仅仅是[[02 useState和useEffect|useState]]的一种替代方案： 
 
 - 在某些场景下，如果state的处理逻辑比较复杂，我们可以通过useReducer来对其进行拆分； 
 - 或者这次**修改的state需要依赖之前的state时**，也可以使用；

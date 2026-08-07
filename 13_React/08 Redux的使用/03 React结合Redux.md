@@ -4,10 +4,11 @@
 
 核心代码主要是两个： 
 
-- 在 [](13_React/04%20React组件-基础/02%20React组件生命周期.md#2.3%20常用生命周期|componentDidMount) 中定义数据的变化，当数据发生变化时重新设置 counter; 
+- 在 [[02 React组件生命周期#2.3 常用生命周期||componentDidMount]] 中定义数据的变化，当数据发生变化时重新设置 counter; 
 - 在发生点击事件时，调用store的dispatch来派发对应的action；
 
-![100%](00_obsidian相关/Excalidraw/React使用redux计数器.md)
+![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1784606101000fvxtbe.png)
+
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755411550000vswzbd.png)
 
@@ -26,8 +27,8 @@ yarn add react-redux
 ```
 
 store里面的编写和上面编写相同（使用同一个Store）：
-
-- 在全局App中引用store，并使用 Provider 提供，后面的 **store 本质是 value**，和 [](13_React/04%20React组件-基础/05%20React非父子的通信.md#2.2%20Context演练|Context.Provider) 差不多。
+ 
+- 在全局App中引用store，并使用 Provider 提供，后面的 **store 本质是 value**，和 [[05 React非父子的通信#2.2 Context演练|Context.Provider]] 差不多。
 - 需要使用的组件通过 connect 进行转换。
 
 ![gh|500](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1755415803000lb7ywc.png)

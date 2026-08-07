@@ -5,7 +5,7 @@ useRef返回一个ref对象，**返回的ref对象在组件的整个生命周期
 最常用的ref是两种用法： 
 
 - 用法一：引入DOM元素
-	- 在React中还有一种方式在类组件中获取到DOM，使用 [](13_React/05%20React组件-进阶/02%20获取DOM方式refs.md#一、如何使用ref|createRef)； 
+	- 在React中还有一种方式在**类组件中获取到DOM**，使用 [[02 获取DOM方式refs#一、如何使用ref|createRef]]； 
 - 用法二：保存一个数据，这个对象在整个生命周期中可以保存不变；
 
 ```jsx
@@ -24,7 +24,7 @@ cont refContainer = useRef(initialValue)
 
 先来回顾一下ref和forwardRef结合使用： 
 
-- 通过 [](13_React/05%20React组件-进阶/04%20React的高阶组件.md#五、ref函数组件转发|forwardRef) 可以将ref转发到子组件； 
+- 通过 [[04 React的高阶组件#五、ref函数组件转发|forwardRef]] 可以将ref转发到子组件； 
 - 子组件拿到父组件中创建的ref，绑定到自己的某一个元素中； 
 
 forwardRef的做法本身没有什么问题，但是我们是将子组件的DOM直接暴露给了父组件： 
@@ -43,7 +43,7 @@ forwardRef的做法本身没有什么问题，但是我们是将子组件的DOM�
 
 # 二、useLayoutEffect
 
-useLayoutEffect看起来和 [](13_React/11%20React%20Hooks/02%20useState和useEffect(核心).md#二、认识Effect%20Hook|useEffect) 非常的相似，事实上他们也只有一点区别而已：
+useLayoutEffect看起来和 [[02 useState和useEffect#二、认识Effect Hook|useEffect]] 非常的相似，事实上他们也只有一点区别而已：
 
 - useEffect会在渲染的内容更新到DOM上后执行，不会阻塞DOM的更新； 
 - useLayoutEffect会在渲染的**内容更新到DOM上之前执行**，**会阻塞DOM的更新**；

@@ -5,12 +5,12 @@
 - 接受一个或多个函数作为输入； 
 - 输出一个函数；
 
-JavaScript中比较常见的[](05_前端基础/02%20JavaScript基础/06%20常见内置类/05%20数组Array.md#八、数组的高阶方法|filter、map、reduce)都是高阶函数。
+JavaScript中比较常见的[[05 数组Array#八、数组的高阶方法|filter、map、reduce]]都是高阶函数。
 
 那么说明是高阶组件是什么呢？ 
 
 - 高阶组件的英文是 Higher-Order Components，简称为 HOC； 
-- 官方的定义：高阶组件是参数为组件，<mark class="hltr-cyan">返回值为新组件</mark>的函数；
+- 官方的定义：高阶组件是参数为组件，返回值为新组件的函数；
 
 **可以进行如下的解析**： 
 

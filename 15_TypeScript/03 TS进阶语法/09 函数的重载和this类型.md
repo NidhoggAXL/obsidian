@@ -48,7 +48,7 @@ console.log(sum('axl', 123))//错误的
 
 - 方案一：使用联合类型来实现； 
 - 方案二：实现函数重载来实现；
-- 方案三：使用[](02%20JS数据类型.md#六、Object类型|对象类型)来实现
+- 方案三：使用[[02 JS数据类型#六、Object类型|对象类型]]来实现
 
 ```ts
 //方案一
@@ -101,7 +101,7 @@ const obj = {
 obj.getName()//axl
 ```
 
-上面的代码默认情况下是可以正常运行的，也就是TypeScript在编译时，认为我们的this是可以正确去使用的： 这是因为**在没有指定this的情况，this会更具上下文[](01%20TS变量.md#三、变量的类型推导(推断|01%20TS变量)|推导)出来this的类型**；
+上面的代码默认情况下是可以正常运行的，也就是TypeScript在编译时，认为我们的this是可以正确去使用的： 这是因为**在没有指定this的情况，this会更具上下文[[01 TS变量#三、变量的类型推导|类型推导]]出来this的类型**；
 
 ![gh](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1760277517000kvj01d.png)
 
