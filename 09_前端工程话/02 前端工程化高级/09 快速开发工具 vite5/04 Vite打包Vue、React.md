@@ -27,7 +27,7 @@ export default defineConfig({
 
 # 二、Vite对react的支持
 
-.jsx 和 .tsx 文件同样开箱即用，它们也是通过[[99 ESBuild工具的解析|ESBuild]]来完成的编译：
+.jsx 和 .tsx 文件同样开箱即用，它们也是通过[[11 ESBuild工具的解析|ESBuild]]来完成的编译：
 
  - 所以我们只需要直接编写react的代码即可；
  - **注意**：在index.html加载main.js时，我们需要将main.js的后缀，修改为 main.jsx 作为后缀名；

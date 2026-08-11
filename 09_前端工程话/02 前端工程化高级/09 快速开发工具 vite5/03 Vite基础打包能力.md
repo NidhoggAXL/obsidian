@@ -68,8 +68,7 @@ npx vite build
 
 可以通过preview的方式，开启一个本地服务来预览打包后的效果：
 
-```shell
+```bash
 npx vite preview
 ```
-
 

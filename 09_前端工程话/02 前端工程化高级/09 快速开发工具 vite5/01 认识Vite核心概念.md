@@ -13,7 +13,6 @@
 Vite (法语意为 "快速的"，发音 /vit/) 是一种新型前端构建工具，能够显著提升前端开发体验。
 
 ![gh|400](https://raw.githubusercontent.com/AXLflechazoPN/Obsidian/main/2025/1773577874000h6oxb4.png)
-
 # 二、Vite的构造
 
 它主要由两部分组成：
